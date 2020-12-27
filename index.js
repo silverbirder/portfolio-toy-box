@@ -1,3 +1,3 @@
-import { sample } from './assets/js/sample.js'
+import MyElement from './assets/js/myElement.js'
 
-sample();
+customElements.define("my-element", MyElement)

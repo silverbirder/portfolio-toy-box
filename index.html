@@ -3,10 +3,26 @@
   <meta charset=utf-8>
   <meta name=viewport content="width=device-width,initial-scale=1">
   <title>portfolio.silverbirder</title>
-  <script defer src="./index.js" type="module"></script>
+
+  <!-- @see: https://fonts.google.com/specimen/Kosugi+Maru -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+
+  <!-- common library import -->
+  <script type="importmap">
+    {
+      "imports": {
+        "lit-html": "https://unpkg.com/lit-html/lit-html.js?module",
+        "lit-element": "https://unpkg.com/lit-element/lit-element.js?module"
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="./index.css">
   <body>
     <header></header>
-    <main>Hello World</main>
+    <my-element></my-element>
     <footer></footer>
+    <script defer src="./index.js" type="module"></script>
   </body>
 </html>
