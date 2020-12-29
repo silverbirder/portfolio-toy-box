@@ -24,18 +24,18 @@
 ○ 分類
 
 ▽ 外せない情報 (myself)
-* 自己紹介
-* 興味
-* 経歴
-* 写真(アバター)
-* 連絡先(コンタクト)
+* 自己紹介 (biography)
+* 興味 (interest)
+* 経歴 (career)
+* 写真 (avatar)
+* 連絡先 (contact)
 
 ▽ 身につけたもの (ability)
-* 資格
-* 職業
-* 実績
-* スキル
+* 資格 (certification)
+* 職業 (job)
+* 実績 (accomplishment)
+* スキル (skill)
 
 ▽ 生成したもの (creation)
-* ブログ
-* プロジェクト(作ったツール)
+* ブログ (blog)
+* プロジェクト (project)
