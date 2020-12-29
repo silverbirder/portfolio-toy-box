@@ -1,8 +1,41 @@
 # portfolio-toy-box
+## Domain
 
-* VSCode ?
-  * https://dev.to/greedybrain/i-used-vscode-itself-as-my-portfolio-1fg5
-* Gatsby ?
-* AMP ?
-* MFE ?
-* RUST Markdown-wasm ?
+ポートフォリオのコアドメインとサブドメインについて
+
+○ 含むコンテンツ
+
+* 自己紹介
+* 興味/資格
+* 経歴
+* 写真
+* 職業
+* 関連リンク
+* 実績
+* スキル
+* 関わるプロジェクト
+* コンタクト
+* ブログ
+
+○ 目的
+
+私を知ってもらうこと (Get to know me)
+
+○ 分類
+
+▽ 外せない情報 (myself)
+* 自己紹介
+* 興味
+* 経歴
+* 写真(アバター)
+* 連絡先(コンタクト)
+
+▽ 身につけたもの (ability)
+* 資格
+* 職業
+* 実績
+* スキル
+
+▽ 生成したもの (creation)
+* ブログ
+* プロジェクト(作ったツール)
