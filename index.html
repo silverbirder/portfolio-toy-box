@@ -52,7 +52,7 @@
         <tbody><tr><td>body</td></tr></tbody>
       </table>
       <pre>
-       <code>
+       <code class="javascript">
         function $initHighlight(block, cls) {
           try {
             if (cls.search(/\bno\-highlight\b/) != -1)
@@ -68,6 +68,13 @@
         }
        </code>
       </pre>
+        <pre><code class="yaml">version: 1.0.0.{build}
+        platform: x64
+        
+        branches:  
+          only:
+            - master
+        </code></pre>
       <img src="./assets/images/free.svg">
       <team-ability-accomplishment></team-ability-accomplishment>
       <team-ability-certification></team-ability-certification>
