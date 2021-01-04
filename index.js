@@ -7,8 +7,8 @@ import TeamCreationProjectComponent from './assets/js/components/team-creation/t
 import TeamMyselfAvatarComponent from './assets/js/components/team-myself/teamMyselfAvatarComponent.js'
 import TeamMyselfBiographyComponent from './assets/js/components/team-myself/teamMyselfBiographyComponent.js'
 import TeamMyselfCareerComponent from './assets/js/components/team-myself/teamMyselfCareerComponent.js'
-import TeamMyselfContactComponent from './assets/js/components/team-myself/teamMyselfContactComponent.js'
 import TeamMyselfInterestComponent from './assets/js/components/team-myself/teamMyselfInterestComponent.js'
+import TeamMyselfLinksComponent from './assets/js/components/team-myself/teamMyselfLinksComponent.js'
 
 customElements.define('team-ability-accomplishment', TeamAbilityAccomplishmentComponent)
 customElements.define('team-ability-certification', TeamAbilityCertificationComponent)
@@ -19,5 +19,5 @@ customElements.define('team-creation-project', TeamCreationProjectComponent)
 customElements.define('team-myself-avatar', TeamMyselfAvatarComponent)
 customElements.define('team-myself-biography', TeamMyselfBiographyComponent)
 customElements.define('team-myself-career', TeamMyselfCareerComponent)
-customElements.define('team-myself-contact', TeamMyselfContactComponent)
 customElements.define('team-myself-interest', TeamMyselfInterestComponent)
+customElements.define('team-myself-links', TeamMyselfLinksComponent)

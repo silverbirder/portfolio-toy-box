@@ -5,17 +5,26 @@ export default class TeamMyselfCareerComponent extends BaseComponent {
     render(){
         return html`
         ${super.preRender()}
+        <h3>Career</h3>
         <table>
           <thead>
             <tr>
-              <th>header1</th>
-              <th>header2</th>
+              <th>Date</th>
+              <th>Summary</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>you1</td>
-              <td>you2</td>
+              <td>2015/04</td>
+              <td>Passing IPA:Information-technology Promotion Agency, Japan</td>
+            </tr>
+            <tr>
+              <td>2016/03</td>
+              <td>Graduation Bachelor's Program in Intelligent Information Engineering, Doshisha University</td>
+            </tr>
+            <tr>
+              <td>2017/09</td>
+              <td>Passing Java SE 8, Oracle</td>
             </tr>
           </tbody>
         </table>
