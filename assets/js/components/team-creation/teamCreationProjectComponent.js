@@ -1,7 +1,11 @@
-import { LitElement, html } from "https://unpkg.com/lit-element/lit-element.js?module"
+import { html } from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module"
+import BaseComponent from "../baseComponent.js";
 
-export default class TeamCreationProjectComponent extends LitElement {
+export default class TeamCreationProjectComponent extends BaseComponent {
     render(){
-        return html`TeamCreationProjectComponent`
+        return html`
+        ${super.preRender()}
+        TeamCreationProjectComponent
+        `
     }
 }
