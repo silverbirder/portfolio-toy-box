@@ -15,17 +15,22 @@ export default class TeamMyselfCareerComponent extends BaseComponent {
           </thead>
           <tbody>
             <tr>
-              <td>2015/04</td>
-              <td>Passing IPA:Information-technology Promotion Agency, Japan</td>
-            </tr>
-            <tr>
               <td>2016/03</td>
-              <td>Graduation Bachelor's Program in Intelligent Information Engineering, Doshisha University</td>
+              <td>👨‍🎓 Graduation Bachelor's Program in Intelligent Information Engineering, Doshisha University</td>
             </tr>
             <tr>
-              <td>2017/09</td>
-              <td>Passing Java SE 8, Oracle</td>
+              <td>2016/04</td>
+              <td>🏢 Joined an SIer company in Osaka, Japan.</td>
             </tr>
+            <tr>
+              <td>2018/07</td>
+              <td>🏢 Left an SIer company in Osaka, Japan.</td>
+            </tr>
+            <tr>
+              <td>2018/08</td>
+              <td>🏢 Joined an Web company in Hyogo, Japan.</td>
+            </tr>
+            <tr>
           </tbody>
         </table>
         `
