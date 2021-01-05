@@ -5,7 +5,8 @@ export default class TeamAbilitySkillComponent extends BaseComponent {
     render(){
         return html`
         ${super.preRender()}
-        TeamAbilitySkillComponent
+        <h3>Skill</h3>
+        [TODO] Githubのコントリビュートしているプログラミング、Commit数を表示
         `
     }
 }
