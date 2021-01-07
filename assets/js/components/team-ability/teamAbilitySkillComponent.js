@@ -20,7 +20,18 @@ export default class TeamAbilitySkillComponent extends BaseComponent {
       }
     `;
     }
-
+    async connectedCallback() {
+        super.connectedCallback();
+        const rows = await this.getGithub();
+        this.shadowRoot.getElementById('chart').innerHTML= `
+        <google-chart
+          type='pie'
+          options='{"title": "Github Contribution by Language"}'
+          cols='${JSON.stringify([{"label":"Language", "type":"string"}, {"label":"Count", "type":"number"}])}'
+          rows='${JSON.stringify(rows)}'>
+        </google-chart>
+        `;
+    }
     render(){
         return html`
         ${super.preRender()}
@@ -31,29 +42,32 @@ export default class TeamAbilitySkillComponent extends BaseComponent {
             <a href="http://github.com/Silver-birder">github my contribution</a>
           </figcaption>
         </figure>
-        <google-chart
-          type='pie'
-          options='{"title": "Distribution of days in 2001Q1"}'
-          cols='[{"label":"Month", "type":"string"}, {"label":"Days", "type":"number"}]'
-          rows='[["Jan", 31],["Feb", 28],["Mar", 31]]'>
-        </google-chart>
+        <section id="chart"></section>
         `
     }
+    async getGithub() {
+        const response = await (await fetch('https://api.github.com/users/Silver-birder/repos')).json();
+        const jsonData = response.filter((r) => {
+            return r.fork === false && r.language !== null;
+        }).map((r) => {
+           return {
+               language: r.language,
+               count: 1,
+           }
+        }).reduce((acc, cur) => {
+            if (acc[cur.language] === undefined) {
+                acc[cur.language] = 0;
+            }
+            acc[cur.language] += cur.count;
+            return acc;
+        }, {});
+        const results = [];
+        for (const key in jsonData) {
+            results.push([key, jsonData[key]]);
+        }
+        return results;
+    }
 }
-
-/*
-fetch("https://api.github.com/users/Silver-birder/repos?page=1").then((a) => {
-a.json().then((b) => {
-b.map((c) => {
-console.log(c.name);
-console.log(c.language);
-console.log(c.size);
-console.log(c.fork);
-})
-})
-})
-githubのrepositoryの言語とsizeを手に入れれる。グラフィカルにしたい。
- */
 
 /*
 UseCotlinについて触れたい。
