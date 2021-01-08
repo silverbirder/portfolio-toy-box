@@ -43,6 +43,7 @@ export default class TeamAbilitySkillComponent extends BaseComponent {
           </figcaption>
         </figure>
         <section id="chart"></section>
+        <section id="iot"></section>
         `
     }
     async getGithub() {
