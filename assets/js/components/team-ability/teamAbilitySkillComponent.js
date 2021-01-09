@@ -26,7 +26,7 @@ export default class TeamAbilitySkillComponent extends BaseComponent {
         this.shadowRoot.getElementById('chart').innerHTML= `
         <google-chart
           type='pie'
-          options='{"title": "Github Contribution by Language"}'
+          options='{"title": "Github My Contribution by Language"}'
           cols='${JSON.stringify([{"label":"Language", "type":"string"}, {"label":"Count", "type":"number"}])}'
           rows='${JSON.stringify(rows)}'>
         </google-chart>
@@ -73,5 +73,7 @@ export default class TeamAbilitySkillComponent extends BaseComponent {
 /*
 UseCotlinについて触れたい。
 ACM会員について触れたい。
-IoTについて触れたい。
+IoTについて触れたい。 (Yamlっぽく書く?)
+MyBookについて触れたい。
+Dark Modeしたい。
  */
