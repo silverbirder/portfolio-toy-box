@@ -1,85 +1,372 @@
 <!doctype html>
 <html ⚡ lang="ja">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="This is the AMP Boilerplate.">
-    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
-    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-experiment-0.1.js">
-    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js">
-    <link rel="preload" href="hero-img.jpg" as="image">
-    <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async custom-element="amp-experiment" src="https://cdn.ampproject.org/v0/amp-experiment-0.1.js"></script>
-    <script async custom-element="amp-dynamic-css-classes" src="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js"></script>
-    <!-- Import other AMP Extensions here -->
-    <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
-    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <style amp-custom>
-        /* Add your styles here */
-    </style>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="This is the AMP Boilerplate.">
+        <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+        <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-experiment-0.1.js">
+        <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js">
+        <link rel="preload" href="hero-img.jpg" as="image">
+        <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin>
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <script async custom-element="amp-experiment" src="https://cdn.ampproject.org/v0/amp-experiment-0.1.js"></script>
+        <script async custom-element="amp-dynamic-css-classes" src="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js"></script>
+        <!-- Import other AMP Extensions here -->
+        <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+        <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300" rel="stylesheet">
+        <style amp-custom>
+            /* custom-font */
+            * {
+                font-family: 'Ubuntu', sans-serif;
+            }
+            /* github-markdown.min.css */
+            .octicon{display:inline-block;fill:currentColor;vertical-align:text-bottom}.anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}.anchor:focus{outline:0}h1 .octicon-link,h2 .octicon-link,h3 .octicon-link,h4 .octicon-link,h5 .octicon-link,h6 .octicon-link{color:#1b1f23;vertical-align:middle;visibility:hidden}h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover .anchor,h5:hover .anchor,h6:hover .anchor{text-decoration:none}h1:hover .anchor .octicon-link,h2:hover .anchor .octicon-link,h3:hover .anchor .octicon-link,h4:hover .anchor .octicon-link,h5:hover .anchor .octicon-link,h6:hover .anchor .octicon-link{visibility:visible}h1:hover .anchor .octicon-link:before,h2:hover .anchor .octicon-link:before,h3:hover .anchor .octicon-link:before,h4:hover .anchor .octicon-link:before,h5:hover .anchor .octicon-link:before,h6:hover .anchor .octicon-link:before{width:16px;height:16px;content:' ';display:inline-block;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E")}body{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;line-height:1.5;color:#24292e;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:16px;line-height:1.5;word-wrap:break-word}details{display:block}summary{display:list-item}a{background-color:initial}a:active,a:hover{outline-width:0}strong{font-weight:inherit;font-weight:bolder}h1{font-size:2em;margin:.67em 0}amp-img{border-style:none}code,kbd,pre{font-family:monospace,monospace;font-size:1em}hr{box-sizing:initial;height:0;overflow:visible}input{font:inherit;margin:0}input{overflow:visible}[type=checkbox]{box-sizing:border-box;padding:0}*{box-sizing:border-box}input{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}strong{font-weight:600}hr{height:0;margin:15px 0;overflow:hidden;background:0 0;border:0;border-bottom:1px solid #dfe2e5}hr:after,hr:before{display:table;content:""}hr:after{clear:both}table{border-spacing:0;border-collapse:collapse}td,th{padding:0}details summary{cursor:pointer}kbd{display:inline-block;padding:3px 5px;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:10px;color:#444d56;vertical-align:middle;background-color:#fafbfc;border:1px solid #d1d5da;border-radius:3px;box-shadow:inset 0 -1px 0 #d1d5da}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:0}h1{font-size:32px}h1,h2{font-weight:600}h2{font-size:24px}h3{font-size:20px}h3,h4{font-weight:600}h4{font-size:16px}h5{font-size:14px}h5,h6{font-weight:600}h6{font-size:12px}p{margin-top:0;margin-bottom:10px}blockquote{margin:0}ol,ul{padding-left:0;margin-top:0;margin-bottom:0}ol ol,ul ol{list-style-type:lower-roman}ol ol ol,ol ul ol,ul ol ol,ul ul ol{list-style-type:lower-alpha}dd{margin-left:0}code,pre{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px}pre{margin-top:0;margin-bottom:0}input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{margin:0;-webkit-appearance:none;appearance:none}:checked+.radio-label{position:relative;z-index:1;border-color:#0366d6}.border{border:1px solid #e1e4e8}.border-0{border:0}.border-bottom{border-bottom:1px solid #e1e4e8}.rounded-1{border-radius:3px}.bg-white{background-color:#fff}.bg-gray-light{background-color:#fafbfc}.text-gray-light{color:#6a737d}.mb-0{margin-bottom:0}.my-2{margin-top:8px;margin-bottom:8px}.pl-0{padding-left:0}.py-0{padding-top:0;padding-bottom:0}.pl-1{padding-left:4px}.pl-2{padding-left:8px}.py-2{padding-top:8px;padding-bottom:8px}.pl-3,.px-3{padding-left:16px}.px-3{padding-right:16px}.pl-4{padding-left:24px}.pl-5{padding-left:32px}.pl-6{padding-left:40px}.f6{font-size:12px}.lh-condensed{line-height:1.25}.text-bold{font-weight:600}.pl-c{color:#6a737d}.pl-c1,.pl-s .pl-v{color:#005cc5}.pl-e,.pl-en{color:#6f42c1}.pl-s .pl-s1,.pl-smi{color:#24292e}.pl-ent{color:#22863a}.pl-k{color:#d73a49}.pl-pds,.pl-s,.pl-s .pl-pse .pl-s1,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre{color:#032f62}.pl-smw,.pl-v{color:#e36209}.pl-bu{color:#b31d28}.pl-ii{color:#fafbfc;background-color:#b31d28}.pl-c2{color:#fafbfc;background-color:#d73a49}.pl-c2:before{content:"^M"}.pl-sr .pl-cce{font-weight:700;color:#22863a}.pl-ml{color:#735c0f}.pl-mh,.pl-mh .pl-en,.pl-ms{font-weight:700;color:#005cc5}.pl-mi{font-style:italic;color:#24292e}.pl-mb{font-weight:700;color:#24292e}.pl-md{color:#b31d28;background-color:#ffeef0}.pl-mi1{color:#22863a;background-color:#f0fff4}.pl-mc{color:#e36209;background-color:#ffebda}.pl-mi2{color:#f6f8fa;background-color:#005cc5}.pl-mdr{font-weight:700;color:#6f42c1}.pl-ba{color:#586069}.pl-sg{color:#959da5}.pl-corl{text-decoration:underline;color:#032f62}.mb-0{margin-bottom:0}.my-2{margin-bottom:8px}.my-2{margin-top:8px}.pl-0{padding-left:0}.py-0{padding-top:0;padding-bottom:0}.pl-1{padding-left:4px}.pl-2{padding-left:8px}.py-2{padding-top:8px;padding-bottom:8px}.pl-3{padding-left:16px}.pl-4{padding-left:24px}.pl-5{padding-left:32px}.pl-6{padding-left:40px}.pl-7{padding-left:48px}.pl-8{padding-left:64px}.pl-9{padding-left:80px}.pl-10{padding-left:96px}.pl-11{padding-left:112px}.pl-12{padding-left:128px}hr{border-bottom-color:#eee}kbd{display:inline-block;padding:3px 5px;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:10px;color:#444d56;vertical-align:middle;background-color:#fafbfc;border:1px solid #d1d5da;border-radius:3px;box-shadow:inset 0 -1px 0 #d1d5da}body:after,body:before{display:table;content:""}body:after{clear:both}body>:first-child{margin-top:0}body>:last-child{margin-bottom:0}a:not([href]){color:inherit;text-decoration:none}blockquote,details,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}hr{height:.25em;padding:0;margin:24px 0;background-color:#e1e4e8;border:0}blockquote{padding:0 1em;color:#6a737d;border-left:.25em solid #dfe2e5}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}h1,h2,h3,h4,h5,h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}h1{font-size:2em}h1,h2{padding-bottom:.3em;border-bottom:1px solid #eaecef}h2{font-size:1.5em}h3{font-size:1.25em}h4{font-size:1em}h5{font-size:.875em}h6{font-size:.85em;color:#6a737d}ol,ul{padding-left:2em}ol ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}li{word-wrap:break-all}li>p{margin-top:16px}li+li{margin-top:.25em}dl{padding:0}dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:600}dl dd{padding:0 16px;margin-bottom:16px}table{display:block;width:100%;overflow:auto}table th{font-weight:600}table td,table th{padding:6px 13px;border:1px solid #dfe2e5}table tr{background-color:#fff;border-top:1px solid #c6cbd1}table tr:nth-child(2n){background-color:#f6f8fa}amp-img{max-width:100%;box-sizing:initial;background-color:#fff}amp-img[align=right]{padding-left:20px}amp-img[align=left]{padding-right:20px}code{padding:.2em .4em;margin:0;font-size:85%;background-color:rgba(27,31,35,.05);border-radius:3px}pre{word-wrap:normal}pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:0 0;border:0}.highlight{margin-bottom:16px}.highlight pre{margin-bottom:0;word-break:normal}.highlight pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f6f8fa;border-radius:3px}pre code{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:initial;border:0}.commit-tease-sha{display:inline-block;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:90%;color:#444d56}.full-commit .btn-outline:not(:disabled):hover{color:#005cc5;border-color:#005cc5}.blob-wrapper{overflow-x:auto;overflow-y:hidden}.blob-wrapper-embedded{max-height:240px;overflow-y:auto}.blob-num{width:1%;min-width:50px;padding-right:10px;padding-left:10px;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;line-height:20px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;vertical-align:top;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.blob-num:hover{color:rgba(27,31,35,.6)}.blob-num:before{content:attr(data-line-number)}.blob-code{position:relative;padding-right:10px;padding-left:10px;line-height:20px;vertical-align:top}.blob-code-inner{overflow:visible;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;color:#24292e;word-wrap:normal;white-space:pre}.pl-token.active,.pl-token:hover{cursor:pointer;background:#ffea7f}.tab-size[data-tab-size="1"]{-moz-tab-size:1;tab-size:1}.tab-size[data-tab-size="2"]{-moz-tab-size:2;tab-size:2}.tab-size[data-tab-size="3"]{-moz-tab-size:3;tab-size:3}.tab-size[data-tab-size="4"]{-moz-tab-size:4;tab-size:4}.tab-size[data-tab-size="5"]{-moz-tab-size:5;tab-size:5}.tab-size[data-tab-size="6"]{-moz-tab-size:6;tab-size:6}.tab-size[data-tab-size="7"]{-moz-tab-size:7;tab-size:7}.tab-size[data-tab-size="8"]{-moz-tab-size:8;tab-size:8}.tab-size[data-tab-size="9"]{-moz-tab-size:9;tab-size:9}.tab-size[data-tab-size="10"]{-moz-tab-size:10;tab-size:10}.tab-size[data-tab-size="11"]{-moz-tab-size:11;tab-size:11}.tab-size[data-tab-size="12"]{-moz-tab-size:12;tab-size:12}.task-list-item{list-style-type:none}.task-list-item+.task-list-item{margin-top:3px}.task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}
 
-    <link rel="canonical" href=".">
-    <title>My AMP Page</title>
-    <link rel="manifest" href="/manifest.json">
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "Webpage",
-            "url": "https://www.example.com",
-            "name": "My Webpage",
-            "headline": "webpage title",
-            "description": "Here is the description",
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://www.example.com"
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "The Publisher",
-                "logo": {
-                    "url": "https://www.example.com/logo-blue.svg",
-                    "width": 175,
-                    "height": 60,
-                    "@type": "ImageObject"
-                }
-            },
-            "image": {
-                "@type": "ImageObject",
-                "url": "https://www.example.com/leader.png",
-                "width": 1200,
-                "height": 630
+            /* custom style */
+            figure {
+                margin: 1em auto;
+                text-align: center;
             }
-        }
-    </script>
-</head>
-<body>
-<h1>Hello World</h1>
-<amp-img src="hero-img.jpg"
-         width="1280"
-         height="720"
-         layout="responsive"
-         alt="This is a hero image which should be loaded as fast as possible">
-</amp-img>
-<amp-install-serviceworker src="/sw.js"
-                           data-iframe-src="install-sw.html"
-                           layout="nodisplay">
-</amp-install-serviceworker>
-<amp-analytics type="gtag" data-credentials="include">
-    <script type="application/json">
-        {
-            "vars" : {
-                "gtag_id": "UA-XXXXX-Y",
-                "config" : {
-                    "UA-XXXXX-Y": {
-                        "groups": "default"
+            figure figcaption {
+                font-size: 95%;
+                opacity: .7;
+                margin: 0 auto 1.5em;
+                text-align: center;
+            }
+            figure figcaption a {
+                text-decoration: underline;
+            }
+        </style>
+        <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+        <link rel="canonical" href=".">
+        <title>silverbirder's page</title>
+        <link rel="manifest" href="/manifest.json">
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "Webpage",
+                "url": "https://silver-birder.github.io",
+                "name": "My Portfolio",
+                "headline": "silverbirder my page",
+                "description": "my description",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://silver-birder.github.io"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "silverbirder",
+                    "logo": {
+                        "url": "https://www.example.com/logo-blue.svg",
+                        "width": 175,
+                        "height": 60,
+                        "@type": "ImageObject"
                     }
+                },
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://www.example.com/leader.png",
+                    "width": 1200,
+                    "height": 630
                 }
             }
-        }
-    </script>
-</amp-analytics>
-</body>
+        </script>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😎</text></svg>">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="/">Top</a>
+                <a href="/blog">Blog</a>
+                <a href="/project">Project</a>
+            </nav>
+        </header>
+        <main>
+            <h1>👋Self Intro</h1>
+            <amp-img
+                    src="https://res.cloudinary.com/silverbirder/image/upload/ar_1:1,b_rgb:ffffff,bo_0px_solid_rgb:ffffff,c_fill,g_auto,o_100,r_max,w_180/v1609512845/github/silver-birder/IMG_3040.jpg"
+                    width="180"
+                    height="180"
+                    layout="fixed"
+            ></amp-img>
+            <h3>Biography</h3>
+            <section>
+                <ul>
+                    <li>Masashi Shibamoto</li>
+                    <li>Born on February 14, 1994</li>
+                </ul>
+                <pre>When I was a university student, I developed a WebApp for the first time, and I was so impressed by the output that I could see it.<br>Whenever I have an idea for a WebApp, I try to develop it quickly, cheaply, and easily.</pre>
+            </section>
+            <h3>Interest</h3>
+            <ul>
+                <li>Micro Frontends</li>
+                <li>Workflow Engine</li>
+                <li>Google Cloud Platform</li>
+            </ul>
+            <h3>Career</h3>
+            <table>
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Summary</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>2016/03</td>
+                    <td>👨‍🎓 Graduation Bachelor's Program in Intelligent Information Engineering, Doshisha University</td>
+                </tr>
+                <tr>
+                    <td>2016/04</td>
+                    <td>🏢 Joined an SIer company in Osaka, Japan.</td>
+                </tr>
+                <tr>
+                    <td>2018/07</td>
+                    <td>🏢 Left an SIer company in Osaka, Japan.</td>
+                </tr>
+                <tr>
+                    <td>2018/08</td>
+                    <td>🏢 Joined an Web company in Hyogo, Japan.</td>
+                </tr>
+                <tr>
+                </tbody>
+            </table>
+            <h1>🔮My abilities</h1>
+            <h3>Skill</h3>
+            <figure>
+                <amp-img
+                        src="https://grass-graph.moshimo.works/images/Silver-birder.png"
+                        width="512"
+                        height="96"
+                        layout="responsive"
+                        alt="github my contribution"
+                ></amp-img>
+                <figcaption>
+                    <a href="http://github.com/Silver-birder">github my contribution</a>
+                </figcaption>
+            </figure>
+            <h3>Certification</h3>
+            <table>
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Summary</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>2015/04</td>
+                    <td>💯 Passing IPA:Information-technology Promotion Agency, Japan</td>
+                </tr>
+                <tr>
+                    <td>2017/09</td>
+                    <td>💯 Passing Java SE 8, Oracle</td>
+                </tr>
+                </tbody>
+            </table>
+            <h3>Accomplishment</h3>
+            <table>
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Summary</th>
+                    <th>Detail</th>
+                    <th>Note</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>2019/02</td>
+                    <td>💪 GCP hands-on Commendation</td>
+                    <td><a href="https://event.shoeisha.jp/devsumi/20190214/session/2015/">Developers Summit 2019</a></td>
+                    <td><a href="https://res.cloudinary.com/silverbirder/image/upload/v1551278903/Accomplish%C2%ADments/developers_summit_2019_gcp_handson.jpg">See certificate</a></td>
+                </tr>
+                <tr>
+                    <td>2019/06</td>
+                    <td>🗣 First time on the stage</td>
+                    <td><a href="https://event.shoeisha.jp/devboost/20190615/timetable#tt1810">Developers Boost KANSAI - gateway to success for U30 engineers in Kansai</a></td>
+                    <td><a href="https://www.slideshare.net/monotaro-itd-pr/ss-150331504">Slide</a></td>
+                </tr>
+                <tr>
+                    <td>2019/09</td>
+                    <td>📚 Published first Book</td>
+                    <td><a href="https://techbookfest.org/event/tbf07/circle/5117648689954816">Tech Book Fest 7</a><br>『Introduction to Web Components for the First Time』</td>
+                    <td><a href="https://silverbirder.booth.pm/items/1572900">Sold here</a></td>
+                </tr>
+                <tr>
+                    <td>2019/11</td>
+                    <td>🤝 Participated in the 3rd Zeniketto Circle</td>
+                    <td><a href="https://zeniket.jimdofree.com/">Zeniketto</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2019/12</td>
+                    <td>📸 Got first interview</td>
+                    <td><a href="https://employment.en-japan.com/engineerhub/entry/2019/12/19/103000">Engineer Hub</a></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </main>
+        <footer>
+            <h1>🔗 Links</h1>
+            <section>
+                <a href="https://twitter.com/Silver_birder/">
+                    <amp-img
+                            src="https://img.shields.io/twitter/follow/silver_birder?style=social"
+                            width="128"
+                            height="20"
+                            layout="fixed"
+                    ></amp-img>
+                </a>
+                <a href="https://www.facebook.com/silverbirder/">
+                    <amp-img
+                            src="https://img.shields.io/badge/facebook-social-green?logo=facebook"
+                            width="128"
+                            height="20"
+                            layout="fixed"
+                    ></amp-img>
+                </a>
+                <a href="https://www.google.com/maps/contrib/101722346324226588907/reviews/@34.6907839,135.4537926,13z/">
+                    <amp-img
+                            src="https://img.shields.io/badge/googleMaps-social-green?logo=google-maps"
+                            width="128"
+                            height="20"
+                            layout="fixed"
+                    ></amp-img>
+                </a>
+                <a href="https://www.instagram.com/silverbirder/">
+                    <amp-img
+                            src="https://img.shields.io/badge/instagram-social-green?logo=instagram"
+                            width="128"
+                            height="20"
+                            layout="fixed"
+                    ></amp-img>
+                </a>
+            </section>
+            <section>
+                <a href="https://medium.com/@silverbirder">
+                    <amp-img
+                            src="https://img.shields.io/badge/medium-blog-blue?logo=medium"
+                            width="128"
+                            height="20"
+                            layout="fixed"
+                    ></amp-img>
+                </a>
+                <a href="https://note.com/silverbirder">
+                    <amp-img
+                            src="https://img.shields.io/badge/note-blog-blue?logo=note"
+                            width="64"
+                            height="20"
+                            layout="fixed"
+                    ></amp-img>
+                </a>
+                <a href="https://qiita.com/silverbirder">
+                    <amp-img
+                            src="https://img.shields.io/badge/qiita-blog-blue?logo=qiita"
+                            width="64"
+                            height="20"
+                            layout="fixed"
+                    ></amp-img>
+                </a>
+                <a href="https://scrapbox.io/silverbirder-memo">
+                    <amp-img
+                            src="https://img.shields.io/badge/scrapbox-blog-blue?logo=scrapbox"
+                            width="96"
+                            height="20"
+                            layout="fixed"
+                    ></amp-img>
+                </a>
+                <a href="https://silverbirder180.hatenablog.com/">
+                    <amp-img
+                            src="https://img.shields.io/badge/hatenabookmark-blog-blue?logo=hatena-bookmark"
+                            width="128"
+                            height="20"
+                            layout="fixed"
+                    ></amp-img>
+                </a>
+                <a href="https://zenn.dev/silverbirder">
+                    <amp-img
+                            src="https://img.shields.io/badge/zenn-blog-blue?logo=zenn"
+                            width="64"
+                            height="20"
+                            layout="fixed"
+                    ></amp-img>
+                </a>
+            </section>
+            <section>
+                <a href="https://github.com/Silver-birder">
+                    <amp-img
+                            src="https://img.shields.io/badge/github-tech-red?logo=github"
+                            width="128"
+                            height="20"
+                            layout="fixed"
+                    ></amp-img>
+                </a>
+                <a href="https://silverbirder.booth.pm/">
+                    <amp-img
+                            src="https://img.shields.io/badge/booth-tech-red?logo=pixiv"
+                            width="96"
+                            height="20"
+                            layout="fixed"
+                    ></amp-img>
+                </a>
+                <a href="https://speakerdeck.com/silverbirder">
+                    <amp-img
+                            src="https://img.shields.io/badge/speakerDeck-tech-red?logo=speaker-deck"
+                            width="128"
+                            height="20"
+                            layout="fixed"
+                    ></amp-img>
+                </a>
+                <a href="https://trello.com/b/RNbUvPFw/my-task">
+                    <amp-img
+                            src="https://img.shields.io/badge/trello-tech-red?logo=trello"
+                            width="96"
+                            height="20"
+                            layout="fixed"
+                    ></amp-img>
+                </a>
+            </section>
+            <section>
+                <a href="https://calendar.google.com/calendar/embed?src=silverbirder%40gmail.com&ctz=Asia%2FTokyo">
+                    <amp-img
+                            src="https://img.shields.io/badge/googleCalendar-contact-yellow?logo=google-calendar"
+                            width="128"
+                            height="20"
+                            layout="fixed"
+                    ></amp-img>
+                </a>
+                <a href="mailto:silverbirder@gmail.com">
+                    <amp-img
+                            src="https://img.shields.io/badge/gmail-contact-yellow?logo=gmail"
+                            width="128"
+                            height="20"
+                            layout="fixed"
+                    ></amp-img>
+                </a>
+            </section>
+        </footer>
+        <amp-install-serviceworker src="/sw.js"
+                                   data-iframe-src="install-sw.html"
+                                   layout="nodisplay">
+        </amp-install-serviceworker>
+<!--        <amp-analytics type="gtag" data-credentials="include">-->
+<!--            <script type="application/json">-->
+<!--                {-->
+<!--                    "vars" : {-->
+<!--                        "gtag_id": "UA-XXXXX-Y",-->
+<!--                        "config" : {-->
+<!--                            "UA-XXXXX-Y": {-->
+<!--                                "groups": "default"-->
+<!--                            }-->
+<!--                        }-->
+<!--                    }-->
+<!--                }-->
+<!--            </script>-->
+<!--        </amp-analytics>-->
+    </body>
 </html>
