@@ -12,6 +12,7 @@
         <script async src="https://cdn.ampproject.org/v0.js"></script>
         <script async custom-element="amp-experiment" src="https://cdn.ampproject.org/v0/amp-experiment-0.1.js"></script>
         <script async custom-element="amp-dynamic-css-classes" src="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js"></script>
+        <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
         <!-- Import other AMP Extensions here -->
         <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
         <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
@@ -75,6 +76,10 @@
             }
         </script>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😎</text></svg>">
+        <meta
+                name="amp-script-src"
+                content="sha384-w97R_u1mphbIi4GF657_UJLWbHPHcQbdsanvcVZXon-TZqEDPjWrTPZWHeP5H_-O"
+        />
     </head>
     <body>
         <header>
@@ -85,6 +90,15 @@
             </nav>
         </header>
         <main>
+            <amp-script width="200" height="100" script="hello-world"></amp-script>
+            <script id="hello-world" type="text/plain" target="amp-script">
+              import('https://unpkg.com/preact?module').then((preact) => {
+              // Create your app
+              const app = preact.h('h1', null, 'Hello World!');
+
+              preact.render(app, document.body);
+              });
+            </script>
             <h1>👋Self Intro</h1>
             <amp-img
                     src="https://res.cloudinary.com/silverbirder/image/upload/ar_1:1,b_rgb:ffffff,bo_0px_solid_rgb:ffffff,c_fill,g_auto,o_100,r_max,w_180/v1609512845/github/silver-birder/IMG_3040.jpg"
