@@ -1,5 +1,7 @@
 # ArchUnit
 
+![hero-img](https://res.cloudinary.com/silverbirder/image/upload/v1588513402/micro-frontends-sample-code/micro_frontends_sample.jpg)
+
 [https://www.archunit.org/:embed:cite]
 
 > ArchUnit is a free, simple and extensible library for checking the architecture of your Java code using any plain Java unit test framework. That is, ArchUnit can check dependencies between packages and classes, layers and slices, check for cyclic dependencies and more. It does so by analyzing given Java bytecode, importing all classes into a Java code structure.
@@ -28,7 +30,7 @@ ArchUnitはJava製です。私はTypescriptのArchUnitがしたいです。
 
 全体のソースコードツリーは次の構成です。
 
-```
+```markdown
 src
 └ 1_enterprise_business_rules
   └ entities
@@ -52,30 +54,30 @@ src
 
 各プロダクトコードは、下の階層のファイルをimportしているだけとします。
 
-```typescript
+```javascript
 // src/4_frameworks_and_drivers/web/Web.ts
 import "../../3_interface_adapters/gateways/Gateway"
 import "../../3_interface_adapters/controllers/Controller"
 import "../../3_interface_adapters/presenters/Presenter"
 ```
 
-```typescript
+```javascript
 // src/3_interface_adapters/controllers/Controller.ts
 import "../../2_application_business_rules/use_cases/UseCase"
 ```
 
-```typescript
+```javascript
 // src/2_application_business_rules/use_cases/UseCase.ts
 import "../../1_enterprise_business_rules/entities/Entity"
 ```
 
-```typescript
+```javascript
 // src/1_enterprise_business_rules/entities/Entity.ts
 ```
 
 下記ファイルにあるUMLのコンポーネント図で依存関係を表します。
 
-```{plantuml}
+```markdown
 # clean_architecture.puml
 @startuml
   component [4_frameworks_and_drivers] #Blue
@@ -95,7 +97,7 @@ UMLを可視化すると、下記の図のとおりです。
 
 テストコードは、下記のとおりです。
 
-```typescript
+```javascript
 // clean_architecture.test.ts
 describe("architecture", () => {
     it("Check dependency", async () => {
@@ -115,7 +117,7 @@ describe("architecture", () => {
 
 では、違反コードを書いてみます。
 
-```typescript
+```javascript
 // src/3_interface_adapters/controllers/Controller.ts
 import "../../2_application_business_rules/use_cases/UseCase"
 import "../../4_frameworks_and_drivers/web/Web"

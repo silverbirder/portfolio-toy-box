@@ -5,13 +5,21 @@ const hljs = require('highlight.js');
 const html = require('markdown-it')({
     html: true,
 }).render(markdown);
+
+function decodeHTML(str) {
+    return str
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#039;/g, '\'')
+        .replace(/&#044;/g, ',')
+        .replace(/&amp;/g, '&');
+}
 function replacer(match, p1, p2, p3, p4, p5) {
-    // function decodeHTML(str) {
-    //     return str .replace(/&lt;/g, '<') .replace(/&gt;/g, '>') .replace(/&quot;/g, '"') .replace(/&#039;/g, '\'') .replace(/&#044;/g, ',') .replace(/&amp;/g, '&');
-    // }
-    return p1 + hljs.highlightAuto(p3).value + p5;
+    return p1 + hljs.highlightAuto(decodeHTML(p3)).value + p5;
 }
 const hlHtml = html.replace(/(<code( class="[^"]+")?>)(((?!<\/code).*\n)*?)(<\/code>)/gi, replacer);
+
 const styles = `
 <style amp-custom>
   /* github-markdown.min.css */
@@ -40,8 +48,8 @@ require('@ampproject/toolbox-optimizer')
         markdown: true,
     })
     .transformHtml(
-        hlHtml, {}
+        `<head>${styles}</head>` + decodeHTML(hlHtml), {}
     )
     .then((a) => {
-        console.log(a);
+        fs.writeFileSync("sample.html", a);
     });
