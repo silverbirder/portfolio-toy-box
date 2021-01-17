@@ -1,1 +1,21 @@
+<meta name="amp-script-src" content="sha384-wr2RmtBQ05vkX6uDyViwOKhd_80yf24HFqabRh8M5VBCsrddzqTAindqhb0H60zo">
+<script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
 <h1>📚 Books</h1>
+<amp-script layout="container" script="hello-world">
+    <div>hey</div>
+</amp-script>
+<script id="hello-world" type="text/plain" target="amp-script">
+    import('https://cdn.skypack.dev/algoliasearch').then((module) => {
+      const algoliasearch = module.default;
+      const client = algoliasearch("IK2G3QGL59", "228126acea5bd276469e9549fb22b5bd");
+      const index = client.initIndex("Book");
+      index
+      .search("Dev")
+      .then(({ hits }) => {
+        console.log(hits);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+    });
+</script>
