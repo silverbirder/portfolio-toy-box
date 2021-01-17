@@ -93,5 +93,5 @@ exports.build = series(
 );
 
 exports.watch = () => {
-    watch(['src/**/*.html', 'src/**/*.md'], exports.build)
+    watch(['src/**/*.html', 'src/**/*.md', 'templates/*'], exports.build)
 };
