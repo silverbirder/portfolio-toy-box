@@ -1,59 +1,97 @@
-const { series, parallel } = require('gulp');
-const hljs = require('highlight.js');
-const markdown = require('markdown-it');
-const toolboxOptimizer = require('@ampproject/toolbox-optimizer');
-const fs = require('fs').promises;
+const {series, src, dest, parallel, watch} = require('gulp');
 
-function clean(cb) {
-    // body omitted
-    cb();
-}
+const buildHTML = (content, layout) => {
+    return layout.replace(`<main></main>`, `<main>${content}</main>`)
+};
 
-async function top(cb) {
-    const top = await fs.readFile('./components/top.html', 'utf-8');
-    const layout = await fs.readFile('./templates/layout.html', 'utf-8');
-    const html = layout.replace(`<main></main>`, `<main>${top}</main>`);
-    const opHtml = await toolboxOptimizer
-        .create({})
-        .transformHtml(
-            html, {}
-        );
-    await fs.writeFile('./build/index.html', opHtml);
-    cb();
-}
+const optimizeAMP = async (html, options) => {
+    const toolboxOptimizer = require('@ampproject/toolbox-optimizer');
+    return toolboxOptimizer
+        .create(options)
+        .transformHtml(html, {});
+};
 
-function decodeHTML(str) {
-    return str
-        .replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>')
-        .replace(/&quot;/g, '"')
-        .replace(/&#039;/g, '\'')
-        .replace(/&#044;/g, ',')
-        .replace(/&amp;/g, '&');
-}
+const convertMarkdownToHTML = (markdownContent) => {
+    const markdown = require('markdown-it');
+    const hljs = require('highlight.js');
 
-async function blog(cb) {
-    const blogMarkdown = await fs.readFile('./components/blog/sample.md', 'utf-8');
-    const blog = markdown({
+    const html = markdown({
         html: true,
-    }).render(blogMarkdown);
+    }).render(markdownContent);
 
-    function replacer(match, p1, p2, p3, p4, p5) {
+    const decodeHTML = (str) => {
+        return str
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&quot;/g, '"')
+            .replace(/&#039;/g, '\'')
+            .replace(/&#044;/g, ',')
+            .replace(/&amp;/g, '&');
+    };
+
+    const replacer = (match, p1, p2, p3, p4, p5) => {
         return p1 + hljs.highlightAuto(decodeHTML(p3)).value + p5;
-    }
-    const hlBlogHtml = blog.replace(/(<code( class="[^"]+")?>)(((?!<\/code).*\n)*?)(<\/code>)/gi, replacer);
+    };
 
-    const layout = await fs.readFile('./templates/layout.html', 'utf-8');
-    const html = layout.replace(`<main></main>`, `<main>${hlBlogHtml}</main>`);
-    const opHtml = await toolboxOptimizer
-        .create({
+    return html.replace(/(<code( class="[^"]+")?>)(((?!<\/code).*\n)*?)(<\/code>)/gi, replacer);
+};
+
+const buildHTMLPipeline = async (file, enc, cb) => {
+    const fs = require('fs');
+    const layout = fs.readFileSync('./templates/layout.html', 'utf-8');
+    const html = await optimizeAMP(
+        buildHTML(file.contents.toString(), layout),
+        {}
+    );
+    file.contents = Buffer.from(html);
+    cb(null, file)
+};
+
+const buildMarkdownPipeline = async (file, enc, cb) => {
+    const fs = require('fs');
+    const markdownHtml = convertMarkdownToHTML(file.contents.toString());
+    const layout = fs.readFileSync('./templates/layout.html', 'utf-8');
+    const html = await optimizeAMP(
+        buildHTML(markdownHtml, layout), {
             markdown: true
-        })
-        .transformHtml(
-            html, {}
-        );
-    await fs.writeFile('./build/blog.html', opHtml);
-    cb();
-}
+        });
+    file.contents = Buffer.from(html);
+    cb(null, file)
+};
 
-exports.build = series(clean, parallel(top, blog));
+const buildMarkdownTaskRunner = () => {
+    const rename = require('gulp-rename');
+    const through = require('through2');
+    return src('src/**/*.md')
+        .pipe(through.obj(buildMarkdownPipeline))
+        .pipe(rename({extname: '.html'}))
+        .pipe(dest('build/'))
+};
+
+const buildHTMLTaskRunner = () => {
+    const through = require('through2');
+    return src('src/**/*.html')
+        .pipe(through.obj(buildHTMLPipeline))
+        .pipe(dest('build/'));
+};
+
+const cleanTaskRunner = () => {
+    const clean = require('gulp-clean');
+    return src('build')
+        .pipe(clean());
+};
+
+const copyAssetsRunner = () => {
+    return src('assets/*')
+        .pipe(dest('build/'));
+};
+
+exports.build = series(
+    cleanTaskRunner,
+    parallel(buildMarkdownTaskRunner, buildHTMLTaskRunner),
+    copyAssetsRunner
+);
+
+exports.watch = () => {
+    watch(['src/**/*.html', 'src/**/*.md'], exports.build)
+};
