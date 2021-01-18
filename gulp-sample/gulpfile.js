@@ -1,4 +1,5 @@
 const {series, src, dest, parallel, watch} = require('gulp');
+const DIST_FOLDER_NAME = "build";
 
 const buildHTML = (content, layout) => {
     const mainRegex = new RegExp("<main>(?<content>((?!<\/main).*\n)*?)<\/main>");
@@ -77,25 +78,26 @@ const buildMarkdownTaskRunner = () => {
     return src('src/**/*.md')
         .pipe(through.obj(buildMarkdownPipeline))
         .pipe(rename({extname: '.html'}))
-        .pipe(dest('build/'))
+        .pipe(dest(`${DIST_FOLDER_NAME}/`))
 };
 
 const buildHTMLTaskRunner = () => {
     const through = require('through2');
     return src('src/**/*.html')
         .pipe(through.obj(buildHTMLPipeline))
-        .pipe(dest('build/'));
+        .pipe(dest(`${DIST_FOLDER_NAME}/`));
 };
 
 const cleanTaskRunner = () => {
-    const clean = require('gulp-clean');
-    return src('build')
-        .pipe(clean());
+    const del = require('del');
+    return del([
+        `${DIST_FOLDER_NAME}`
+    ]);
 };
 
 const copyAssetsRunner = () => {
     return src('assets/*')
-        .pipe(dest('build/'));
+        .pipe(dest(`${DIST_FOLDER_NAME}/`));
 };
 
 exports.build = series(
