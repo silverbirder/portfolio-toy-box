@@ -4,23 +4,52 @@
 </head>
 <main>
     <h1>📚 Books</h1>
-    <amp-script layout="container" script="hello-world">
-        <div>hey</div>
+    <amp-script layout="container" script="search">
+        <input
+                type="search"
+                id="search-input"
+                placeholder="Type to search"
+        />
+        <div id="search-results">No results</div>
     </amp-script>
-    <script id="hello-world" type="text/plain" target="amp-script">
+    <script id="search" type="text/plain" target="amp-script">
     import('https://cdn.skypack.dev/algoliasearch').then((module) => {
       const algoliasearch = module.default;
       const client = algoliasearch("IK2G3QGL59", "228126acea5bd276469e9549fb22b5bd");
       const index = client.initIndex("Book");
-      index
-      .search("Dev")
-      .then(({ hits }) => {
-        console.log(hits);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-    });
+      const searchInput = document.querySelector("#search-input");
+      searchInput.addEventListener("input", onInput);
+      async function onInput(event) {
+        const previousSearchResults = document.querySelector("#search-results");
+        const newSearchResults = document.createElement("div");
+        newSearchResults.setAttribute("id", "search-results");
+        if (searchInput.value.length > 0) {
+          const results = (await index.search(searchInput.value)).hits;
+          results.forEach(result => {
+              const item = document.createElement("div");
+              item.classList.add("search-item")
 
+              // amp-script needs to use AMP components
+              const img = document.createElement("amp-img");
+              img.setAttribute("src", result.cover);
+              img.setAttribute("width", 128);
+              img.setAttribute("height", 128);
+              img.setAttribute("layout", 'intrinsic');
+              item.appendChild(img);
+
+              const label = document.createElement("div");
+              let text = result.title;
+              if (text.length > 50) {
+                text = text.substring(0, 50) + '...';
+              }
+              label.textContent = text;
+              item.appendChild(label);
+
+              newSearchResults.appendChild(item);
+          });
+        }
+        document.body.replaceChild(newSearchResults, previousSearchResults);
+      }
+    });
     </script>
 </main>
