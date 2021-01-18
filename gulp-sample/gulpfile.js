@@ -1,7 +1,19 @@
 const {series, src, dest, parallel, watch} = require('gulp');
 
 const buildHTML = (content, layout) => {
-    return layout.replace(`<main></main>`, `<main>${content}</main>`)
+    const mainRegex = new RegExp("<main>(?<content>((?!<\/main).*\n)*?)<\/main>");
+    const headRegex = new RegExp("<head>(?<content>((?!<\/head).*\n)*?)<\/head>");
+    const matchMain = content.match(mainRegex);
+    const matchHead = content.match(headRegex);
+    const matchLayoutMain = layout.match(mainRegex);
+    const matchLayoutHead = layout.match(headRegex);
+    const main = matchMain === null ? "" : matchMain.groups.content;
+    const head = matchHead === null ? "" : matchHead.groups.content;
+    const layoutMain = matchLayoutMain === null ? "" : matchLayoutMain.groups.content;
+    const layoutHead = matchLayoutHead === null ? "" : matchLayoutHead.groups.content;
+    return layout
+        .replace(mainRegex, `<main>${layoutMain}${main}</main>`)
+        .replace(headRegex, `<head>${layoutHead}${head}</head>`);
 };
 
 const optimizeAMP = async (html, options) => {
