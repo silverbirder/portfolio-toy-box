@@ -27,17 +27,15 @@
           const results = (await index.search(searchInput.value)).hits;
           results.forEach(result => {
               const item = document.createElement("div");
-              item.classList.add("search-item")
-
-              // amp-script needs to use AMP components
+              item.classList.add("card");
               const img = document.createElement("amp-img");
               img.setAttribute("src", result.cover);
-              img.setAttribute("width", 128);
-              img.setAttribute("height", 128);
+              img.setAttribute("width", 200);
+              img.setAttribute("height", 280);
               img.setAttribute("layout", 'intrinsic');
               item.appendChild(img);
-
               const label = document.createElement("div");
+              label.classList.add("container");
               let text = result.title;
               if (text.length > 50) {
                 text = text.substring(0, 50) + '...';
