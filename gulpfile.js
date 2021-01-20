@@ -1,5 +1,5 @@
 const {series, src, dest, parallel, watch} = require('gulp');
-const DIST_FOLDER_NAME = "build";
+const DIST_FOLDER_NAME = "docs";
 
 const buildHTML = (content, layout) => {
     const mainRegex = new RegExp("<main>(?<content>((?!<\/main).*\n)*?)<\/main>");
