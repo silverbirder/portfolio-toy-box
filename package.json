@@ -1,8 +1,8 @@
 {
-  "name": "gulp-sample",
+  "name": "portfolio-toy-box",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "build": "gulp build",
     "watch": "gulp watch",
