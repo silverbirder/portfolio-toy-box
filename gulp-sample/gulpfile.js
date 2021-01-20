@@ -65,7 +65,7 @@ const buildMarkdownPipeline = async (file, enc, cb) => {
     const markdownHtml = convertMarkdownToHTML(file.contents.toString());
     const layout = fs.readFileSync('./templates/layout.html', 'utf-8');
     const html = await optimizeAMP(
-        buildHTML(markdownHtml, layout), {
+        buildHTML(`<main>${markdownHtml}</main>`, layout), {
             markdown: true
         });
     file.contents = Buffer.from(html);
