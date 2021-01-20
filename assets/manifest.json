@@ -5,7 +5,7 @@
   "display": "standalone",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
-  "Scope": "/",
+  "Scope": "./",
   "description": "Show the silverbirder's portfolio.",
   "icons": [
     {
