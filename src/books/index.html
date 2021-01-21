@@ -7,12 +7,12 @@
     <amp-script layout="container" script="search">
         <input type="search" id="search-input" placeholder="Type to search" style="
             display: inline;
-            margin-right: 10px;
+            margin-right: 5px;
         ">
         <button id="search-button" style="
             background: none;
             border: none;
-        ">🔍
+        ">alert 🔍
         </button>
         <div id="search-results"></div>
     </amp-script>
@@ -25,6 +25,7 @@
       const searchButton = document.querySelector("#search-button");
       searchButton.addEventListener("click", onInput);
       async function onInput(event) {
+        alert('hey');
         const previousSearchResults = document.querySelector("#search-results");
         const newSearchResults = document.createElement("div");
         newSearchResults.setAttribute("id", "search-results");
