@@ -111,5 +111,3 @@ exports.build = series(
 exports.watch = () => {
     watch(['src/**/*.html', 'src/**/*.md', 'templates/*'], exports.build)
 };
-
-/* baseのURLを指定する方法がないか？ AMP Optimize, gulpどちらでも良い */
