@@ -19,6 +19,7 @@
       const index = client.initIndex("Book");
       const searchInput = document.querySelector("#search-input");
       searchInput.addEventListener("input", onInput);
+      searchInput.addEventListener("change", onInput);
       async function onInput(event) {
         const previousSearchResults = document.querySelector("#search-results");
         const newSearchResults = document.createElement("div");
