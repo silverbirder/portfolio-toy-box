@@ -1,5 +1,6 @@
 const {series, src, dest, parallel, watch} = require('gulp');
 const DIST_FOLDER_NAME = "docs";
+const BASE_URL = "https://silver-birder.github.io/portfolio-toy-box";
 
 const buildHTML = (content, layout) => {
     const mainRegex = new RegExp("<main>(?<content>((?!<\/main).*\n)*?)<\/main>");
@@ -12,9 +13,10 @@ const buildHTML = (content, layout) => {
     const head = matchHead === null ? "" : matchHead.groups.content;
     const layoutMain = matchLayoutMain === null ? "" : matchLayoutMain.groups.content;
     const layoutHead = matchLayoutHead === null ? "" : matchLayoutHead.groups.content;
-    return layout
+    const replacedLayout = layout
         .replace(mainRegex, `<main>${layoutMain}${main}</main>`)
         .replace(headRegex, `<head>${layoutHead}${head}</head>`);
+    return replacedLayout.replace(/BASE_URL/g, BASE_URL);
 };
 
 const optimizeAMP = async (html, options) => {
