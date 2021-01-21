@@ -5,12 +5,16 @@
 <main>
     <h1>📚 Books</h1>
     <amp-script layout="container" script="search">
-        <input
-                type="search"
-                id="search-input"
-                placeholder="Type to search"
-        />
-        <div id="search-results">No results</div>
+        <input type="search" id="search-input" placeholder="Type to search" style="
+            display: inline;
+            margin-right: 10px;
+        ">
+        <button id="search-button" style="
+            background: none;
+            border: none;
+        ">🔍
+        </button>
+        <div id="search-results"></div>
     </amp-script>
     <script id="search" type="text/plain" target="amp-script">
     import('https://cdn.skypack.dev/algoliasearch').then((module) => {
@@ -18,8 +22,8 @@
       const client = algoliasearch("IK2G3QGL59", "228126acea5bd276469e9549fb22b5bd");
       const index = client.initIndex("Book");
       const searchInput = document.querySelector("#search-input");
-      searchInput.addEventListener("input", onInput);
-      searchInput.addEventListener("change", onInput);
+      const searchButton = document.querySelector("#search-button");
+      searchButton.addEventListener("click", onInput);
       async function onInput(event) {
         const previousSearchResults = document.querySelector("#search-results");
         const newSearchResults = document.createElement("div");
@@ -50,5 +54,8 @@
         document.body.replaceChild(newSearchResults, previousSearchResults);
       }
     });
+
+
+
     </script>
 </main>
