@@ -1,6 +1,6 @@
 const {series, src, dest, parallel, watch} = require('gulp');
 const DIST_FOLDER_NAME = "docs";
-const BASE_URL = "https://silver-birder.github.io/portfolio-toy-box";
+const BASE_URL = process.env.BASE_URL || "";
 
 const buildHTML = (content, layout) => {
     const mainRegex = new RegExp("<main>(?<content>((?!<\/main).*\n)*?)<\/main>");

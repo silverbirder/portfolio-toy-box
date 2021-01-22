@@ -4,7 +4,8 @@
   "description": "",
   "main": "",
   "scripts": {
-    "build": "gulp build",
+    "build:dev": "BASE_URL=http://localhost:5000/docs gulp build",
+    "build:prod": "BASE_URL=https://silver-birder.github.io/portfolio-toy-box gulp build",
     "watch": "gulp watch",
     "start": "serve ."
   },
