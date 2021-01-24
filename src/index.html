@@ -134,3 +134,28 @@
         </tbody>
     </table>
 </main>
+
+<!--
+    async getGithub() {
+        const response = await (await fetch('https://api.github.com/users/Silver-birder/repos')).json();
+        const jsonData = response.filter((r) => {
+            return r.fork === false && r.language !== null;
+        }).map((r) => {
+           return {
+               language: r.language,
+               count: 1,
+           }
+        }).reduce((acc, cur) => {
+            if (acc[cur.language] === undefined) {
+                acc[cur.language] = 0;
+            }
+            acc[cur.language] += cur.count;
+            return acc;
+        }, {});
+        const results = [];
+        for (const key in jsonData) {
+            results.push([key, jsonData[key]]);
+        }
+        return results;
+    }
+-->
