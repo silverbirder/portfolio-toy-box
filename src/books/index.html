@@ -30,13 +30,14 @@
               const item = document.createElement("div");
               item.classList.add("card");
               const img = document.createElement("amp-img");
+              img.classList.add("card-img-top");
               img.setAttribute("src", result.cover);
               img.setAttribute("width", 200);
               img.setAttribute("height", 280);
-              img.setAttribute("layout", 'intrinsic');
+              img.setAttribute("layout", 'fixed');
               item.appendChild(img);
               const label = document.createElement("div");
-              label.classList.add("container");
+              label.classList.add("card-body");
               let text = result.title;
               if (text.length > 50) {
                 text = text.substring(0, 50) + '...';
