@@ -50,10 +50,14 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
     console.log('fetch');
     // Skip cross-origin requests, like those for Google Analytics.
-    if (event.request.url.startsWith(self.location.origin)) {
+    if (event.request.url.startsWith(self.location.origin) ||
+        /(algolia|shields)/.test(event.request.url) ||
+        /(png|jpg)$/.test(event.request.url)
+    ) {
         event.respondWith(
             caches.match(event.request).then(cachedResponse => {
                 if (cachedResponse) {
+                    console.log(`hit cache. ${event.request.url}`);
                     return cachedResponse;
                 }
 
@@ -61,6 +65,7 @@ self.addEventListener('fetch', event => {
                     return fetch(event.request).then(response => {
                         // Put a copy of the response in the runtime cache.
                         return cache.put(event.request, response.clone()).then(() => {
+                            console.log(`put cache. ${event.request.url}`);
                             return response;
                         });
                     });
