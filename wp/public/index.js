@@ -6,14 +6,21 @@ let convertedVapidKey, subscription;
         const registration = await navigator.serviceWorker.register('/sw.js', { scope: '/' });
 
         // サーバー側で生成したパブリックキーを取得し、urlBase64ToUint8Array()を使ってUit8Arrayに変換
-        // const res = await fetch('/key');
-        // const vapidPublicKey = await res.text();
-        convertedVapidKey = urlBase64ToUint8Array("BJ5IxJBWdeqFDJTvrZ4wNRu7UY2XigDXjgiUBYEYVXDudxhEs0ReOJRBcBHsPYgZ5dyV8VjyqzbQKS8V7bUAglk");
+        const res = await fetch('/key');
+        const vapidPublicKey = await res.text();
+        convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
 
         // (変換した)パブリックキーをapplicationServerKeyに設定してsubscribe
         subscription = await registration.pushManager.subscribe({
             userVisibleOnly: true,
             applicationServerKey: convertedVapidKey
+        });
+        console.log({
+            endpoint: subscription.endpoint,
+            key: btoa(String.fromCharCode.apply(null, new Uint8Array(subscription.getKey('p256dh'))))
+                .replace(/\+/g, '-').replace(/\//g, '_'),
+            auth: btoa(String.fromCharCode.apply(null, new Uint8Array(subscription.getKey('auth'))))
+                .replace(/\+/g, '-').replace(/\//g, '_')
         });
 
         // 通知の許可を求める
@@ -25,16 +32,16 @@ let convertedVapidKey, subscription;
     }
 })();
 
-// btnWebPushTest.onclick = async evt => {
-//     if (!subscription) return console.log('sbuscription is null');
-//     await fetch('/webpushtest', {
-//         method: 'POST',
-//         body: JSON.stringify(subscription),
-//         headers: {
-//             'Content-Type': 'application/json',
-//         },
-//     });
-// };
+btnWebPushTest.onclick = async evt => {
+    if (!subscription) return console.log('sbuscription is null');
+    await fetch('/webpushtest', {
+        method: 'POST',
+        body: JSON.stringify(subscription),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+};
 
 function urlBase64ToUint8Array(base64String) {
     const padding = '='.repeat((4 - base64String.length % 4) % 4);

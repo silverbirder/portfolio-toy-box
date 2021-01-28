@@ -6,17 +6,16 @@ const webPush = require('web-push');
 
 const app = new Koa();
 const router = new Router();
-const vapidKeys = webPush.generateVAPIDKeys();
 
 webPush.setVapidDetails(
     'mailto:hoge@fuga.piyo', // 第一引数は'mailto:～'というフォーマットでないとだめらしい
-    vapidKeys.publicKey,
-    vapidKeys.privateKey
+    "BAWrcjWdlscQOdRFf0qV3OG4_CXU0xk_qKDPVZG3pMLkRfiNBhPsGRq1jZDpwI_ualZs9cTzaNHmqicmZ8ZVkO8",
+    "Sv8MH3W1jhkwALz3suOSadlhQqov-SiaDTmrerBQGRI"
 );
 
 router
     .get('/key', ctx => {
-        ctx.body = vapidKeys.publicKey;
+        ctx.body = "BAWrcjWdlscQOdRFf0qV3OG4_CXU0xk_qKDPVZG3pMLkRfiNBhPsGRq1jZDpwI_ualZs9cTzaNHmqicmZ8ZVkO8";
     })
     .post('/webpushtest', koaBody(), async ctx => {
         try {

@@ -10,6 +10,7 @@
     <script async custom-element="amp-experiment" src="https://cdn.ampproject.org/v0/amp-experiment-0.1.js"></script>
     <script async custom-element="amp-dynamic-css-classes" src="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-web-push" src="https://cdn.ampproject.org/v0/amp-web-push-0.1.js"></script>
     <!-- Import other AMP Extensions here -->
     <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
@@ -152,6 +153,34 @@
     </nav>
     </ul>
 </amp-sidebar>
+<!-- A subscription widget -->
+<amp-web-push-widget
+        visibility="unsubscribed"
+        layout="fixed"
+        width="250"
+        height="80"
+>
+    <button on="tap:amp-web-push.subscribe">Subscribe to Notifications</button>
+</amp-web-push-widget>
+
+<!-- An unsubscription widget -->
+<amp-web-push-widget
+        visibility="subscribed"
+        layout="fixed"
+        width="250"
+        height="80"
+>
+    <button on="tap:amp-web-push.unsubscribe">
+        Unsubscribe from Notifications
+    </button>
+</amp-web-push-widget>
+<amp-web-push
+        id="amp-web-push"
+        layout="nodisplay"
+        helper-iframe-url="BASE_URL/helper-iframe.html"
+        permission-dialog-url="BASE_URL/permission-dialog.html"
+        service-worker-url="BASE_URL/sw.js"
+></amp-web-push>
 <main></main>
 <footer>
     <h1>🔗 Links</h1>
