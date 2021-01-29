@@ -104,7 +104,7 @@
             margin-top: 50px;
         }
     </style>
-    <link rel="canonical" href=".">
+    <link rel="canonical" href="BASE_URL/">
     <title>silverbirder's page</title>
     <link rel="manifest" href="BASE_URL/manifest.json">
     <script type="application/ld+json">
@@ -153,34 +153,6 @@
     </nav>
     </ul>
 </amp-sidebar>
-<!-- A subscription widget -->
-<amp-web-push-widget
-        visibility="unsubscribed"
-        layout="fixed"
-        width="250"
-        height="80"
->
-    <button on="tap:amp-web-push.subscribe">Subscribe to Notifications</button>
-</amp-web-push-widget>
-
-<!-- An unsubscription widget -->
-<amp-web-push-widget
-        visibility="subscribed"
-        layout="fixed"
-        width="250"
-        height="80"
->
-    <button on="tap:amp-web-push.unsubscribe">
-        Unsubscribe from Notifications
-    </button>
-</amp-web-push-widget>
-<amp-web-push
-        id="amp-web-push"
-        layout="nodisplay"
-        helper-iframe-url="BASE_URL/helper-iframe.html"
-        permission-dialog-url="BASE_URL/permission-dialog.html"
-        service-worker-url="BASE_URL/sw.js"
-></amp-web-push>
 <main></main>
 <footer>
     <h1>🔗 Links</h1>
@@ -321,9 +293,24 @@
         </a>
     </section>
 </footer>
+<amp-web-push-widget
+        visibility="unsubscribed"
+        layout="fixed"
+        width="250"
+        height="80"
+>
+    <button on="tap:amp-web-push.subscribe">Subscribe to Notifications</button>
+</amp-web-push-widget>
 <amp-install-serviceworker src="BASE_URL/sw.js"
                            data-iframe-src="BASE_URL/install-sw.html"
                            layout="nodisplay">
 </amp-install-serviceworker>
+<amp-web-push
+        id="amp-web-push"
+        layout="nodisplay"
+        helper-iframe-url="BASE_URL/helper-iframe"
+        permission-dialog-url="BASE_URL/permission-dialog"
+        service-worker-url="BASE_URL/sw.js"
+></amp-web-push>
 </body>
 </html>

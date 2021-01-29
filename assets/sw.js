@@ -30,8 +30,26 @@ self.addEventListener('install', event => {
 });
 
 // The activate handler takes care of cleaning up old caches.
-self.addEventListener('activate', event => {
+self.addEventListener('activate', async event => {
     console.log('activate');
+    // function urlBase64ToUint8Array(base64String) {
+    //     const padding = '='.repeat((4 - base64String.length % 4) % 4);
+    //     const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
+    //     const rawData = self.atob(base64);
+    //     const outputArray = new Uint8Array(rawData.length);
+    //     for (let i = 0; i < rawData.length; ++i) {
+    //         outputArray[i] = rawData.charCodeAt(i);
+    //     }
+    //     return outputArray;
+    // }
+    // const convertedVapidKey = urlBase64ToUint8Array("BAWrcjWdlscQOdRFf0qV3OG4_CXU0xk_qKDPVZG3pMLkRfiNBhPsGRq1jZDpwI_ualZs9cTzaNHmqicmZ8ZVkO8");
+    //
+    // // (変換した)パブリックキーをapplicationServerKeyに設定してsubscribe
+    // const subscription = await self.registration.pushManager.subscribe({
+    //     userVisibleOnly: true,
+    //     applicationServerKey: convertedVapidKey
+    // });
+    // console.log(subscription);
     const currentCaches = [PRECACHE, RUNTIME];
     event.waitUntil(
         caches.keys().then(cacheNames => {
@@ -47,7 +65,7 @@ self.addEventListener('activate', event => {
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
 // from the network before returning it to the page.
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', async event => {
     console.log('fetch');
     // Skip cross-origin requests, like those for Google Analytics.
     if (event.request.url.startsWith(self.location.origin) ||
