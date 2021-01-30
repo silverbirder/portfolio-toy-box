@@ -152,8 +152,6 @@
   function z(a){var b=a.c.document.querySelector("#close");b&&b.addEventListener("click",function(){a.closeDialog()})}f.closeDialog=function(){if(this.isCurrentDialogPopup())this.c.close();else{var a=this.c.fakeLocation||this.c.location;var b=a.search,d=Object.create(null);if(b)for(var c;c=m.exec(b);){var e=l(c[1],c[1]);c=c[2]?l(c[2],c[2]):"";d[e]=c}var g=d;if(!g["return"])throw Error("Missing required parameter.");var h=l(g["return"],void 0);this.redirectToUrl(h)}};
   function D(a){navigator.permissions.query({name:"notifications"}).then(function(b){b.onchange=function(){A(a);switch(a.c.Notification.permission){case "default":case "granted":C(a)}}})}function A(a){a.c.localStorage.setItem("amp-web-push-notification-permission",a.c.Notification.permission)}function B(a,b){if(a){var d="invisible";b?a.classList.remove(d):a.classList.add(d)}}
   function C(a){a.requestNotificationPermission().then(function(b){A(a);if(a.isCurrentDialogPopup())return a.D.connect(opener,"*"),a.D.send(x.Topics.NOTIFICATION_PERMISSION_STATE,b).then(function(b){var c=b[0];c&&c.closeFrame&&a.closeDialog()});a.closeDialog()})}f.redirectToUrl=function(a){var b=u(a);!b||"http:"!==b.protocol&&"https:"!==b.protocol||(this.c.location.href=a)};window._ampWebPushPermissionDialog=new y({debug:!1});window._ampWebPushPermissionDialog.run();})();
-//# sourceMappingURL=amp-web-push-permission-dialog.js.map
-
 </script>
 </body>
 </html>

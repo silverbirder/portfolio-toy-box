@@ -21,8 +21,6 @@
     f.waitUntilWorkerControlsPage=function(){var a=this;return new Promise(function(b){z(a)?b():a.h.navigator.serviceWorker.addEventListener("controllerchange",function(){z(a)?b():a.h.navigator.serviceWorker.controller.addEventListener("statechange",function(){z(a)&&b()})})})};
     f.run=function(a){var b=this;this.o.on(v.Topics.NOTIFICATION_PERMISSION_STATE,this.N.bind(this));this.o.on(v.Topics.SERVICE_WORKER_STATE,this.R.bind(this));this.o.on(v.Topics.SERVICE_WORKER_REGISTRATION,this.P.bind(this));this.o.on(v.Topics.SERVICE_WORKER_QUERY,this.O.bind(this));this.o.on(v.Topics.STORAGE_GET,this.S.bind(this));this.waitUntilWorkerControlsPage().then(function(){b.h.navigator.serviceWorker.addEventListener("message",b.V.bind(b))});this.o.listen([a||y(this)])};
     window._ampWebPushHelperFrame=new w({debug:!1});window._ampWebPushHelperFrame.run();})();
-  //# sourceMappingURL=amp-web-push-helper-frame.js.map
-
   </script>
 </head>
 <body>
