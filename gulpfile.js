@@ -2,7 +2,7 @@ const {series, src, dest, parallel, watch} = require('gulp');
 const DIST_FOLDER_NAME = "docs";
 const BASE_URL = process.env.BASE_URL || "";
 
-const buildHTML = (content, layout) => {
+const replaceMainAndHeadHTMLTag = (content, layout) => {
     const mainRegex = new RegExp("<main>(?<content>((?!<\/main).*\n)*?)<\/main>");
     const headRegex = new RegExp("<head>(?<content>((?!<\/head).*\n)*?)<\/head>");
     const matchMain = content.match(mainRegex);
@@ -13,10 +13,34 @@ const buildHTML = (content, layout) => {
     const head = matchHead === null ? "" : matchHead.groups.content;
     const layoutMain = matchLayoutMain === null ? "" : matchLayoutMain.groups.content;
     const layoutHead = matchLayoutHead === null ? "" : matchLayoutHead.groups.content;
-    const replacedLayout = layout
+    return layout
         .replace(mainRegex, `<main>${layoutMain}${main}</main>`)
-        .replace(headRegex, `<head>${layoutHead}${head}</head>`);
-    return replacedLayout.replace(/BASE_URL/g, BASE_URL);
+        .replace(headRegex, `<head>${layoutHead}${head}</head>`)
+};
+
+const replaceHeaderHTMLTag = (content) => {
+    const replacer = (match, startTag, value, endTag) => {
+        const normalizedValue = value
+            .toLowerCase()
+            .replace(/[^a-z0-9+]+/gi, '_')
+            .replace(/^_/, '');
+        const anchorTag = `<a class="anchor" aria-label="Anchor" data-anchorjs-icon="#" href="#${normalizedValue}"></a>`;
+        return `${startTag} id="${normalizedValue}">${anchorTag}${value}${endTag}`;
+    };
+
+    return content.replace(/(<h[1-9])>((?!<\/h[1-9]).+)(<\/h[1-9]>)/gi, replacer);
+};
+
+const replaceBaseURL = (content) => {
+    return content.replace(/BASE_URL/g, BASE_URL);
+};
+
+const buildHTML = (content, layout) => {
+    return replaceBaseURL(
+        replaceHeaderHTMLTag(
+            replaceMainAndHeadHTMLTag(content, layout)
+        )
+    );
 };
 
 const optimizeAMP = async (html, options) => {
