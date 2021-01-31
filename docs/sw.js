@@ -16,10 +16,9 @@ const RUNTIME = 'runtime';
 
 const PRECACHE_URLS = [
     'index.html',
-    './', // Alias for index.html
+    './',
 ];
 
-// The install handler takes care of precaching the resources we always need.
 self.addEventListener('install', event => {
     console.log('install');
     event.waitUntil(
@@ -29,8 +28,7 @@ self.addEventListener('install', event => {
     );
 });
 
-// The activate handler takes care of cleaning up old caches.
-self.addEventListener('activate', event => {
+self.addEventListener('activate', async event => {
     console.log('activate');
     const currentCaches = [PRECACHE, RUNTIME];
     event.waitUntil(
@@ -44,12 +42,27 @@ self.addEventListener('activate', event => {
     );
 });
 
-// The fetch handler serves responses for same-origin resources from a cache.
-// If no response is found, it populates the runtime cache with the response
-// from the network before returning it to the page.
+self.addEventListener('message', async event => {
+    // const {command} = event.data;
+    // console.log(`message: ${command}`);
+    // switch (command) {
+    //     case 'amp-web-push-subscribe':
+    //         const convertedVapidKey = urlBase64ToUint8Array("BAWrcjWdlscQOdRFf0qV3OG4_CXU0xk_qKDPVZG3pMLkRfiNBhPsGRq1jZDpwI_ualZs9cTzaNHmqicmZ8ZVkO8");
+    //         const subscription = await self.registration.pushManager.subscribe({
+    //             userVisibleOnly: true,
+    //             applicationServerKey: convertedVapidKey
+    //         });
+    //         console.log(subscription);
+    //         break;
+    //     case 'amp-web-push-subscription-state':
+    //         break;
+    //     default:
+    //         break;
+    // }
+});
+
 self.addEventListener('fetch', event => {
-    console.log('fetch');
-    // Skip cross-origin requests, like those for Google Analytics.
+    console.log(`fetch: ${event.request.url}`);
     if (event.request.url.startsWith(self.location.origin) ||
         /(algolia|shields)/.test(event.request.url) ||
         /(png|jpg)$/.test(event.request.url)
@@ -63,7 +76,6 @@ self.addEventListener('fetch', event => {
 
                 return caches.open(RUNTIME).then(cache => {
                     return fetch(event.request).then(response => {
-                        // Put a copy of the response in the runtime cache.
                         return cache.put(event.request, response.clone()).then(() => {
                             console.log(`put cache. ${event.request.url}`);
                             return response;
@@ -74,3 +86,29 @@ self.addEventListener('fetch', event => {
         );
     }
 });
+
+self.addEventListener('push', event => {
+    const data = event.data.json();
+    console.log(data);
+    const title = data.title;
+    const options = {
+        body: data.body,
+        icon: 'test.jpg'
+    };
+    event.waitUntil(self.registration.showNotification(title, options));
+});
+
+// self.addEventListener('notificationclick', event => {
+//     event.notification.close();
+// });
+
+// const urlBase64ToUint8Array = (base64String) => {
+//     const padding = '='.repeat((4 - base64String.length % 4) % 4);
+//     const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
+//     const rawData = self.atob(base64);
+//     const outputArray = new Uint8Array(rawData.length);
+//     for (let i = 0; i < rawData.length; ++i) {
+//         outputArray[i] = rawData.charCodeAt(i);
+//     }
+//     return outputArray;
+// };
