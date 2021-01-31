@@ -19,16 +19,17 @@ const replaceMainAndHeadHTMLTag = (content, layout) => {
 };
 
 const replaceHeaderHTMLTag = (content) => {
-    const replacer = (match, startTag, value, endTag) => {
+    const replacer = (match, startHeaderNumber, value, endHeaderNumber) => {
         const normalizedValue = value
             .toLowerCase()
             .replace(/[^a-z0-9+]+/gi, '_')
             .replace(/^_/, '');
-        const anchorTag = `<a class="anchor" aria-label="Anchor" data-anchorjs-icon="#" href="#${normalizedValue}"></a>`;
-        return `${startTag} id="${normalizedValue}">${anchorTag}${value}${endTag}`;
+        const anchorIcon = '#'.repeat(parseInt(startHeaderNumber));
+        const anchorTag = `<a class="anchor" aria-label="Anchor" data-anchor-icon="${anchorIcon}" href="#${normalizedValue}"></a>`;
+        return `<h${startHeaderNumber} id="${normalizedValue}">${anchorTag}${value}</h${endHeaderNumber}>`;
     };
 
-    return content.replace(/(<h[1-9])>((?!<\/h[1-9]).+)(<\/h[1-9]>)/gi, replacer);
+    return content.replace(/<h([1-9])>((?!<\/h[1-9]).+)<\/h([1-9])>/gi, replacer);
 };
 
 const replaceBaseURL = (content) => {
