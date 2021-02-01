@@ -1,6 +1,19 @@
+<head>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+</head>
 <main>
     <h1>✍️ Blog</h1>
     <ul>
         <li><a href="BASE_URL/blog/contents/20201201.html">ArchUnit</a></li>
     </ul>
+    <amp-list width="auto"
+              height="100"
+              layout="fixed-height"
+              src="BASE_URL/amp-list-urls.json">
+        <template type="amp-mustache">
+            <div class="url-entry">
+                <a href="{{url}}">{{title}}</a>
+            </div>
+        </template>
+    </amp-list>
 </main>

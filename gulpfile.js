@@ -99,6 +99,39 @@ const buildMarkdownPipeline = async (file, enc, cb) => {
     cb(null, file)
 };
 
+const streamToString = (stream) => {
+    const chunks = [];
+    return new Promise((resolve, reject) => {
+        stream.on('data', chunk => chunks.push(chunk));
+        stream.on('error', reject);
+        stream.on('end', () => resolve(chunks));
+    })
+};
+
+const buildAggregatedJSONPipeline = async (file, enc, cb) => {
+    const path = require('path');
+    const through = require('through2');
+    const filePath = file.history[0];
+    const jsonDir = path.dirname(`${filePath}`);
+    const jsonFile = JSON.parse(file.contents.toString());
+    const jsonList = await streamToString(
+        await src(path.join(jsonDir, jsonFile.source))
+            .pipe(through.obj(extractMarkdownToJSONPipeline))
+    );
+    cb(null, file)
+};
+
+const extractMarkdownToJSONPipeline = async (file, enc, cb) => {
+    const content = file.contents.toString();
+    const headRegex = new RegExp("<!--(?<content>((?!-->).*\n)*?)-->");
+    const head = content.match(headRegex).groups.content.trim();
+    head.split('\n').map((rows) => {
+
+    });
+    file.contents = Buffer.from(JSON.stringify({a: 1}));
+    cb(null, file)
+};
+
 const buildMarkdownTaskRunner = () => {
     const rename = require('gulp-rename');
     const through = require('through2');
@@ -112,6 +145,13 @@ const buildHTMLTaskRunner = () => {
     const through = require('through2');
     return src('src/**/*.html')
         .pipe(through.obj(buildHTMLPipeline))
+        .pipe(dest(`${DIST_FOLDER_NAME}/`));
+};
+
+const buildAggregatedJSONTaskRunner = () => {
+    const through = require('through2');
+    return src('src/**/*.json')
+        .pipe(through.obj(buildAggregatedJSONPipeline))
         .pipe(dest(`${DIST_FOLDER_NAME}/`));
 };
 
@@ -129,10 +169,19 @@ const copyAssetsRunner = () => {
 
 exports.build = series(
     cleanTaskRunner,
-    parallel(buildMarkdownTaskRunner, buildHTMLTaskRunner),
+    parallel(
+        buildMarkdownTaskRunner,
+        buildHTMLTaskRunner,
+        buildAggregatedJSONTaskRunner
+    ),
     copyAssetsRunner
 );
 
 exports.watch = () => {
-    watch(['src/**/*.html', 'src/**/*.md', 'templates/*', 'assets/*'], exports.build)
+    watch([
+        'src/**/*.html',
+        'src/**/*.md',
+        'templates/*',
+        'assets/*'
+    ], exports.build)
 };
