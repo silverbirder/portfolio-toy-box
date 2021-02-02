@@ -76,6 +76,14 @@ const convertMarkdownToHTML = (markdownContent) => {
     return html.replace(/(<code( class="[^"]+")?>)(((?!<\/code).*\n)*?)(<\/code>)/gi, replacer);
 };
 
+const generateCanonicalUrl = (filePath) => {
+    const path = require('path');
+    const contentPath = path
+        .relative(__dirname, filePath)
+        .replace(/^src\//, '');
+    return `${BASE_URL}/${contentPath}`;
+};
+
 const buildHTMLPipeline = async (file, enc, cb) => {
     const fs = require('fs');
     const layout = fs.readFileSync('./templates/layout.html', 'utf-8');
@@ -90,9 +98,11 @@ const buildHTMLPipeline = async (file, enc, cb) => {
 const buildMarkdownPipeline = async (file, enc, cb) => {
     const fs = require('fs');
     const markdownHtml = convertMarkdownToHTML(file.contents.toString());
+    const filePath = file.history[0];
+    const canonicalUrl = generateCanonicalUrl(filePath).replace(/\.md$/, '');
     const layout = fs.readFileSync('./templates/layout.html', 'utf-8');
     const html = await optimizeAMP(
-        buildHTML(`<main>${markdownHtml}</main>`, layout), {
+        buildHTML(`<head>\n<link rel="canonical" href="${canonicalUrl}">\n</head>\n<main>\n${markdownHtml}\n</main>`, layout), {
             markdown: true
         });
     file.contents = Buffer.from(html);
@@ -123,7 +133,7 @@ const buildAggregatedJSONPipeline = async (file, enc, cb) => {
         markdownJson['draft'] = markdownJson['draft'] === 'true';
         const d = new Date(markdownJson['date']);
         markdownJson['date'] = d;
-        markdownJson['humanDate'] = `${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()}`;
+        markdownJson['humanDate'] = `${d.getFullYear()}/${d.getMonth() + 1}/${d.getDate()}`;
         return markdownJson;
     }).filter((markdownJson) => {
         return markdownJson.draft === false
@@ -154,11 +164,8 @@ const extractMarkdownToJSONPipeline = async (file, enc, cb) => {
         const [key, value] = rows.split(splitRegex);
         responseJson[key.trim()] = value.trim();
     });
-    const contentPath = path
-        .relative(__dirname, filePath)
-        .replace(/^src\//, '')
-        .replace(/\.md$/, '.html');
-    responseJson['url'] = `${BASE_URL}/${contentPath}`;
+    responseJson['url'] = generateCanonicalUrl(filePath)
+        .replace(/\.md$/, '');
     file.contents = Buffer.from(JSON.stringify(responseJson));
     cb(null, file)
 };
