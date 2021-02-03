@@ -36,12 +36,19 @@ const replaceBaseURL = (content) => {
     return content.replace(/BASE_URL/g, BASE_URL);
 };
 
+const replaceCanonicalURL = (content) => {
+    const canonicalUrl = content.match(/<link rel="canonical" href="(?<url>[^"]+)">/).groups.url;
+    return content.replace(/CANONICAL_URL/g, canonicalUrl);
+};
+
 const buildHTML = (content, layout) => {
-    return replaceBaseURL(
-        replaceHeaderHTMLTag(
-            replaceMainAndHeadHTMLTag(content, layout)
+    return replaceCanonicalURL(
+        replaceBaseURL(
+            replaceHeaderHTMLTag(
+                replaceMainAndHeadHTMLTag(content, layout)
+            )
         )
-    );
+    )
 };
 
 const optimizeAMP = async (html, options) => {
@@ -102,7 +109,8 @@ const buildMarkdownPipeline = async (file, enc, cb) => {
     const canonicalUrl = generateCanonicalUrl(filePath).replace(/\.md$/, '');
     const layout = fs.readFileSync('./templates/layout.html', 'utf-8');
     const cloneFile = Object.create(file);
-    await extractMarkdownToJSONPipeline(cloneFile, enc, (_1, _2) => {});
+    await extractMarkdownToJSONPipeline(cloneFile, enc, (_1, _2) => {
+    });
     const markdownJson = JSON.parse(cloneFile.contents.toString());
     const headHtml = `<head>\n<link rel="canonical" href="${canonicalUrl}">\n<title>${markdownJson.title} - silverbirder's page</title>\n<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✍</text></svg>">\n</head>\n`;
     const html = await optimizeAMP(
