@@ -1,11 +1,15 @@
 const {optimizeAMP, buildHTML} = require('./utils.js');
+const {generateCanonicalUrl} = require('./utils.js');
 
 const buildHTMLPipeline = async (file, enc, cb) => {
     const fs = require('fs');
     const layout = fs.readFileSync('./templates/layout.html', 'utf-8');
+    const filePath = file.history[0];
+    const canonicalUrl = generateCanonicalUrl(filePath).replace(/index\.html$/, '');
     const html = await optimizeAMP(
-        buildHTML(file.contents.toString(), layout),
-        {}
+        buildHTML(file.contents.toString(), layout, canonicalUrl),
+        {},
+        {canonical: canonicalUrl}
     );
     file.contents = Buffer.from(html);
     cb(null, file)

@@ -24,11 +24,11 @@ const convertMarkdownToHTML = (markdownContent) => {
     }).render(markdownContent);
 };
 
-const optimizeAMP = async (html, options) => {
+const optimizeAMP = async (html, options, transformOptions) => {
     const toolboxOptimizer = require('@ampproject/toolbox-optimizer');
     return toolboxOptimizer
         .create(options)
-        .transformHtml(html, {});
+        .transformHtml(html, transformOptions);
 };
 
 const replaceMainAndHeadHTMLTag = (content, layout) => {
@@ -65,18 +65,17 @@ const replaceBaseURL = (content) => {
     return content.replace(/BASE_URL/g, BASE_URL);
 };
 
-const replaceCanonicalURL = (content) => {
-    const canonicalUrl = content.match(/<link rel="canonical" href="(?<url>[^"]+)">/).groups.url;
+const replaceCanonicalURL = (content, canonicalUrl) => {
     return content.replace(/CANONICAL_URL/g, canonicalUrl);
 };
 
-const buildHTML = (content, layout) => {
+const buildHTML = (content, layout, canonicalUrl) => {
     return replaceCanonicalURL(
         replaceBaseURL(
             replaceHeaderHTMLTag(
                 replaceMainAndHeadHTMLTag(content, layout)
             )
-        )
+        ), canonicalUrl
     )
 };
 
