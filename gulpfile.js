@@ -60,27 +60,9 @@ const optimizeAMP = async (html, options) => {
 
 const convertMarkdownToHTML = (markdownContent) => {
     const markdown = require('markdown-it');
-    const hljs = require('highlight.js');
-
-    const html = markdown({
+    return markdown({
         html: true,
     }).render(markdownContent);
-
-    const decodeHTML = (str) => {
-        return str
-            .replace(/&lt;/g, '<')
-            .replace(/&gt;/g, '>')
-            .replace(/&quot;/g, '"')
-            .replace(/&#039;/g, '\'')
-            .replace(/&#044;/g, ',')
-            .replace(/&amp;/g, '&');
-    };
-
-    const replacer = (match, p1, p2, p3, p4, p5) => {
-        return p1 + hljs.highlightAuto(decodeHTML(p3)).value + p5;
-    };
-
-    return html.replace(/(<code( class="[^"]+")?>)(((?!<\/code).*\n)*?)(<\/code>)/gi, replacer);
 };
 
 const generateCanonicalUrl = (filePath) => {
