@@ -1,4 +1,5 @@
-const {optimizeAMP, buildHTML} = require('./utils.js');
+const {optimizeAMP} = require('./html/optimizeAMP.js');
+const {buildHTML} = require('./html/buildHTML.js');
 const {generateCanonicalUrl} = require('./utils.js');
 
 const buildHTMLPipeline = async (file, enc, cb) => {

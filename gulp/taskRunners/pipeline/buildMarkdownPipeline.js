@@ -1,4 +1,8 @@
-const {generateCanonicalUrl, convertMarkdownToHTML, optimizeAMP, buildHTML} = require('./utils.js');
+const {generateCanonicalUrl} = require('./utils.js');
+const {convertMarkdownToHTML} = require('./html/convertMarkdownToHTML.js');
+const {optimizeAMP} = require('./html/optimizeAMP.js');
+const {buildHTML} = require('./html/buildHTML.js');
+
 const {extractMarkdownToJSONPipeline} = require('./extractMarkdownToJSONPipeline.js');
 
 const buildMarkdownPipeline = async (file, enc, cb) => {
