@@ -6,9 +6,9 @@ exports.build = series(
     parallel(
         runners.buildMarkdownTaskRunner,
         runners.buildHTMLTaskRunner,
-        runners.buildAggregatedJSONTaskRunner
-    ),
-    runners.copyAssetsRunner
+        runners.buildAggregatedJSONTaskRunner,
+        runners.copyAssetsRunner
+    )
 );
 
 exports.watch = () => {
