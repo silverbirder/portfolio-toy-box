@@ -1,5 +1,6 @@
 const {BASE_URL} = require('../../variables.js');
 const jsdom = require('jsdom');
+const hljs = require('highlight.js');
 const {JSDOM} = jsdom;
 
 const concatHeadAndMain = (contentDOM, layoutDOM) => {
@@ -82,6 +83,13 @@ const addLdJson = (layoutDOM, canonicalUrl) => {
     headElement.appendChild(scriptElement);
 };
 
+const highlight = (layoutDOM) => {
+    const codeElementList = layoutDOM.window.document.querySelectorAll('pre code');
+    Array.prototype.forEach.call(codeElementList, (element) => {
+        hljs.highlightBlock(element);
+    });
+};
+
 const buildHTML = (content, layout, canonicalUrl) => {
     const contentDOM = new JSDOM(content);
     const layoutDOM = new JSDOM(layout);
@@ -89,6 +97,7 @@ const buildHTML = (content, layout, canonicalUrl) => {
     addAnchorToHeader(layoutDOM);
     replaceUrl(layoutDOM, canonicalUrl);
     addLdJson(layoutDOM, canonicalUrl);
+    highlight(layoutDOM);
     return layoutDOM.serialize();
 };
 
