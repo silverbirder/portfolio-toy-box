@@ -10,7 +10,7 @@
                 id="search-input"
                 placeholder="Type to search"
         />
-        <div id="search-results">No results</div>
+        <div id="search-results" class="row">No results</div>
     </amp-script>
     <script id="search" type="text/plain" target="amp-script">
       const searchInput = document.querySelector("#search-input");
@@ -20,6 +20,7 @@
         const previousSearchResults = document.querySelector("#search-results");
         const newSearchResults = document.createElement("div");
         newSearchResults.setAttribute("id", "search-results");
+        newSearchResults.classList.add("row");
         if (searchInput.value.length > 0) {
           const results = (await runSearch(searchInput.value)).hits;
           results.forEach(result => {
@@ -40,8 +41,11 @@
               }
               label.textContent = text;
               item.appendChild(label);
-
-              newSearchResults.appendChild(item);
+              const grid = document.createElement("div");
+              grid.classList.add("col-md-3");
+              grid.classList.add("col-sm-12");
+              grid.appendChild(item);
+              newSearchResults.appendChild(grid);
           });
         }
         document.body.replaceChild(newSearchResults, previousSearchResults);
@@ -57,5 +61,6 @@
         })
         return await response.json();
       }
+
     </script>
 </main>
