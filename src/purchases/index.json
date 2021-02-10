@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "image": "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP678/techspecs_13_headline.jpg",
+      "url": "https://support.apple.com/kb/sp678?locale=ja_JP",
+      "name": "MacBook Air (13-inch, 2013)",
+      "width": 248,
+      "height": 148,
+      "date": "2013/01/13"
+    },
+    {
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41niUjjWjmL._AC_SL1050_.jpg",
+      "url": "https://www.amazon.co.jp/gp/product/B0053WYXRG/",
+      "name": "キングジム 電子メモパッド",
+      "width": 460,
+      "height": 703,
+      "date": "202X/XX/XX"
+    }
+  ]
+}

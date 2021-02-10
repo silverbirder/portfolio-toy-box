@@ -6,9 +6,24 @@
 <main>
     <h1>👜 Purchases</h1>
     <h3>Outright</h3>
+    <amp-list width="100"
+              height="100"
+              layout="responsive"
+              src="BASE_URL/purchases/index.json">
+        <template type="amp-mustache">
+            <div class="col-sm-12 col-md-3">
+                <div class="card">
+                    <amp-img class="card-img-top" src="{{image}}" width="{{width}}" height="{{height}}"
+                             layout="responsive">
+                    </amp-img>
+                    <div class="card-body">
+                        <p><a href="{{url}}">{{name}}</a> - {{date}}</p>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </amp-list>
     <ul>
-        <li><a href="https://support.apple.com/kb/sp678?locale=ja_JP">MacBook Air (13-inch, 2013)</a></li>
-        <li><a href="https://www.amazon.co.jp/gp/product/B0053WYXRG/">キングジム 電子メモパッド</a></li>
         <li><a href="https://www.amazon.co.jp/gp/product/B004QJYBAG/">ケンジントン 【正規品・5年保証付き 日本語パッケージ】 SlimBlade Trackball
             72327JP</a></li>
         <li><a href="https://www.amazon.co.jp/dp/B01M6Y3RLI/">怠け者メガネ</a></li>

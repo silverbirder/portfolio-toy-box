@@ -8,6 +8,10 @@ const buildAggregatedJSONPipeline = async (file, enc, cb) => {
     const filePath = file.history[0];
     const jsonDir = path.dirname(`${filePath}`);
     const jsonFile = JSON.parse(file.contents.toString());
+    if (jsonFile.source === undefined) {
+        cb(null, file);
+        return;
+    }
     const jsonList = (await streamToString(
         await src(path.join(jsonDir, jsonFile.source))
             .pipe(through.obj(extractMarkdownToJSONPipeline))
