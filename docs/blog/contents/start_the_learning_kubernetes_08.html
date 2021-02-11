@@ -86,27 +86,28 @@
 <p>Kubernetesでは、Pod毎にIPアドレスが割り振られています。
 そのため、異なるPod間で通信する際は、PodのIPアドレスが必要になります。逆に同一のPod内ならlocalhostで通信できます。</p>
 <p>説明するために、準備します。</p>
-<pre><code class="language-sample-deployment.yaml">apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: sample-deployment
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: sample-app
-  template:
-    metadata:
-      labels:
-        app: sample-app
-    spec:
-      containers:
-        - name: nginx-container
-          image: nginx:1.12
-          ports:
-            - containerPort: 80
-        - name: redis-container
-          image: redis:3.2
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-deployment.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Deployment</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-deployment</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">replicas:</span> <span class="hljs-number">3</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">matchLabels:</span>
+      <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+  <span class="hljs-attr">template:</span>
+    <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">labels:</span>
+        <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">containers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+          <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+          <span class="hljs-attr">ports:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-attr">containerPort:</span> <span class="hljs-number">80</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">redis-container</span>
+          <span class="hljs-attr">image:</span> <span class="hljs-string">redis:3.2</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-deployment.yaml
 pi@raspi001:~/tmp $ k get pods -l app=sample-app -o custom-columns="NAME:{metadata.name}, IP:{status.podIP},NODE:{spec.nodeName}"
@@ -172,19 +173,20 @@ pi@raspi001:~/tmp $ curl 10.244.2.67:80
 自作すると、少し大変です。そこで、Serviceの出番です。
 サービスは、複数存在するPodに対して<strong>自動的にロードバランスしてくれる</strong>のと、合わせて<strong>外向けのIPアドレス</strong>(ExternalIP)や、<strong>内向けのIPアドレス</strong>(ClusterIP)も提供してくれます。</p>
 <p>さっそく、試してみます。</p>
-<pre><code class="language-sample-clusterip.yaml">apiVersion: v1
-kind: Service
-metadata:
-  name: sample-clusterip
-spec:
-  type: ClusterIP
-  ports:
-    - name: "http-port"
-      protocol: "TCP"
-      port: 8080
-      targetPort: 80
-  selector:
-    app: sample-app
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-clusterip.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Service</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-clusterip</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">type:</span> <span class="hljs-string">ClusterIP</span>
+  <span class="hljs-attr">ports:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">"http-port"</span>
+      <span class="hljs-attr">protocol:</span> <span class="hljs-string">"TCP"</span>
+      <span class="hljs-attr">port:</span> <span class="hljs-number">8080</span>
+      <span class="hljs-attr">targetPort:</span> <span class="hljs-number">80</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
 </code></pre>
 <p>これは、<code>app=sample-app</code>にマッチするPodに対してロードバランスしてくれます。外から8080ポートで待ち受けて、80ポートでコンテナへ通信します。
 spec.typeがClusterIPなので、内向けのIPアドレスが提供されています。</p>

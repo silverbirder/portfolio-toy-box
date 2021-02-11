@@ -69,18 +69,19 @@ No resources found.
 <p>使い始めたばかりだと、podが１つもない状態ですね。
 また、DockerForMacでは、もちろん動かしているマシンは一台（VMとか使えば増やせますが）なので、
 MasterNodeとWorkerNodeが同一になっているはずです。試してみます。</p>
-<pre><code class="language-nginx.yaml hljs">apiVersion: <span class="hljs-attribute">v1</span>
-kind: Pod
-metadata:
-  name: nginx
-spec:
-  containers:
-    - name: nginx
-      image: nginx
-      ports:
-       - containerPort: <span class="hljs-number">80</span>
-         name: http
-         protocol: TCP
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># nginx.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Pod</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">nginx</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">containers:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx</span>
+      <span class="hljs-attr">image:</span> <span class="hljs-string">nginx</span>
+      <span class="hljs-attr">ports:</span>
+       <span class="hljs-bullet">-</span> <span class="hljs-attr">containerPort:</span> <span class="hljs-number">80</span>
+         <span class="hljs-attr">name:</span> <span class="hljs-string">http</span>
+         <span class="hljs-attr">protocol:</span> <span class="hljs-string">TCP</span>
 </code></pre>
 <pre><code class="language-console hljs shell">~ $ kubectl apply -f nginx.yaml
 pod "nginx" created

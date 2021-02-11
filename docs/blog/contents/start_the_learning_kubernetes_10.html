@@ -68,28 +68,29 @@
 </table>
 <h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>環境変数</h1>
 <p>静的設定や、Podやコンテナの情報を設定、シークレットでの設定があるみたいです。</p>
-<pre><code class="language-sample-env.yaml">apiVersion: v1
-kind: Pod
-metadata:
-  name: sample-env
-  labels:
-    app: sample-app
-spec:
-  containers:
-    - name: nginx-container
-      image: nginx:1.12
-      env:
-        - name: MAX_CONNECTION
-          value: "100"
-        - name: POD_IP
-          valueFrom:
-           fieldRef:
-            fieldPath: status.podIP
-        - name: LIMITS_CPU
-          valueFrom:
-            resourceFieldRef:
-             containerName: nginx-container
-             resource: limits.cpu
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-env.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Pod</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-env</span>
+  <span class="hljs-attr">labels:</span>
+    <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">containers:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+      <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+      <span class="hljs-attr">env:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">MAX_CONNECTION</span>
+          <span class="hljs-attr">value:</span> <span class="hljs-string">"100"</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">POD_IP</span>
+          <span class="hljs-attr">valueFrom:</span>
+           <span class="hljs-attr">fieldRef:</span>
+            <span class="hljs-attr">fieldPath:</span> <span class="hljs-string">status.podIP</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">LIMITS_CPU</span>
+          <span class="hljs-attr">valueFrom:</span>
+            <span class="hljs-attr">resourceFieldRef:</span>
+             <span class="hljs-attr">containerName:</span> <span class="hljs-string">nginx-container</span>
+             <span class="hljs-attr">resource:</span> <span class="hljs-string">limits.cpu</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-env.yaml
 pi@raspi001:~/tmp $ k exec -it sample-env env
@@ -126,7 +127,8 @@ pi@raspi001:~/tmp $ k get secrets sample-db-auth -o json | jq .data
 }
 </code></pre>
 <h2 id="envfile_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#envfile_"></a>envfile参照</h2>
-<pre><code class="language-env-secret.txt">username=root
+<pre><code class="language-text hljs plaintext"># env-secret.txt
+username=root
 password=rootpassword
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k create secret generic --save-config sample-db-auth2 --from-env-file ./env-secret.txt
@@ -145,14 +147,15 @@ pi@raspi001:~/tmp $ k get secrets sample-db-auth3 -o json | jq .data
 }
 </code></pre>
 <h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>マニュフェスト指定</h2>
-<pre><code class="language-sample-db-auth.yaml">apiVersion: v1
-kind: Secret
-metadata:
-  name: sample-db-auth4
-type: Opaque
-data:
-  username: cm9vdA== # root
-  password: cm9vdHBhc3N3b3Jk # rootpassword
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-db-auth.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Secret</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-db-auth4</span>
+<span class="hljs-attr">type:</span> <span class="hljs-string">Opaque</span>
+<span class="hljs-attr">data:</span>
+  <span class="hljs-attr">username:</span> <span class="hljs-string">cm9vdA==</span> <span class="hljs-comment"># root</span>
+  <span class="hljs-attr">password:</span> <span class="hljs-string">cm9vdHBhc3N3b3Jk</span> <span class="hljs-comment"># rootpassword</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-db-auth.yaml
 pi@raspi001:~/tmp $ k get secrets sample-db-auth4 -o json | jq .data
@@ -167,20 +170,21 @@ Genericは扱いやすくて良いですね。</p>
 <h1 id="secret_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#secret_"></a>Secretの利用</h1>
 <p>手段として、環境変数かVolumeかの2つです。</p>
 <h2 id="secret_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#secret_"></a>環境変数からSecretを使う</h2>
-<pre><code class="language-sample-secret-single-env.yaml">apiVersion: v1
-kind: Pod
-metadata:
-  name: sample-secret-single-env
-spec:
-  containers:
-    - name: secret-container
-      image: nginx:1.12
-      env:
-        - name: DB_USERNAME
-          valueFrom:
-            secretKeyRef:
-              name: sample-db-auth
-              key: username
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-secret-single-env.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Pod</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-secret-single-env</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">containers:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">secret-container</span>
+      <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+      <span class="hljs-attr">env:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">DB_USERNAME</span>
+          <span class="hljs-attr">valueFrom:</span>
+            <span class="hljs-attr">secretKeyRef:</span>
+              <span class="hljs-attr">name:</span> <span class="hljs-string">sample-db-auth</span>
+              <span class="hljs-attr">key:</span> <span class="hljs-string">username</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-secret-single-env.yaml
 pi@raspi001:~/tmp $ k exec -it sample-secret-single-env env | grep DB_USERNAME
@@ -188,24 +192,25 @@ DB_USERNAME=root
 </code></pre>
 <p>環境変数から使う場合、値が固定されてしまいます。（静的）</p>
 <h2 id="volume_secret_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#volume_secret_"></a>VolumeからSecretを使う</h2>
-<pre><code class="language-sample-secret-single-volume.yaml">apiVersion: v1
-kind: Pod
-metadata:
-  name: sample-secret-single-volume
-spec:
-  containers:
-    - name: secret-container
-      image: nginx:1.12
-      volumeMounts:
-      - name: config-volume
-        mountPath: /config
-  volumes:
-    - name: config-volume
-      secret:
-        secretName: sample-db-auth
-        items:
-        - key: username
-          path: username.txt
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-secret-single-volume.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Pod</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-secret-single-volume</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">containers:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">secret-container</span>
+      <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+      <span class="hljs-attr">volumeMounts:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">config-volume</span>
+        <span class="hljs-attr">mountPath:</span> <span class="hljs-string">/config</span>
+  <span class="hljs-attr">volumes:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">config-volume</span>
+      <span class="hljs-attr">secret:</span>
+        <span class="hljs-attr">secretName:</span> <span class="hljs-string">sample-db-auth</span>
+        <span class="hljs-attr">items:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">key:</span> <span class="hljs-string">username</span>
+          <span class="hljs-attr">path:</span> <span class="hljs-string">username.txt</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-secret-single-volume.yaml
 pi@raspi001:~/tmp $ k exec -it sample-secret-single-volume cat /config/username.txt
@@ -231,7 +236,8 @@ amin
 <p>設定情報をKey-Value形式で登録することができます。
 こちらも手段としては、ファイル参照、直接参照、マニフェスト参照があります。
 さっきと同じなので、ファイル参照のみ試してみます。</p>
-<pre><code class="language-sample.txt">hogehoge
+<pre><code class="language-text hljs plaintext"># sample.txt
+hogehoge
 fugafuga
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k create configmap --save-config sample-configmap --from-file=./sample.txt

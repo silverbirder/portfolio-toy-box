@@ -82,18 +82,19 @@ pi@raspi001:~/tmp $ k label node raspi003 cputype=low disksize=300
 <p>最も簡単なNodeAffinityの設定です。
 指定するラベルに属するNodeにPodを割り当てるようスケジューリングします。簡易なので、equality-baseのみしか指定できません。</p>
 <p>では、disksizeが300のNode(raspi003)にPodを配置しましょう。</p>
-<pre><code class="language-sample-nodeselector.yaml">apiVersion: v1
-kind: Pod
-metadata:
-  name: sample-nodeselector
-  labels:
-    app: sample-app
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx:1.12
-  nodeSelector:
-    disksize: "300"
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-nodeselector.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Pod</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-nodeselector</span>
+  <span class="hljs-attr">labels:</span>
+    <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">containers:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+  <span class="hljs-attr">nodeSelector:</span>
+    <span class="hljs-attr">disksize:</span> <span class="hljs-string">"300"</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-nodeselector.yaml
 pi@raspi001:~/tmp $ k get pods sample-nodeselector -o wide
@@ -105,31 +106,32 @@ nodeSelectorはイコールでしか表現できないので、柔軟性に欠�
 <h1 id="affinity"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#affinity"></a>Affinity</h1>
 <p>Affinityは、NodeSelectorよりも柔軟に設定できます。つまり、set-basedの指定方法です。
 詳しくは<a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement">こちら</a>を参照下さい。今回はInオペレータを使います。</p>
-<pre><code class="language-sample-node-affinity.yaml">apiVersion: v1
-kind: Pod
-metadata:
-  name: sample-node-affinity
-spec:
-  affinity:
-    nodeAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
-        nodeSelectorTerms:
-        - matchExpressions:
-          - key: disktype
-            operator: In
-            values:
-            - hdd
-      preferredDuringSchedulingIgnoredDuringExecution:
-      - weight: 1
-        preference:
-          matchExpressions:
-          - key: kubernetes.io/hostname
-            operator: In
-            values:
-            - raspi002
-  containers:
-  - name: nginx-container
-    image: nginx:1.12
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-node-affinity.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Pod</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-node-affinity</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">affinity:</span>
+    <span class="hljs-attr">nodeAffinity:</span>
+      <span class="hljs-attr">requiredDuringSchedulingIgnoredDuringExecution:</span>
+        <span class="hljs-attr">nodeSelectorTerms:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">matchExpressions:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">key:</span> <span class="hljs-string">disktype</span>
+            <span class="hljs-attr">operator:</span> <span class="hljs-string">In</span>
+            <span class="hljs-attr">values:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-string">hdd</span>
+      <span class="hljs-attr">preferredDuringSchedulingIgnoredDuringExecution:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">weight:</span> <span class="hljs-number">1</span>
+        <span class="hljs-attr">preference:</span>
+          <span class="hljs-attr">matchExpressions:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">key:</span> <span class="hljs-string">kubernetes.io/hostname</span>
+            <span class="hljs-attr">operator:</span> <span class="hljs-string">In</span>
+            <span class="hljs-attr">values:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-string">raspi002</span>
+  <span class="hljs-attr">containers:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
 </code></pre>
 <p>NodeAffinityでは、requiredとpreferredの2つ設定できます。</p>
 <ul>
@@ -166,13 +168,14 @@ pi@raspi001:~/tmp $ k uncordon raspi002
 </code></pre>
 <h2 id="and_or"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#and_or"></a>ANDとOR</h2>
 <p>nodeSelectorTermsやmatchExpressionsは配列なので複数指定できます。</p>
-<pre><code class="language-sample.yaml">nodeSelectorTerms:
-  - matchExpressions:
-    - A
-    - B
-  - matchExpressions:
-    - C
-    - D
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample.yaml</span>
+<span class="hljs-attr">nodeSelectorTerms:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">matchExpressions:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">A</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">B</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">matchExpressions:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">C</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">D</span>
 </code></pre>
 <p>上記の場合は、 (A and B) OR (C and D)という条件になります。</p>
 <h1 id="anti_affinity"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#anti_affinity"></a>Anti-Affinity</h1>
@@ -187,24 +190,25 @@ pi@raspi001:~/tmp $ k get pods sample-nodeselector -o wide
 NAME                  READY   STATUS    RESTARTS   AGE   IP             NODE       NOMINATED NODE   READINESS GATES
 sample-nodeselector   1/1     Running   0          36m   10.244.2.130   raspi003   &lt;none&gt;           &lt;none&gt;
 </code></pre>
-<pre><code class="language-sample-pod-affinity-host.yaml">apiVersion: v1
-kind: Pod
-metadata:
-  name: sample-pod-affinity-host
-spec:
-  affinity:
-    podAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
-      - labelSelector:
-          matchExpressions:
-          - key: app
-            operator: In
-            values:
-            - sample-app
-        topologyKey: kubernetes.io/hostname
-  containers:
-  - name: nginx-container
-    image: nginx:1.12
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-pod-affinity-host.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Pod</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-pod-affinity-host</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">affinity:</span>
+    <span class="hljs-attr">podAffinity:</span>
+      <span class="hljs-attr">requiredDuringSchedulingIgnoredDuringExecution:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">labelSelector:</span>
+          <span class="hljs-attr">matchExpressions:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">key:</span> <span class="hljs-string">app</span>
+            <span class="hljs-attr">operator:</span> <span class="hljs-string">In</span>
+            <span class="hljs-attr">values:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-string">sample-app</span>
+        <span class="hljs-attr">topologyKey:</span> <span class="hljs-string">kubernetes.io/hostname</span>
+  <span class="hljs-attr">containers:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
 </code></pre>
 <p>これだと、sample-appがあるNodeでkubernetes.io/hostname(=raspi003)と同じNodeにPodを割り振ります。つまり、raspi003にできるはずです。</p>
 <pre><code class="hljs elixir">pi<span class="hljs-variable">@raspi001</span><span class="hljs-symbol">:~/tmp</span> <span class="hljs-variable">$ </span>k apply -f sample-pod-affinity-host.yaml
@@ -214,34 +218,35 @@ sample-pod-affinity-host   0/<span class="hljs-number">1</span>     ContainerCre
 </code></pre>
 <p>期待通りraspi003にできています。
 また、requiredだけでなく、preferredも設定できます。</p>
-<pre><code class="language-sample-pod-affinity-arch.yaml">apiVersion: v1
-kind: Pod
-metadata:
-  name: sample-pod-affinity-arch
-spec:
-  affinity:
-    podAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
-        - labelSelector:
-            matchExpressions:
-            - key: app
-              operator: In
-              values:
-              - sample-app
-          topologyKey: kubernetes.io/arch
-      preferredDuringSchedulingIgnoredDuringExecution:
-        - weight: 1
-          podAffinityTerm:
-            labelSelector:
-              matchExpressions:
-              - key: app
-                operator: In
-                values:
-                - sample-app
-            topologyKey: kubernetes.io/hostname
-  containers:
-    - name: nginx-container
-      image: nginx:1.12
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-pod-affinity-arch.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Pod</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-pod-affinity-arch</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">affinity:</span>
+    <span class="hljs-attr">podAffinity:</span>
+      <span class="hljs-attr">requiredDuringSchedulingIgnoredDuringExecution:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">labelSelector:</span>
+            <span class="hljs-attr">matchExpressions:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-attr">key:</span> <span class="hljs-string">app</span>
+              <span class="hljs-attr">operator:</span> <span class="hljs-string">In</span>
+              <span class="hljs-attr">values:</span>
+              <span class="hljs-bullet">-</span> <span class="hljs-string">sample-app</span>
+          <span class="hljs-attr">topologyKey:</span> <span class="hljs-string">kubernetes.io/arch</span>
+      <span class="hljs-attr">preferredDuringSchedulingIgnoredDuringExecution:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">weight:</span> <span class="hljs-number">1</span>
+          <span class="hljs-attr">podAffinityTerm:</span>
+            <span class="hljs-attr">labelSelector:</span>
+              <span class="hljs-attr">matchExpressions:</span>
+              <span class="hljs-bullet">-</span> <span class="hljs-attr">key:</span> <span class="hljs-string">app</span>
+                <span class="hljs-attr">operator:</span> <span class="hljs-string">In</span>
+                <span class="hljs-attr">values:</span>
+                <span class="hljs-bullet">-</span> <span class="hljs-string">sample-app</span>
+            <span class="hljs-attr">topologyKey:</span> <span class="hljs-string">kubernetes.io/hostname</span>
+  <span class="hljs-attr">containers:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+      <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
 </code></pre>
 <p>必須条件としては、下記のとおりです。</p>
 <ul>
@@ -291,21 +296,22 @@ Taints:             env=prd:NoSchedule
 <h1 id="tolerations"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#tolerations"></a>Tolerations</h1>
 <p>さきほど汚したNodeに対して、許容(Tolerations)できるPodを作成しましょう。</p>
 <p>keyとvalue(env=prd)とEffect(NoSchedule)が設定されたPodのみ許容されます。作ってみます。</p>
-<pre><code class="language-sample-tolerations.yaml">apiVersion: v1
-kind: Pod
-metadata:
-  name: sample-tolerations
-spec:
-  containers:
-    - name: nginx-container
-      image: nginx:1.12
-  tolerations:
-  - key: "env"
-    operator: "Equal"
-    value: "prd"
-    effect: "NoSchedule"
-  nodeSelector:
-    disksize: "300"
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-tolerations.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Pod</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-tolerations</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">containers:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+      <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+  <span class="hljs-attr">tolerations:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">key:</span> <span class="hljs-string">"env"</span>
+    <span class="hljs-attr">operator:</span> <span class="hljs-string">"Equal"</span>
+    <span class="hljs-attr">value:</span> <span class="hljs-string">"prd"</span>
+    <span class="hljs-attr">effect:</span> <span class="hljs-string">"NoSchedule"</span>
+  <span class="hljs-attr">nodeSelector:</span>
+    <span class="hljs-attr">disksize:</span> <span class="hljs-string">"300"</span>
 </code></pre>
 <p>※ nodeSelectorで汚れたNodeであるraspi003を指定するようにしています。</p>
 <p>operatorには、2種類あります。</p>

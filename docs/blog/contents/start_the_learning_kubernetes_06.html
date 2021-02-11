@@ -34,24 +34,25 @@
 ReplicaSetとの違いは、各ノードに1つずつ配置するのがDaemonSet,バラバラなのがReplicaSet。
 用途として、モニタリングツールやログ収集のPodに使う。</p>
 <p>さっそく、試してみます。</p>
-<pre><code class="language-sample-ds.yaml">apiVersion: apps/v1
-kind: DaemonSet
-metadata:
-  name: sample-ds
-spec:
-  selector:
-    matchLabels:
-      app: sample-app
-  template:
-    metadata:
-      labels:
-        app: sample-app
-    spec:
-      containers:
-        - name: nginx-container
-          image: nginx:1.12
-          ports:
-            - containerPort: 80
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-ds.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">DaemonSet</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-ds</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">matchLabels:</span>
+      <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+  <span class="hljs-attr">template:</span>
+    <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">labels:</span>
+        <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">containers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+          <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+          <span class="hljs-attr">ports:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-attr">containerPort:</span> <span class="hljs-number">80</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f . --all --prune
 daemonset.apps/sample-ds created
@@ -70,24 +71,25 @@ daemonset.apps/sample-ds   2         2         2       2            2           
 また、各ノードに対してpodが作られていることがわかります。</p>
 <p>Deploymentと似ているアップデート戦略があり、OnDeleteとRollingUpdate(デフォルト)があります。前者は、podを明示的に削除した(<code>k delete</code>)際に更新する戦略です。DaemonSetは、死活監視やログ収集に使うので、手動でのタイミングが効くOnDeleteが好まれます。後者は、Deploymentと同じ動きで、即時更新していく戦略です。</p>
 <p>ReplicaSetと似ているようで、機能的にはDeploymentに近い感じですね。ReplicaSetはpodが削除されたら複製されますけど、アップデートされません。DaemonSetはpodが削除されたら複製するし、アップデートもされます。試してみます。</p>
-<pre><code class="language-sample-ds.yaml">apiVersion: apps/v1
-kind: DaemonSet
-metadata:
-  name: sample-ds
-spec:
-  selector:
-    matchLabels:
-      app: sample-app
-  template:
-    metadata:
-      labels:
-        app: sample-app
-    spec:
-      containers:
-        - name: nginx-container
-          image: nginx:1.13
-          ports:
-            - containerPort: 80
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-ds.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">DaemonSet</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-ds</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">matchLabels:</span>
+      <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+  <span class="hljs-attr">template:</span>
+    <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">labels:</span>
+        <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">containers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+          <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.13</span>
+          <span class="hljs-attr">ports:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-attr">containerPort:</span> <span class="hljs-number">80</span>
 </code></pre>
 <p>nginxのバージョンを1.12から1.13に変更しました。</p>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f . --all --prune
@@ -123,38 +125,39 @@ daemonset.apps/sample-ds   2         2         1       2            1           
 podを削除しても、データを永続的に保存する仕組みが存在。
 動作自体は、replicaSetと似ている。</p>
 <p>さっそく、試してみます。</p>
-<pre><code class="language-sample-statefulset.yaml">apiVersion: apps/v1
-kind: StatefulSet
-metadata:
-  name: sample-statefulset
-spec:
-  serviceName: sample-statefulset
-  replicas: 3
-  selector:
-    matchLabels:
-      app: sample-app
-  template:
-    metadata:
-      labels:
-        app: sample-app
-    spec:
-      containers:
-        - name: nginx-container
-          image: nginx:1.12
-          ports:
-            - containerPort: 80
-          volumeMounts:
-          - name: www
-            mountPath: /usr/share/nginx/html
-  volumeClaimTemplates:
-  - metadata:
-      name: www
-    spec:
-      accessModes:
-      - ReadWriteOnce
-      resources:
-        requests:
-          storage: 1G
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-statefulset.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">StatefulSet</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-statefulset</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">serviceName:</span> <span class="hljs-string">sample-statefulset</span>
+  <span class="hljs-attr">replicas:</span> <span class="hljs-number">3</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">matchLabels:</span>
+      <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+  <span class="hljs-attr">template:</span>
+    <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">labels:</span>
+        <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">containers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+          <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+          <span class="hljs-attr">ports:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-attr">containerPort:</span> <span class="hljs-number">80</span>
+          <span class="hljs-attr">volumeMounts:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">www</span>
+            <span class="hljs-attr">mountPath:</span> <span class="hljs-string">/usr/share/nginx/html</span>
+  <span class="hljs-attr">volumeClaimTemplates:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">name:</span> <span class="hljs-string">www</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">accessModes:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">ReadWriteOnce</span>
+      <span class="hljs-attr">resources:</span>
+        <span class="hljs-attr">requests:</span>
+          <span class="hljs-attr">storage:</span> <span class="hljs-string">1G</span>
 </code></pre>
 <p>mountPathで指定したマウントしたいパスを、volumeClaimTemplatesでマウントしてくれます。 どこに？
 Storageに関しては別で学習することにします。
@@ -290,39 +293,40 @@ class.yamlが、今回欲していたNFSのstorageClass(managed-nfs-storage)に�
 しかし、<a href="https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client">nfs-client</a>には、<strong>dynamic provisioning</strong>という機能が備わっており、PersistentVolumeを作らなくても、PersistentVolumeClaimするだけで良くなります。この件については、storageを学習する際に書きます。</p>
 <p>raspi001に移動して、sample-statefulset.yamlをもう一度applyします。
 (storageClassName: managed-nfs-storageを追加, ReadWriteOnce→ReadWriteManyに変更)</p>
-<pre><code class="language-sample-statefulset.yaml">apiVersion: apps/v1
-kind: StatefulSet
-metadata:
-  name: sample-statefulset
-spec:
-  serviceName: sample-statefulset
-  replicas: 3
-  selector:
-    matchLabels:
-      app: sample-app
-  template:
-    metadata:
-      labels:
-        app: sample-app
-    spec:
-      containers:
-        - name: nginx-container
-          image: nginx:1.12
-          ports:
-            - containerPort: 80
-          volumeMounts:
-          - name: www
-            mountPath: /usr/share/nginx/html
-  volumeClaimTemplates:
-  - metadata:
-      name: www
-    spec:
-      accessModes:
-      - ReadWriteMany
-      storageClassName: managed-nfs-storage
-      resources:
-        requests:
-          storage: 1Gi
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-statefulset.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">StatefulSet</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-statefulset</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">serviceName:</span> <span class="hljs-string">sample-statefulset</span>
+  <span class="hljs-attr">replicas:</span> <span class="hljs-number">3</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">matchLabels:</span>
+      <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+  <span class="hljs-attr">template:</span>
+    <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">labels:</span>
+        <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">containers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+          <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+          <span class="hljs-attr">ports:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-attr">containerPort:</span> <span class="hljs-number">80</span>
+          <span class="hljs-attr">volumeMounts:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">www</span>
+            <span class="hljs-attr">mountPath:</span> <span class="hljs-string">/usr/share/nginx/html</span>
+  <span class="hljs-attr">volumeClaimTemplates:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">name:</span> <span class="hljs-string">www</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">accessModes:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">ReadWriteMany</span>
+      <span class="hljs-attr">storageClassName:</span> <span class="hljs-string">managed-nfs-storage</span>
+      <span class="hljs-attr">resources:</span>
+        <span class="hljs-attr">requests:</span>
+          <span class="hljs-attr">storage:</span> <span class="hljs-string">1Gi</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-statefulset.yaml
 </code></pre>

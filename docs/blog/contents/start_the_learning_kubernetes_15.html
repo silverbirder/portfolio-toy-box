@@ -31,13 +31,14 @@
 <p><a href="https://qiita.com/silverbirder/items/cae4649d9f9336bc01fd">一足遅れて Kubernetes を学び始める - 14. スケジューリング -</a>では、AffinityなどでPodのスケジューリングについて学習しました。今回は、セキュリティについて学習します。</p>
 <h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>サービスアカウント</h1>
 <p>Podで実行するためのプロセスを制御するために割り振られるアカウントのことをサービスアカウントというそうです。</p>
-<pre><code class="language-sample-serviceaccount.yaml">apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: sample-serviceaccount
-  namespace: default
-imagePullSecrets:
-  - name: hogehoge
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-serviceaccount.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">ServiceAccount</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-serviceaccount</span>
+  <span class="hljs-attr">namespace:</span> <span class="hljs-string">default</span>
+<span class="hljs-attr">imagePullSecrets:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">hogehoge</span>
 </code></pre>
 <p>これをapplyしてみます。</p>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-serviceaccount.yaml
@@ -141,28 +142,30 @@ Error from server (Forbidden): pods is forbidden: User "system:serviceaccount:de
 <p>元に戻ります。</p>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k config use-context kubernetes-admin@kubernetes
 </code></pre>
-<pre><code class="language-sample-role.yaml">apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
-metadata:
-  name: sample-role
-rules:
-- apiGroups: [""]
-  resources: ["pods"]
-  verbs: ["get", "watch", "list"]
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-role.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">rbac.authorization.k8s.io/v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Role</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-role</span>
+<span class="hljs-attr">rules:</span>
+<span class="hljs-bullet">-</span> <span class="hljs-attr">apiGroups:</span> [<span class="hljs-string">""</span>]
+  <span class="hljs-attr">resources:</span> [<span class="hljs-string">"pods"</span>]
+  <span class="hljs-attr">verbs:</span> [<span class="hljs-string">"get"</span>, <span class="hljs-string">"watch"</span>, <span class="hljs-string">"list"</span>]
 </code></pre>
-<pre><code class="language-sample-rolebinding.yaml">apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
-metadata:
-  name: sample-rolebinding
-  namespace: default
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: Role
-  name: sample-role
-subjects:
-- kind: ServiceAccount
-  name: sample-serviceaccount
-  namespace: default
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-rolebinding.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">rbac.authorization.k8s.io/v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">RoleBinding</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-rolebinding</span>
+  <span class="hljs-attr">namespace:</span> <span class="hljs-string">default</span>
+<span class="hljs-attr">roleRef:</span>
+  <span class="hljs-attr">apiGroup:</span> <span class="hljs-string">rbac.authorization.k8s.io</span>
+  <span class="hljs-attr">kind:</span> <span class="hljs-string">Role</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-role</span>
+<span class="hljs-attr">subjects:</span>
+<span class="hljs-bullet">-</span> <span class="hljs-attr">kind:</span> <span class="hljs-string">ServiceAccount</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-serviceaccount</span>
+  <span class="hljs-attr">namespace:</span> <span class="hljs-string">default</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-role.yaml
 pi@raspi001:~/tmp $ k apply -f sample-rolebinding.yaml
@@ -180,18 +183,19 @@ NAME                                      READY   STATUS    RESTARTS   AGE
 <h1 id="securitycontext"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#securitycontext"></a>SecurityContext</h1>
 <p>コンテナに対してセキュリティ設定をすることができます。
 例えば、Capabilitiesの追加・削除、実行するユーザ、グループの変更、ファイルのReadOnly化などができるそうです。</p>
-<pre><code class="language-sample-capabilities.yaml">apiVersion: v1
-kind: Pod
-metadata:
-  name: sample-capabilities
-spec:
-  containers:
-    - name: nginx-container
-      image: nginx:1.12
-      securityContext:
-        capabilities:
-          add: ["SYS_ADMIN"]
-          drop: ["AUDIT_WRITE"]
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-capabilities.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Pod</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-capabilities</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">containers:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+      <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+      <span class="hljs-attr">securityContext:</span>
+        <span class="hljs-attr">capabilities:</span>
+          <span class="hljs-attr">add:</span> [<span class="hljs-string">"SYS_ADMIN"</span>]
+          <span class="hljs-attr">drop:</span> [<span class="hljs-string">"AUDIT_WRITE"</span>]
 </code></pre>
 <p>applyし、中身を確認してみます。</p>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-capabilities.yaml
@@ -206,21 +210,22 @@ root@sample-capabilities:/# exit
 <h1 id="podsecuritycontext"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#podsecuritycontext"></a>PodSecurityContext</h1>
 <p>Pod(全てのコンテナ)に対してセキュリティ設定をすることができます。
 例えば、実行するユーザやグループの制御、root実行を拒否したり、カーネルパラメータを上書きすることもできます。</p>
-<pre><code class="language-sample-runuser.yaml">apiVersion: v1
-kind: Pod
-metadata:
-  name: sample-runuser
-spec:
-  securityContext:
-    runAsUser: 99
-    # runAsGroup: 99
-    supplementalGroups:
-    - 1001
-    - 1002
-  containers:
-    - name: centos-container
-      image: centos:7
-      command: ["/bin/sleep", "3600"]
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-runuser.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Pod</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-runuser</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">securityContext:</span>
+    <span class="hljs-attr">runAsUser:</span> <span class="hljs-number">99</span>
+    <span class="hljs-comment"># runAsGroup: 99</span>
+    <span class="hljs-attr">supplementalGroups:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">1001</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">1002</span>
+  <span class="hljs-attr">containers:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">centos-container</span>
+      <span class="hljs-attr">image:</span> <span class="hljs-string">centos:7</span>
+      <span class="hljs-attr">command:</span> [<span class="hljs-string">"/bin/sleep"</span>, <span class="hljs-string">"3600"</span>]
 </code></pre>
 <p>では、applyしています。</p>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-runuser.yaml

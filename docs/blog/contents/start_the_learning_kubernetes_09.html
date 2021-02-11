@@ -41,21 +41,22 @@
 <p>※ ClusterIPを飛ばしたのは、前回使った内容で十分だと思ったため。</p>
 <h1 id="externalip"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#externalip"></a>ExternalIP</h1>
 <p>こちらは、外向けのIPアドレスを割り振ります。</p>
-<pre><code class="language-sample-externalip.yaml">apiVersion: v1
-kind: Service
-metadata:
-  name: sample-externalip
-spec:
-  type: ClusterIP
-  externalIPs:
-    - 192.168.3.33
-  ports:
-    - name: "http-port"
-      protocol: "TCP"
-      port: 8080
-      targetPort: 80
-  selector:
-    app: sample-app
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-externalip.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Service</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-externalip</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">type:</span> <span class="hljs-string">ClusterIP</span>
+  <span class="hljs-attr">externalIPs:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">192.168</span><span class="hljs-number">.3</span><span class="hljs-number">.33</span>
+  <span class="hljs-attr">ports:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">"http-port"</span>
+      <span class="hljs-attr">protocol:</span> <span class="hljs-string">"TCP"</span>
+      <span class="hljs-attr">port:</span> <span class="hljs-number">8080</span>
+      <span class="hljs-attr">targetPort:</span> <span class="hljs-number">80</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
 </code></pre>
 <p>私のNode情報では、下記の状態です。</p>
 <table>
@@ -86,27 +87,28 @@ spec:
 </table>
 <p>ここで、spec. externalIPsに、公開したいIPアドレスを上記NodeのIPアドレスより設定します。
 今回は、１つだけ(raspi002:193.168.3.33)にしました。</p>
-<pre><code class="language-sample-deployment.yaml">apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: sample-deployment
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: sample-app
-  template:
-    metadata:
-      labels:
-        app: sample-app
-    spec:
-      containers:
-        - name: nginx-container
-          image: nginx:1.12
-          ports:
-            - containerPort: 80
-        - name: redis-container
-          image: redis:3.2
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-deployment.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Deployment</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-deployment</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">replicas:</span> <span class="hljs-number">3</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">matchLabels:</span>
+      <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+  <span class="hljs-attr">template:</span>
+    <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">labels:</span>
+        <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">containers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+          <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+          <span class="hljs-attr">ports:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-attr">containerPort:</span> <span class="hljs-number">80</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">redis-container</span>
+          <span class="hljs-attr">image:</span> <span class="hljs-string">redis:3.2</span>
 </code></pre>
 <p>前回同様のファイルを用意します。</p>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-deployment.yaml -f sample-externalip.yaml
@@ -130,20 +132,21 @@ sample-externalip   ClusterIP   10.104.170.220   192.168.3.33   8080/TCP   15m
 <h1 id="nodeport"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#nodeport"></a>NodePort</h1>
 <p>ExternalIPのような特定Nodeを公開するのと違って、NodePortは、<strong>全て</strong>のNodeを公開します。</p>
 <p>試してみます。</p>
-<pre><code class="language-sample-nodeport.yaml">apiVersion: v1
-kind: Service
-metadata:
-  name: sample-nodeport
-spec:
-  type: NodePort
-  ports:
-    - name: "http-port"
-      protocol: "TCP"
-      port: 8080
-      targetPort: 80
-      nodePort: 30080
-  selector:
-    app: sample-app
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-nodeport.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Service</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-nodeport</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">type:</span> <span class="hljs-string">NodePort</span>
+  <span class="hljs-attr">ports:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">"http-port"</span>
+      <span class="hljs-attr">protocol:</span> <span class="hljs-string">"TCP"</span>
+      <span class="hljs-attr">port:</span> <span class="hljs-number">8080</span>
+      <span class="hljs-attr">targetPort:</span> <span class="hljs-number">80</span>
+      <span class="hljs-attr">nodePort:</span> <span class="hljs-number">30080</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k delete -f sample-externalip.yaml #しなくても良い
 pi@raspi001:~/tmp $ k apply -f sample-nodeport.yaml
@@ -165,39 +168,41 @@ sample-nodeport   NodePort    10.96.173.243   &lt;none&gt;        8080:30080/TCP
 <blockquote>
 <p>MetalLB is a load-balancer implementation for bare metal Kubernetes clusters, using standard routing protocols.</p>
 </blockquote>
-<pre><code class="language-l2-config.yaml">apiVersion: v1
-kind: ConfigMap
-metadata:
-  namespace: metallb-system
-  name: config
-data:
- config: |
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># l2-config.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">ConfigMap</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">namespace:</span> <span class="hljs-string">metallb-system</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">config</span>
+<span class="hljs-attr">data:</span>
+ <span class="hljs-attr">config:</span> <span class="hljs-string">|
   address-pools:
   - name: default
     protocol: layer2
     addresses:
     - 192.168.3.100-192.168.3.200
-</code></pre>
+</span></code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f l2-config.yaml
 </code></pre>
 <p>これで、raspberryPi環境でもloadBalancerが使えます。さっそくつかってみましょう。</p>
-<pre><code class="language-sample-lb.yaml">apiVersion: v1
-kind: Service
-metadata:
-  name: sample-lb
-spec:
-  type: LoadBalancer
-  loadBalancerIP: 192.168.3.100
-  ports:
-    - name: "http-port"
-      protocol: "TCP"
-      port: 8080
-      targetPort: 80
-      nodePort: 30082
-  selector:
-    app: sample-app
-  loadBalancerSourceRanges:
-  - 192.168.3.0/8
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-lb.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Service</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-lb</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">type:</span> <span class="hljs-string">LoadBalancer</span>
+  <span class="hljs-attr">loadBalancerIP:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.3</span><span class="hljs-number">.100</span>
+  <span class="hljs-attr">ports:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">"http-port"</span>
+      <span class="hljs-attr">protocol:</span> <span class="hljs-string">"TCP"</span>
+      <span class="hljs-attr">port:</span> <span class="hljs-number">8080</span>
+      <span class="hljs-attr">targetPort:</span> <span class="hljs-number">80</span>
+      <span class="hljs-attr">nodePort:</span> <span class="hljs-number">30082</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+  <span class="hljs-attr">loadBalancerSourceRanges:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-number">192.168</span><span class="hljs-number">.3</span><span class="hljs-number">.0</span><span class="hljs-string">/8</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-deployment.yaml
 pi@raspi001:~/tmp $ k apply -f sample-lb.yaml
@@ -218,39 +223,41 @@ sample-lb    LoadBalancer   10.106.253.65   192.168.3.100   8080:30082/TCP   8m4
 DNS ラウンドロビンによる転送先のPodのIPアドレスを取得できます。
 つまり、Headlessのサービスへ問い合わせすると、spec.selectorで登録したPodのIPアドレスが手に入ります。
 PodのIPアドレスがほしいときには便利です。（Envoyとか?）</p>
-<pre><code class="language-sample-statefulset-headless.yaml">apiVersion: apps/v1
-kind: StatefulSet
-metadata:
-  name: sample-statefulset-headless
-spec:
-  serviceName: sample-headless
-  replicas: 3
-  selector:
-    matchLabels:
-      app: sample-app
-  template:
-    metadata:
-      labels:
-        app: sample-app
-    spec:
-      containers:
-        - name: nginx-container
-          image: nginx:1.12
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-statefulset-headless.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">StatefulSet</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-statefulset-headless</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">serviceName:</span> <span class="hljs-string">sample-headless</span>
+  <span class="hljs-attr">replicas:</span> <span class="hljs-number">3</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">matchLabels:</span>
+      <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+  <span class="hljs-attr">template:</span>
+    <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">labels:</span>
+        <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">containers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+          <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
 </code></pre>
-<pre><code class="language-sample-headless.yaml">apiVersion: v1
-kind: Service
-metadata:
-  name: sample-headless
-spec:
-  type: ClusterIP
-  clusterIP: None
-  ports:
-    - name: "http-port"
-      protocol: "TCP"
-      port: 80
-      targetPort: 80
-  selector:
-    app: sample-app
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-headless.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Service</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-headless</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">type:</span> <span class="hljs-string">ClusterIP</span>
+  <span class="hljs-attr">clusterIP:</span> <span class="hljs-string">None</span>
+  <span class="hljs-attr">ports:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">"http-port"</span>
+      <span class="hljs-attr">protocol:</span> <span class="hljs-string">"TCP"</span>
+      <span class="hljs-attr">port:</span> <span class="hljs-number">80</span>
+      <span class="hljs-attr">targetPort:</span> <span class="hljs-number">80</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
 </code></pre>
 <p>spec.typeがClusterIPであり、spec.clusterIPがNone、そして、metadata.nameがstatefulsetのspec.serviceNameと同じことで、Headless Serviceと呼ぶそうです。</p>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-statefulset-headless.yaml
@@ -268,14 +275,15 @@ sample-headless.default.svc.cluster.local. 5 IN	A 10.244.2.70
 <h1 id="externalname"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#externalname"></a>ExternalName</h1>
 <p>外部のドメイン宛のCNAMEを返すサービスです。
 例えば、Podから外部の<a href="http://example.com/">example.com</a>へアクセスする場合、下記のように設定します。</p>
-<pre><code class="language-sample-externalname.yaml">kind: Service
-apiVersion: v1
-metadata:
-  name: sample-externalname
-  namespace: default
-spec:
-  type: ExternalName
-  externalName: example.com
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-externalname.yaml</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Service</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-externalname</span>
+  <span class="hljs-attr">namespace:</span> <span class="hljs-string">default</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">type:</span> <span class="hljs-string">ExternalName</span>
+  <span class="hljs-attr">externalName:</span> <span class="hljs-string">example.com</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-externalname.yaml
 pi@raspi001:~/tmp $ k run --image=centos:7 --restart=Never --rm -i testpod  -- dig sample-externalname.default.svc.cluster.local
@@ -287,29 +295,30 @@ example.com.		5	IN	A	93.184.216.34
 <p>確かに、<code>sample-externalname.default.svc.cluster.local</code>と問い合わせすることで、外部の<a href="http://example.com/">example.com</a>へのCNAMEを取得できます。また、外部のサイトを切り替えたいときは、問い合わせ先は<strong>変わらず</strong>に、sample-externalname.yamlのspec.externalNameを変更するだけで済みます。これは切り替えが楽ですね。</p>
 <h1 id="none_selector"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#none_selector"></a>None-Selector</h1>
 <p>外部のサービスに対してロードバランシングします。</p>
-<pre><code class="language-sample-none-selector.yaml">---
-kind: Service
-apiVersion: v1
-metadata:
-  name: sample-none-selector
-spec:
-  type: ClusterIP
-  ports:
-  - protocol: TCP
-    port: 8080
-    targetPort: 80
----
-kind: Endpoints
-apiVersion: v1
-metadata:
-  name: sample-none-selector
-subsets:
-  - addresses:
-    - ip: 172.217.31.164
-    - ip: 172.217.31.165
-    ports:
-      - protocol: TCP
-        port: 80
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-none-selector.yaml</span>
+<span class="hljs-meta">---</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Service</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-none-selector</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">type:</span> <span class="hljs-string">ClusterIP</span>
+  <span class="hljs-attr">ports:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">protocol:</span> <span class="hljs-string">TCP</span>
+    <span class="hljs-attr">port:</span> <span class="hljs-number">8080</span>
+    <span class="hljs-attr">targetPort:</span> <span class="hljs-number">80</span>
+<span class="hljs-meta">---</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Endpoints</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-none-selector</span>
+<span class="hljs-attr">subsets:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">addresses:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">ip:</span> <span class="hljs-number">172.217</span><span class="hljs-number">.31</span><span class="hljs-number">.164</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">ip:</span> <span class="hljs-number">172.217</span><span class="hljs-number">.31</span><span class="hljs-number">.165</span>
+    <span class="hljs-attr">ports:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">protocol:</span> <span class="hljs-string">TCP</span>
+        <span class="hljs-attr">port:</span> <span class="hljs-number">80</span>
 </code></pre>
 <p>172.217.31.164と172.217.31.165は、どちらも<a href="https://www.google.com/">www.google.com</a>を指します。</p>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-none-selector.yaml

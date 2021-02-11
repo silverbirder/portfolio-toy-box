@@ -85,16 +85,17 @@ Pod毎にIPアドレスが振られる。ボリュームは共有。
 基本的に、Podにコンテナを詰め込めるのではなく、「分離できるなら、分離する」方針がマイクロサービスとして良いそうです。
 さっそく、動かしてみます。</p>
 <p>※ <code>alias k=kubectl</code></p>
-<pre><code class="language-sample-2pod.yaml">apiVersion: v1
-kind: Pod
-metadata:
-  name: sample-2pod
-spec:
-  containers:
-    - name: nginx-container
-      image: nginx:1.12
-    - name: redis-container
-      image: redis:3.2
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-2pod.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Pod</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-2pod</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">containers:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+      <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">redis-container</span>
+      <span class="hljs-attr">image:</span> <span class="hljs-string">redis:3.2</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f . --prune --all
 pod/sample-2pod created
@@ -122,25 +123,26 @@ redis-containerに入る場合は、</p>
 <p>レプリカという名前だけあって、Podを複製するリソース。
 過去の経緯からReplicationControllerからReplicaSetへ名前変更があったため、ReplicaSetを使うことが推奨</p>
 <p>さっそく、動かしてみます。</p>
-<pre><code class="language-sample-rs.yaml">apiVersion: apps/v1
-kind: ReplicaSet
-metadata:
-  name: sample-rs
-spec:
-  replicas: 3
-  selector:
-   matchLabels:
-    app: sample-app
-  template:
-   metadata:
-    labels:
-     app: sample-app
-   spec:
-    containers:
-      - name: nginx-container
-        image: nginx:1.12
-      - name: redis-container
-        image: redis:3.2
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-rs.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">ReplicaSet</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-rs</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">replicas:</span> <span class="hljs-number">3</span>
+  <span class="hljs-attr">selector:</span>
+   <span class="hljs-attr">matchLabels:</span>
+    <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+  <span class="hljs-attr">template:</span>
+   <span class="hljs-attr">metadata:</span>
+    <span class="hljs-attr">labels:</span>
+     <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+   <span class="hljs-attr">spec:</span>
+    <span class="hljs-attr">containers:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+        <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">redis-container</span>
+        <span class="hljs-attr">image:</span> <span class="hljs-string">redis:3.2</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f . --prune --all
 replicaset.apps/sample-rs created
@@ -245,27 +247,28 @@ sample-rsは、全てraspi002で動いているので、下記を試してみま
 <li>raspi002をシャットダウン</li>
 </ol>
 <p>その結果、「sample-rsはraspi002が動いていないので、セルフヒーリングしない」ことを期待します。</p>
-<pre><code class="language-sample-rs.yaml">apiVersion: apps/v1
-kind: ReplicaSet
-metadata:
-  name: sample-rs
-spec:
-  replicas: 3
-  selector:
-   matchLabels:
-    app: sample-app
-  template:
-   metadata:
-    labels:
-     app: sample-app
-   spec:
-    containers:
-      - name: nginx-container
-        image: nginx:1.12
-      - name: redis-container
-        image: redis:3.2
-    nodeSelector:
-        type: AWS
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-rs.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">ReplicaSet</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-rs</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">replicas:</span> <span class="hljs-number">3</span>
+  <span class="hljs-attr">selector:</span>
+   <span class="hljs-attr">matchLabels:</span>
+    <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+  <span class="hljs-attr">template:</span>
+   <span class="hljs-attr">metadata:</span>
+    <span class="hljs-attr">labels:</span>
+     <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+   <span class="hljs-attr">spec:</span>
+    <span class="hljs-attr">containers:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+        <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">redis-container</span>
+        <span class="hljs-attr">image:</span> <span class="hljs-string">redis:3.2</span>
+    <span class="hljs-attr">nodeSelector:</span>
+        <span class="hljs-attr">type:</span> <span class="hljs-string">AWS</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f . --prune --all
 replicaset.apps/sample-rs configured
@@ -342,25 +345,26 @@ Name:               sample-rs-4srpp
 </code></pre>
 <p>podは変化なしのようです。
 では、Deploymentを使ってみます。</p>
-<pre><code class="language-sample-deployment.yaml">apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: sample-deployment
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: sample-app
-  template:
-    metadata:
-      labels:
-        app: sample-app
-    spec:
-      containers:
-        - name: nginx-container
-          image: nginx:1.12
-          ports:
-            - containerPort: 80
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-deployment.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Deployment</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-deployment</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">replicas:</span> <span class="hljs-number">3</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">matchLabels:</span>
+      <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+  <span class="hljs-attr">template:</span>
+    <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">labels:</span>
+        <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">containers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+          <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+          <span class="hljs-attr">ports:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-attr">containerPort:</span> <span class="hljs-number">80</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f . --prune --all --record
 replicaset.apps/sample-rs configured
@@ -390,25 +394,26 @@ replicaset.apps/sample-rs                     3         3         3       8h
 </code></pre>
 <p>sample-deploymentが、deployment,replicaset,podを作成しました。</p>
 <p>では、sample-deploymentのnginxコンテナを1.12から1.13に更新してみます。</p>
-<pre><code class="language-sample-deployment.yaml">apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: sample-deployment
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: sample-app
-  template:
-    metadata:
-      labels:
-        app: sample-app
-    spec:
-      containers:
-        - name: nginx-container
-          image: nginx:1.13
-          ports:
-            - containerPort: 80
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-deployment.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Deployment</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-deployment</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">replicas:</span> <span class="hljs-number">3</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">matchLabels:</span>
+      <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+  <span class="hljs-attr">template:</span>
+    <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">labels:</span>
+        <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">containers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+          <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.13</span>
+          <span class="hljs-attr">ports:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-attr">containerPort:</span> <span class="hljs-number">80</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f . --prune --all --record
 replicaset.apps/sample-rs unchanged

@@ -108,30 +108,31 @@ Allocated resources:
 </tbody>
 </table>
 <p>では、リソース制限を試してみましょう。</p>
-<pre><code class="language-sample-resource.yaml">apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: sample-resource
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: sample-app
-  template:
-    metadata:
-      labels:
-        app: sample-app
-    spec:
-      containers:
-        - name: nginx-container
-          image: nginx:1.12
-          resources:
-            requests:
-              memory: "128Mi"
-              cpu: "300m"
-            limits:
-              memory: "256Mi"
-              cpu: "600m"
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-resource.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Deployment</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-resource</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">replicas:</span> <span class="hljs-number">3</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">matchLabels:</span>
+      <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+  <span class="hljs-attr">template:</span>
+    <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">labels:</span>
+        <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">containers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+          <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+          <span class="hljs-attr">resources:</span>
+            <span class="hljs-attr">requests:</span>
+              <span class="hljs-attr">memory:</span> <span class="hljs-string">"128Mi"</span>
+              <span class="hljs-attr">cpu:</span> <span class="hljs-string">"300m"</span>
+            <span class="hljs-attr">limits:</span>
+              <span class="hljs-attr">memory:</span> <span class="hljs-string">"256Mi"</span>
+              <span class="hljs-attr">cpu:</span> <span class="hljs-string">"600m"</span>
 </code></pre>
 <p>applyするpodで要求するmemoryの下限合計は384Mi(128Mi×3),cpuは900m(300m×3)です。
 これだと、podがrunするはずです。</p>
@@ -239,15 +240,16 @@ requestsは、パフォーマンステストをしつつ最適化していきま
 <h1 id="resourcequota"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#resourcequota"></a>ResourceQuota</h1>
 <p>ResourceQuotaを使うことで、Namespaceごとに「作成可能なリソース数の制限」と「リソース使用量の制限」ができます。
 「作成可能なリソース数の制限」を試そうと思います。</p>
-<pre><code class="language-sample-resourcequota.yaml">apiVersion: v1
-kind: ResourceQuota
-metadata:
-  name: sample-resourcequota
-  namespace: default
-spec:
-  hard:
-    # 作成可能なリソースの数
-    count/pods: 5
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-resourcequota.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">ResourceQuota</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-resourcequota</span>
+  <span class="hljs-attr">namespace:</span> <span class="hljs-string">default</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">hard:</span>
+    <span class="hljs-comment"># 作成可能なリソースの数</span>
+    <span class="hljs-attr">count/pods:</span> <span class="hljs-number">5</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k delete -f sample-resource.yaml
 pi@raspi001:~/tmp $ k apply -f sample-resourcequota.yaml

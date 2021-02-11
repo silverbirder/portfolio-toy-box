@@ -30,39 +30,40 @@
 <h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>前回</h1>
 <p><a href="https://qiita.com/silverbirder/items/d3522237b28703a9adb6">一足遅れて Kubernetes を学び始める - 06. workloads その2 -</a>にて、DaemonSetとStatefulSet(一部）を学習しました。今回は、StatefulSetの続きとJob,CronJobを学習します。</p>
 <h1 id="statefulset"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#statefulset"></a>StatefulSet</h1>
-<pre><code class="language-sample-statefulset.yaml">apiVersion: apps/v1
-kind: StatefulSet
-metadata:
-  name: sample-statefulset
-spec:
-  serviceName: sample-statefulset
-  replicas: 3
-  selector:
-    matchLabels:
-      app: sample-app
-  template:
-    metadata:
-      labels:
-        app: sample-app
-    spec:
-      containers:
-        - name: nginx-container
-          image: nginx:1.12
-          ports:
-            - containerPort: 80
-          volumeMounts:
-          - name: www
-            mountPath: /usr/share/nginx/html
-  volumeClaimTemplates:
-  - metadata:
-      name: www
-    spec:
-      accessModes:
-      - ReadWriteMany
-      storageClassName: managed-nfs-storage
-      resources:
-        requests:
-          storage: 1Gi
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-statefulset.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">StatefulSet</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-statefulset</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">serviceName:</span> <span class="hljs-string">sample-statefulset</span>
+  <span class="hljs-attr">replicas:</span> <span class="hljs-number">3</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">matchLabels:</span>
+      <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+  <span class="hljs-attr">template:</span>
+    <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">labels:</span>
+        <span class="hljs-attr">app:</span> <span class="hljs-string">sample-app</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">containers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+          <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+          <span class="hljs-attr">ports:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-attr">containerPort:</span> <span class="hljs-number">80</span>
+          <span class="hljs-attr">volumeMounts:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">www</span>
+            <span class="hljs-attr">mountPath:</span> <span class="hljs-string">/usr/share/nginx/html</span>
+  <span class="hljs-attr">volumeClaimTemplates:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">name:</span> <span class="hljs-string">www</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">accessModes:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">ReadWriteMany</span>
+      <span class="hljs-attr">storageClassName:</span> <span class="hljs-string">managed-nfs-storage</span>
+      <span class="hljs-attr">resources:</span>
+        <span class="hljs-attr">requests:</span>
+          <span class="hljs-attr">storage:</span> <span class="hljs-string">1Gi</span>
 </code></pre>
 <p>永続的にデータが保存されるかどうか確認します。</p>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-statefulset.yaml
@@ -118,17 +119,18 @@ sample-statefulset-2                      0/1     Terminating   0          10h
 <p>戦略は２通りあり、OnDeleteとRollingUpdateがあります。前者は、削除された（マニュフェスト更新ではなく、delete）タイミングに更新され、後者は、即時更新します。StatefulSetの更新では、アップデート中の過不足分の調整(maxUnavailable, maxSurge)は一切できません。また、partitionというフィールドのによって、どのインデックス以降を更新するかを調整することもできます。これは、ステートフルならではの機能です。
 Deploymentでは試してませんでしたが、こちらで試してみようと思います。</p>
 <p>デフォルトの戦略はRollingUpdateです。これは何度も動作して確認できているので、OnDeleteを試そうと思います。(partitionは置いとく）</p>
-<pre><code class="language-sample-statefulset.yaml">...
-spec:
-  updateStrategy:
-   type: OnDelete
-...
-  template:
-    spec:
-      containers:
-        - name: nginx-container
-          image: nginx:1.13
-...
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-statefulset.yaml</span>
+<span class="hljs-string">...</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">updateStrategy:</span>
+   <span class="hljs-attr">type:</span> <span class="hljs-string">OnDelete</span>
+<span class="hljs-string">...</span>
+  <span class="hljs-attr">template:</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">containers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx-container</span>
+          <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.13</span>
+<span class="hljs-string">...</span>
 </code></pre>
 <p>アップデート戦略をOnDeleteにし、nginxイメージを1.12から1.13に更新しました。</p>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k delete -f sample-statefulset.yaml
@@ -148,22 +150,23 @@ pi@raspi001:~/tmp $ k describe pod sample-statefulset-0 | grep "Image:"
 replicaSetのように複製ができる。
 バッチ処理に向いている。</p>
 <p>10秒sleepするだけのjobを実行してみます。</p>
-<pre><code class="language-sample-job.yaml">apiVersion: batch/v1
-kind: Job
-metadata:
-  name: sample-job
-spec:
-  completions: 1
-  parallelism: 1
-  backoffLimit: 10
-  template:
-    spec:
-      containers:
-      - name: sleep-container
-        image: nginx:1.12
-        command: ["sleep"]
-        args: ["10"]
-      restartPolicy: Never
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-job.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">batch/v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Job</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-job</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">completions:</span> <span class="hljs-number">1</span>
+  <span class="hljs-attr">parallelism:</span> <span class="hljs-number">1</span>
+  <span class="hljs-attr">backoffLimit:</span> <span class="hljs-number">10</span>
+  <span class="hljs-attr">template:</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">containers:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">sleep-container</span>
+        <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+        <span class="hljs-attr">command:</span> [<span class="hljs-string">"sleep"</span>]
+        <span class="hljs-attr">args:</span> [<span class="hljs-string">"10"</span>]
+      <span class="hljs-attr">restartPolicy:</span> <span class="hljs-string">Never</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-job.yaml
 pi@raspi001:~/tmp $ k get pod
@@ -182,34 +185,35 @@ sample-job   1/1           27s        4m8s
 <p>Jobをスケジュールされた時間で実行するリソース。
 DeploymentとReplicaSetの関係と似ていて、Cronjobがjobを管理する。</p>
 <p>1分毎に50%の確率で成功するjobを用意して、試してみます。</p>
-<pre><code class="language-sample-cronjob.yaml">apiVersion: batch/v1beta1
-kind: CronJob
-metadata:
-  name: sample-cronjob
-spec:
-  schedule: "*/1 * * * *"
-  concurrencyPolicy: Allow
-  startingDeadlineSeconds: 30
-  successfulJobsHistoryLimit: 5
-  failedJobsHistoryLimit: 3
-  suspend: false
-  jobTemplate:
-    spec:
-      completions: 1
-      parallelism: 1
-      backoffLimit: 1
-      template:
-        spec:
-          containers:
-          - name: sleep-container
-            image: nginx:1.12
-            command:
-            - "sh"
-            - "-c"
-            args:
-            # 約50%の確率で成功するコマンド
-            - "sleep 40; date +'%N' | cut -c 9 | egrep '[1|3|5|7|9]'"
-          restartPolicy: Never
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-cronjob.yaml</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">batch/v1beta1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">CronJob</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">sample-cronjob</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">schedule:</span> <span class="hljs-string">"*/1 * * * *"</span>
+  <span class="hljs-attr">concurrencyPolicy:</span> <span class="hljs-string">Allow</span>
+  <span class="hljs-attr">startingDeadlineSeconds:</span> <span class="hljs-number">30</span>
+  <span class="hljs-attr">successfulJobsHistoryLimit:</span> <span class="hljs-number">5</span>
+  <span class="hljs-attr">failedJobsHistoryLimit:</span> <span class="hljs-number">3</span>
+  <span class="hljs-attr">suspend:</span> <span class="hljs-literal">false</span>
+  <span class="hljs-attr">jobTemplate:</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">completions:</span> <span class="hljs-number">1</span>
+      <span class="hljs-attr">parallelism:</span> <span class="hljs-number">1</span>
+      <span class="hljs-attr">backoffLimit:</span> <span class="hljs-number">1</span>
+      <span class="hljs-attr">template:</span>
+        <span class="hljs-attr">spec:</span>
+          <span class="hljs-attr">containers:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">sleep-container</span>
+            <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:1.12</span>
+            <span class="hljs-attr">command:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-string">"sh"</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-string">"-c"</span>
+            <span class="hljs-attr">args:</span>
+            <span class="hljs-comment"># 約50%の確率で成功するコマンド</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-string">"sleep 40; date +'%N' | cut -c 9 | egrep '[1|3|5|7|9]'"</span>
+          <span class="hljs-attr">restartPolicy:</span> <span class="hljs-string">Never</span>
 </code></pre>
 <pre><code class="language-console hljs shell">pi@raspi001:~/tmp $ k apply -f sample-cronjob.yaml
 pi@raspi001:~/tmp $ k get all
