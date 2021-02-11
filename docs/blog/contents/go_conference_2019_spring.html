@@ -19,16 +19,16 @@ twitter:
 リクルートライフスタイル本社
 東京都千代田区丸の内1-9-2 グラントーキョーサウスタワー</p>
 <p>[:contents]</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>よかったセッション</h1>
-<h2 id="h1_s_hacking_go_compiler_internals_2"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#h1_s_hacking_go_compiler_internals_2"></a>H1 (S): Hacking Go Compiler Internals 2</h2>
-<h3 id><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#"></a>概要</h3>
+<h1 id="よかったセッション"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#よかったセッション"></a>よかったセッション</h1>
+<h2 id="h1_(s):_hacking_go_compiler_internals_2"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#h1_(s):_hacking_go_compiler_internals_2"></a>H1 (S): Hacking Go Compiler Internals 2</h2>
+<h3 id="概要"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#概要"></a>概要</h3>
 <p>Since the previous talk at Go Con 2014 Autumn, lots of things in the internals have changed. In this talk, I will try to give an overview of Go compiler internals and update the information as much as possible, along with my new hacks.</p>
-<h3 id><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#"></a>資料</h3>
-<h4 id><a class="anchor" aria-label="Anchor" data-anchor-icon="####" href="#"></a>今回</h4>
+<h3 id="資料"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#資料"></a>資料</h3>
+<h4 id="今回"><a class="anchor" aria-label="Anchor" data-anchor-icon="####" href="#今回"></a>今回</h4>
 <p>[https://speakerdeck.com/moriyoshi/hacking-go-compiler-internals-2nd-season:embed:cite]</p>
-<h4 id><a class="anchor" aria-label="Anchor" data-anchor-icon="####" href="#"></a>前回</h4>
+<h4 id="前回"><a class="anchor" aria-label="Anchor" data-anchor-icon="####" href="#前回"></a>前回</h4>
 <p>[https://www.slideshare.net/moriyoshi/hacking-go-compiler-internals-gocon-2014-autumn:embed:cite]</p>
-<h3 id><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#"></a>感想</h3>
+<h3 id="感想"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#感想"></a>感想</h3>
 <p>このセッションでは、Golangのソースコードが機械語になるまでのステップ、要はコンパイラの動きを紹介されていました。
 大きく分類して11ステップあり、ざっくり要約すると下記のステップです。</p>
 <p>１．コードをトークンに分割<br>
@@ -43,13 +43,13 @@ twitter:
 ちょうど、同じ疑問を持った方が質問されていて、回答として「型チェック」だそうです。
 実際に調べるためのツールが、golangのbenchmarkがあるみたいなので、こちらを使って
 チューニングをすることができます。簡単なコードを書いて、試してみたいなと思いました。</p>
-<h2 id="a4_s_design_considerations_for_container_based_go_applications"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#a4_s_design_considerations_for_container_based_go_applications"></a>A4 (S): Design considerations for container-based Go applications</h2>
-<h3 id><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#"></a>概要</h3>
+<h2 id="a4_(s):_design_considerations_for_container-based_go_applications"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#a4_(s):_design_considerations_for_container-based_go_applications"></a>A4 (S): Design considerations for container-based Go applications</h2>
+<h3 id="概要"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#概要"></a>概要</h3>
 <p>Go言語でのアプリケーション開発で、特にコンテナを前提とする場合の設計考慮点について話します。 例えば、Go言語でAPIを開発する場合、コンテナとして動かすことを前提とするケースが多いと感じます。コンテナベースで動かすことを前提とした場合、コンテナイメージ作成・アプリケーション監視において、考慮すべき点が出てくるでしょう。このトークでは、Go言語での実装にまで踏み込んだ上で、コンテナベースアプリケーションにおける設計の考慮点について話します。</p>
-<h3 id><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#"></a>資料</h3>
+<h3 id="資料"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#資料"></a>資料</h3>
 <p>[https://speakerdeck.com/hgsgtk/design-considerations-for-container-based-go-application:embed:cite]
 [https://www.redhat.com/ja/resources/cloud-native-container-design-whitepaper:embed:cite]</p>
-<h3 id><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#"></a>感想</h3>
+<h3 id="感想"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#感想"></a>感想</h3>
 <p>Golangの話というより、コンテナで開発する上でのTipsの話でした。
 Tipsは３つ紹介されていて、「Configuration」「Logging」「Monitering」です。
 どれも、資料にあるベストプラクティスに沿った方法で、良い手法だなと勉強になりました。</p>
@@ -63,12 +63,12 @@ Tipsは３つ紹介されていて、「Configuration」「Logging」「Moniteri
 ヘルスチェックのエンドポイントを提供する<br>
 → 外部サービスと連携しやすくなる</p>
 <p>他にもベストプラクティが資料に載ってあるので、時間があるときに読んでみたいなと思います。</p>
-<h2 id="b8_l_cpu_memory_and_go"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#b8_l_cpu_memory_and_go"></a>B8 (L): CPU, Memory and Go</h2>
-<h3 id><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#"></a>概要</h3>
+<h2 id="b8_(l):_cpu,_memory_and_go"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#b8_(l):_cpu,_memory_and_go"></a>B8 (L): CPU, Memory and Go</h2>
+<h3 id="概要"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#概要"></a>概要</h3>
 <p>基本的なCPUやメモリを簡単に触れ、Goの最適化、コンパイラの最適化、Goで実装したときのCPUやメモリの振る舞いを紹介します。 またこれら最適化の様子やパフォーマンスを実際にGoの標準ツールを使いながら確認していきます。</p>
-<h3 id><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#"></a>資料</h3>
+<h3 id="資料"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#資料"></a>資料</h3>
 <p>[https://speakerdeck.com/sonatard/cpu-memory-and-go:embed:cite]</p>
-<h3 id><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#"></a>感想</h3>
+<h3 id="感想"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#感想"></a>感想</h3>
 <p>Golangにおけるパフォーマンス・チューニングについて勉強になりました。
 Golangだけの話なのかわかりませんが、コーディングする際に気にしたほうが良いと思います。</p>
 <p>・動的配列を使うのではなくて、静的配列を使う<br>
@@ -79,7 +79,7 @@ Golangだけの話なのかわかりませんが、コーディングする際�
 → 隙間があった場合、パディングが発生して遅くなる(メモリアライメント)</p>
 <p>そもそも低レイヤーについて全くわからない人なので、
 CPUとMemoryについて知れてよかったです。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>全体的な感想</h1>
+<h1 id="全体的な感想"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#全体的な感想"></a>全体的な感想</h1>
 <p>Golangのセミナーに初めて参加しました。
 スポンサーの話を聞いていると、Golangを採用した理由は、
 どの企業も「パフォーマンスの良さと、学習コストの低さ」
@@ -89,7 +89,7 @@ Golangはドンドンと人気になっていく言語なのかなと期待し�
 <p>また、スポンサーの中で「既存システムをGolangに再構築した」や
 「Golangの知識を得るために勉強会を開催した」など、各社Golangへ
 積極的に活動を試みていることをお聞きしました。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>反省</h1>
+<h1 id="反省"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#反省"></a>反省</h1>
 <p>Google TeamであるKatie Hockmanのspeakingが英語だったために、ほとんど聞き取ることができませんでした。
 実にもったいないと感じました。</p>
 <p>※　資料まとめ

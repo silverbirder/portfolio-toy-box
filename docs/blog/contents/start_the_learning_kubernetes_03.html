@@ -8,7 +8,7 @@
 
 <h1 id="links"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#links"></a>Links</h1>
 <p>https://qiita.com/silverbirder/items/cfaaba136b74b3140902</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>ストーリー</h1>
+<h1 id="ストーリー"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ストーリー"></a>ストーリー</h1>
 <ol>
 <li><a href="https://qiita.com/silverbirder/items/34b823c1a4449d40e610">一足遅れて Kubernetes を学び始める - 01. 環境選択編 -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/d1aa368568885df2e44f">一足遅れて Kubernetes を学び始める - 02. Docker For Mac -</a></li>
@@ -27,7 +27,7 @@
 <li><a href="https://qiita.com/silverbirder/items/8ea729949ab3bb4cf540">一足遅れて Kubernetes を学び始める - 15. セキュリティ -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/a68499a10dd00c192947">一足遅れて Kubernetes を学び始める - 16. コンポーネント -</a></li>
 </ol>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>前回</h1>
+<h1 id="前回"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#前回"></a>前回</h1>
 <p><a href="https://qiita.com/silverbirder/items/d1aa368568885df2e44f">一足遅れて Kubernetes を学び始める - 02. Docker For Mac -</a>では、MacでKubernetesを軽く動かしてみました。DockerForMacでは、NodeがMasterのみだったため、Kubernetesを学習するには、ものたりない感がありました。そこで、RaspberryPiを使っておうちKubernetesを構築することになりました。</p>
 <p>@go_vargoさんの<a href="https://qiita.com/go_vargo/items/d1271ab60f2bba375dcc">Raspberry PiでおうちKubernetes構築【物理編】</a>, <a href="https://qiita.com/go_vargo/items/29f6d832ea0a289b4778">Raspberry PiでおうちKubernetes構築【論理編】</a>をベースに進めていきます。</p>
 <p>他、参考サイト</p>
@@ -40,7 +40,7 @@
 <li><a href="https://developers.cyberagent.co.jp/blog/archives/14721/">3日間クッキング【Kubernetes のラズペリーパイ包み　“サイバーエージェント風”】</a></li>
 <li><a href="https://engineers.weddingpark.co.jp/?p=1993">33時間クッキング【Kubernetesのラズベリーパイ包み〜ウエパ風〜】</a></li>
 </ul>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>レシピ</h1>
+<h1 id="レシピ"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#レシピ"></a>レシピ</h1>
 <table>
 <thead>
 <tr>
@@ -87,17 +87,17 @@
 <p>また、私の環境は下記のとおりです。</p>
 <pre><code class="language-text:machine hljs plaintext">iMac (21.5-inch, 2017)
 </code></pre>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>構築（物理）</h1>
+<h1 id="構築（物理）"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#構築（物理）"></a>構築（物理）</h1>
 <p><a href="https://qiita.com/go_vargo/items/d1271ab60f2bba375dcc">Raspberry PiでおうちKubernetes構築【物理編】</a>で十分な情報があります。こちらを参考にして組み立てします。
 できたものがこちらです。
 <amp-img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/72661091-1ffa-a9da-76dc-68c53b0f5b39.png" alt="kubernetes_raspberrypi.png" width="500" height="514" layout="intrinsic" i-amphtml-ssr data-hero class="i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" i-amphtml-layout="intrinsic"><i-amphtml-sizer class="i-amphtml-sizer"><img alt aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxNCIgd2lkdGg9IjUwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer><img class="i-amphtml-fill-content i-amphtml-replaced-content" decoding="async" alt="kubernetes_raspberrypi.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/72661091-1ffa-a9da-76dc-68c53b0f5b39.png"></amp-img></p>
 <p>WiFiを使うために、LANケーブルやWiFi親機などがなくなり、スッキリしました。
 電源を確保できるところであれば、家の中なら、どこでも持ち運びできます。 :sparkles:</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>構築（論理）</h1>
+<h1 id="構築（論理）"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#構築（論理）"></a>構築（論理）</h1>
 <p><a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Stretch Lite</a>をダウンロードしておきます。
 <code>2019-04-08-raspbian-stretch-lite.img</code></p>
 <p>Stepの1から3までの手順を<strong>RaspberryPi一台ずつ</strong> 、下記の手続きを踏んでいきます。</p>
-<h2 id="1_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#1_"></a>1. 初期設定</h2>
+<h2 id="1._初期設定"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#1._初期設定"></a>1. 初期設定</h2>
 <p>microSDカードをMacにつなげた後に、下記を実施します。</p>
 <pre><code class="language-shell hljs"><span class="hljs-meta">$</span><span class="bash"> diskutil list</span>
 <span class="hljs-meta">$</span><span class="bash"> sudo diskutil umount /dev/disk3s1</span>
@@ -109,7 +109,7 @@
 cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
 </code></pre>
 <p>イメージを書き込み際、<strong>r</strong> をつける (rdisk3)と、高速になるそうです。</p>
-<h2 id="2_raspberrypi_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#2_raspberrypi_"></a>2. RaspberryPiに接続</h2>
+<h2 id="2._raspberrypiに接続"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#2._raspberrypiに接続"></a>2. RaspberryPiに接続</h2>
 <p>MicroSDカードをRaspbeeryPiに挿入し、電源をつけたら、下記を実施します。
 LANケーブルは、自宅のWiFiに直接つなげます。(私の場合はSoftBankAir)</p>
 <p>hostnameは、お好みの名前にします。（私は、<code>Master:raspi001, Worker:raspi002,raspi003</code>としました。)</p>
@@ -127,7 +127,7 @@ pi@raspbeerypi:~ $ sudo shutdown -r now
 pi@raspi001:~ $ 
 </code></pre>
 <p>接続できたら成功です。</p>
-<h2 id="3_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#3_"></a>3. 各種インストール</h2>
+<h2 id="3._各種インストール"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#3._各種インストール"></a>3. 各種インストール</h2>
 <p>おまじないをします。</p>
 <pre><code class="language-shell hljs">pi@raspi001:~ $ sudo dphys-swapfile swapoff &amp;&amp; sudo dphys-swapfile uninstall &amp;&amp; sudo update-rc.d dphys-swapfile remove
 </code></pre>
@@ -145,7 +145,7 @@ pi@raspi001:~ $　sudo apt-get install docker-ce -y
 pi@raspi001:~ $　echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kube.list
 pi@raspi001:~ $　sudo apt-get update -y &amp;&amp; sudo apt-get install kubelet kubeadm kubectl -y
 </code></pre>
-<h2 id="4_masternode_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#4_masternode_"></a>4. MasterNodeの設定</h2>
+<h2 id="4._masternodeの設定"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#4._masternodeの設定"></a>4. MasterNodeの設定</h2>
 <p>MasterNodeにするRaspberryPiに対して下記を実施します。</p>
 <pre><code class="language-shell hljs">pi@raspi001:~ $ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 pi@raspi001:~ $ mkdir -p $HOME/.kube
@@ -161,12 +161,12 @@ kube-system   coredns-fb8b8dccf-lglcr            0/1     ContainerCreating   0  
 kube-system   coredns-fb8b8dccf-snt7d            0/1     ContainerCreating   0          4d16h
 ...
 </code></pre>
-<h2 id="5_workernode_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#5_workernode_"></a>5. WorkerNodeの設定</h2>
+<h2 id="5._workernodeの設定"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#5._workernodeの設定"></a>5. WorkerNodeの設定</h2>
 <p>MasterNodeから出力されたjoinコマンドを実施します。</p>
 <pre><code class="language-shell hljs">pi@raspi002 $ kubeadm join 192.168.3.32:6443 --token X \
     --discovery-token-ca-cert-hash sha256:X
 </code></pre>
-<h2 id="6_masternode_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#6_masternode_"></a>6. MasterNodeから確認</h2>
+<h2 id="6._masternodeから確認"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#6._masternodeから確認"></a>6. MasterNodeから確認</h2>
 <p>Nodeが増えているか確認します。</p>
 <pre><code class="language-shell hljs">pi@raspi001:~ $ kubectl get nodes
 NAME       STATUS   ROLES    AGE   VERSION
@@ -181,7 +181,7 @@ raspi001   Ready    master   65m   v1.14.1
 raspi002   Ready    worker   37m   v1.14.1
 raspi003   Ready    worker   37m   v1.14.1
 </code></pre>
-<h2 id="7_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#7_"></a>7. ブラウザから確認</h2>
+<h2 id="7._ブラウザから確認"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#7._ブラウザから確認"></a>7. ブラウザから確認</h2>
 <p>試しにデプロイ→サービス公開→ブラウザ確認までを、さっと通してみます。</p>
 <pre><code class="language-shell hljs">pi@raspi001:~ $ kubectl run nginx --image=nginx --replicas=1 --port=80
 pi@raspi001:~ $ kubectl expose deployment nginx --port 80 --target-port 80 --type NodePort
@@ -226,13 +226,13 @@ wlan0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
 <p><code>http://192.168.3.32:30783</code>にアクセス</p>
 <p><amp-img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/f7bd2359-a988-28e4-b45b-c24aa9524452.png" alt="nginx" width="554" height="210" layout="intrinsic" class="i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" i-amphtml-layout="intrinsic"><i-amphtml-sizer class="i-amphtml-sizer"><img alt aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjIxMCIgd2lkdGg9IjU1NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer></amp-img></p>
 <p>OK!</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>お片付け</h1>
+<h1 id="お片付け"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#お片付け"></a>お片付け</h1>
 <pre><code class="language-shell hljs">pi@raspi001:~ $ kubectl delete deployments nginx
 deployment.extensions "nginx" deleted
 pi@raspi001:~ $ kubectl  delete service nginx
 service "nginx" deleted
 </code></pre>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>完成</h1>
+<h1 id="完成"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#完成"></a>完成</h1>
 <p>すんなりと構築することができました。これは先人たちの記事がたくさんあるので、
 サクサクと進めることができました。これで、Kubernetesを使いまくります!! :muscle: :muscle:
 次回は<a href="https://qiita.com/silverbirder/items/7ae773b6519b940b5be4">こちら</a>です。</p> </main>

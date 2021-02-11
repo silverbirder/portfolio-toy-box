@@ -12,7 +12,7 @@
 <p>本記事は、昨年の冬あたりから検証していた クライアントサイド統合でのMicro Frontendsについて話そうと思います。検証したソースコードは、次のリポジトリにあります。</p>
 <p>[https://github.com/Silver-birder/micro-frontends-sample-code-6:embed:cite]</p>
 <p>[:contents]</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>概要</h1>
+<h1 id="概要"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#概要"></a>概要</h1>
 <p>全体設計イメージ図は、次のとおりです。</p>
 <p><img src="https://raw.githubusercontent.com/Silver-birder/micro-frontends-sample-code-6/main/overview.svg" alt="overview"></p>
 <p>サーバーサイドは静的コンテンツを返すだけとし、クライアントサイドでアプリケーションを構築します。</p>
@@ -59,7 +59,7 @@ Routerには、後ほど説明するWebComponentsとの相性が良いvaadin/rou
 <h1 id="component"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#component"></a>Component</h1>
 <p>ComponentはLitElementというWebComponentsベースのライブラリを使用しています。各TeamのComponent(LitElementのライブラリ込)をImportしていると、重複したloadとなりパフォーマンスがよろしくありません。共通ライブラリを事前にload (import mapとかで)することをお勧めします。</p>
 <p>WebComponentsということなので、Shadow DOMでレンダリングすることになります。CSSのスコープが独立できるため、他へ影響することはありません。ただ、全体的なブランドカラーを統一したい等 Design Systemがある場合、Componentの共通化のやり方を(慎重に)考える必要があります。</p>
-<h1 id="build_package_design_system_performance_metrics"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#build_package_design_system_performance_metrics"></a>Build Package, Design System, Performance Metrics</h1>
+<h1 id="build_package,_design_system,_performance_metrics"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#build_package,_design_system,_performance_metrics"></a>Build Package, Design System, Performance Metrics</h1>
 <p>各Teamを独立したいといっても、共通化しないといけないことがあると考えています。私が想定しているものは、次のとおりです。</p>
 <ul>
 <li>Design System
@@ -91,9 +91,9 @@ Routerには、後ほど説明するWebComponentsとの相性が良いvaadin/rou
 </li>
 </ul>
 <p>と書いているだけで、実際に試した訳ではありません(笑)。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>所感</h1>
+<h1 id="所感"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#所感"></a>所感</h1>
 <p>Micro Frontendsのサーバーサイド統合でもそうでしたが、Componentを集約・提供するサービスは、クライアントサイド統合でも必要になりました。今回でいうと、Component Discovery API です。これは、Component間の依存度を下げるためのレイヤーであり、Micro Frontendsでは、ほぼ必須の要素なのではないかと思います。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>最後に</h1>
+<h1 id="最後に"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#最後に"></a>最後に</h1>
 <p>Micro Frontendsは、統合パターンも大切ですが、もっと大切なのは、ドメインをどう分解するかだと思います。この分割が適切ではないとどうしても共通化しなければならないケースが誕生し、Micro Frontendsのメリットが活かせないと思います。そろそろ、プロダクションレベルで検証したいと思いますが、中々重い腰を上げらない今日このごろです。</p> </main>
 <amp-social-share type="twitter" aria-label="Share on Twitter" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:60px;height:44px;" i-amphtml-layout="fixed"></amp-social-share>
 <amp-social-share type="hatena_bookmark" data-share-endpoint="http://b.hatena.ne.jp/entry/https://silver-birder.github.io/portfolio-toy-box/blog/contents/client_microfrontends" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:60px;height:44px;" i-amphtml-layout="fixed"></amp-social-share>

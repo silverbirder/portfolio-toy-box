@@ -14,12 +14,12 @@
 <p>リポジトリは、こちらです。
 [https://github.com/Silver-birder/puppeteer-account-manager:embed:cite]</p>
 <p>[:contents]</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>なんで作ったの？</h1>
+<h1 id="なんで作ったの？"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#なんで作ったの？"></a>なんで作ったの？</h1>
 <p>GithubやTwitter、Facebookなど、Webサービスにはプロフィール画像を登録することができます。
 私の性格上、どのサービスでも、同じ画像で登録したいと考えています。</p>
 <p>そのため、いい感じのプロフィール写真を手に入れたら、全サービスのプロフィール画像を再登録しないと気がすまなくなり、とても面倒です。
 そこで、今回、その面倒さを解決したく、このツールを作りました。</p>
-<h1 id="gravatar_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#gravatar_"></a>それ、Gravatarで良くない？</h1>
+<h1 id="それ、gravatarで良くない？"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#それ、gravatarで良くない？"></a>それ、Gravatarで良くない？</h1>
 <p>今回の面倒さは、GravatarというWebサービスで解決できるかもしれません。</p>
 <p>[http://gravatar.com/:embed:cite]</p>
 <p>このサービスは、グローバルなプロフィール画像を提供するサービスです。
@@ -49,25 +49,25 @@ API経由で、プロフィール画像を取得できます。</p>
 <p>[https://www.contentful.com/:embed:cite]</p>
 <p>Contentfulでは、自由に項目を決めることができます。
 独自に作った項目 (画像や紹介文)を、API経由で取得できるため、とても便利です。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>どうやって作ったの？</h1>
+<h1 id="どうやって作ったの？"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#どうやって作ったの？"></a>どうやって作ったの？</h1>
 <p>愚直なやり方です。
 Puppeteerと呼ばれる Chromeブラウザを自動操作できるライブラリを使いました。
 Chromeブラウザから、"各サービスへログインし、写真をアップロードする"処理を自動化しただけです。</p>
 <p>[https://github.com/puppeteer/puppeteer:embed:cite]</p>
-<h1 id="api_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#api_"></a>プロフィール画像を更新するAPIは、なかったの？</h1>
+<h1 id="プロフィール画像を更新するapiは、なかったの？"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#プロフィール画像を更新するapiは、なかったの？"></a>プロフィール画像を更新するAPIは、なかったの？</h1>
 <p>サービスによってはあります。例えば、Twitterには、次のようなプロフィール画像を更新するAPIがあります。</p>
 <p>[https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings/api-reference/post-account-update_profile_image:embed:cite]</p>
 <p>ただ、全てのサービスには、そのようなAPIはありません。
 APIを使って更新するのが正しい姿ですが、全サービスの実装方法の足並みを揃えるために、
 Puppeteer で自動操作することにしました。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>パスワードって大丈夫？</h1>
+<h1 id="パスワードって大丈夫？"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#パスワードって大丈夫？"></a>パスワードって大丈夫？</h1>
 <p>Puppeteerを動かすnodeアプリケーションと、Chromeブラウザを同一マシン内で動作するようにしました。
 そのため、nodeアプリケーション実行中に、パスワードを傍受されることはありません。
 また、パスワードの設定は環境変数から注入するようにしています。
 Dockerコンテナで動作できるようにしているので、ローカルでも、コンテナサービスでも動かすことができます。</p>
 <p>今後、パスワードの管理は、KeepassやLastpassのようなサービスと連携したいと思っています。</p>
 <p>[https://github.com/keeweb/kdbxweb:embed:cite]</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>どのサービスが対応している？</h1>
+<h1 id="どのサービスが対応している？"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#どのサービスが対応している？"></a>どのサービスが対応している？</h1>
 <p>これは、私が楽になりたいために作ったため、使い方が、限定的になっています。</p>
 <table>
 <thead>
@@ -121,9 +121,9 @@ Dockerコンテナで動作できるようにしているので、ローカル�
 </table>
 <p>詳しくは、
 [https://github.com/Silver-birder/puppeteer-account-manager/blob/master/src/index.ts] をご確認下さい。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>どんな学びがあった？</h1>
+<h1 id="どんな学びがあった？"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#どんな学びがあった？"></a>どんな学びがあった？</h1>
 <p>結構色々とハマりました。</p>
-<h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>極力 セレクタ指定したコードを書かない</h2>
+<h2 id="極力_セレクタ指定したコードを書かない"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#極力_セレクタ指定したコードを書かない"></a>極力 セレクタ指定したコードを書かない</h2>
 <p>Webサービスが返すHTMLは、いつもずっと変わらないことはありません。
 あるidやclassのhtmlタグがずっと残り続けるとは限りません。</p>
 <p>そこで、できる限り、セレクタを指定せずにブラウザ操作をするようにしました。
@@ -137,25 +137,25 @@ Dockerコンテナで動作できるようにしているので、ローカル�
 <li>submitボタンをクリックするのではなく、エンターキーを入力する</li>
 </ul>
 <p>です。こうすることで、安定した自動化ができました。</p>
-<h2 id="xpath_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#xpath_"></a>XPathが意外と使える</h2>
+<h2 id="xpathが意外と使える"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#xpathが意外と使える"></a>XPathが意外と使える</h2>
 <p>GoogleやMediumでは、idやclassがランダム値になっています。
 そのため、単純なidやclassを指定して進めることができません。</p>
 <p>そこで、『○○』のテキストが含まれているセレクタの指定することが、XPathでできます。
 これは、助かりました。</p>
-<h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>ログインが難しいものは、無理せず諦める</h2>
+<h2 id="ログインが難しいものは、無理せず諦める"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#ログインが難しいものは、無理せず諦める"></a>ログインが難しいものは、無理せず諦める</h2>
 <p>Amazonのログインは、2段階認証が発生します。
 テキストメッセージや、音声電話によるログインが求められ、Puppeteer単体ではどうしようもありません。</p>
 <p>この2段階認証の機能を解除することもできますが、セキュリティ上よろしくないので、ここは無理せず諦めることにしました。</p>
-<h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>並列処理をガンガン実行する</h2>
+<h2 id="並列処理をガンガン実行する"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#並列処理をガンガン実行する"></a>並列処理をガンガン実行する</h2>
 <p>処理速度向上のため、全サービスを Promise.allで並列処理しました。それぞれが、シークレットウィンドウで開くことで、独立して処理するようにもしました。
 しかし、たまにPuppeteerが落ちてしまうことがあります。原因は、実行しているマシンのスペック(Core数)にも影響しますが、サービス側からの影響も受けたりします。
 そのため、落ちても大丈夫のようにエラーハンドリングし、リトライするようにしました。</p>
 <p>また、失敗したらどういった画面なのか知りたいので、スクリーンショットを撮るようにもしました。</p>
-<h2 id="docker_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#docker_"></a>Docker で実行可能に</h2>
+<h2 id="docker_で実行可能に"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#docker_で実行可能に"></a>Docker で実行可能に</h2>
 <p>Puppeteerに必要なモジュールをDockerに詰め込み、ログイン情報等を環境変数から外注することで、
 環境非依存の実行環境ができました。そのため、Pub/SubとContainer Engine等を組み合わせれば、
 ContentfulのWebfook経由で、アカウント情報を更新することができます。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>終わりに</h1>
+<h1 id="終わりに"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#終わりに"></a>終わりに</h1>
 <p>私の性格がもっと大雑把であれば、このツールを作らなかったのですが、どうしても気になって仕方がなく... (笑)
 最後まで読んでいただき、ありがとうございました。</p> </main>
 <amp-social-share type="twitter" aria-label="Share on Twitter" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:60px;height:44px;" i-amphtml-layout="fixed"></amp-social-share>

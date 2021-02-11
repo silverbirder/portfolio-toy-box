@@ -15,14 +15,14 @@
 <p>サンプルリポジトリは、下記に載せています。</p>
 <p>[https://github.com/Silver-birder/apache-beam-kotlin-example/tree/master/src/main/kotlin:embed:cite]</p>
 <p>[:contents]</p>
-<h1 id="apache_beam_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#apache_beam_"></a>Apache Beam とは</h1>
+<h1 id="apache_beam_とは"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#apache_beam_とは"></a>Apache Beam とは</h1>
 <p>[https://www.st-hakky-blog.com/entry/2020/04/29/172220:embed:cite]</p>
 <p>** BatchやStreaming を1つのパイプライン処理 ** として実現できるデータパイプライン、それがApache Beamです。(Batch + Stream → Beam)</p>
 <p>言語は、Java, Python, Go(experimental)が選べます。 また、パイプライン上で実行する環境のことをランナーと呼び、Cloud DataflowやApache Flink、Apache Sparkなどがあります。</p>
 <p>※ Streaming処理は、サーバーの能力がボトルネックになりがちです。そこで、Cloud DataflowというGCPのマネージドサービスを使用すると、その問題が解消されます。</p>
 <p>機械学習など豊富な ** 分析ライブラリ ** を使いたい場合は、Python、 ** 型安全な ** 開発をしたい場合は、Java を選べば良いかなと思います。</p>
 <p>今回は、Javaを選びました。モダンな書き方ができるKotlinでコーディングします。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>セットアップ</h1>
+<h1 id="セットアップ"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#セットアップ"></a>セットアップ</h1>
 <p>ソフトウェアバージョンは、次のとおりです。</p>
 <pre><code class="language-shell hljs"><span class="hljs-meta">$</span><span class="bash"> java -version</span>
 openjdk version "1.8.0_252"
@@ -33,7 +33,7 @@ OpenJDK 64-Bit Server VM (AdoptOpenJDK)(build 25.252-b09, mixed mode)
 <pre><code class="language-shell hljs"><span class="hljs-meta">$</span><span class="bash"> git <span class="hljs-built_in">clone</span> https://github.com/Silver-birder/apache-beam-kotlin-example.git &amp;&amp; <span class="hljs-built_in">cd</span> apache-beam-kotlin-example</span>
 <span class="hljs-meta">$</span><span class="bash"> ./gradlew build</span>
 </code></pre>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>パイプライン処理の概要</h1>
+<h1 id="パイプライン処理の概要"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#パイプライン処理の概要"></a>パイプライン処理の概要</h1>
 <pre><code class="language-shell hljs">1. データの入力する(input → PCollection)
 2. 入力されたデータを変形させる (PCollection → PTransform → PCollection)
 3. 加工したデータを出力する (PCollection → output)
@@ -131,7 +131,7 @@ GroupByKeyのKey毎に要素を結合する方法と、PCollection毎に要素�
 <span class="hljs-comment">// PCollection&lt;KV&lt;String, Long&gt;&gt;</span>
 <span class="hljs-keyword">var</span> 10wordCounts = wordCounts.apply(Partition.of(<span class="hljs-number">10</span>, PartitionFunc()))
 </code></pre>
-<h1 id="streaming_windowing"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#streaming_windowing"></a>StreamingとWindowing</h1>
+<h1 id="streamingとwindowing"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#streamingとwindowing"></a>StreamingとWindowing</h1>
 <p>パイプラインを、そのまま使えばBatch実行となります。
 Batchは、有限のデータに対し、Streamingは無限のデータに対して使います。
 無限のデータを処理するのは、Windowingというものを使い、無限を有限のデータにカットして、処理します。</p>
@@ -162,7 +162,7 @@ Batchは、有限のデータに対し、Streamingは無限のデータに対し
         p.run().waitUntilFinish()
     }
 </code></pre>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>テストコード</h1>
+<h1 id="テストコード"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#テストコード"></a>テストコード</h1>
 <p>Apache Beamもテストコードが書けます。
 サンプルコードは、<a href="https://github.com/Silver-birder/apache-beam-kotlin-example/blob/master/src/test/kotlin/WordCountTest.kt">こちら</a>です。</p>
 <p>実行するパイプラインをTestPipelineにすることで、テストができます。</p>
@@ -194,7 +194,7 @@ Batchは、有限のデータに対し、Streamingは無限のデータに対し
         )
     }
 </code></pre>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>終わりに</h1>
+<h1 id="終わりに"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#終わりに"></a>終わりに</h1>
 <p>Apache Beamは、他にも Side inputやAdditional outputsなどがあります。
 使いこなせるためにも、これからも頑張っていきます！</p>
 <p>さて、Re:ゼロ2期を見ましょう👍</p> </main>

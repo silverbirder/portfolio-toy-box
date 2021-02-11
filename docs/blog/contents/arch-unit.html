@@ -19,13 +19,13 @@
 そこで、親の顔よりも見たこの図をテストしたいと思います。</p>
 <p>[https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg:image=https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg]
 ※ [https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html]</p>
-<h1 id="typescript_archunit_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#typescript_archunit_"></a>TypescriptでもArchUnitしたい</h1>
+<h1 id="typescriptでもarchunitしたい"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#typescriptでもarchunitしたい"></a>TypescriptでもArchUnitしたい</h1>
 <p>ArchUnitはJava製です。私はTypescriptのArchUnitがしたいです。
 そこで、良さげなライブラリを発見しました。</p>
 <p>[https://github.com/MaibornWolff/ts-arch:embed:cite]</p>
 <p>特に拘りなく、アーキテクチャのテストができれば何でも良いかなと思います。
 極端な話、ソースコードをASTパースし、依存関係を抽出できれば自作できるんじゃないかと思います。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>試してみた</h1>
+<h1 id="試してみた"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#試してみた"></a>試してみた</h1>
 <p>試したソースコードは、下記に置いています。ご参考下さい。</p>
 <p>[https://github.com/Silver-birder/try-archunit:embed:cite]</p>
 <p>全体のソースコードツリーは次の構成です。</p>
@@ -102,7 +102,7 @@ describe(<span class="hljs-string">"architecture"</span>, <span class="hljs-func
 <p>3レイヤーが上位の4レイヤーを使用しています。この状態でテストを実行すると、</p>
 <figure class="figure-image figure-image-fotolife" title="src/clean_architecture.test.ts > architecture > Check dependency #Failed">[f:id:silverbirder180:20201128115543p:plain]<figcaption>src/clean_architecture.test.ts &gt; architecture &gt; Check dependency #Failed</figcaption></figure>
 <p>見事Failedとなりました。つまり、依存関係の誤りを自動的に検出することができます。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>最後に</h1>
+<h1 id="最後に"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#最後に"></a>最後に</h1>
 <p>規模が大きなプロジェクトほど、依存関係が複雑になりがちです。(Javaでいう) パッケージやクラスの依存関係を適切に設計できていたとしても、誰かが壊しかねません。せっかく設計したのに壊されるのは、とても残念なので、テストコードで守ってあげましょう！</p> </main>
 <amp-social-share type="twitter" aria-label="Share on Twitter" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:60px;height:44px;" i-amphtml-layout="fixed"></amp-social-share>
 <amp-social-share type="hatena_bookmark" data-share-endpoint="http://b.hatena.ne.jp/entry/https://silver-birder.github.io/portfolio-toy-box/blog/contents/arch-unit" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:60px;height:44px;" i-amphtml-layout="fixed"></amp-social-share>

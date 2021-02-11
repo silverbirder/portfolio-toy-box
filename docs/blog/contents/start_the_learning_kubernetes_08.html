@@ -8,7 +8,7 @@
 
 <h1 id="links"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#links"></a>Links</h1>
 <p>https://qiita.com/silverbirder/items/3a46ab92b45cdcc56ccd</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>ストーリー</h1>
+<h1 id="ストーリー"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ストーリー"></a>ストーリー</h1>
 <ol>
 <li><a href="https://qiita.com/silverbirder/items/34b823c1a4449d40e610">一足遅れて Kubernetes を学び始める - 01. 環境選択編 -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/d1aa368568885df2e44f">一足遅れて Kubernetes を学び始める - 02. Docker For Mac -</a></li>
@@ -27,9 +27,9 @@
 <li><a href="https://qiita.com/silverbirder/items/8ea729949ab3bb4cf540">一足遅れて Kubernetes を学び始める - 15. セキュリティ -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/a68499a10dd00c192947">一足遅れて Kubernetes を学び始める - 16. コンポーネント -</a></li>
 </ol>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>前回</h1>
+<h1 id="前回"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#前回"></a>前回</h1>
 <p><a href="https://qiita.com/silverbirder/items/937e1b5f6b3589452932">一足遅れて Kubernetes を学び始める - 07. workloads その3 -</a>でようやくworkloadsが終了しました。今回は、discovery&amp;LBを進めようと思います。</p>
-<h1 id="discovery_amp_lb"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#discovery_amp_lb"></a>discovery&amp;LB</h1>
+<h1 id="discovery&amp;amp;lb"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#discovery&amp;lb"></a>discovery&amp;LB</h1>
 <p>Kubernetesには、下記のようにリソースの種類が存在します。
 今回は、discovery&amp;LBを学習します。</p>
 <table>
@@ -82,7 +82,7 @@
 <li>Ingress</li>
 </ul>
 <p>Serviceの概要について学びます。</p>
-<h1 id="kubernetes_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#kubernetes_"></a>Kubernetesとネットワーク</h1>
+<h1 id="kubernetesとネットワーク"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#kubernetesとネットワーク"></a>Kubernetesとネットワーク</h1>
 <p>Kubernetesでは、Pod毎にIPアドレスが割り振られています。
 そのため、異なるPod間で通信する際は、PodのIPアドレスが必要になります。逆に同一のPod内ならlocalhostで通信できます。</p>
 <p>説明するために、準備します。</p>
@@ -119,20 +119,20 @@ sample-deployment-9dc487867-nxbxc   10.244.2.67   raspi003
 <p><amp-img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/44e0d3a4-7acd-e5cc-9362-e6ea14850589.png" alt="Kubernetes_learning-Page-2 (1).png" width="790" height="311" layout="intrinsic" i-amphtml-ssr data-hero class="i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" i-amphtml-layout="intrinsic"><i-amphtml-sizer class="i-amphtml-sizer"><img alt aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMxMSIgd2lkdGg9Ijc5MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer><img class="i-amphtml-fill-content i-amphtml-replaced-content" decoding="async" alt="Kubernetes_learning-Page-2 (1).png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/44e0d3a4-7acd-e5cc-9362-e6ea14850589.png"></amp-img></p>
 <p>このような状況下で、<code>sample-deployment-9dc487867-n8x5w:redis</code>を中心に見ていきます。</p>
 <p>※ nginxは80ポートで開放されています。</p>
-<h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>前準備</h2>
+<h2 id="前準備"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#前準備"></a>前準備</h2>
 <pre><code class="language-shell hljs">pi@raspi001:~/tmp $ k exec -it sample-deployment-9dc487867-n8x5w -c redis-container /bin/bash
 root@sample-deployment-9dc487867-n8x5w:/data# apt-get update &amp;&amp; apt-get install curl -y
 root@sample-deployment-9dc487867-n8x5w:/data# exit
 </code></pre>
 <p>curlがないのでインストールします。</p>
-<h2 id="node_pod_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#node_pod_"></a>同一Node,同一Pod内のコンテナへ通信</h2>
+<h2 id="同一node,同一pod内のコンテナへ通信"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#同一node,同一pod内のコンテナへ通信"></a>同一Node,同一Pod内のコンテナへ通信</h2>
 <pre><code class="language-shell hljs">pi@raspi001:~/tmp $ k exec -it sample-deployment-9dc487867-n8x5w -c redis-container /bin/bash
 root@sample-deployment-9dc487867-n8x5w:/data# curl localhost:80
 &lt;!DOCTYPE html&gt;
 ...
 </code></pre>
 <p>OK</p>
-<h2 id="node_pod_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#node_pod_"></a>同一Node,異なるPodのコンテナへ通信</h2>
+<h2 id="同一node,異なるpodのコンテナへ通信"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#同一node,異なるpodのコンテナへ通信"></a>同一Node,異なるPodのコンテナへ通信</h2>
 <pre><code class="language-shell hljs">pi@raspi001:~/tmp $ k exec -it sample-deployment-9dc487867-n8x5w -c redis-container /bin/bash
 root@sample-deployment-9dc487867-n8x5w:/data# curl 10.244.2.66:80
 &lt;!DOCTYPE html&gt;
@@ -142,14 +142,14 @@ root@sample-deployment-9dc487867-n8x5w:/data# curl 10.244.2.67:80
 ...
 </code></pre>
 <p>OK</p>
-<h2 id="node_pod_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#node_pod_"></a>異なるNode,異なるPodのコンテナへ通信</h2>
+<h2 id="異なるnode,異なるpodのコンテナへ通信"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#異なるnode,異なるpodのコンテナへ通信"></a>異なるNode,異なるPodのコンテナへ通信</h2>
 <pre><code class="language-shell hljs">pi@raspi001:~/tmp $ k exec -it sample-deployment-9dc487867-n8x5w -c redis-container /bin/bash
 root@sample-deployment-9dc487867-n8x5w:/data# curl 10.244.1.72:80
 &lt;!DOCTYPE html&gt;
 ...
 </code></pre>
 <p>OK</p>
-<h2 id="masternode_pod_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#masternode_pod_"></a>MasterNodeから各Podへ通信</h2>
+<h2 id="masternodeから各podへ通信"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#masternodeから各podへ通信"></a>MasterNodeから各Podへ通信</h2>
 <pre><code class="language-shell hljs">pi@raspi001:~/tmp $ curl 10.244.1.72:80
 &lt;!DOCTYPE html&gt;
 ...
@@ -168,7 +168,7 @@ pi@raspi001:~/tmp $ curl 10.244.2.67:80
 <li>pod宛トラフィックのロードバランシング</li>
 <li>サービスディスカバリとクラスタ内DNS</li>
 </ul>
-<h2 id="pod_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#pod_"></a>pod宛トラフィックのロードバランシング</h2>
+<h2 id="pod宛トラフィックのロードバランシング"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#pod宛トラフィックのロードバランシング"></a>pod宛トラフィックのロードバランシング</h2>
 <p>先程の例で、Pod間を通信することは可能です。しかし、podを作り直すたびにIPアドレスが変わってしまうため、
 自作すると、少し大変です。そこで、Serviceの出番です。
 サービスは、複数存在するPodに対して<strong>自動的にロードバランスしてくれる</strong>のと、合わせて<strong>外向けのIPアドレス</strong>(ExternalIP)や、<strong>内向けのIPアドレス</strong>(ClusterIP)も提供してくれます。</p>
@@ -225,7 +225,7 @@ sample-deployment-9dc487867-h7lww
 <pre><code class="language-shell hljs">~ $ curl 10.111.197.69:8080
 <span class="hljs-meta">#</span><span class="bash"> 返答なし</span>
 </code></pre>
-<h2 id="dns"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#dns"></a>サービスディスカバリとクラスタ内DNS</h2>
+<h2 id="サービスディスカバリとクラスタ内dns"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#サービスディスカバリとクラスタ内dns"></a>サービスディスカバリとクラスタ内DNS</h2>
 <p>サービスディスカバリとは、「問題においての解決策」を指しています。
 Kubernetesにおける問題とは、動的にサービスが生成され続けていることによるサービスを特定することが難しくなる問題です。
 そのサービスディスカバリが、Serviceにあります。
@@ -249,10 +249,10 @@ Kubernetesにおける問題とは、動的にサービスが生成され続け�
 </ul>
 <p>dnsPolicyによる明示的な設定がない限り、Pod生成時にクラスタ内DNSへレコード追加されます。
 クラスタ内DNSで名前解決できなかった場合は、クラスタ外DNSに問い合わせします。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>お片付け</h1>
+<h1 id="お片付け"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#お片付け"></a>お片付け</h1>
 <pre><code class="language-shell hljs">pi@raspi001:~/tmp $ k delete -f sample-deployment.yaml -f sample-clusterip.yaml
 </code></pre>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>最後に</h1>
+<h1 id="最後に"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#最後に"></a>最後に</h1>
 <p>今回は、Serviceについての概要を学びました。Kubernetesの世界では、自動的にネットワーク構築されているため、特段意識することはありませんでした。
 もう少し理解が進めれば、ネットワークがどのように構築されているのか、クラスタ内DNSがどのように動いているのか知りたいと思います。
 次回は、<a href="https://qiita.com/silverbirder/items/f6290a7868849d57b9f1">こちら</a>です。</p>

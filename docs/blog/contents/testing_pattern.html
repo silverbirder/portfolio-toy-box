@@ -14,7 +14,7 @@
 本記事は、テストの種類を列挙します。
 ※ 使用する技術は、私の都合上、node.jsで選んでいます。</p>
 <p>[:contents]</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>テスト観点一覧</h1>
+<h1 id="テスト観点一覧"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#テスト観点一覧"></a>テスト観点一覧</h1>
 <h2 id="cache_test"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#cache_test"></a>Cache Test</h2>
 <p>Webアプリでは、様々なCacheが使われます。
 例えば、ブラウザCache、CDN Cache、プロキシCache、バックエンドCache などなどです。
@@ -29,11 +29,11 @@ Webアプリでも、Cacheをテストする必要がありそうです。</p>
 <p>循環的複雑度(Cyclomatic complexity)は、制御文(ifやfor)の複雑さを計測します。
 複雑なコードは、バグの温床になりがちなので、極力シンプルなコードを心がけたいところです。</p>
 <p>[https://eslint.org/docs/rules/complexity:embed:cite]</p>
-<h2 id="copy_amp_paste_test"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#copy_amp_paste_test"></a>Copy&amp;Paste Test</h2>
+<h2 id="copy&amp;amp;paste_test"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#copy&amp;paste_test"></a>Copy&amp;Paste Test</h2>
 <p>Copy&amp;Pasteは、DRYの原則に反するため、特別な理由がない限りは、してはいけません。Copy&amp;Pasteを検出するツールがあるみたいです。</p>
 <p>[https://github.com/kucherenko/jscpd:embed:cite]</p>
 <figure class="figure-image figure-image-fotolife" title="https://github.com/kucherenko/jscpd">[f:id:silverbirder180:20200617070137p:plain]<figcaption>https://github.com/kucherenko/jscpd</figcaption></figure>
-<h2 id="cross_browser_platform_test"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#cross_browser_platform_test"></a>Cross Browser/Platform Test</h2>
+<h2 id="cross_browser/platform_test"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#cross_browser/platform_test"></a>Cross Browser/Platform Test</h2>
 <p>サポートするブラウザや、プラットフォーム(iOS,Android,Desktopなど)の動作検証が必要です。
 そのため、サポートするブラウザやプラットフォームの環境を準備しなければなりません。
 そういう環境を手軽に使えるサービスがあったりします。</p>
@@ -163,7 +163,7 @@ lighthouseというツールでSEOスコアを見ることができるみたい�
 <p>見た目の変化を監視する必要があります。例えば、リンク切れとかがあれば、検出するべきです。</p>
 <p>[https://github.com/garris/BackstopJS:embed:cite]</p>
 <figure class="figure-image figure-image-fotolife" title="https://github.com/garris/BackstopJS">[f:id:silverbirder180:20200617070556p:plain]<figcaption>https://github.com/garris/BackstopJS</figcaption></figure>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>最後に</h1>
+<h1 id="最後に"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#最後に"></a>最後に</h1>
 <p>どういうテストの観点があるのか、調べたり、経験則よりざっと書いてみました。
 全てをテストする必要はなく、『どういう動作の品質を担保したいか』を意識して、
 取捨選択するのが良いと思います。

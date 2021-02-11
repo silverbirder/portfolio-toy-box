@@ -8,7 +8,7 @@
 
 <h1 id="links"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#links"></a>Links</h1>
 <p>https://qiita.com/silverbirder/items/f6290a7868849d57b9f1</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>ストーリー</h1>
+<h1 id="ストーリー"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ストーリー"></a>ストーリー</h1>
 <ol>
 <li><a href="https://qiita.com/silverbirder/items/34b823c1a4449d40e610">一足遅れて Kubernetes を学び始める - 01. 環境選択編 -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/d1aa368568885df2e44f">一足遅れて Kubernetes を学び始める - 02. Docker For Mac -</a></li>
@@ -27,7 +27,7 @@
 <li><a href="https://qiita.com/silverbirder/items/8ea729949ab3bb4cf540">一足遅れて Kubernetes を学び始める - 15. セキュリティ -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/a68499a10dd00c192947">一足遅れて Kubernetes を学び始める - 16. コンポーネント -</a></li>
 </ol>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>前回</h1>
+<h1 id="前回"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#前回"></a>前回</h1>
 <p><a href="https://qiita.com/silverbirder/items/3a46ab92b45cdcc56ccd">一足遅れて Kubernetes を学び始める - 08. discovery&amp;LB その1 -</a>でServiceについての概要を学びました。今回は下記を一気に学びます。</p>
 <ul>
 <li>ExternalIP</li>
@@ -293,7 +293,7 @@ sample-externalname.default.svc.cluster.local. 5 IN CNAME example.com.
 example.com.		5	IN	A	93.184.216.34
 </code></pre>
 <p>確かに、<code>sample-externalname.default.svc.cluster.local</code>と問い合わせすることで、外部の<a href="http://example.com/">example.com</a>へのCNAMEを取得できます。また、外部のサイトを切り替えたいときは、問い合わせ先は<strong>変わらず</strong>に、sample-externalname.yamlのspec.externalNameを変更するだけで済みます。これは切り替えが楽ですね。</p>
-<h1 id="none_selector"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#none_selector"></a>None-Selector</h1>
+<h1 id="none-selector"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#none-selector"></a>None-Selector</h1>
 <p>外部のサービスに対してロードバランシングします。</p>
 <pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-none-selector.yaml</span>
 <span class="hljs-meta">---</span>
@@ -360,10 +360,10 @@ Ingressでは、l7レイヤーのロードバランサを提供します。(URL�
 <p>そこで、下記のyamlを発見し、試してみると動作します。ぜひ、お試しあれ。
 <a href="https://gist.github.com/hectcastro/097ba8e9759689b6b29dd164cd116eeb">hectcastro/mandatory.yaml</a></p>
 <p>※ namespaceを削除できない場合は、<a href="https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.1/troubleshoot/ns_terminating.html">こちら</a>を参考下さい。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>お片付け</h1>
+<h1 id="お片付け"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#お片付け"></a>お片付け</h1>
 <pre><code class="language-shell hljs">pi@raspi001:~/tmp $ k delete -f sample-externalip.yaml -f sample-deployment.yaml -f sample-nodeport.yaml -f sample-lb.yaml -f sample-statefulset-headless.yaml -f sample-headless.yaml -f sample-none-selector.yaml -f sample-externalname.yaml
 </code></pre>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>最後に</h1>
+<h1 id="最後に"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#最後に"></a>最後に</h1>
 <p>Serviceについて学びました。
 様々な用途に応じて、エンドポイントを公開する手段を学びました。
 手を動かして確認してみると、理解が深まりました。

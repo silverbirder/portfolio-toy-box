@@ -8,7 +8,7 @@
 
 <h1 id="links"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#links"></a>Links</h1>
 <p>https://qiita.com/silverbirder/items/5c0703f8fa055ade9f21</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>ストーリー</h1>
+<h1 id="ストーリー"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ストーリー"></a>ストーリー</h1>
 <ol>
 <li><a href="https://qiita.com/silverbirder/items/34b823c1a4449d40e610">一足遅れて Kubernetes を学び始める - 01. 環境選択編 -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/d1aa368568885df2e44f">一足遅れて Kubernetes を学び始める - 02. Docker For Mac -</a></li>
@@ -27,14 +27,14 @@
 <li><a href="https://qiita.com/silverbirder/items/8ea729949ab3bb4cf540">一足遅れて Kubernetes を学び始める - 15. セキュリティ -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/a68499a10dd00c192947">一足遅れて Kubernetes を学び始める - 16. コンポーネント -</a></li>
 </ol>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>前回</h1>
+<h1 id="前回"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#前回"></a>前回</h1>
 <p><a href="https://qiita.com/silverbirder/items/8d7a5473fa6969954e21">一足遅れて Kubernetes を学び始める - 10. config&amp;storage その2 -</a>では、storageについて学習しました。
 今回は、リソース制限について学習します。</p>
 <p>※ リソースの種類から、次は「Metadata」だったのですが、kubernetes完全ガイドによると直接説明するのではなく、内容ベースで説明されていましたので、それに準拠します。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>リソース制限</h1>
+<h1 id="リソース制限"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#リソース制限"></a>リソース制限</h1>
 <p>kubernetesで管理するコンテナに対して、リソース制限をかけることができます。主にCPUやメモリに対して制限をかけることができますが、Device Pluginsを使うことでGPUにも制限をかけることもできます。</p>
 <p>※ CPUの指定方法は、1vCPUを1000millicores(m)とする単位となります。</p>
-<h1 id="requests_limits"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#requests_limits"></a>requestsとlimits</h1>
+<h1 id="requestsとlimits"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#requestsとlimits"></a>requestsとlimits</h1>
 <p>requestは、使用するリソースの下限値です。
 limitsは、使用するリソースの上限値です。</p>
 <p>requestは、空きノードに指定するリソースがなければスケジューリングされませんが、limitsは、関係なくスケジューリングされます。</p>
@@ -265,7 +265,7 @@ sample-resource-785cd54844-3ffeg          1/1     Running   0          38s
 <p>こうすると、podsが5個までしか作成できないので、sample-resource.yamlを適用しても5個までしか作成されません。
 replicaのような場合は、特に警告がなく単純に作られませんでした。
 configmapを5個までに制限して、1つずつconfigmapをapplyすると、警告がでるそうです。</p>
-<h1 id="horizontalpodautoscaler_hpa_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#horizontalpodautoscaler_hpa_"></a>HorizontalPodAutoscaler(HPA)</h1>
+<h1 id="horizontalpodautoscaler(hpa)"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#horizontalpodautoscaler(hpa)"></a>HorizontalPodAutoscaler(HPA)</h1>
 <p>HPAは、Deployment,ReplicaSetで管理するPodのCPU負荷などに応じて自動的にスケールするリソースです。
 30秒に１回の頻度でスケールするかチェックしています。</p>
 <p>必要なレプリカ数は、下記の数式で表します。</p>
@@ -279,13 +279,13 @@ configmapを5個までに制限して、1つずつconfigmapをapplyすると、�
 <p>という文がわかりやすかったです。つまり、targetAverageUtilizationが50なら、全体のCPU使用率が50%になるよう調整されます。
 今回、試そうと考えたのですが、metrics-serverをinstallしていないため、動作確認できませんでした。
 また今度installして試してみようと思います。</p>
-<h1 id="verticalpodautoscaler_vpa_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#verticalpodautoscaler_vpa_"></a>VerticalPodAutoscaler(VPA)</h1>
+<h1 id="verticalpodautoscaler(vpa)"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#verticalpodautoscaler(vpa)"></a>VerticalPodAutoscaler(VPA)</h1>
 <p>VPAは、コンテナに割り当てるCPUやメモリのリソース割当をスケールさせるリソースです。
 これは、HPAのスケールアウトではなく、Podのスケールアップを行うものです。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>お片付け</h1>
+<h1 id="お片付け"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#お片付け"></a>お片付け</h1>
 <pre><code class="language-shell hljs">pi@raspi001:~/tmp $ k delete -f sample-resource.yaml -f sample-resourcequota.yaml
 </code></pre>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>最後に</h1>
+<h1 id="最後に"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#最後に"></a>最後に</h1>
 <p>今回は、RequestsやLimitsを操作してリソース制限をしてみました。
 どれがいくらリソースを消費しているのか確認する術を学び、
 ついでにjsonpathの使い方も知りました。

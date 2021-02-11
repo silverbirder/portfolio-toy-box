@@ -8,7 +8,7 @@
 
 <h1 id="links"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#links"></a>Links</h1>
 <p>https://qiita.com/silverbirder/items/d1aa368568885df2e44f</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>ストーリー</h1>
+<h1 id="ストーリー"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ストーリー"></a>ストーリー</h1>
 <ol>
 <li><a href="https://qiita.com/silverbirder/items/34b823c1a4449d40e610">一足遅れて Kubernetes を学び始める - 01. 環境選択編 -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/d1aa368568885df2e44f">一足遅れて Kubernetes を学び始める - 02. Docker For Mac -</a></li>
@@ -27,10 +27,10 @@
 <li><a href="https://qiita.com/silverbirder/items/8ea729949ab3bb4cf540">一足遅れて Kubernetes を学び始める - 15. セキュリティ -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/a68499a10dd00c192947">一足遅れて Kubernetes を学び始める - 16. コンポーネント -</a></li>
 </ol>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>前回</h1>
+<h1 id="前回"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#前回"></a>前回</h1>
 <p><a href="https://qiita.com/silverbirder/items/34b823c1a4449d40e610">一足遅れて Kubernetes を学び始める - 01. 環境選択編 -</a>にて、Kubernetesを学ぶ環境を考えてみました。いきなりGKEを使うんじゃなくて、お手軽に試せるDockerForMacを使おうとなりました。</p>
-<h1 id="docker_for_mac_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#docker_for_mac_"></a>Docker For Mac を試す</h1>
-<h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>環境</h2>
+<h1 id="docker_for_mac_を試す"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#docker_for_mac_を試す"></a>Docker For Mac を試す</h1>
+<h2 id="環境"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#環境"></a>環境</h2>
 <pre><code class="language-text:machine hljs plaintext">iMac (21.5-inch, 2017)
 </code></pre>
 <pre><code class="language-text:docker hljs plaintext">Docker Community Edition:
@@ -40,7 +40,7 @@ Docker Engine:
 Kubernetes:
   Version: v1.10.3
 </code></pre>
-<h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>実践</h2>
+<h2 id="実践"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#実践"></a>実践</h2>
 <p>さっそく、使ってみます。 (<a href="https://www.oreilly.co.jp/books/9784873118406/">入門 Kubernetes</a>参考)</p>
 <pre><code class="language-shell hljs">~ $ kubectl get componentstatuses
 NAME                 STATUS    MESSAGE              ERROR
@@ -110,11 +110,11 @@ exit
 </code></pre>
 <p>ローカルとPodとの双方向コピー、仮想的なターミナルを体験していました。
 「ふ〜ん、で？」ってなっちゃいました。(笑)</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>お片付け</h1>
+<h1 id="お片付け"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#お片付け"></a>お片付け</h1>
 <pre><code class="language-shell hljs">~ $ kubectl delete -f nginx.yaml
 pod "nginx" deleted
 </code></pre>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>ものたりない</h1>
+<h1 id="ものたりない"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ものたりない"></a>ものたりない</h1>
 <p>やっぱりNode増やしたい！！
 <a href="https://qiita.com/go_vargo/items/29f6d832ea0a289b4778">Raspberry PiでおうちKubernetes構築【論理編】</a>を見て、これをやるっきゃない！
 すごく今更だけど、試してみようと思います。

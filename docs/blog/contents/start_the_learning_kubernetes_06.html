@@ -8,7 +8,7 @@
 
 <h1 id="links"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#links"></a>Links</h1>
 <p>https://qiita.com/silverbirder/items/d3522237b28703a9adb6</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>ストーリー</h1>
+<h1 id="ストーリー"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ストーリー"></a>ストーリー</h1>
 <ol>
 <li><a href="https://qiita.com/silverbirder/items/34b823c1a4449d40e610">一足遅れて Kubernetes を学び始める - 01. 環境選択編 -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/d1aa368568885df2e44f">一足遅れて Kubernetes を学び始める - 02. Docker For Mac -</a></li>
@@ -27,7 +27,7 @@
 <li><a href="https://qiita.com/silverbirder/items/8ea729949ab3bb4cf540">一足遅れて Kubernetes を学び始める - 15. セキュリティ -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/a68499a10dd00c192947">一足遅れて Kubernetes を学び始める - 16. コンポーネント -</a></li>
 </ol>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>前回</h1>
+<h1 id="前回"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#前回"></a>前回</h1>
 <p><a href="https://qiita.com/silverbirder/items/7041aa5d4126a6784d59">一足遅れて Kubernetes を学び始める - 05. workloads その1 -</a>では、Pod,ReplicaSet,Deploymentの３つを学習しました。今回はDaemonSet,StatefulSet(一部)を学びます。</p>
 <h1 id="daemonset"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#daemonset"></a>DaemonSet</h1>
 <p>ReplicaSetとほぼ同じ機能のリソース。
@@ -178,7 +178,7 @@ Events:
   Warning  FailedScheduling  70s (x3 over 2m28s)  default-scheduler  pod has unbound immediate PersistentVolumeClaims (repeated 2 times)
 </code></pre>
 <p>おや、Pendingになってしまいました。 <code>pod has unbound immediate PersistentVolumeClaims</code></p>
-<h2 id="persistentvolume_persistentvolumeclaims"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#persistentvolume_persistentvolumeclaims"></a>PersistentVolumeとPersistentVolumeClaims</h2>
+<h2 id="persistentvolumeとpersistentvolumeclaims"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#persistentvolumeとpersistentvolumeclaims"></a>PersistentVolumeとPersistentVolumeClaims</h2>
 <p>PersistentVolume(永続的ボリューム)は、名前の通りで、データを永続的に保存しておく場所のリソースです。
 マネージドサービスを利用すると、デフォルトでPresistentVolumeが用意されているそうです。
 私の環境は、マネージドサービスではなく、自作環境であるので、PresistentVolumeを用意する必要があります。</p>
@@ -186,7 +186,7 @@ Events:
 このリソースで、PresistentVolumeのnameを指定し、applyすることで、初めてマウントができます。
 例えば、PodからPersistentVolumeClaimsの名前を指定してあげると、そのPodはClaimしたPersistentVolumeをマウントすることができます。
 volumeClaimTemplatesというのは、「わざわざPersistentVolumeClaimsを定義しなくてもテンプレートに沿って書けばClaimsできるよ」というものです。</p>
-<h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>で、何が問題だったの？</h2>
+<h2 id="で、何が問題だったの？"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#で、何が問題だったの？"></a>で、何が問題だったの？</h2>
 <p><code>pod has unbound immediate PersistentVolumeClaims</code>のとおりで、「PersistentVolumeの要求をしたけど、Volume割当できなかったよ」とのことです。</p>
 <p>PersistentVolume(pv)があるのか確認してみます。</p>
 <pre><code class="language-shell hljs">pi@raspi001:~/tmp $ k get pv
@@ -204,8 +204,8 @@ No resources found.
 <p>2は、<a href="https://qiita.com/ysakashita/items/67a452e76260b1211920">Kubernetes: Local Volumeの検証</a>の参考にして<strong>試した</strong>のですが、 記事にも書いてあるとおり「Local Volumeは他のPodから共有で利用することができない」ため、statefulsetが<code>replica:1</code>でなければ動きません。それはそれで動くので学習になり良いのですが、せっかくならreplicaの制限なしにしたいです(ReadWriteManyにしたい)。</p>
 <p>3は、もう一台raspberryPiを用意して、それをNFSと見立ててPersistentVolumeにしてみる方法です。</p>
 <p>3を進めようと思います。</p>
-<h2 id="nfs_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#nfs_"></a>NFS導入</h2>
-<h3 id><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#"></a>サーバ設定</h3>
+<h2 id="nfs導入"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#nfs導入"></a>NFS導入</h2>
+<h3 id="サーバ設定"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#サーバ設定"></a>サーバ設定</h3>
 <p>NFS用の新たなraspberryPiを用意します。設定手順は<a href="https://qiita.com/silverbirder/items/cfaaba136b74b3140902#2-raspberrypi%E3%81%AB%E6%8E%A5%E7%B6%9A">こちら</a>を参考にしました。
 その後の続きは下記です。</p>
 <p>NFSのホスト名は<code>nfspi</code>とします。</p>
@@ -259,11 +259,11 @@ pi@nfspi:~ $ systemctl status nfs-server.service
 ~ $ sudo umount share
 </code></pre>
 <p>OK</p>
-<h3 id><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#"></a>クライアント設定</h3>
+<h3 id="クライアント設定"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#クライアント設定"></a>クライアント設定</h3>
 <p>各ノードに対して下記を実行します。</p>
 <pre><code class="language-shell hljs">pi@raspi001:~ $ sudo apt-get install nfs-common
 </code></pre>
-<h2 id="nfs_client_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#nfs_client_"></a>nfs-client導入</h2>
+<h2 id="nfs-client導入"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#nfs-client導入"></a>nfs-client導入</h2>
 <p>raspberryPi環境では、真っ白な状態なので、一からPersistentVolumeを用意する必要があります。それにはVolumeとなるStorageの型を用意する必要もあるのですが、<a href="https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner">Storage Classes</a>を見る限り、NFS用の型は標準で存在しません。そこで、<a href="https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client">nfs-client</a>を使ってNFS用のStorageClassを作成します。</p>
 <pre><code class="language-shell hljs">pi@raspi001:~ $ git clone https://github.com/kubernetes-incubator/external-storage.git &amp;&amp; cd cd external-storage/nfs-client/
 pi@raspi001:~/external-storage/nfs-client $ NS=$(kubectl config get-contexts|grep -e "^\*" |awk '{print $5}')
@@ -288,7 +288,7 @@ class.yamlが、今回欲していたNFSのstorageClass(managed-nfs-storage)に�
 <p>あれば成功です。あれば、下記で片付けます。</p>
 <pre><code class="language-shell hljs">pi@raspi001:~/external-storage/nfs-client $ k delete -f deploy/test-pod.yaml -f deploy/test-claim.yaml
 </code></pre>
-<h2 id="statefulset_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#statefulset_"></a>statefulsetをリトライ</h2>
+<h2 id="statefulsetをリトライ"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#statefulsetをリトライ"></a>statefulsetをリトライ</h2>
 <p>以上で、StorageClassを用意できました。よって後は、PersistentVolume作って、PersistentVolumeClaim作って...となる予定でした。
 しかし、<a href="https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client">nfs-client</a>には、<strong>dynamic provisioning</strong>という機能が備わっており、PersistentVolumeを作らなくても、PersistentVolumeClaimするだけで良くなります。この件については、storageを学習する際に書きます。</p>
 <p>raspi001に移動して、sample-statefulset.yamlをもう一度applyします。
@@ -340,13 +340,13 @@ drwxrwxrwx 2 nobody nogroup 4096 May  5 17:18 default-www-sample-statefulset-1-p
 drwxrwxrwx 2 nobody nogroup 4096 May  5 17:18 default-www-sample-statefulset-2-pvc-69bee568-6f51-11e9-bb47-b827eb8ccd80
 </code></pre>
 <p>ありました！ マウントできています！</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>お片付け</h1>
+<h1 id="お片付け"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#お片付け"></a>お片付け</h1>
 <p><code>--prune</code>でも良いのですが、下記のほうが使いやすかったです。</p>
 <pre><code class="language-shell hljs">pi@raspi001:~/tmp $　k delete -f sample-ds.yaml -f sample-statefulset.yaml
 pi@raspi001:~/tmp $　k delete pvc www-sample-statefulset-{0,1,2}
 </code></pre>
 <p>※ <code>k get pv</code>と<code>k get pvc</code>を試して頂き、今回作ったリソースがありましたら削除お願いします。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>おわりに</h1>
+<h1 id="おわりに"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#おわりに"></a>おわりに</h1>
 <p>StatefulSetを使える状態にするまでに記事が大きくなってしまいました。次回に詳しく学んでいこうと思います。笑
 あと、<a href="https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client">nfs-client</a>を見て思ったのが、kubernetesのパッケージマネージャであるhelmを導入した方が、遥かに便利だと思いつつ、手動設定しました。。。
 次回は、<a href="https://qiita.com/silverbirder/items/937e1b5f6b3589452932">こちら</a>です。</p> </main>

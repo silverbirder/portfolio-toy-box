@@ -12,7 +12,7 @@
 <p>Google Apps Script(以下,GAS)でライブラリを公開しました。ライブラリを開発する際、<b>テストのフィードバックサイクルを短くする</b>ため、<code>Clasp + Typescript + Jest</code> という技術スタックを選択しました。
 その開発体験について共有しようと思います。特段変わったことはしていません。</p>
 <p>[:contents]</p>
-<h1 id="google_apps_script_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#google_apps_script_"></a>Google Apps Scriptのテストってどうしてますか？</h1>
+<h1 id="google_apps_scriptのテストってどうしてますか？"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#google_apps_scriptのテストってどうしてますか？"></a>Google Apps Scriptのテストってどうしてますか？</h1>
 <p><a href="https://script.google.com/">script.google.com</a>にアクセスしてデバッグ実行って、しんどくないですか？</p>
 <figure class="figure-image figure-image-fotolife" title="Google Apps Script Debugging ...">[f:id:silverbirder180:20200201234221p:plain]<figcaption>Google Apps Script Debugging ...</figcaption></figure>
 <ul>
@@ -21,7 +21,7 @@
 <li>デバッグ機能が<b>貧弱</b></li>
 </ul>
 <p>とても<span style="color: #d32f2f"><b>ストレスフル</b></span>です。単純なGASなら別に良いんですが、少し複雑なGASを作ろうと思うと、問題に感じます。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>ローカルで動かそう</h1>
+<h1 id="ローカルで動かそう"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ローカルで動かそう"></a>ローカルで動かそう</h1>
 <p>GASをローカル環境で動かすことができる ClaspというコマンドラインツールがGoogleより公開されています。
 [https://github.com/google/clasp:embed:cite]</p>
 <p>また、ClaspはTypescriptをサポートしているため、型を中心としたコーディングが可能となりました。
@@ -115,13 +115,13 @@ Ran all test suites.
 <p>ライブラリとして提供する機能のテストが、たったの<b>約3秒</b>で終わります。
 <span style="color: #d32f2f"><b>ストレスフリー</b></span>にローカル開発が可能となりました。</p>
 <p>詳しくは、実際に作ったライブラリのソースコード(<a href="https://github.com/Silver-birder/CaAT/tree/master/__tests__">__tests__</a>)を御覧ください。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>終わりに</h1>
+<h1 id="終わりに"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#終わりに"></a>終わりに</h1>
 <p>GASは、とても便利です。生産性が向上します。
 サクッとAPIを構築できますし、G Suiteとの連携も(当たり前ですが)簡単です。</p>
 <p>ただ、メンテナンス性が低いコードになると、<span style="color: #d32f2f"><b>陳腐化され誰も面倒が見れなくなります</b></span>。
 常にクリーンであり続けるためには、テストコードは<b>必須</b>です。
 GASを運用する方々には、是非ともテストコードを検討下さい。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>え、あ、ちょっとまって。ライブラリの紹介！</h1>
+<h1 id="え、あ、ちょっとまって。ライブラリの紹介！"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#え、あ、ちょっとまって。ライブラリの紹介！"></a>え、あ、ちょっとまって。ライブラリの紹介！</h1>
 <p>アジャイル開発で、かつ、Google Calendarで予定管理しているチームには是非とも使って頂きたいライブラリです。
 [https://github.com/Silver-birder/caat:embed:cite]</p>
 <blockquote>

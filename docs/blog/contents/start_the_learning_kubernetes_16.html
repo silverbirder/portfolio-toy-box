@@ -8,7 +8,7 @@
 
 <h1 id="links"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#links"></a>Links</h1>
 <p>https://qiita.com/silverbirder/items/a68499a10dd00c192947</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>ストーリー</h1>
+<h1 id="ストーリー"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ストーリー"></a>ストーリー</h1>
 <ol>
 <li><a href="https://qiita.com/silverbirder/items/34b823c1a4449d40e610">一足遅れて Kubernetes を学び始める - 01. 環境選択編 -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/d1aa368568885df2e44f">一足遅れて Kubernetes を学び始める - 02. Docker For Mac -</a></li>
@@ -27,14 +27,14 @@
 <li><a href="https://qiita.com/silverbirder/items/8ea729949ab3bb4cf540">一足遅れて Kubernetes を学び始める - 15. セキュリティ -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/a68499a10dd00c192947">一足遅れて Kubernetes を学び始める - 16. コンポーネント -</a></li>
 </ol>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>前回</h1>
+<h1 id="前回"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#前回"></a>前回</h1>
 <p><a href="https://qiita.com/silverbirder/items/8ea729949ab3bb4cf540">一足遅れて Kubernetes を学び始める - 15. セキュリティ -</a>では、RBACによる権限について学習しました。今回は最後にKubernetesのコンポーネントについて学習します。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>コンポーネント</h1>
+<h1 id="コンポーネント"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#コンポーネント"></a>コンポーネント</h1>
 <p>Kubernetesでは、下記のような構成になっています。</p>
 <p><amp-img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/6d1c59bc-937a-6a5f-91d4-cb0dadd46e2a.png" alt="スクリーンショット 2019-06-09 20.14.38.png" width="878" height="404" layout="intrinsic" i-amphtml-ssr data-hero class="i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" i-amphtml-layout="intrinsic"><i-amphtml-sizer class="i-amphtml-sizer"><img alt aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjQwNCIgd2lkdGg9Ijg3OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer><img class="i-amphtml-fill-content i-amphtml-replaced-content" decoding="async" alt="スクリーンショット 2019-06-09 20.14.38.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/6d1c59bc-937a-6a5f-91d4-cb0dadd46e2a.png"></amp-img>
 ※ https://kubernetes.io/docs/concepts/architecture/cloud-controller/</p>
 <p>それぞれのコンポーネントについて学習します。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>現状確認</h1>
+<h1 id="現状確認"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#現状確認"></a>現状確認</h1>
 <pre><code class="language-shell hljs">pi@raspi001:~/tmp $ k get nodes
 NAME       STATUS   ROLES    AGE   VERSION
 raspi001   Ready    master   42d   v1.14.1
@@ -73,33 +73,33 @@ kube-scheduler-raspi001            1/1     Running   87         42d   192.168.3.
 <p>MasterNodeに存在するコンポーネントです。
 分散Key-ValueStoreであるetcdは、Kubernetesのクラスタにある全情報が保存されています。そのため、単一障害にならないようクラスタを組むことが推奨されているみたいです。ここのデータにアクセスするのはkube-apiserverから経由しなければなりません。
 直接確認したい場合は、etcdctlを使ってみると良いです。</p>
-<h1 id="kube_apiserver"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#kube_apiserver"></a>kube-apiserver</h1>
+<h1 id="kube-apiserver"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#kube-apiserver"></a>kube-apiserver</h1>
 <p>MasterNodeに存在するコンポーネントです。
 KubernetesAPIを提供するコンポーネントです。kube-schedulerやkube-controller-manager,kubeletから呼ばれます。
 etcdに対してリソースを管理するだけで、Podの起動はしません。</p>
-<h1 id="kube_scheduler"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#kube_scheduler"></a>kube-scheduler</h1>
+<h1 id="kube-scheduler"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#kube-scheduler"></a>kube-scheduler</h1>
 <p>MasterNodeに存在するコンポーネントです。
 Node情報が未割り当てのPodを検知して、そのPodにNodeを割り当てるリクエストをkube-apiserverに送ります。
 割り当てるだけであって、Podを起動させません。Nodeを割り当てる際、NodeAffinityやTaintsなどを考慮に入れます。</p>
 <h1 id="kubelet"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#kubelet"></a>kubelet</h1>
 <p>各Node上で動作するコンポーネントです。未割り当てだったNodeが割り当てられたことを検知し、
 実際にPodを起動します。</p>
-<h1 id="kube_controller_manager"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#kube_controller_manager"></a>kube-controller-manager</h1>
+<h1 id="kube-controller-manager"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#kube-controller-manager"></a>kube-controller-manager</h1>
 <p>MasterNodeに存在するコンポーネントです。
 様々なコントローラを実行するコンポーネントです。DeploymentやControllerReplicaSetControllerでは、
 状態を監視し、期待するPod数と現在のPod数を見ます。kube-apiserverに対して、過不足分のPodを調整するよう要求します。
 その後は、さきほどのkube-scheduler,kubeletの一連の流れになります。</p>
-<h1 id="kube_proxy"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#kube_proxy"></a>kube-proxy</h1>
+<h1 id="kube-proxy"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#kube-proxy"></a>kube-proxy</h1>
 <p>各Node上で動作するコンポーネントです。NodePortやClusterIP宛のトラフィックを転送します。</p>
-<h1 id="kube_dns"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#kube_dns"></a>kube-dns</h1>
+<h1 id="kube-dns"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#kube-dns"></a>kube-dns</h1>
 <p>kubernetesクラスタ内の名前解決やサービスディスカバリに利用されるDNSサーバです。
 私の環境では、CoreDNSを使っていました。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>そのほか</h1>
-<h2 id="customresourcedefinition_crd_operator"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#customresourcedefinition_crd_operator"></a>CustomResourceDefinition(CRD)とOperator</h2>
+<h1 id="そのほか"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#そのほか"></a>そのほか</h1>
+<h2 id="customresourcedefinition(crd)とoperator"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#customresourcedefinition(crd)とoperator"></a>CustomResourceDefinition(CRD)とOperator</h2>
 <p>CRDは独自のリソースを定義できるリソースです。このような拡張性をもたせることで、様々な開発が進められます。
 CRDは、単なるKubernetesオブジェクトなだけなので、Operatorというカスタムコントローラをセットで作る必要があります。
 Operator Frameworkと呼ばれるもので簡単に作成できるそうです。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>最後に</h1>
+<h1 id="最後に"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#最後に"></a>最後に</h1>
 <p>ようやくKubernetes完全ガイドの内容を読み切ることができました。
 当初は、ここまで記事にアウトプットし続けるつもりはなかったです。
 実際にkubernetesをraspberryPi上で動かしてみると、

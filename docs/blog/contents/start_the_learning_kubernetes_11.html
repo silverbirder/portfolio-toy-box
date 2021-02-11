@@ -8,7 +8,7 @@
 
 <h1 id="links"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#links"></a>Links</h1>
 <p>https://qiita.com/silverbirder/items/8d7a5473fa6969954e21</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>ストーリー</h1>
+<h1 id="ストーリー"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ストーリー"></a>ストーリー</h1>
 <ol>
 <li><a href="https://qiita.com/silverbirder/items/34b823c1a4449d40e610">一足遅れて Kubernetes を学び始める - 01. 環境選択編 -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/d1aa368568885df2e44f">一足遅れて Kubernetes を学び始める - 02. Docker For Mac -</a></li>
@@ -27,16 +27,16 @@
 <li><a href="https://qiita.com/silverbirder/items/8ea729949ab3bb4cf540">一足遅れて Kubernetes を学び始める - 15. セキュリティ -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/a68499a10dd00c192947">一足遅れて Kubernetes を学び始める - 16. コンポーネント -</a></li>
 </ol>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>前回</h1>
+<h1 id="前回"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#前回"></a>前回</h1>
 <p><a href="https://qiita.com/silverbirder/items/cb17f02f52c7b5c2aafd">一足遅れて Kubernetes を学び始める - 10. config&amp;storage その1 -</a>では、configについて学習しました。
 今回は、storageを学びます。</p>
-<h1 id="volume_presistentvolume"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#volume_presistentvolume"></a>VolumeとPresistentVolume</h1>
+<h1 id="volumeとpresistentvolume"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#volumeとpresistentvolume"></a>VolumeとPresistentVolume</h1>
 <p>Volumeは、あらかじめ決められた利用可能なボリュームを指します。こちらは、ボリュームの削除や新規作成ができません。
 PresistentVolumeは、外部にある永続ボリュームを指します。こちらは、ボリュームの削除や新規作成ができます。
 DBのようなステートフルなものはPresistentVolumeを使います。
 一時的なものなら、Volumeを使うのですかね？</p>
 <p>※ PresistentVolumeClaimは、PresistentVolumeをアサインするためのリソース。</p>
-<h1 id="volume_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#volume_"></a>Volumeの種類</h1>
+<h1 id="volumeの種類"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#volumeの種類"></a>Volumeの種類</h1>
 <p>書籍（kubernetes完全ガイド）で紹介されていたVolumeの種類は、下記のとおりです。</p>
 <ul>
 <li>emptyDir
@@ -68,7 +68,7 @@ DBのようなステートフルなものはPresistentVolumeを使います。
 ただ、定期的に外部ストレージに移さないといけないですので、手間です。
 （そもそも、ログはストリームにして外部サービスに流すのがベスト）</p>
 <p>プロダクトとしては、あんまり使い道ない...?</p>
-<h1 id="presistentvolume_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#presistentvolume_"></a>PresistentVolumeの種類</h1>
+<h1 id="presistentvolumeの種類"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#presistentvolumeの種類"></a>PresistentVolumeの種類</h1>
 <p>外部の永続ボリュームを利用します。例えば、下記の種類があります。</p>
 <ul>
 <li>GCE Persistent Disk</li>
@@ -174,7 +174,7 @@ PersistentVolumeの作成方法は、外部の永続ボリュームによって�
 </li>
 </ul>
 <p>要求を満たしたVolumeがRetainPolicyだった場合、Claimを削除した時点で「Released」になります。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>最後に</h1>
+<h1 id="最後に"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#最後に"></a>最後に</h1>
 <p>今回は、書籍をそのまま書いた感じになりました。
 実際に試したのは、<a href="https://qiita.com/silverbirder/items/d3522237b28703a9adb6">一足遅れて Kubernetes を学び始める - 06. workloads その2 -</a>です。
 まあ、あんまり深くはハマらない方が良いのではと思いました。

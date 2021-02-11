@@ -17,8 +17,7 @@ const addAnchorToHeader = (layoutDOM) => {
     Array.prototype.forEach.call(headerElementList, (element) => {
         const normalizedValue = element.innerHTML
             .toLowerCase()
-            .replace(/[^a-z0-9+]+/gi, '_')
-            .replace(/^_/, '');
+            .replace(/\s/gi, '_')
         const startHeaderNumber = parseInt(element.tagName.slice(1));
         const anchorIcon = '#'.repeat(startHeaderNumber);
         const anchorTag = `<a class="anchor" aria-label="Anchor" data-anchor-icon="${anchorIcon}" href="#${normalizedValue}"></a>`;

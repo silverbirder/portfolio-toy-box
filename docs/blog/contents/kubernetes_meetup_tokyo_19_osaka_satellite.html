@@ -18,7 +18,7 @@ Kubernetesの生みの親である3人の内の1人のJoe Bedaから、<strong>K
 発表の内容は全てYoutubeにありますので、そちらが正しいものです。ご参考下さい。
 [https://www.youtube.com/watch?v=ETHGx8_Q-1k:embed:cite]</p>
 <p>[:contents]</p>
-<h1 id="who_is_joe_beda_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#who_is_joe_beda_"></a>Who is Joe Beda ?</h1>
+<h1 id="who_is_joe_beda_?"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#who_is_joe_beda_?"></a>Who is Joe Beda ?</h1>
 <blockquote>
 <p>Joe Beda は、Kubernetes の co-founder（共同創設者/最初に開発した3人のうちの1人）/ 昨年 VMware に買収された Heptio の CTO / O'Reilly「Kubernetes: Up &amp; Running」 (邦題「入門Kubernetes」）の共著者で、現在も Kubernetes をリードしている1人です。今回は、Kubernetes のこれまでと未来についてお話いただきます。</p>
 </blockquote>
@@ -37,25 +37,25 @@ Googleで働いていたときは、KubernetesやCompute Engineを作ってい�
 この柔軟性をしすぎると複雑になってしまい、ユーザーが使ってくれなくなる恐れがあります（マニアックなユーザーは残るかもしれないけど）。
 そこのバランスが大切なのかなと思いました。</p>
 <p>Joeさんの詳細な説明は<a href="https://www.linkedin.com/in/jbeda">こちら</a>です。</p>
-<h1 id="the_origins_and_future_of_kubernetes_en_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#the_origins_and_future_of_kubernetes_en_"></a>The origins and future of Kubernetes (en/英語)</h1>
+<h1 id="the_origins_and_future_of_kubernetes_(en/英語)"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#the_origins_and_future_of_kubernetes_(en/英語)"></a>The origins and future of Kubernetes (en/英語)</h1>
 <p>Joeさんは英語で話されてました。
 CPCAmerica(?)の田中さんが通訳をされていたのですが、ものすごくわかりやすかったです。感謝です！
 あと、記憶力はんぱねぇ...。</p>
 <p>[https://twitter.com/mumoshu/status/1134438272518635521?s=20:embed]</p>
 <p>※ 以下、<a href="https://twitter.com/apstndb">@‏apstndb</a> さんの要約Tweetを参考にしました。神!!!
 [https://twitter.com/silver_birder/status/1134406467744804864?s=20:embed]</p>
-<h2 id="kubernetes_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#kubernetes_"></a>kubernetesの歴史</h2>
-<h3 id="borg_"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#borg_"></a>Borgの誕生</h3>
+<h2 id="kubernetesの歴史"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#kubernetesの歴史"></a>kubernetesの歴史</h2>
+<h3 id="borgの誕生"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#borgの誕生"></a>Borgの誕生</h3>
 <p>Googleでは、BigDataを処理するための<a href="https://ja.wikipedia.org/wiki/MapReduce">MapReduce</a>を開発していました。
 MapReduceを扱うために、<a href="https://www.slideshare.net/hasanveldstra/the-anatomy-of-the-google-architecture-fina-lv11/34-GWQ_Google_Workqueue_ulliBatch_SubmissionScheduler">GlobalWorkQueue</a>(GWQ)というものを開発され、これは主にバッチのために作成されたものでした。そこからバッチだけでなく、リアルタイムに実行したい(検索など)サービスに対応するために生まれたのがBorgだそうです。
 Googleのような大規模な検索であれば、数％の効率Upでも大きなコスト削減につながるメリットがあります。
 これが、Kubernetesの元となりました。</p>
-<h3 id="kubernetes_"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#kubernetes_"></a>Kubernetesの誕生</h3>
+<h3 id="kubernetesの誕生"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#kubernetesの誕生"></a>Kubernetesの誕生</h3>
 <p>GoogleでBorgを開発を進めていく中で、世の中は仮想マシンを扱うユーザーが多かったそうです。
 Borgはプロプライエタリなソフトウェアだったため、Borgの世界を知ってほしい、開発者を引き込みたいという願いから、
 OSSとしてKubernetesが誕生しました。
 またKubernetesは、APIドリブンで開発者の生産性を上げるというのが先で、効率やセキュリティは後からついてきたそうです。</p>
-<h3 id="kubernetes_"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#kubernetes_"></a>Kubernetesの魅力</h3>
+<h3 id="kubernetesの魅力"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#kubernetesの魅力"></a>Kubernetesの魅力</h3>
 <p>Kubernetesとは、「コンテナオーケストレーター」と多くの人は知っていると思います。普及した大きなポイントですね。
 他の観点で「１つのデータベースだけでクラスタを管理している設計」が魅力的だという話がありました。
 （勝手な解釈かもしれません。すみません）</p>
@@ -69,7 +69,7 @@ kubernetesをDockerForMacで動かしたときは、そういえばシングル�
 <figure class="figure-image figure-image-fotolife" title="kubernetes jazz Improv">[f:id:silverbirder180:20190601154007p:plain]<figcaption>kubernetes jazz Improv</figcaption></figure>
 <p>Kubernetesはコンテナオーケストレーションとよく言われますが、事前にすべてがプランされたオーケストレーションではなく、ジャズのように即興で計画して組み立てていくものに近い思想だそうです。
 私は音楽に疎い人なのですが意味は理解しました。（笑）性格的には即興は苦手っす。</p>
-<h3 id="crd_operators"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#crd_operators"></a>CRDとOperators</h3>
+<h3 id="crdとoperators"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#crdとoperators"></a>CRDとOperators</h3>
 <p>PodやReplication,Deploymentなど様々なリソースがあります。
 ただ、Kubernetes が持っていないものを実装するにはどうすればよいのでしょうか。
 そこで、Custom Resource Definitions (CRD)です。
@@ -86,23 +86,23 @@ Operatorsというものが生まれました。</p>
 [https://github.com/heptio/gimbal:embed:cite]
 [https://techblog.yahoo.co.jp/advent-calendar-2018/oss-gimbal/:embed:cite]</p>
 <p>詳しくは分かりませんが、こういった拡張しやすい機能があるおかげでドンドン普及するのだなと勉強になりました。</p>
-<h3 id="q_amp_a"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#q_amp_a"></a>Q&amp;A</h3>
-<h4 id="q1_statefulsets_"><a class="anchor" aria-label="Anchor" data-anchor-icon="####" href="#q1_statefulsets_"></a>Q1. StatefulSets には今回触れられなかったが、どういう扱いなのか</h4>
+<h3 id="q&amp;amp;a"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#q&amp;a"></a>Q&amp;A</h3>
+<h4 id="q1._statefulsets_には今回触れられなかったが、どういう扱いなのか"><a class="anchor" aria-label="Anchor" data-anchor-icon="####" href="#q1._statefulsets_には今回触れられなかったが、どういう扱いなのか"></a>Q1. StatefulSets には今回触れられなかったが、どういう扱いなのか</h4>
 <p>[https://twitter.com/apstndb/status/1134409892033261569?s=20:embed]</p>
-<h4 id="q2_"><a class="anchor" aria-label="Anchor" data-anchor-icon="####" href="#q2_"></a>Q2. スケーラビリティに関して</h4>
+<h4 id="q2._スケーラビリティに関して"><a class="anchor" aria-label="Anchor" data-anchor-icon="####" href="#q2._スケーラビリティに関して"></a>Q2. スケーラビリティに関して</h4>
 <p>[https://twitter.com/apstndb/status/1134410827627487232?s=20:embed]</p>
-<h4 id="q3_kubernetes_etcd_"><a class="anchor" aria-label="Anchor" data-anchor-icon="####" href="#q3_kubernetes_etcd_"></a>Q3. Kubernetes はなぜ etcd を使っているか</h4>
+<h4 id="q3._kubernetes_はなぜ_etcd_を使っているか"><a class="anchor" aria-label="Anchor" data-anchor-icon="####" href="#q3._kubernetes_はなぜ_etcd_を使っているか"></a>Q3. Kubernetes はなぜ etcd を使っているか</h4>
 <p>[https://twitter.com/apstndb/status/1134411776009785345?s=20:embed]
 [https://twitter.com/apstndb/status/1134412148237512705?s=20:embed]
 [https://twitter.com/apstndb/status/1134412317439844352?s=20:embed]</p>
-<h4 id="q4_virtual_kubelet_k3s_"><a class="anchor" aria-label="Anchor" data-anchor-icon="####" href="#q4_virtual_kubelet_k3s_"></a>Q4. Virtual Kubelet とか k3s みたいなエッジで活用する動きがコミュニティでは感じられるが、どう見ている?</h4>
+<h4 id="q4._virtual_kubelet_とか_k3s_みたいなエッジで活用する動きがコミュニティでは感じられるが、どう見ている?"><a class="anchor" aria-label="Anchor" data-anchor-icon="####" href="#q4._virtual_kubelet_とか_k3s_みたいなエッジで活用する動きがコミュニティでは感じられるが、どう見ている?"></a>Q4. Virtual Kubelet とか k3s みたいなエッジで活用する動きがコミュニティでは感じられるが、どう見ている?</h4>
 <p>[https://twitter.com/apstndb/status/1134413224839745536?s=20:embed]
 [https://twitter.com/apstndb/status/1134413431316987904?s=20:embed]</p>
-<h4 id><a class="anchor" aria-label="Anchor" data-anchor-icon="####" href="#"></a>そのほか</h4>
+<h4 id="そのほか"><a class="anchor" aria-label="Anchor" data-anchor-icon="####" href="#そのほか"></a>そのほか</h4>
 <p>参加者からの質問は、どれも鋭いものばかり。
 適度な質問をしたいなとつぶやきました...。届かなかったけど...。
 [https://twitter.com/silver_birder/status/1134412867988480000?s=20:embed]</p>
-<h1 id="osaka_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#osaka_"></a>Osaka会場</h1>
+<h1 id="osaka会場"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#osaka会場"></a>Osaka会場</h1>
 <p>会場提供は、株式会社Aimingさんでした。</p>
 <p>[https://aiming-inc.com/ja/:embed:cite]</p>
 <p>会場場所は、グランフロント大阪タワーBの18階にありました。(高い!)
@@ -118,7 +118,7 @@ Operatorsというものが生まれました。</p>
 </ul>
 <p>まあ、私はコミュ障なので、ほぼなかったですが...。</p>
 <p>改善ポイントとしては、<strong>中継地からも質問ができる</strong>ようになってくれたら良いなと期待しています。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>最後に</h1>
+<h1 id="最後に"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#最後に"></a>最後に</h1>
 <p>Kubernetesについて、どういった経緯で誕生したのか、またCRDについても勉強になりました。
 また、Kubernetesとは違うのですが、「<strong>OSSのちから</strong>」というものがエンジニアの世界では大事だと強く感じました。
 普段エンジニアが開発する上で、ほぼ間違いなくOSSを使っています。
@@ -130,7 +130,7 @@ OSSとしてKubernetesが広まっていった一要因と思いました。こ�
 個人でもOSSへ貢献できますし、OSS Gateという初心者向けのものもあります。
 Kubernetesのコントリビューターは、ちょっとハードルが高いですが、
 私もエンジニアとしてOSSへ貢献し続けていこうと思います。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>そのほか</h1>
+<h1 id="そのほか"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#そのほか"></a>そのほか</h1>
 <p>拙い文章なのに、最後まで読んでいただき、ありがとうございます。
 twitterをしていますので、フォローしてもらえるとうれしいです。(<a href="https://twitter.com/silver_birder">silver_birder</a>)</p> </main>
 <amp-social-share type="twitter" aria-label="Share on Twitter" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:60px;height:44px;" i-amphtml-layout="fixed"></amp-social-share>

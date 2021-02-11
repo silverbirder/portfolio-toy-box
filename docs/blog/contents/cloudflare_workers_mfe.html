@@ -12,7 +12,7 @@
 その内容を紹介します。サンプルコードは、下記に残しています。</p>
 <p>[https://github.com/Silver-birder/micro-frontends-sample-code-5/:embed:cite]</p>
 <p>[:contents]</p>
-<h1 id="edge_side_include_esi_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#edge_side_include_esi_"></a>Edge Side Include (ESI)って？</h1>
+<h1 id="edge_side_include_(esi)って？"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#edge_side_include_(esi)って？"></a>Edge Side Include (ESI)って？</h1>
 <p>[https://www.w3.org/TR/esi-lang/:embed:cite]</p>
 <p>ESIは、SSIと似たようなもので、サーバーサイド側でコンテンツを挿入する仕組みの1つです。ESIの場合、挿入するコンテンツ(ページフラグメント)がEdge側にあると理解しています。
 そのため、Edgeキャッシュをコンテンツ毎に効かせれるメリットがあります。
@@ -27,7 +27,7 @@
 <p>要は、Edge WorkersとはCDNが提供するプラットフォーム上で、プログラムコード、例えばJavascriptなどが実行できるサービスです。</p>
 <h1 id="edge_workers"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#edge_workers"></a>Edge Workers</h1>
 <p>個人で使えるEdge Workersだと、<a href="https://fly.io">fly.io</a>や<a href="https://developers.cloudflare.com/workers/">Cloudflare Workers</a> があります。後者のCloudflare Workersには、<a href="https://developers.cloudflare.com/workers/runtime-apis/html-rewriter">HTMLRewriter</a> というHTMLを書き換える機能があり、Micro Frontendsに使えそうだったため、今回はCloudflare Workersを使用します。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>構成</h1>
+<h1 id="構成"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#構成"></a>構成</h1>
 <p>次のような構成を考えてみました。</p>
 <figure class="figure-image figure-image-fotolife" title="Cloudflare worker + Micro Frontends">[f:id:silverbirder180:20201114000721p:plain]<figcaption>Cloudflare Workers + Micro Frontends</figcaption></figure>
 <p>※ <a href="https://podium-lib.io/">Podium</a>と<a href="https://ara-framework.github.io/website/">Ara-Framework</a> に影響されています。<br>
@@ -45,8 +45,8 @@ JSONを返すURLは、/manifest.json と統一しています。</p>
 <p>また、RustのWebAssemblyを下記のようなテンプレートで組み込むことができます。</p>
 <p>[https://github.com/cloudflare/rustwasm-worker-template:embed:cite]</p>
 <p>特定の重い処理をRustのWebAssemblyで処理するようなフラグメントをページに混ぜることができます。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>構築して困ったこと</h1>
-<h2 id="edge_workers_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#edge_workers_"></a>同一ドメイン内でのEdge Workers通信が不可</h2>
+<h1 id="構築して困ったこと"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#構築して困ったこと"></a>構築して困ったこと</h1>
+<h2 id="同一ドメイン内でのedge_workers通信が不可"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#同一ドメイン内でのedge_workers通信が不可"></a>同一ドメイン内でのEdge Workers通信が不可</h2>
 <p>Cloudflare Workersは、任意のドメインで動かすことになります。
 例えば、ドメインA内に複数のCloudflare Workers XとYがあったとすると、
 XからYへの通信ができないです。</p>
@@ -55,7 +55,7 @@ XからYへの通信ができないです。</p>
 先程の例なら、ドメインAに属するCloudflare Workers XからドメインBに属するCloudflare Workers Yへ通信することができます。
 私は、freenomのtkドメイン(無料)を複数購入しました。</p>
 <p>[https://freenom.com/:embed:cite]</p>
-<h2 id="ip_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#ip_"></a>直接IPアドレスへリクエストできない</h2>
+<h2 id="直接ipアドレスへリクエストできない"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#直接ipアドレスへリクエストできない"></a>直接IPアドレスへリクエストできない</h2>
 <p>ローカル開発時に困ったことがあります。
 Cloudflare Workersをローカル開発する場合、<a href="https://github.com/cloudflare/wrangler#-dev">wrangler:dev</a> というコマンドで検証します。
 検証中に、他のCloudflare WorkersのURL(localhost:XXXX)へアクセスしようとしても、直接IPとなるため失敗します。</p>
@@ -63,12 +63,12 @@ Cloudflare Workersをローカル開発する場合、<a href="https://github.co
 <p>そのため、下記のようなサービスを使って、私は解決させました。</p>
 <p>[https://ngrok.com/:embed:cite]
 [https://github.com/localtunnel/localtunnel:embed:cite]</p>
-<h2 id="cloudflare_workers_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#cloudflare_workers_"></a>Cloudflare Workersによる制約が大きい</h2>
+<h2 id="cloudflare_workersによる制約が大きい"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#cloudflare_workersによる制約が大きい"></a>Cloudflare Workersによる制約が大きい</h2>
 <p>Cloudflareのプラットフォーム上では、下記のランタイムAPIが使用できます。</p>
 <p>[https://developers.cloudflare.com/workers/runtime-apis:embed:cite]</p>
 <p>Cloudflare Workersの仕組みを把握していないのですが、この提供されているAPI以外は、
 確か使えなかったような気がします。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>最後に</h1>
+<h1 id="最後に"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#最後に"></a>最後に</h1>
 <p>Edgeって、私の印象では、単なる静的コンテンツを置くだけのものと考えていました。
 それが、動的なコンテンツ、つまりEdge Workersのような存在を知り、Edgeの世界が広がったように感じます。
 Webアプリケーションを、よりユーザーに近いEdgeへ配置するようにすれば、レスポンス速度改善が期待できます。</p>

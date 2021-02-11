@@ -8,7 +8,7 @@
 
 <h1 id="links"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#links"></a>Links</h1>
 <p>https://qiita.com/silverbirder/items/937e1b5f6b3589452932</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>ストーリー</h1>
+<h1 id="ストーリー"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ストーリー"></a>ストーリー</h1>
 <ol>
 <li><a href="https://qiita.com/silverbirder/items/34b823c1a4449d40e610">一足遅れて Kubernetes を学び始める - 01. 環境選択編 -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/d1aa368568885df2e44f">一足遅れて Kubernetes を学び始める - 02. Docker For Mac -</a></li>
@@ -27,7 +27,7 @@
 <li><a href="https://qiita.com/silverbirder/items/8ea729949ab3bb4cf540">一足遅れて Kubernetes を学び始める - 15. セキュリティ -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/a68499a10dd00c192947">一足遅れて Kubernetes を学び始める - 16. コンポーネント -</a></li>
 </ol>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>前回</h1>
+<h1 id="前回"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#前回"></a>前回</h1>
 <p><a href="https://qiita.com/silverbirder/items/d3522237b28703a9adb6">一足遅れて Kubernetes を学び始める - 06. workloads その2 -</a>にて、DaemonSetとStatefulSet(一部）を学習しました。今回は、StatefulSetの続きとJob,CronJobを学習します。</p>
 <h1 id="statefulset"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#statefulset"></a>StatefulSet</h1>
 <pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-statefulset.yaml</span>
@@ -86,7 +86,7 @@ pi@raspi001:~/tmp $ k exec -it sample-statefulset-0 ls /usr/share/nginx/html/sam
 /usr/share/nginx/html/sample.html
 </code></pre>
 <p>こちらも残っていますね。OKです。</p>
-<h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>スケーリング</h2>
+<h2 id="スケーリング"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#スケーリング"></a>スケーリング</h2>
 <p>StatefulSetでは、スケールアウトするときは、インデックスが小さいものから増えていきます。
 逆にスケールインするときは、インデックスが大きいものから削除されていきます。
 また、１つずつ増減します。そのため、一番始めに作られるPodは、一番最後に削除されることになります。
@@ -115,7 +115,7 @@ sample-statefulset-1                      1/1     Running       1          10h
 sample-statefulset-2                      0/1     Terminating   0          10h
 </code></pre>
 <p>期待通りですね。１つずつではなく、並列して作成したい場合は、spec.podManagementPolicyをparallelにすれば実現できます。</p>
-<h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>アップデート戦略</h2>
+<h2 id="アップデート戦略"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#アップデート戦略"></a>アップデート戦略</h2>
 <p>戦略は２通りあり、OnDeleteとRollingUpdateがあります。前者は、削除された（マニュフェスト更新ではなく、delete）タイミングに更新され、後者は、即時更新します。StatefulSetの更新では、アップデート中の過不足分の調整(maxUnavailable, maxSurge)は一切できません。また、partitionというフィールドのによって、どのインデックス以降を更新するかを調整することもできます。これは、ステートフルならではの機能です。
 Deploymentでは試してませんでしたが、こちらで試してみようと思います。</p>
 <p>デフォルトの戦略はRollingUpdateです。これは何度も動作して確認できているので、OnDeleteを試そうと思います。(partitionは置いとく）</p>
@@ -247,11 +247,11 @@ Forbidは、前のjobが終わらない限り実行しない。
 Replaceは、前のjobを削除し、jobを実行する。</p>
 <p>遅延がどのぐらい許容できるかは、startingDeadlineSecondsで指定します。</p>
 <p>こちらも、特に何事もなく終わりました。笑</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>お片付け</h1>
+<h1 id="お片付け"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#お片付け"></a>お片付け</h1>
 <pre><code class="language-shell hljs">pi@raspi001:~/tmp $ k delete -f sample-statefulset.yaml -f sample-job.yaml -f sample-cronjob.yaml
 pi@raspi001:~/tmp $ k delete pvc www-sample-statefulset-{0,1,2,3}
 </code></pre>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>終わりに</h1>
+<h1 id="終わりに"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#終わりに"></a>終わりに</h1>
 <p>ようやく、workloadsが終わりました。最後はざっくり進めてしまった感がありました。
 次回は<a href="https://qiita.com/silverbirder/items/3a46ab92b45cdcc56ccd">こちら</a>です。</p> </main>
 <amp-social-share type="twitter" aria-label="Share on Twitter" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:60px;height:44px;" i-amphtml-layout="fixed"></amp-social-share>

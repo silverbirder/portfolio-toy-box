@@ -8,7 +8,7 @@
 
 <h1 id="links"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#links"></a>Links</h1>
 <p>https://qiita.com/silverbirder/items/8df21f399c453b9f8e51</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>ストーリー</h1>
+<h1 id="ストーリー"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ストーリー"></a>ストーリー</h1>
 <ol>
 <li><a href="https://qiita.com/silverbirder/items/34b823c1a4449d40e610">一足遅れて Kubernetes を学び始める - 01. 環境選択編 -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/d1aa368568885df2e44f">一足遅れて Kubernetes を学び始める - 02. Docker For Mac -</a></li>
@@ -27,9 +27,9 @@
 <li><a href="https://qiita.com/silverbirder/items/8ea729949ab3bb4cf540">一足遅れて Kubernetes を学び始める - 15. セキュリティ -</a></li>
 <li><a href="https://qiita.com/silverbirder/items/a68499a10dd00c192947">一足遅れて Kubernetes を学び始める - 16. コンポーネント -</a></li>
 </ol>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>前回</h1>
+<h1 id="前回"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#前回"></a>前回</h1>
 <p><a href="https://qiita.com/silverbirder/items/5c0703f8fa055ade9f21">一足遅れて Kubernetes を学び始める - 12. リソース制限 -</a>では、requestsやlimitなどのリソース制限について学習しました。今回は、ヘルスチェックとコンテナライフサイクルについて学習します。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>ヘルスチェック</h1>
+<h1 id="ヘルスチェック"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ヘルスチェック"></a>ヘルスチェック</h1>
 <p>Kubernetesでは、Podの正常生判断のためのヘルスチェックが2種類用意されています。</p>
 <ul>
 <li>Liveness Probe
@@ -151,7 +151,7 @@ sample-healthcheck                        0/1     Running   2          17m
 sample-healthcheck                        1/1     Running   2          17m
 </code></pre>
 <p>期待通り、50x.htmlを削除すると、READYから外れて、追加するとREADYに戻りました。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>コンテナの再起動</h1>
+<h1 id="コンテナの再起動"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#コンテナの再起動"></a>コンテナの再起動</h1>
 <p>コンテナのプロセスが停止、またはヘルスチェックの失敗によってコンテナを再起動するかどうかは、spec.restartPolicyによって決まります。
 種類は下記３つです。</p>
 <ul>
@@ -281,7 +281,7 @@ pi@raspi001:~/tmp $ k exec -it sample-initcontainer cat /usr/share/nginx/html/in
 2nd
 </code></pre>
 <p>確かに、initContainersが順序通り起動できています。ふむふむ。</p>
-<h1 id="poststart_prestop_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#poststart_prestop_"></a>起動時と終了時のコマンド実行(postStart,preStop)</h1>
+<h1 id="起動時と終了時のコマンド実行(poststart,prestop)"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#起動時と終了時のコマンド実行(poststart,prestop)"></a>起動時と終了時のコマンド実行(postStart,preStop)</h1>
 <p>コンテナ起動後に実行するコマンドをpostStart,
 コンテナ終了前に実行するコマンドをpreStopという機能で実現できます。</p>
 <pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-lifecycle.yaml</span>
@@ -315,13 +315,13 @@ poststart  prestop  started
 </code></pre>
 <p>たしかに、postStart, preStopが動いています。
 注意しないといけないのが、postStartは、spec.containers[].commandの実行とほぼ同じだそうです。（非同期)</p>
-<h1 id="pod_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#pod_"></a>Podの安全な停止とタイミング</h1>
+<h1 id="podの安全な停止とタイミング"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#podの安全な停止とタイミング"></a>Podの安全な停止とタイミング</h1>
 <p>terminationGracePeriodSecondsに指定した秒数は、podが削除開始時からの猶予です。
 デフォルトで30秒となっています。30秒の間にpreStop+SIGTERMの処理が終わらなければ、
 強制的にSIGKILLされて停止されます。ただし、preStopが終わっていなくて30秒たった場合、
 SIGTERM処理を2秒だけ実施できます。
 terminationGracePeriodSecondsの値は、prePostを必ず終える秒数に設定しましょう。</p>
-<h1 id="node_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#node_"></a>Nodeをスケジューリング対象から外す</h1>
+<h1 id="nodeをスケジューリング対象から外す"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#nodeをスケジューリング対象から外す"></a>Nodeをスケジューリング対象から外す</h1>
 <p>Nodeをkubernetesのスケジューリング対象から外すcordonというコマンドがあります。
 Nodeの状態には、SchedulingEnabledとSchedulingDisabledがあり、後者の状態になると、
 kubernetesからのスケジューリング対象外となり、たとえばReplicaSetの更新などが機能しなくなります。</p>
@@ -359,10 +359,10 @@ error: cannot delete DaemonSet-managed Pods (use --ignore-daemonsets to ignore):
 単体Podなど管理されていないものは、削除されてしまいます。上記の警告は、DaemonSetで管理されているPodは、
 削除するしかないけど、良いですか？というものです。
 そのため、drainをすると、いくつか警告されます。警告内容に従って適宜操作する必要があります。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>お片付け</h1>
+<h1 id="お片付け"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#お片付け"></a>お片付け</h1>
 <pre><code class="language-shell hljs">pi@raspi001:~/tmp $ k delete -f sample-healthcheck.yaml -f sample-restart-always.yaml -f sample-restart-onfailure.yaml -f sample-initcontainer.yaml -f sample-lifecycle.yaml
 </code></pre>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>最後に</h1>
+<h1 id="最後に"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#最後に"></a>最後に</h1>
 <p>今回は、ヘルスチェックの動作と、コンテナを停止するまでのステップを学習しました。
 わざわざヘルスチェックの処理をアプリケーションに用意せずとも、kubernetesに機能として
 存在することに、驚きました。次回は、<a href="https://qiita.com/silverbirder/items/cae4649d9f9336bc01fd">こちら</a>です。</p> </main>

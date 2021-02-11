@@ -13,13 +13,13 @@
 このアーキテクチャを知るために、書籍を読み、簡単なサンプルWebアプリを開発しました。
 そこから学んだことをすべて議事録として残したいと思います。</p>
 <p>[:contents]</p>
-<h1 id="web_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#web_"></a>モノリシックな Webアプリケーション</h1>
+<h1 id="モノリシックな_webアプリケーション"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#モノリシックな_webアプリケーション"></a>モノリシックな Webアプリケーション</h1>
 <p>マイクロサービスという考え方の多くは、バックエンドへ適用されることが一般的です。
 一方で、フロントエンドは依然モノリシックなままの状態です。</p>
 <p>ECサイトのようなWebアプリケーションでは、様々な専門知識(商品、注文、検索など)を必要とし、フロントエンド開発者の守備範囲がとても広くなってしまいます。
 開発者には限界があり、いつしか<b>トラブルシューティングに追われる日々</b>になってしまいます。</p>
 <p>そこで、Micro Frontendsというアーキテクチャの出番です。</p>
-<h1 id="micro_frontends_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#micro_frontends_"></a>Micro Frontends とは</h1>
+<h1 id="micro_frontends_とは"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#micro_frontends_とは"></a>Micro Frontends とは</h1>
 <blockquote>
 <p>それはマイクロサービスの考え方をフロントエンドに拡張したものです。
 [https://micro-frontends-japanese.org/resources/monolith-frontback-microservices.png:image=https://micro-frontends-japanese.org/resources/monolith-frontback-microservices.png]
@@ -47,7 +47,7 @@
 <p>という内容があります。</p>
 <p>IKEAやZalando といった<b>ECサイトがMicro Frontendsを採用する</b>ケースが多く、公には言っていませんが、AmazonもMicro Frontendsで取り組んでいるようです。
 ECサイトだけでなく、Spotifyのようなサービスにも適用されるケースがあります。</p>
-<h1 id="micro_frontends_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#micro_frontends_"></a>Micro Frontends の良さ</h1>
+<h1 id="micro_frontends_の良さ"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#micro_frontends_の良さ"></a>Micro Frontends の良さ</h1>
 <p>私が思う Micro Frontends から得られる最大の恩恵は、"<b>局所化</b>" だと思います。</p>
 <p>フロントエンドをサービス毎(商品、注文、検索など)に分割することで</p>
 <ul>
@@ -66,7 +66,7 @@ ECサイトだけでなく、Spotifyのようなサービスにも適用され�
 </ul>
 <p>少し薄っぺらいかも知れませんが、↑のように実感しています。</p>
 <p>※ Micro Frontendsは Webベースのアーキテクチャになります。</p>
-<h1 id="micro_frontends_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#micro_frontends_"></a>Micro Frontends の難しさ</h1>
+<h1 id="micro_frontends_の難しさ"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#micro_frontends_の難しさ"></a>Micro Frontends の難しさ</h1>
 <p>ここは、まだちゃんと掘り下げれていませんが、次のようなものがあります。</p>
 <ul>
 <li>特定チームが改善しても、チーム全体が改善しない
@@ -86,7 +86,7 @@ ECサイトだけでなく、Spotifyのようなサービスにも適用され�
 </ul>
 </li>
 </ul>
-<h1 id="micro_frontends_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#micro_frontends_"></a>Micro Frontends の作る上で考えること</h1>
+<h1 id="micro_frontends_の作る上で考えること"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#micro_frontends_の作る上で考えること"></a>Micro Frontends の作る上で考えること</h1>
 <p>フロントエンドをマイクロサービス化するということは、各サービスで HTML/CSS/JSを作ることになります。
 それらの<b>サービスを統合するサービス</b>が重要になってきます。</p>
 <p>大きく分けて2つの統合パターンがあります。</p>
@@ -143,14 +143,14 @@ ECサイトだけでなく、Spotifyのようなサービスにも適用され�
 <p>ちなみにWeb Componentsは、次の入門書(500円)を執筆したため、ご興味がある人は見てみて下さい。
 [https://silverbirder.booth.pm/items/1572900:embed:cite]</p>
 <p>※ クライアントサイド統合(Web Components)でも良かったのですが、私都合により却下となりました。</p>
-<h1 id="micro_frontends_web_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#micro_frontends_web_"></a>Micro Frontends サンプルWebアプリ</h1>
+<h1 id="micro_frontends_サンプルwebアプリ"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#micro_frontends_サンプルwebアプリ"></a>Micro Frontends サンプルWebアプリ</h1>
 <p>apple, banana, orangeという商品を検索するだけのサンプルWebアプリを作りました。</p>
 <p>概要図はこちらです。
 [https://res.cloudinary.com/silverbirder/image/upload/v1588513402/micro-frontends-sample-code/micro_frontends_sample.jpg:image=https://res.cloudinary.com/silverbirder/image/upload/v1588513402/micro-frontends-sample-code/micro_frontends_sample.jpg]
 ※ [http://team-page.fly.dev/]</p>
 <p>サンプルコードは、ここに置いています。
 [https://github.com/Silver-birder/micro-frontends-sample-code:embed:cite]</p>
-<h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>サービス</h2>
+<h2 id="サービス"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#サービス"></a>サービス</h2>
 <table>
 <thead>
 <tr>
@@ -177,7 +177,7 @@ ECサイトだけでなく、Spotifyのようなサービスにも適用され�
 </tr>
 </tbody>
 </table>
-<h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>仕組み</h2>
+<h2 id="仕組み"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#仕組み"></a>仕組み</h2>
 <p>Podium というライブラリを採用しました。</p>
 <p>[https://github.com/podium-lib/:embed:cite]</p>
 <p>これは、フロントエンドのサービスを簡単に統合できるようなライブラリになっています。
@@ -203,7 +203,7 @@ Podium には大きく分けて3つの機能があります。</p>
 </ul>
 </li>
 </ul>
-<h3 id="podium_podlet"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#podium_podlet"></a>@podium/podlet</h3>
+<h3 id="@podium/podlet"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#@podium/podlet"></a>@podium/podlet</h3>
 <p>Podletには、manifest.json と呼ばれる値を返却することが必須になっています。
 menifest.jsonには、サービスのエンドポイントや、Asset(JSやCSS)のパスが明記されています。</p>
 <p>team-search では</p>
@@ -230,7 +230,7 @@ menifest.jsonには、サービスのエンドポイントや、Asset(JSやCSS)�
   }
 </code></pre>
 <p>というレスポンス結果になります。</p>
-<h3 id="podium_layout"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#podium_layout"></a>@podium/layout</h3>
+<h3 id="@podium/layout"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#@podium/layout"></a>@podium/layout</h3>
 <p>Layoutでは、Podletのmanifest.jsonの定義に従って fetchすることになります。</p>
 <p>team-page では</p>
 <pre><code class="language-javascript hljs"><span class="hljs-comment">// server.js (express)</span>
@@ -264,7 +264,7 @@ app.get(<span class="hljs-string">`/`</span>, <span class="hljs-keyword">async</
 <p>のようにPodletを使って、ページ全体を構築します。このようにサーバーサイドで統合しています(SSR)。
 しかし、インタラクティブなアクションも必要なため、PodletからHydrateするためのjsを読み込んでいます。</p>
 <p>また、team-searchの検索結果(x-product-items)をteam-productへ渡しているため、商品の検索結果を含めてSSRが実現できます。</p>
-<h3 id="podium_browser"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#podium_browser"></a>@podium/browser</h3>
+<h3 id="@podium/browser"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#@podium/browser"></a>@podium/browser</h3>
 <p>サーバーサイドは、podium/podlet, podium/layoutで連携できます。
 クライアントサイドは、この @podium/browserのMessageBusで連携できます。</p>
 <p>今回のサンプルWebアプリでは、次のようなユースケースに使用しています。</p>
@@ -284,7 +284,7 @@ messageBus.subscribe(<span class="hljs-string">'search'</span>, <span class="hlj
 </code></pre>
 <p>このようにすることで、画面更新ではなく部分更新ができました。
 インタラクティブな操作も実現可能です。</p>
-<h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>状態管理, ルーティング</h2>
+<h2 id="状態管理,_ルーティング"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#状態管理,_ルーティング"></a>状態管理, ルーティング</h2>
 <p>ここは、まだきちんと作っていませんが、次のようなコンセプトで設計するのが良いと思います。</p>
 <ul>
 <li>状態管理
@@ -300,7 +300,7 @@ messageBus.subscribe(<span class="hljs-string">'search'</span>, <span class="hlj
 </ul>
 </li>
 </ul>
-<h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>その他</h2>
+<h2 id="その他"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#その他"></a>その他</h2>
 <p>各サービスは、fly.io というPaaSへデプロイしています。</p>
 <p>[https://fly.io/:embed:cite]</p>
 <p>CDNでSSRが実行できる <b>Edge Worker</b>を使用しています。
@@ -308,8 +308,8 @@ messageBus.subscribe(<span class="hljs-string">'search'</span>, <span class="hlj
 <p>ただ、サンプルWebアプリでは、全くその力を引き出せていないです...</p>
 <p>※ 参考記事
 [https://mizchi.hatenablog.com/entry/2019/02/21/235403:embed:cite]</p>
-<h1 id="web_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#web_"></a>サンプルWebアプリで分かったこと</h1>
-<h2 id="ssr_+_csr_hydration_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#ssr_+_csr_hydration_"></a>SSR + CSR (Hydration) が実現可能</h2>
+<h1 id="サンプルwebアプリで分かったこと"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#サンプルwebアプリで分かったこと"></a>サンプルWebアプリで分かったこと</h1>
+<h2 id="ssr_+_csr_(hydration)_が実現可能"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#ssr_+_csr_(hydration)_が実現可能"></a>SSR + CSR (Hydration) が実現可能</h2>
 <p><b>サーバーサイド統合であっても、CSRは実現可能</b>です。
 ただし、Hydrationには<b>パフォーマンス面に難有り</b>なため、このあたりは課題として残ります。
 また、CSRするためのbundleしたjavascriptのsizeには注意が必要です。</p>
@@ -319,7 +319,7 @@ javascriptのsizeを減らすといった手段があります。</p>
 <p>また、次のリポジトリにある zalando tailorは、script loadをstreamingすることで、
 全体のscript load完了時間を短縮するツールもあります。</p>
 <p>[https://github.com/zalando/tailor:embed:cite]</p>
-<h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>サービス内で技術スタックを選択できる</h2>
+<h2 id="サービス内で技術スタックを選択できる"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#サービス内で技術スタックを選択できる"></a>サービス内で技術スタックを選択できる</h2>
 <p>マイクロサービスでは、よくあるメリットとして挙げられるものです。
 フロントエンドでも、同様に技術スタックを自由に選択できます。</p>
 <p>今回では、React.jsとVue.jsを使用しています。
@@ -329,13 +329,13 @@ javascriptのsizeを減らすといった手段があります。</p>
 <p>ただし、Podiumのmanifest.jsonを返却しなければなりません。
 今の所、Podiumに対応しているのはExpressのみなので、Expressを使用する
 フレームワークのみとなります。</p>
-<h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>サービス毎のフロントエンドに集中できる</h2>
+<h2 id="サービス毎のフロントエンドに集中できる"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#サービス毎のフロントエンドに集中できる"></a>サービス毎のフロントエンドに集中できる</h2>
 <p>検索サービスだと、検索に特化したフロントエンドのみに集中することができます。
 商品サービスだと、商品の表示内容のみに集中することができます。</p>
 <p>ただ、どうしても他サービスと連携する要件が出てきます。
 これは、マイクロサービスとしての難しさだと思います。
 例えば、各サービスがどのタイミングでイベント登録するのかを考える必要があります。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>最後に</h1>
+<h1 id="最後に"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#最後に"></a>最後に</h1>
 <p>ECサイトのようなアプリケーションでは『商品を探しやすくする』『買いたくなるような商品を表示する』
 『商品を簡単に購入できる』などフロントエンドでやるべきことが多くあります。</p>
 <p>そういうサービスにおけるフロントエンドがモノリシックであれば、
@@ -346,7 +346,7 @@ javascriptのsizeを減らすといった手段があります。</p>
 <p>日本では、Micro Frontendsの導入実績が少なく、まだまだ発展途上だと思います。
 この記事が、どこかのサービスへの参考になればと思います。</p>
 <p>最後まで読んで頂き、ありがとうございました。</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>参考リンク</h1>
+<h1 id="参考リンク"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#参考リンク"></a>参考リンク</h1>
 <p>[https://github.com/ChristianUlbrich/awesome-microfrontends:embed:cite]</p> </main>
 <amp-social-share type="twitter" aria-label="Share on Twitter" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:60px;height:44px;" i-amphtml-layout="fixed"></amp-social-share>
 <amp-social-share type="hatena_bookmark" data-share-endpoint="http://b.hatena.ne.jp/entry/https://silver-birder.github.io/portfolio-toy-box/blog/contents/microfrontends" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:60px;height:44px;" i-amphtml-layout="fixed"></amp-social-share>

@@ -14,20 +14,20 @@
 私の最近の興味として、Micro Frontends があります。
 [https://silverbirder180.hatenablog.com/entry/2020/05/04/182921:embed:cite]
 今、Ara-Frameworkというフレームワークを使った Micro Frontends のアプローチ方法を学んでいます。</p>
-<h1 id="ara_framework_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ara_framework_"></a>Ara-Framework とは</h1>
+<h1 id="ara-framework_とは"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ara-framework_とは"></a>Ara-Framework とは</h1>
 <blockquote>
 <p>Build Micro-frontends easily using Airbnb Hypernova</p>
 </blockquote>
 <p>※ [https://ara-framework.github.io/website/]</p>
 <p>Ara-Frameworkは、Airbnbが開発したHypernovaというフレームワークを使って、Micro Frontendsを構築します。</p>
-<h1 id="airbnb_hypernova_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#airbnb_hypernova_"></a>Airbnb Hypernova とは</h1>
+<h1 id="airbnb_hypernova_とは"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#airbnb_hypernova_とは"></a>Airbnb Hypernova とは</h1>
 <blockquote>
 <p>A service for server-side rendering your JavaScript views</p>
 </blockquote>
 <p>※ [https://github.com/airbnb/hypernova]</p>
 <p>簡単に説明すると、Hypernovaはデータを渡せばレンダリング結果(HTML)を返却してくれるライブラリです。
 これにより、データ構築とレンダリングを明確に分離することができるメリットがあります。</p>
-<h1 id="ara_framework_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ara_framework_"></a>Ara-Framework アーキテクチャ</h1>
+<h1 id="ara-framework_アーキテクチャ"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ara-framework_アーキテクチャ"></a>Ara-Framework アーキテクチャ</h1>
 <p>Ara-Frameworkのアーキテクチャ図は、次のようなものです。</p>
 <p>[https://cdn-images-1.medium.com/max/2400/1<em>43CBDwIZ8P2q_ZfGg_ktUQ.png:image=https://cdn-images-1.medium.com/max/2400/1</em>43CBDwIZ8P2q_ZfGg_ktUQ.png]</p>
 <p>※ [https://ara-framework.github.io/website/docs/nova-architecture]</p>
@@ -62,7 +62,7 @@
 <p>このように、LayoutとRendering (Nova Bindings) を明確に分けることで、独立性、スケーラビリティ性が良いのかなと感じます。
 各レイアの間にキャッシュレイヤを設けることでパフォーマンス向上も期待できます。</p>
 <p>詳しくは、公式ページをご確認下さい。</p>
-<h1 id="ara_framework_"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ara_framework_"></a>Ara-Framework サンプルコード</h1>
+<h1 id="ara-framework_サンプルコード"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ara-framework_サンプルコード"></a>Ara-Framework サンプルコード</h1>
 <p>Ara-Frameworkを実際に使ってみました。サンプルコードは下記にあげています。
 [https://github.com/Silver-birder/micro-frontends-sample-code-2:embed:cite]</p>
 <p>package.json はこんな感じです。</p>
@@ -103,7 +103,7 @@
 Nova Proxyを動かすときは、次のコマンドを実行します。</p>
 <pre><code class="hljs awk">$ HYPERNOVA_BATCH=http:<span class="hljs-regexp">//</span>localhost:<span class="hljs-number">5000</span><span class="hljs-regexp">/batch PORT=8000 ara run:proxy --config ./</span>nova-proxy.json
 </code></pre>
-<h2 id="nova_directive_layout_"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#nova_directive_layout_"></a>Nova Directive (Layout)</h2>
+<h2 id="nova_directive_(layout)"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#nova_directive_(layout)"></a>Nova Directive (Layout)</h2>
 <p>Nova Directvieは、<code>hypernova-handlebars-directive</code> を使います。
 これは、Node.jsのhandlebarsテンプレートエンジン(hbs)で使えます。</p>
 <p>Expressの雛形を生成します。</p>
@@ -192,14 +192,14 @@ $ PORT=<span class="hljs-number">3000</span> .<span class="hljs-regexp">/node_mo
 <span class="hljs-comment"># product</span>
 $ PORT=<span class="hljs-number">3001</span> .<span class="hljs-regexp">/node_modules/</span>webpack<span class="hljs-regexp">/bin/</span>webpack.js --watch --mode development
 </code></pre>
-<h2 id><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#"></a>動作確認</h2>
+<h2 id="動作確認"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#動作確認"></a>動作確認</h2>
 <p>今まで紹介したものを同時に実行する必要があります。
 そこで、<code>concurrently</code> を使います。</p>
 <pre><code class="hljs pgsql">$ <span class="hljs-keyword">concurrently</span> -n <span class="hljs-keyword">cluster</span>,layout,proxy,<span class="hljs-keyword">search</span>,product "npm run cluster" "npm run layout" "npm run proxy" "npm run search:dev" "npm run product:dev"
 </code></pre>
 <p>動作として、次のような画像になります。</p>
 <p>[f:id:silverbirder180:20200823170828p:plain]</p>
-<h1 id><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#"></a>最後に</h1>
+<h1 id="最後に"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#最後に"></a>最後に</h1>
 <p>繰り返しますが、Ara-Framework を使うとデータ構築(Nova Directive)とレンダリング(Nova Bindings)を明確に分離できます。
 また、レンダリング部分は、それぞれ独立できます。今回紹介していないAPI部分は、誰がどのように管理するのか考える必要があります。</p>
 <p>ただ、Nova Bindingsで使用するCSR用javascriptは、重複するコードが含まれてしまい、ブラウザロード時間が長くなってしまいます。
