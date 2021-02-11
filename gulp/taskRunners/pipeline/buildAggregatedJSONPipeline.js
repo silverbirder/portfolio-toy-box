@@ -21,7 +21,7 @@ const buildAggregatedJSONPipeline = async (file, enc, cb) => {
         markdownJson['draft'] = markdownJson['draft'] === 'true';
         const d = new Date(markdownJson['date']);
         markdownJson['date'] = d;
-        markdownJson['humanDate'] = `${d.getFullYear()}/${d.getMonth() + 1}/${d.getDate()}`;
+        markdownJson['humanDate'] = `${d.getFullYear()}/${('00' + (d.getMonth() + 1)).slice(-2)}/${('00' + d.getDate()).slice(-2)}`;
         return markdownJson;
     }).filter((markdownJson) => {
         return markdownJson.draft === false

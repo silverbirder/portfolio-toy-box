@@ -1,42 +1,47 @@
 <!-- 
-title: archUnit
-date: 2020-12-01T22:43:36+09:00
+title: TypescriptでArchUnitしてみた
+date: 2020-11-28T12:08:33+09:00
 draft: false
 description: description
 -->
-# ArchUnit
+# Links
+https://silverbirder180.hatenablog.com/entry/2020/11/28/
 
-![hero-img](https://res.cloudinary.com/silverbirder/image/upload/v1588513402/micro-frontends-sample-code/micro_frontends_sample.jpg)
+ArchUnitをというものを最近知りました。依存関係のテストができるそうです。さっそく試してみたいと思いますので、その備忘録として残しておきます。
+
+[:contents]
+
+# ArchUnit
 
 [https://www.archunit.org/:embed:cite]
 
 > ArchUnit is a free, simple and extensible library for checking the architecture of your Java code using any plain Java unit test framework. That is, ArchUnit can check dependencies between packages and classes, layers and slices, check for cyclic dependencies and more. It does so by analyzing given Java bytecode, importing all classes into a Java code structure.
 
-It is a library that allows you to test the Java architecture, including packages, classes, layers, and slices (?). So I want to test this diagram, which I've seen more than my parents' faces.
-So I would like to test this diagram, which I have seen more than my parents' faces.
+Javaのアーキテクチャをテストできるライブラリで、パッケージやクラス、レイヤー、スライス（？）の依存関係をテストできるそうです。
+そこで、親の顔よりも見たこの図をテストしたいと思います。
 
 [https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg:image=https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg]
 ※ [https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html]
 
-# Do ArchUnit in Typescript too
+# TypescriptでもArchUnitしたい
 
-ArchUnit is made in Java. I want to do an ArchUnit for Typescript.
-So I found a library that looks good.
+ArchUnitはJava製です。私はTypescriptのArchUnitがしたいです。
+そこで、良さげなライブラリを発見しました。
 
 [https://github.com/MaibornWolff/ts-arch:embed:cite]
 
-I'm not particular about it, I think anything is fine as long as it can test the architecture.
-In extreme cases, if you can parse the source code AST and extract the dependencies, I think you can make your own.
+特に拘りなく、アーキテクチャのテストができれば何でも良いかなと思います。
+極端な話、ソースコードをASTパースし、依存関係を抽出できれば自作できるんじゃないかと思います。
 
-# Try
+# 試してみた
 
-The source code we tried is available below. Please refer to it.
+試したソースコードは、下記に置いています。ご参考下さい。
 
 [https://github.com/Silver-birder/try-archunit:embed:cite]
 
-The entire source code tree consists of the following.
+全体のソースコードツリーは次の構成です。
 
-```markdown
+```
 src
 └ 1_enterprise_business_rules
   └ entities
@@ -58,32 +63,32 @@ src
 └ clean_architecture.test.ts
 ```
 
-Each product code is assumed to be just importing the files in the lower level.
+各プロダクトコードは、下の階層のファイルをimportしているだけとします。
 
-```javascript
+```typescript
 // src/4_frameworks_and_drivers/web/Web.ts
 import "../../3_interface_adapters/gateways/Gateway"
 import "../../3_interface_adapters/controllers/Controller"
 import "../../3_interface_adapters/presenters/Presenter"
 ```
 
-```javascript
+```typescript
 // src/3_interface_adapters/controllers/Controller.ts
 import "../../2_application_business_rules/use_cases/UseCase"
 ```
 
-```javascript
+```typescript
 // src/2_application_business_rules/use_cases/UseCase.ts
 import "../../1_enterprise_business_rules/entities/Entity"
 ```
 
-```javascript
+```typescript
 // src/1_enterprise_business_rules/entities/Entity.ts
 ```
 
-The UML component diagram in the following file shows the dependencies.
+下記ファイルにあるUMLのコンポーネント図で依存関係を表します。
 
-```
+```{plantuml}
 # clean_architecture.puml
 @startuml
   component [4_frameworks_and_drivers] #Blue
@@ -97,13 +102,13 @@ The UML component diagram in the following file shows the dependencies.
 @enduml
 ```
 
-The UML visualization is shown in the figure below.
+UMLを可視化すると、下記の図のとおりです。
 
 <figure class="figure-image figure-image-fotolife" title="clean_architecture.puml">[f:id:silverbirder180:20201128114839p:plain]<figcaption>clean_architecture.puml</figcaption></figure>
 
-The test code is shown below.
+テストコードは、下記のとおりです。
 
-```javascript
+```typescript
 // clean_architecture.test.ts
 describe("architecture", () => {
     it("Check dependency", async () => {
@@ -118,24 +123,23 @@ describe("architecture", () => {
 });
 ```
 
-This test case will PASS.
+このテストケースはPASSします。
 <figure class="figure-image figure-image-fotolife" title="src/clean_architecture.test.ts &gt; architecture &gt; Check dependency #Succeed">[f:id:silverbirder180:20201128115326p:plain]<figcaption>src/clean_architecture.test.ts &gt; architecture &gt; Check dependency #Succeed</figcaption></figure>
 
-Now let's try to write the offending code.
+では、違反コードを書いてみます。
 
-```javascript
+```typescript
 // src/3_interface_adapters/controllers/Controller.ts
 import "../../2_application_business_rules/use_cases/UseCase"
 import "../../4_frameworks_and_drivers/web/Web"
 ```
 
-Three layers use the upper four layers. If we run the test in this state
+3レイヤーが上位の4レイヤーを使用しています。この状態でテストを実行すると、
 
 <figure class="figure-image figure-image-fotolife" title="src/clean_architecture.test.ts &gt; architecture &gt; Check dependency #Failed">[f:id:silverbirder180:20201128115543p:plain]<figcaption>src/clean_architecture.test.ts &gt; architecture &gt; Check dependency #Failed</figcaption></figure>
 
 
-It turned out to be Failed. This means that dependency errors can be detected automatically.
+見事Failedとなりました。つまり、依存関係の誤りを自動的に検出することができます。
 
-# Finally
-
-The larger the project, the more complex the dependencies tend to be. Even if you have properly designed the dependencies of packages and classes (in Java), someone may break them. It would be a shame to have them broken after all the effort you put into designing them, so let's protect them with test code!
+# 最後に
+規模が大きなプロジェクトほど、依存関係が複雑になりがちです。(Javaでいう) パッケージやクラスの依存関係を適切に設計できていたとしても、誰かが壊しかねません。せっかく設計したのに壊されるのは、とても残念なので、テストコードで守ってあげましょう！
