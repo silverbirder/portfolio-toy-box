@@ -58,7 +58,7 @@ spec:
             - containerPort: 80
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f . --all --prune
 daemonset.apps/sample-ds created
 pi@raspi001:~/tmp $ k get all -o=wide
@@ -103,7 +103,7 @@ spec:
 
 nginxのバージョンを1.12から1.13に変更しました。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f . --all --prune
 daemonset.apps/sample-ds configured
 pi@raspi001:~/tmp $ k get all -o=wide
@@ -120,7 +120,7 @@ daemonset.apps/sample-ds   2         2         1       1            1           
 
 applyしてみると、一台ずつupdateされています(containerCreating)。Deploymentと違うのは、最大pod数が１のために、一時的にpodが機能しなくなるタイミングが生まれます(超過分の設定不可)。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k delete pod sample-ds-sx4mv
 pod "sample-ds-sx4mv" deleted
 pi@raspi001:~/tmp $ k get all -o=wide
@@ -184,7 +184,7 @@ mountPathで指定したマウントしたいパスを、volumeClaimTemplatesで
 Storageに関しては別で学習することにします。
 ひとまず、applyします。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f . --all --prune
 daemonset.apps/sample-ds unchanged
 statefulset.apps/sample-statefulset created
@@ -219,7 +219,7 @@ volumeClaimTemplatesというのは、「わざわざPersistentVolumeClaimsを�
 
 PersistentVolume(pv)があるのか確認してみます。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k get pv
 No resources found.
 ```
@@ -248,7 +248,7 @@ NFS用の新たなraspberryPiを用意します。設定手順は[こちら](htt
 
 NFSのホスト名は`nfspi`とします。
 
-```console
+```shell
 ~ $ slogin pi@nfspi.local
 pi@nfspi:~ $ sudo apt-get install nfs-kernel-server
 pi@nfspi:~ $ sudo vim /etc/exports
@@ -268,7 +268,7 @@ pi@nfspi:~ $ sudo vim /etc/exports
 |raspi003(worker)|192.168.3.34|
 |nfspi(NFS)|192.168.3.35|
 
-```console
+```shell
 pi@nfspi:~ $ sudo mkdir -p /home/data
 pi@nfspi:~ $ sudo chmod 755 /home/data
 pi@nfspi:~ $ sudo chown pi:pi /home/data
@@ -279,7 +279,7 @@ pi@nfspi:~ $ systemctl status nfs-server.service
 
 正しく設定されたか、iMacから確認してみます。
 
-```console
+```shell
 ~ $ mkdir share
 ~ $ sudo mount_nfs -P nfspi.local:/home/data ./share/
 ~ $ sudo umount share
@@ -291,7 +291,7 @@ OK
 
 各ノードに対して下記を実行します。
 
-```console
+```shell
 pi@raspi001:~ $ sudo apt-get install nfs-common
 ```
 
@@ -299,7 +299,7 @@ pi@raspi001:~ $ sudo apt-get install nfs-common
 
 raspberryPi環境では、真っ白な状態なので、一からPersistentVolumeを用意する必要があります。それにはVolumeとなるStorageの型を用意する必要もあるのですが、[Storage Classes](https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner)を見る限り、NFS用の型は標準で存在しません。そこで、[nfs-client](https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client)を使ってNFS用のStorageClassを作成します。
 
-```console
+```shell
 pi@raspi001:~ $ git clone https://github.com/kubernetes-incubator/external-storage.git && cd cd external-storage/nfs-client/
 pi@raspi001:~/external-storage/nfs-client $ NS=$(kubectl config get-contexts|grep -e "^\*" |awk '{print $5}')
 pi@raspi001:~/external-storage/nfs-client $ NAMESPACE=${NS:-default}
@@ -309,7 +309,7 @@ pi@raspi001:~/external-storage/nfs-client $ k apply -f deploy/rbac.yaml
 
 rbac.yamlにあるnamespaceを現在動かしている環境のnamespaceに置換して、applyしています。
 
-```console
+```shell
 pi@raspi001:~/external-storage/nfs-client $ k apply -f deploy/deployment-arm.yaml
 pi@raspi001:~/external-storage/nfs-client $ k apply -f deploy/class.yaml
 ```
@@ -320,7 +320,7 @@ class.yamlが、今回欲していたNFSのstorageClass(managed-nfs-storage)に�
 ※ raspberryPiのイメージはRaspbianを使っているので、arm用のdeployment-arm.yamlを使います。[Wiki](https://ja.wikipedia.org/wiki/Raspbian)
 これに随分とハマってしまいました... 
 
-```console
+```shell
 pi@raspi001:~/external-storage/nfs-client $ k apply -f deploy/test-claim.yaml -f deploy/test-pod.yaml
 ```
 
@@ -328,13 +328,13 @@ pi@raspi001:~/external-storage/nfs-client $ k apply -f deploy/test-claim.yaml -f
 
 nfspiに移動
 
-```console
+```shell
 pi@nfspi:~ $ ls /home/data
 ```
 
 あれば成功です。あれば、下記で片付けます。
 
-```console
+```shell
 pi@raspi001:~/external-storage/nfs-client $ k delete -f deploy/test-pod.yaml -f deploy/test-claim.yaml
 ```
 
@@ -383,13 +383,13 @@ spec:
           storage: 1Gi
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-statefulset.yaml
 ```
 
 nfapiに移動して、あるか確認。
 
-```console
+```shell
 pi@nfspi:~ $ ls -la /home/data
 total 20
 drwxrwxrwx 5 pi     pi      4096 May  5 17:18 .
@@ -404,7 +404,7 @@ drwxrwxrwx 2 nobody nogroup 4096 May  5 17:18 default-www-sample-statefulset-2-p
 
 `--prune`でも良いのですが、下記のほうが使いやすかったです。
 
-```console
+```shell
 pi@raspi001:~/tmp $　k delete -f sample-ds.yaml -f sample-statefulset.yaml
 pi@raspi001:~/tmp $　k delete pvc www-sample-statefulset-{0,1,2}
 ```

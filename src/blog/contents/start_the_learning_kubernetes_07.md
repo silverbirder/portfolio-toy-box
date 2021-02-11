@@ -69,7 +69,7 @@ spec:
 
 永続的にデータが保存されるかどうか確認します。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-statefulset.yaml
 pi@raspi001:~/tmp $ k exec -it sample-statefulset-0 -- df -h
 Filesystem  Size  Used Avail Use% Mounted on
@@ -81,7 +81,7 @@ pi@raspi001:~/tmp $ k exec -it sample-statefulset-0 touch /usr/share/nginx/html/
 
 sample.htmlというファイルを作りました。こちらが消えるかどうか確認します。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k delete pod sample-statefulset-0
 pi@raspi001:~/tmp $ k exec -it sample-statefulset-0 ls /usr/share/nginx/html/sample.html
 /usr/share/nginx/html/sample.html
@@ -89,7 +89,7 @@ pi@raspi001:~/tmp $ k exec -it sample-statefulset-0 ls /usr/share/nginx/html/sam
 
 podを消してセルフヒーリングで復活した後、確認すると、sample.html残っています。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k delete -f sample-statefulset.yaml
 pi@raspi001:~/tmp $ k apply -f sample-statefulset.yaml
 pi@raspi001:~/tmp $ k exec -it sample-statefulset-0 ls /usr/share/nginx/html/sample.html
@@ -104,7 +104,7 @@ StatefulSetでは、スケールアウトするときは、インデックスが
 また、１つずつ増減します。そのため、一番始めに作られるPodは、一番最後に削除されることになります。
 試してみます。
 
-```console
+```shell
 pi@raspi001:~ $ k get pod | grep sample-statefulset
 sample-statefulset-0                      1/1     Running   1          10h
 sample-statefulset-1                      1/1     Running   1          10h
@@ -155,7 +155,7 @@ spec:
 
 アップデート戦略をOnDeleteにし、nginxイメージを1.12から1.13に更新しました。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k delete -f sample-statefulset.yaml
 pi@raspi001:~/tmp $ k apply -f sample-statefulset.yaml
 pi@raspi001:~/tmp $ k describe pod sample-statefulset-0 | grep "Image:"
@@ -197,7 +197,7 @@ spec:
       restartPolicy: Never
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-job.yaml
 pi@raspi001:~/tmp $ k get pod
 NAME                                      READY   STATUS      RESTARTS   AGE
@@ -253,7 +253,7 @@ spec:
           restartPolicy: Never
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-cronjob.yaml
 pi@raspi001:~/tmp $ k get all
 NAME                           SCHEDULE      SUSPEND   ACTIVE   LAST SCHEDULE   AGE
@@ -263,7 +263,7 @@ cronjob.batch/sample-cronjob   */1 * * * *   False     0        <none>          
 時間がくるまで、job,podは作成されないようです。
 数分待ってみました。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k get all
 NAME                                          READY   STATUS      RESTARTS   AGE
 pod/sample-cronjob-1557115320-dsdvg           0/1     Error       0          2m18s
@@ -295,7 +295,7 @@ Replaceは、前のjobを削除し、jobを実行する。
 こちらも、特に何事もなく終わりました。笑
 
 # お片付け
-```console
+```shell
 pi@raspi001:~/tmp $ k delete -f sample-statefulset.yaml -f sample-job.yaml -f sample-cronjob.yaml
 pi@raspi001:~/tmp $ k delete pvc www-sample-statefulset-{0,1,2,3}
 ```

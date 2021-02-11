@@ -38,7 +38,7 @@ Kubernetesでは、下記のような構成になっています。
 
 # 現状確認
 
-```console
+```shell
 pi@raspi001:~/tmp $ k get nodes
 NAME       STATUS   ROLES    AGE   VERSION
 raspi001   Ready    master   42d   v1.14.1

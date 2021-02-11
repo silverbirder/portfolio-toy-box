@@ -47,7 +47,7 @@ requestは、空きノードに指定するリソースがなければスケジ�
 
 まず、現状確認です。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k get node
 NAME       STATUS   ROLES    AGE   VERSION
 raspi001   Ready    master   31d   v1.14.1
@@ -68,7 +68,7 @@ jsonpathの使い方は、[こちら](https://kubernetes.io/docs/reference/kubec
 allocatableがPodに配置できるリソース量で、capacityはNode全体での配置できるリソース量です。
 これだけだと、現在使っているリソース量が不明なので個別に調べます。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k describe node raspi002
 ...
 Allocated resources:
@@ -131,7 +131,7 @@ spec:
 applyするpodで要求するmemoryの下限合計は384Mi(128Mi×3),cpuは900m(300m×3)です。
 これだと、podがrunするはずです。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-resource.yaml
 pi@raspi001:~/tmp $ k get pods
 NAME                                      READY   STATUS    RESTARTS   AGE
@@ -151,7 +151,7 @@ replica数を3にしましたが、10にすれば良いですね（1,280Mi)
 
 sample-resource.yamlのreplicaを10に変更したあと↓
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-resource.yaml
 pi@raspi001:~/tmp $ k get pods
 NAME                                      READY   STATUS    RESTARTS   AGE
@@ -170,7 +170,7 @@ sample-resource-785cd54844-xclsk          1/1     Running   0          60s
 あれ、2つPendingになっていますね。もしかして、Nodeの空きリソースが中途半端にないからですかね。
 確認してみましょう。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k describe node raspi002
 ...
 Allocated resources:
@@ -252,7 +252,7 @@ spec:
     count/pods: 5
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k delete -f sample-resource.yaml
 pi@raspi001:~/tmp $ k apply -f sample-resourcequota.yaml
 pi@raspi001:~/tmp $ k apply -f sample-resource.yaml
@@ -290,7 +290,7 @@ VPAは、コンテナに割り当てるCPUやメモリのリソース割当を�
 
 # お片付け
 
-```console
+```shell
 pi@raspi001:~/tmp $ k delete -f sample-resource.yaml -f sample-resourcequota.yaml
 ```
 

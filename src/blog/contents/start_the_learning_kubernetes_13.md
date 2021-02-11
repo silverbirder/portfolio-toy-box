@@ -95,7 +95,7 @@ spec:
 * periodSeconds
     * ヘルスチェックの間隔
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-healthcheck.yaml
 pi@raspi001:~/tmp $ k describe pod sample-healthcheck | egrep "Liveness|Readiness"
     Liveness:       http-get http://:80/index.html delay=5s timeout=1s period=3s #success=1 #failure=2
@@ -106,7 +106,7 @@ pi@raspi001:~/tmp $ k describe pod sample-healthcheck | egrep "Liveness|Readines
 
 livenessを失敗させるにはindex.htmlを削除すれば良いですね。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k exec -it sample-healthcheck rm /usr/share/nginx/html/index.html
 pi@raspi001:~/tmp $ k get pods --watch
 NAME                                      READY   STATUS    RESTARTS   AGE
@@ -118,7 +118,7 @@ sample-healthcheck                        1/1     Running   2          10m
 一度削除されて、再起動しましたね。
 今度は、readinessを失敗させましょう。こちらは50x.htmlを削除すれば良いですね。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k exec -it sample-healthcheck rm /usr/share/nginx/html/50x.html
 pi@raspi001:~/tmp $ k get pods --watch
 NAME                                      READY   STATUS    RESTARTS   AGE
@@ -161,7 +161,7 @@ spec:
 #      command: ["sh", "-c", "exit 1"] # 失敗の場合
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-restart-always.yaml
 # 成功の場合
 pi@raspi001:~/tmp $ k get pods sample-restart-always --watch
@@ -198,7 +198,7 @@ spec:
 #      command: ["sh", "-c", "exit 1"] # 失敗の場合
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-restart-onfailure.yaml
 # 成功の場合
 pi@raspi001:~/tmp $ k get pods sample-restart-onfailure --watch
@@ -256,7 +256,7 @@ spec:
     emptyDir: {}
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k get pod sample-initcontainer --watch
 NAME                   READY   STATUS     RESTARTS   AGE
 sample-initcontainer   0/1     Init:0/2   0          3s
@@ -296,7 +296,7 @@ spec:
             command: ["/bin/sh", "-c", "touch /tmp/prestop; sleep 20"]
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $  k apply -f sample-lifecycle.yaml
 pi@raspi001:~/tmp $  k exec -it sample-lifecycle ls /tmp
 started
@@ -330,7 +330,7 @@ cordonコマンドを使うと、指定するNodeがSchedulingDisabledになり�
 を使います。
 実際に試してみます。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k get nodes
 NAME       STATUS   ROLES    AGE   VERSION
 raspi001   Ready    master   33d   v1.14.1
@@ -364,7 +364,7 @@ drainすると、ReplicaSetのように管理したPodであれば、別Nodeに�
 
 # お片付け
 
-```console
+```shell
 pi@raspi001:~/tmp $ k delete -f sample-healthcheck.yaml -f sample-restart-always.yaml -f sample-restart-onfailure.yaml -f sample-initcontainer.yaml -f sample-lifecycle.yaml
 ```
 

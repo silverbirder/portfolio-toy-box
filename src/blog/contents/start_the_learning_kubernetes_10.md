@@ -72,7 +72,7 @@ spec:
              resource: limits.cpu
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-env.yaml
 pi@raspi001:~/tmp $ k exec -it sample-env env
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
@@ -101,7 +101,7 @@ Genericの場合は、スキーマレスなため、汎用性の高い指定が�
 使い方して、ファイル参照、envfile参照、直接指定、マニュフェスト指定の４パターンです。それぞれ試してみます。
 
 ## ファイル参照
-```console
+```shell
 pi@raspi001:~/tmp $ echo -n "root" > ./username
 pi@raspi001:~/tmp $ echo -n "rootpassword" > ./password
 pi@raspi001:~/tmp $ k create secret generic --save-config sample-db-auth --from-file=./username --from-file=./password
@@ -121,7 +121,7 @@ username=root
 password=rootpassword
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k create secret generic --save-config sample-db-auth2 --from-env-file ./env-secret.txt
 pi@raspi001:~/tmp $ k get secrets sample-db-auth2 -o json | jq .data
 {
@@ -132,7 +132,7 @@ pi@raspi001:~/tmp $ k get secrets sample-db-auth2 -o json | jq .data
 
 ## 直接指定
 
-```console
+```shell
 pi@raspi001:~/tmp $ k create secret generic --save-config sample-db-auth3 --from-literal=username=root --from-literal=password=rootpassword
 pi@raspi001:~/tmp $ k get secrets sample-db-auth3 -o json | jq .data
 {
@@ -155,7 +155,7 @@ data:
   password: cm9vdHBhc3N3b3Jk # rootpassword
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-db-auth.yaml
 pi@raspi001:~/tmp $ k get secrets sample-db-auth4 -o json | jq .data
 {
@@ -192,7 +192,7 @@ spec:
               key: username
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-secret-single-env.yaml
 pi@raspi001:~/tmp $ k exec -it sample-secret-single-env env | grep DB_USERNAME
 DB_USERNAME=root
@@ -224,7 +224,7 @@ spec:
           path: username.txt
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-secret-single-volume.yaml
 pi@raspi001:~/tmp $ k exec -it sample-secret-single-volume cat /config/username.txt
 root
@@ -232,7 +232,7 @@ root
 
 こちらは、動的に書き換えることができるそうです。逐次Volumeを見ているんでしょうね。（環境変数の場合、コンテン起動した時点で固定される）
 
-```console
+```shell
 pi@raspi001:~/tmp $ cat << EOF | k apply -f -
 > apiVersion: v1
 > kind: Secret
@@ -261,7 +261,7 @@ hogehoge
 fugafuga
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k create configmap --save-config sample-configmap --from-file=./sample.txt
 pi@raspi001:~/tmp $ k get configmaps sample-configmap -o json | jq .data
 {
@@ -274,7 +274,7 @@ secretと同様で、設定したデータは環境変数、Volumeの２つか�
 
 # お片付け
 
-```console
+```shell
 pi@raspi001:~/tmp $ k delete -f sample-env.yaml -f sample-db-auth.yaml -f sample-secret-single-env.yaml -f sample-secret-single-volume.yaml
 pi@raspi001:~/tmp $ k delete secret sample-db-auth sample-db-auth2 sample-db-auth3 
 pi@raspi001:~/tmp $ k delete configmap sample-configmap

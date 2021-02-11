@@ -78,7 +78,7 @@ Stepの1から3までの手順を**RaspberryPi一台ずつ** 、下記の手続�
 ## 1. 初期設定
 microSDカードをMacにつなげた後に、下記を実施します。
 
-```console
+```shell
 $ diskutil list
 $ sudo diskutil umount /dev/disk3s1
 $ sudo dd bs=1m if=2019-04-08-raspbian-stretch-lite.img of=/dev/rdisk3 conv=sync
@@ -97,7 +97,7 @@ LANケーブルは、自宅のWiFiに直接つなげます。(私の場合はSof
 
 hostnameは、お好みの名前にします。（私は、`Master:raspi001, Worker:raspi002,raspi003`としました。)
 
-```console
+```shell
 $ slogin pi@raspberrypi.local
 # 初回password「raspberry」
 pi@raspbeerypi:~ $ sudo passwd pi
@@ -110,7 +110,7 @@ pi@raspbeerypi:~ $ sudo shutdown -r now
 
 電源を落として、LANケーブルを外します。再度電源をつけて数分待ってから、下記を実施します。
 
-```console
+```shell
 $ slogin pi@raspi001.local
 pi@raspi001:~ $ 
 ```
@@ -121,13 +121,13 @@ pi@raspi001:~ $
 
 おまじないをします。
 
-```console
+```shell
 pi@raspi001:~ $ sudo dphys-swapfile swapoff && sudo dphys-swapfile uninstall && sudo update-rc.d dphys-swapfile remove
 ```
 
 Dockerをインストールします。
 
-```console
+```shell
 pi@raspi001:~ $　sudo apt-get install apt-transport-https ca-certificates curl software-properties-common -y
 pi@raspi001:~ $　curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 pi@raspi001:~ $　echo "deb [arch=armhf] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
@@ -139,7 +139,7 @@ pi@raspi001:~ $　sudo apt-get install docker-ce -y
 
 Kubernetesをインストールします。
 
-```console
+```shell
 pi@raspi001:~ $　curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg|sudo apt-key add - 
 pi@raspi001:~ $　echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kube.list
 pi@raspi001:~ $　sudo apt-get update -y && sudo apt-get install kubelet kubeadm kubectl -y
@@ -149,7 +149,7 @@ pi@raspi001:~ $　sudo apt-get update -y && sudo apt-get install kubelet kubeadm
 
 MasterNodeにするRaspberryPiに対して下記を実施します。
 
-```console
+```shell
 pi@raspi001:~ $ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 pi@raspi001:~ $ mkdir -p $HOME/.kube
 pi@raspi001:~ $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
@@ -159,7 +159,7 @@ pi@raspi001:~ $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 [こちら](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#pod-network)に従い下記を実行します。
 
-```console
+```shell
 pi@raspi001:~ $ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/a70459be0084506e4ec919aa1c114638878db11b/Documentation/kube-flannel.yml
 pi@raspi001:~ $ kubectl get pods --all-namespaces
 NAMESPACE     NAME                               READY   STATUS              RESTARTS   AGE
@@ -172,7 +172,7 @@ kube-system   coredns-fb8b8dccf-snt7d            0/1     ContainerCreating   0  
 
 MasterNodeから出力されたjoinコマンドを実施します。
 
-```console
+```shell
 pi@raspi002 $ kubeadm join 192.168.3.32:6443 --token X \
     --discovery-token-ca-cert-hash sha256:X
 ```
@@ -181,7 +181,7 @@ pi@raspi002 $ kubeadm join 192.168.3.32:6443 --token X \
 
 Nodeが増えているか確認します。
 
-```console
+```shell
 pi@raspi001:~ $ kubectl get nodes
 NAME       STATUS   ROLES    AGE   VERSION
 raspi001   Ready    master   65m   v1.14.1
@@ -199,7 +199,7 @@ raspi003   Ready    worker   37m   v1.14.1
 ## 7. ブラウザから確認
 試しにデプロイ→サービス公開→ブラウザ確認までを、さっと通してみます。
 
-```console
+```shell
 pi@raspi001:~ $ kubectl run nginx --image=nginx --replicas=1 --port=80
 pi@raspi001:~ $ kubectl expose deployment nginx --port 80 --target-port 80 --type NodePort
 pi@raspi001:~ $ kubectl get svc nginx
@@ -210,7 +210,7 @@ nginx   NodePort   10.99.227.194   <none>        80:30783/TCP   17m
 
 内部
 
-```console
+```shell
 pi@raspi001:~ $ curl http://10.99.227.194:80
 <!DOCTYPE html>
 <html>
@@ -240,7 +240,7 @@ Commercial support is available at
 
 外部
 
-```console
+```shell
 pi@raspi001:~ $ ifconfig
 ...
 wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
@@ -255,7 +255,7 @@ OK!
 
 # お片付け
 
-```console
+```shell
 pi@raspi001:~ $ kubectl delete deployments nginx
 deployment.extensions "nginx" deleted
 pi@raspi001:~ $ kubectl  delete service nginx

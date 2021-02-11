@@ -37,7 +37,7 @@ https://silverbirder180.hatenablog.com/entry/2020/07/10/
 # セットアップ
 ソフトウェアバージョンは、次のとおりです。
 
-```bash
+```shell
 $ java -version
 openjdk version "1.8.0_252"
 OpenJDK Runtime Environment (AdoptOpenJDK)(build 1.8.0_252-b09)
@@ -46,14 +46,14 @@ OpenJDK 64-Bit Server VM (AdoptOpenJDK)(build 25.252-b09, mixed mode)
 
 IDEとしてintelliJを使用しており、Kotlin SDK(1.3.72)が内蔵しています。
 
-```bash
+```shell
 $ git clone https://github.com/Silver-birder/apache-beam-kotlin-example.git && cd apache-beam-kotlin-example
 $ ./gradlew build
 ```
 
 # パイプライン処理の概要
 
-```bash
+```shell
 1. データの入力する(input → PCollection)
 2. 入力されたデータを変形させる (PCollection → PTransform → PCollection)
 3. 加工したデータを出力する (PCollection → output)

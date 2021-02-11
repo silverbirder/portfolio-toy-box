@@ -99,7 +99,7 @@ spec:
 
 前回同様のファイルを用意します。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-deployment.yaml -f sample-externalip.yaml
 pi@raspi001:~/tmp $ k get pod -o=wide
 NAME                                      READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
@@ -113,7 +113,7 @@ sample-externalip   ClusterIP   10.104.170.220   192.168.3.33   8080/TCP   15m
 
 externalIPが設定されました。
 
-```console
+```shell
 pi@raspi001:~/tmp $ for PODNAME in `k get pods -l app=sample-app -o jsonpath='{.items[*].metadata.name}'`; do k exec -it ${PODNAME} -- cp /etc/hostname /usr/share/nginx/html/index.html; done
 ```
 
@@ -148,7 +148,7 @@ spec:
     app: sample-app
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k delete -f sample-externalip.yaml #しなくても良い
 pi@raspi001:~/tmp $ k apply -f sample-nodeport.yaml
 pi@raspi001:~/tmp $ k get service
@@ -167,7 +167,7 @@ ExternalIPやNodePortの場合、ロードバランシングするのはクラ�
 
 master(raspi001)に移動
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f https://raw.githubusercontent.com/google/metallb/v0.7.3/manifests/metallb.yaml
 ```
 
@@ -192,7 +192,7 @@ data:
     - 192.168.3.100-192.168.3.200
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f l2-config.yaml
 ```
 
@@ -220,7 +220,7 @@ spec:
 ```
 
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-deployment.yaml
 pi@raspi001:~/tmp $ k apply -f sample-lb.yaml
 pi@raspi001:~/tmp $ k get services
@@ -233,7 +233,7 @@ sample-lb    LoadBalancer   10.106.253.65   192.168.3.100   8080:30082/TCP   8m4
 
 iMacに移動
 
-```console
+```shell
 ~ $ curl -s http://192.168.3.100:8080
 <!DOCTYPE html>
 ...
@@ -290,7 +290,7 @@ spec:
 
 spec.typeがClusterIPであり、spec.clusterIPがNone、そして、metadata.nameがstatefulsetのspec.serviceNameと同じことで、Headless Serviceと呼ぶそうです。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-statefulset-headless.yaml
 pi@raspi001:~/tmp $ k run --image=centos:7 --restart=Never --rm -i testpod  -- dig sample-headless.default.svc.cluster.local
 ...
@@ -321,7 +321,7 @@ spec:
   externalName: example.com
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-externalname.yaml
 pi@raspi001:~/tmp $ k run --image=centos:7 --restart=Never --rm -i testpod  -- dig sample-externalname.default.svc.cluster.local
 ...
@@ -365,7 +365,7 @@ subsets:
 172.217.31.164と172.217.31.165は、どちらも[www.google.com](https://www.google.com/)を指します。
 
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-none-selector.yaml
 pi@raspi001:~/tmp $ k get service
 NAME                   TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)          AGE
@@ -383,7 +383,7 @@ Endpoints:         172.217.31.164:80,172.217.31.165:80
 
 ClusterIPなので、内部で公開されていますね。
 
-```console
+```shell
 pi@raspi001:~/tmp $ curl 10.102.225.99:8080
 <HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
 <TITLE>301 Moved</TITLE></HEAD><BODY>
@@ -419,7 +419,7 @@ raspberryPi環境では、Ingress-Nginx-Controllerを使うことで、Ingress�
 
 # お片付け
 
-```console
+```shell
 pi@raspi001:~/tmp $ k delete -f sample-externalip.yaml -f sample-deployment.yaml -f sample-nodeport.yaml -f sample-lb.yaml -f sample-statefulset-headless.yaml -f sample-headless.yaml -f sample-none-selector.yaml -f sample-externalname.yaml
 ```
 

@@ -55,7 +55,7 @@ Re:VIEW Starterというツールを使うと、学習コストゼロで、良�
 
 次のコマンド１つで本のPDFが作られます。
 
-```bash
+```shell
 $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake pdf"
 ```
 <figure class="figure-image figure-image-fotolife" title="ReViewStarter sample page"><div class="images-row mceNonEditable">[f:id:silverbirder180:20190904204630p:plain][f:id:silverbirder180:20190904204703p:plain]</div><figcaption>ReViewStarter sample page</figcaption></figure>
@@ -204,7 +204,7 @@ iPad, Magic Pencilは買って正解でした。
 本文はじまりのページは、nombreをというものを設定する必要があります。
 Re:VIEW Starterはnombre対応していて、次のコマンドを叩くだけです。
 
-```bash
+```shell
 $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake pdf:nombre"
 ```
 

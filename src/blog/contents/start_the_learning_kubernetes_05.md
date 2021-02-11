@@ -80,7 +80,7 @@ spec:
       image: redis:3.2
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f . --prune --all
 pod/sample-2pod created
 pi@raspi001:~/tmp $ k get pod sample-2pod
@@ -91,7 +91,7 @@ sample-2pod   2/2     Running   0          101s
 期待通り複数のコンテナが動いていますね。(READY 2/2)
 execで中に入る場合、どうなるのでしょうか。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k exec -it sample-2pod /bin/sh
 Defaulting container name to nginx-container.
 Use 'kubectl describe pod/sample-2pod -n default' to see all of the containers in this pod.
@@ -101,7 +101,7 @@ Use 'kubectl describe pod/sample-2pod -n default' to see all of the containers i
 なるほど、デフォルトのコンテナ（spec.containersの先頭)に入るみたいです。
 redis-containerに入る場合は、
 
-```console
+```shell
 pi@raspi001:~/tmp $ k exec -it sample-2pod -c redis-container /bin/sh
 # redis-cli
 127.0.0.1:6379> exit
@@ -141,7 +141,7 @@ spec:
         image: redis:3.2
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f . --prune --all
 replicaset.apps/sample-rs created
 pod/sample-2pod unchanged
@@ -159,7 +159,7 @@ Coreとなる機能は、`v1`で良いみたいです。
 
 Kubernetesの目玉機能であるオーケストレーションの機能であるセルフヒーリングを試してみます。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k get pods
 NAME              READY   STATUS    RESTARTS   AGE
 sample-2pod       2/2     Running   0          29m
@@ -179,7 +179,7 @@ sample-rs-nsc5b   2/2     Running             0          11m
 おー、ContainerCreatingされています。良いですね〜。 
 ちなみに、気になったのはnode自体が故障してダウンした場合は、どうなるのでしょうか。試してみます。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k get pods -o=wide
 NAME              READY   STATUS    RESTARTS   AGE    IP            NODE       NOMINATED NODE   READINESS GATES
 sample-2pod       2/2     Running   0          32m    10.244.1.25   raspi002   <none>           <none>
@@ -192,7 +192,7 @@ raspi003の電源を落としてみます。
 
 worker(raspi003)に移動
 
-```console
+```shell
 ~ $ slogin pi@raspi003.local
 pi@raspi003.local's password:
 pi@raspi003:~ $ sudo shutdown now
@@ -204,7 +204,7 @@ Connection to raspi003.local closed.
 
 master(raspi001)に移動
 
-```console
+```shell
 pi@raspi001:~/tmp $ k get nodes
 NAME       STATUS     ROLES    AGE     VERSION
 raspi001   Ready      master   5d16h   v1.14.1
@@ -220,7 +220,7 @@ sample-rs-nsc5b   2/2     Running   0          17m     10.244.2.15   raspi003   
 
 ん？ raspi003で動いている？ 数十秒後... 
 
-```console
+```shell
 pi@raspi001:~/kubernetes-perfect-guide/samples/chapter05/tmp $ k get pods -o=wide
 NAME              READY   STATUS        RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
 sample-2pod       2/2     Running       0          40m   10.244.1.25   raspi002   <none>           <none>
@@ -246,7 +246,7 @@ sample-rs-p2jsc   2/2     Running       0          53s   10.244.1.28   raspi002 
 まず、先程落としたraspi003を電源を入れ直して起動させます。
 その後、master(raspi001)に移動。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k label nodes raspi002 type=AWS
 node/raspi002 labeled
 pi@raspi001:~/tmp $ k label nodes raspi003 type=GCP
@@ -298,7 +298,7 @@ spec:
         type: AWS
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f . --prune --all
 replicaset.apps/sample-rs configured
 pod/sample-2pod unchanged
@@ -310,7 +310,7 @@ nodeSelectorを追加しました。
 
 worker(raspi002)に移動
 
-```console
+```shell
 ~ $ slogin pi@raspi002.local
 pi@raspi002.local's password:
 pi@raspi002:~ $ sudo shutdown now
@@ -325,7 +325,7 @@ Connection to raspi002.local closed.
 
 master(raspi001)に移動
 
-```console
+```shell
 pi@raspi001:~/tmp $ k get nodes -L type
 NAME       STATUS     ROLES    AGE     VERSION   TYPE
 raspi001   Ready      master   5d17h   v1.14.1
@@ -355,7 +355,7 @@ ReplicaSetでは、指定したコンテナイメージを更新した場合(ア
 
 sample-2pod-replica.yamlのnginxイメージを1.12から1.13に更新しました。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k get all
 NAME                  READY   STATUS    RESTARTS   AGE
 pod/sample-rs-4srpp   2/2     Running   0          7h14m
@@ -381,7 +381,7 @@ Name:         sample-rs
 
 replicasetのマニュフェストは更新されました。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k describe pod sample-rs-4srpp
 Name:               sample-rs-4srpp
 ...
@@ -417,7 +417,7 @@ spec:
             - containerPort: 80
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f . --prune --all --record
 replicaset.apps/sample-rs configured
 pod/sample-2pod configured
@@ -426,7 +426,7 @@ deployment.apps/sample-deployment created
 
 `--record`をつけることで、履歴を保持することができます。ロールバックに使います。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k get all
 NAME                                    READY   STATUS    RESTARTS   AGE
 pod/sample-2pod                         2/2     Running   0          12m
@@ -475,7 +475,7 @@ spec:
             - containerPort: 80
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f . --prune --all --record
 replicaset.apps/sample-rs unchanged
 pod/sample-2pod unchanged
@@ -509,7 +509,7 @@ sample-rs-lc225                      2/2     Running             0          7h31
 
 試しに、pruneで削除しています。
 
-```console
+```shell
 pi@raspi001:~/tmp $ ls
 sample-2pod-replica.yaml  sample-2pod.yaml  sample-deployment.yaml
 pi@raspi001:~/tmp $ mv sample-2pod-replica.yaml sample-2pod-replica.yaml.org
@@ -528,14 +528,14 @@ service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   6d1h
 んー、こうすると消せるのですが、どうしても１ファイル残してしまいます...。
 すべてorgにすると、`k apply -f .`が失敗しますし...。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k delete pod sample-2pod
 pod "sample-2pod" deleted
 ```
 
 結局、こうしました...。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k label node raspi002 type-
 pi@raspi001:~/tmp $ k label node raspi003 type-
 ```

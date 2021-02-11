@@ -103,7 +103,7 @@ Mockで差し替えるオブジェクトが増えると、InversifyJSのよう�
 実際に、開発・公開したライブラリでも十分にテストをすることができました。
 [https://www.npmjs.com/package/@silverbirder/caat:embed:cite]
 
-```bash
+```shell
 CaAT $ npm run test -- --coverage
 
 > jest "--coverage"

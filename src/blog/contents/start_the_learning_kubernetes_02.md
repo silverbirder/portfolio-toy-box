@@ -47,7 +47,7 @@ Kubernetes:
 ## 実践
 さっそく、使ってみます。 ([入門 Kubernetes](https://www.oreilly.co.jp/books/9784873118406/)参考)
 
-```console
+```shell
 ~ $ kubectl get componentstatuses
 NAME                 STATUS    MESSAGE              ERROR
 controller-manager   Healthy   ok
@@ -69,7 +69,7 @@ Kubernetesでは、MasterNodeとWorkerNodeの2種類のNodeが存在しており
 ![Kubernetes_learning.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/f53b8321-a01c-c03e-77cb-2e90a1ca30ef.png)
 
 
-```console
+```shell
 ~ $ kubectl get nodes
 NAME                 STATUS    ROLES     AGE       VERSION
 docker-for-desktop   Ready     master    120d      v1.10.3
@@ -96,7 +96,7 @@ spec:
          protocol: TCP
 ```
 
-```console
+```shell
 ~ $ kubectl apply -f nginx.yaml
 pod "nginx" created
 ~ $ kubectl get pod -o wide
@@ -110,7 +110,7 @@ WorkerNodeにPodが作られていますね。んー、これだとある程度�
 
 次は、いくつかのコマンド(cp,exec, port-forward)を試してみます。
 
-```console
+```shell
 ~ $ touch memo.txt
 ~ $ ls
 nginx.yaml memo.txt
@@ -132,7 +132,7 @@ exit
 
 # お片付け
 
-```console
+```shell
 ~ $ kubectl delete -f nginx.yaml
 pod "nginx" deleted
 ```

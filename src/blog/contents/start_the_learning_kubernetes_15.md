@@ -44,7 +44,7 @@ imagePullSecrets:
 
 これをapplyしてみます。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-serviceaccount.yaml
 pi@raspi001:~/tmp $ k get serviceaccounts sample-serviceaccount -o yaml
 ...
@@ -55,7 +55,7 @@ secrets:
 サービスアカウントが作成されました。また、imagePullSecretsの内容がsecretsに登録されました。(sample-serviceaccount-token-4xhgm)
 imagePullSecretsはprivateなdockerレジストリに使います。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k get secrets sample-serviceaccount-token-4xhgm -o yaml
 apiVersion: v1
 data:
@@ -109,7 +109,7 @@ RBACは、２つのレベルがあり、１つはNamespaceレベルで、もう�
 そのためには、サービスアカウントの認証情報を通しておく必要があります。
 ※ RoleとClusterRoleに大きな違いはないため、Roleを試します。
 
-```console
+```shell
 pi@raspi001:~/tmp $ TOKEN=$(k get secret/sample-serviceaccount-token-jd279 -o json | jq -r .data.token)
 pi@raspi001:~/tmp $ DECODE_TOKEN=$(echo -n $TOKEN | base64 -d)
 pi@raspi001:~/tmp $ k config set-credentials sample-serviceaccount --token $DECODE_TOKEN
@@ -117,7 +117,7 @@ pi@raspi001:~/tmp $ k config set-credentials sample-serviceaccount --token $DECO
 
 では、コンテキスト(sample-sa-context)を作成して、それを使用します。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k config set-context sample-sa-context --user sample-serviceaccount --cluster kubernetes
 pi@raspi001:~/tmp $ k config use-context sample-sa-context
 pi@raspi001:~/tmp $ k config get-contexts
@@ -128,7 +128,7 @@ CURRENT   NAME                          CLUSTER      AUTHINFO                NAM
 
 新たに作成したサービスアカウントでPodの情報が取得できるか試してみます。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k get po
 Error from server (Forbidden): pods is forbidden: User "system:serviceaccount:default:sample-serviceaccount" cannot list resource "pods" in API group "" in the namespace "default"
 ```
@@ -138,7 +138,7 @@ Errorになりました。sample-serviceaccountは何もRoleをバインドし�
 
 元に戻ります。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k config use-context kubernetes-admin@kubernetes
 ```
 
@@ -171,14 +171,14 @@ subjects:
   namespace: default
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-role.yaml
 pi@raspi001:~/tmp $ k apply -f sample-rolebinding.yaml
 ```
 
 では、もう一度試してみます。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k config use-context sample-sa-context
 pi@raspi001:~/tmp $ k get po
 NAME                                      READY   STATUS    RESTARTS   AGE
@@ -188,7 +188,7 @@ NAME                                      READY   STATUS    RESTARTS   AGE
 おお、取得できました！
 もとに戻しておきます。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k config use-context kubernetes-admin@kubernetes
 ```
 
@@ -214,7 +214,7 @@ spec:
 
 applyし、中身を確認してみます。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-capabilities.yaml
 pi@raspi001:~/tmp $ k exec -it sample-capabilities /bin/bash
 root@sample-capabilities:/# apt update && apt install libcap2-bin
@@ -251,7 +251,7 @@ spec:
 
 では、applyしています。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-runuser.yaml
 pi@raspi001:~/tmp $ k exec -it sample-runuser -- id
 uid=99(nobody) gid=99(nobody) groups=99(nobody),1001,1002
@@ -266,7 +266,7 @@ PodSecurityPolicyや、NetworkPolicy、そして認証、認可のAdmissionContr
 
 # お片付け
 
-```console
+```shell
 pi@raspi001:~/tmp $ k delete -f sample-serviceaccount.yaml -f sample-role.yaml -f sample-rolebinding.yaml -f sample-capabilities.yaml -f sample-runuser.yaml
 pi@raspi001:~/tmp $ k config delete-context sample-sa-context
 ```

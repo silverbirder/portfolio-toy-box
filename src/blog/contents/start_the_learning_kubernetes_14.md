@@ -42,7 +42,7 @@ https://qiita.com/silverbirder/items/cae4649d9f9336bc01fd
 # Nodeのラベル確認
 デフォルトで設定されているNodeのラベルを見てみます。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k get nodes -o json | jq ".items[] | .metadata.labels"
 {
   "beta.kubernetes.io/arch": "arm",
@@ -73,7 +73,7 @@ pi@raspi001:~/tmp $ k get nodes -o json | jq ".items[] | .metadata.labels"
 archやosはデフォルトで設定されているみたいです。
 次以降の学習のため、ラベルをはります。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k label node raspi002 cputype=low disksize=200
 pi@raspi001:~/tmp $ k label node raspi003 cputype=low disksize=300
 ```
@@ -100,7 +100,7 @@ spec:
     disksize: "300"
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-nodeselector.yaml
 pi@raspi001:~/tmp $ k get pods sample-nodeselector -o wide
 NAME                  READY   STATUS    RESTARTS   AGE   IP             NODE       NOMINATED NODE   READINESS GATES
@@ -153,7 +153,7 @@ NodeAffinityでは、requiredとpreferredの2つ設定できます。
 必須条件が「cputype=lowであるNode(raspi002,raspi003)」で、優先条件が「hostname=raspi002であるNode」です。
 適用してみましょう。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-node-affinity.yaml
 pi@raspi001:~/tmp $ k get pods sample-node-affinity -o wide
 NAME                   READY   STATUS              RESTARTS   AGE   IP       NODE       NOMINATED NODE   READINESS GATES
@@ -162,7 +162,7 @@ sample-node-affinity   0/1     ContainerCreating   0          5s    <none>   ras
 
 確かにraspi002に配置されました。では、raspi002をスケジューリングできなくするとどうなるのでしょうか。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k delete -f sample-node-affinity.yaml
 pi@raspi001:~/tmp $ k cordon raspi002
 pi@raspi001:~/tmp $ k apply -f sample-node-affinity.yaml
@@ -175,7 +175,7 @@ sample-node-affinity   0/1     ContainerCreating   0          11s   <none>   ras
 
 元に戻します。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k delete -f sample-node-affinity.yaml
 pi@raspi001:~/tmp $ k uncordon raspi002
 ```
@@ -207,7 +207,7 @@ Pod間を近づけることができるので、レイテンシを下げるこ�
 
 まず、特定のPodは、先程のNodeSelectorで使ったものとします。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-node-affinity.yaml
 pi@raspi001:~/tmp $ k get pods sample-nodeselector -o wide
 NAME                  READY   STATUS    RESTARTS   AGE   IP             NODE       NOMINATED NODE   READINESS GATES
@@ -291,7 +291,7 @@ spec:
 
 これにより、raspi003が選ばれるはずです。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-pod-affinity-arch.yaml
 pi@raspi001:~/tmp $ k get pods sample-pod-affinity-arch -o wide
 NAME                       READY   STATUS              RESTARTS   AGE   IP       NODE       NOMINATED NODE   READINESS GATES
@@ -319,7 +319,7 @@ Nodeに対して汚れをつけていきます。汚れたNodeに対して、許
 
 それでは、まずNodeを汚しましょう。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k taint node raspi003 env=prd:NoSchedule
 pi@raspi001:~/tmp $ k describe node raspi003 | grep Taints
 Taints:             env=prd:NoSchedule
@@ -362,7 +362,7 @@ operatorには、2種類あります。
 
 では、適用してみます。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-tolerations.yaml
 pi@raspi001:~/tmp $ k get pod sample-tolerations -o=wide
 NAME                 READY   STATUS    RESTARTS   AGE   IP             NODE       NOMINATED NODE   READINESS GATES
@@ -374,13 +374,13 @@ sample-tolerations   1/1     Running   0          27s   10.244.2.140   raspi003 
 
 もとに戻しておきます。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k taint node raspi003 env-
 ```
 
 # お片付け
 
-```console
+```shell
 pi@raspi001:~/tmp $ k delete -f sample-nodeselector.yaml -f sample-node-affinity.yaml -f sample-pod-affinity-host.yaml -f sample-pod-affinity-arch.yaml -f sample-tolerations.yaml
 pi@raspi001:~/tmp $ k label node raspi002 cputype- disksize-
 pi@raspi001:~/tmp $ k label node raspi003 cputype- disksize-

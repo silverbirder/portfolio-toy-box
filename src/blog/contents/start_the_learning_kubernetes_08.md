@@ -88,7 +88,7 @@ spec:
           image: redis:3.2
 ```
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-deployment.yaml
 pi@raspi001:~/tmp $ k get pods -l app=sample-app -o custom-columns="NAME:{metadata.name}, IP:{status.podIP},NODE:{spec.nodeName}"
 NAME                                 IP           NODE
@@ -106,7 +106,7 @@ sample-deployment-9dc487867-nxbxc   10.244.2.67   raspi003
 
 ## 前準備
 
-```console
+```shell
 pi@raspi001:~/tmp $ k exec -it sample-deployment-9dc487867-n8x5w -c redis-container /bin/bash
 root@sample-deployment-9dc487867-n8x5w:/data# apt-get update && apt-get install curl -y
 root@sample-deployment-9dc487867-n8x5w:/data# exit
@@ -116,7 +116,7 @@ curlがないのでインストールします。
 
 ## 同一Node,同一Pod内のコンテナへ通信
 
-```console
+```shell
 pi@raspi001:~/tmp $ k exec -it sample-deployment-9dc487867-n8x5w -c redis-container /bin/bash
 root@sample-deployment-9dc487867-n8x5w:/data# curl localhost:80
 <!DOCTYPE html>
@@ -127,7 +127,7 @@ OK
 
 ## 同一Node,異なるPodのコンテナへ通信
 
-```console
+```shell
 pi@raspi001:~/tmp $ k exec -it sample-deployment-9dc487867-n8x5w -c redis-container /bin/bash
 root@sample-deployment-9dc487867-n8x5w:/data# curl 10.244.2.66:80
 <!DOCTYPE html>
@@ -141,7 +141,7 @@ OK
 
 ## 異なるNode,異なるPodのコンテナへ通信
 
-```console
+```shell
 pi@raspi001:~/tmp $ k exec -it sample-deployment-9dc487867-n8x5w -c redis-container /bin/bash
 root@sample-deployment-9dc487867-n8x5w:/data# curl 10.244.1.72:80
 <!DOCTYPE html>
@@ -152,7 +152,7 @@ OK
 
 ## MasterNodeから各Podへ通信
 
-```console
+```shell
 pi@raspi001:~/tmp $ curl 10.244.1.72:80
 <!DOCTYPE html>
 ...
@@ -202,7 +202,7 @@ spec:
 これは、`app=sample-app`にマッチするPodに対してロードバランスしてくれます。外から8080ポートで待ち受けて、80ポートでコンテナへ通信します。
 spec.typeがClusterIPなので、内向けのIPアドレスが提供されています。
 
-```console
+```shell
 pi@raspi001:~/tmp $ k apply -f sample-clusterip.yaml
 pi@raspi001:~/tmp $ k get service sample-clusterip
 NAME               TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
@@ -225,7 +225,7 @@ Endpintsに`:80`とあるように、port毎にサービス(clusterIP)を作る�
 アクセスできるのか、試します。
 せっかくなので、pod毎にindex.htmlの内容を変化させましょう。
 
-```console
+```shell
 pi@raspi001:~/tmp $ for PODNAME in `k get pods -l app=sample-app -o jsonpath='{.items[*].metadata.name}'`; do
 > k exec -it ${PODNAME} -- cp /etc/hostname /usr/share/nginx/html/index.html;
 > done
@@ -242,7 +242,7 @@ sample-deployment-9dc487867-h7lww
 
 iMacへ移動
 
-```console
+```shell
 ~ $ curl 10.111.197.69:8080
 # 返答なし
 ```
@@ -265,7 +265,7 @@ dnsPolicyによる明示的な設定がない限り、Pod生成時にクラス�
 
 # お片付け
 
-```console
+```shell
 pi@raspi001:~/tmp $ k delete -f sample-deployment.yaml -f sample-clusterip.yaml
 ```
 
