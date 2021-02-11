@@ -36,7 +36,8 @@ ReplicaSetとの違いは、各ノードに1つずつ配置するのがDaemonSet
 
 さっそく、試してみます。
 
-```sample-ds.yaml
+```yaml
+# sample-ds.yaml
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
@@ -78,7 +79,8 @@ Deploymentと似ているアップデート戦略があり、OnDeleteとRollingU
 
 ReplicaSetと似ているようで、機能的にはDeploymentに近い感じですね。ReplicaSetはpodが削除されたら複製されますけど、アップデートされません。DaemonSetはpodが削除されたら複製するし、アップデートもされます。試してみます。
 
-```sample-ds.yaml
+```yaml
+# sample-ds.yaml
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
@@ -142,7 +144,8 @@ podを削除しても、データを永続的に保存する仕組みが存在�
 
 さっそく、試してみます。
 
-```sample-statefulset.yaml
+```yaml
+# sample-statefulset.yaml
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -343,7 +346,8 @@ pi@raspi001:~/external-storage/nfs-client $ k delete -f deploy/test-pod.yaml -f 
 raspi001に移動して、sample-statefulset.yamlをもう一度applyします。
 (storageClassName: managed-nfs-storageを追加, ReadWriteOnce→ReadWriteManyに変更)
 
-```sample-statefulset.yaml
+```yaml
+# sample-statefulset.yaml
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:

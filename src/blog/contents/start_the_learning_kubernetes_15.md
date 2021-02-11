@@ -31,7 +31,8 @@ https://qiita.com/silverbirder/items/8ea729949ab3bb4cf540
 # サービスアカウント
 Podで実行するためのプロセスを制御するために割り振られるアカウントのことをサービスアカウントというそうです。
 
-```sample-serviceaccount.yaml
+```yaml
+# sample-serviceaccount.yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -141,7 +142,8 @@ Errorになりました。sample-serviceaccountは何もRoleをバインドし�
 pi@raspi001:~/tmp $ k config use-context kubernetes-admin@kubernetes
 ```
 
-```sample-role.yaml
+```yaml
+# sample-role.yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
@@ -152,7 +154,8 @@ rules:
   verbs: ["get", "watch", "list"]
 ```
 
-```sample-rolebinding.yaml
+```yaml
+# sample-rolebinding.yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
@@ -193,7 +196,8 @@ pi@raspi001:~/tmp $ k config use-context kubernetes-admin@kubernetes
 コンテナに対してセキュリティ設定をすることができます。
 例えば、Capabilitiesの追加・削除、実行するユーザ、グループの変更、ファイルのReadOnly化などができるそうです。
 
-```sample-capabilities.yaml
+```yaml
+# sample-capabilities.yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -226,7 +230,8 @@ cap_sys_adminが増えてますね。audit_writeは見つかりません。
 Pod(全てのコンテナ)に対してセキュリティ設定をすることができます。
 例えば、実行するユーザやグループの制御、root実行を拒否したり、カーネルパラメータを上書きすることもできます。
 
-```sample-runuser.yaml
+```yaml
+# sample-runuser.yaml
 apiVersion: v1
 kind: Pod
 metadata:

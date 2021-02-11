@@ -100,7 +100,8 @@ Allocated resources:
 
 では、リソース制限を試してみましょう。
 
-```sample-resource.yaml
+```yaml
+# sample-resource.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -238,7 +239,8 @@ requestsは、パフォーマンステストをしつつ最適化していきま
 ResourceQuotaを使うことで、Namespaceごとに「作成可能なリソース数の制限」と「リソース使用量の制限」ができます。
 「作成可能なリソース数の制限」を試そうと思います。
 
-```sample-resourcequota.yaml
+```yaml
+# sample-resourcequota.yaml
 apiVersion: v1
 kind: ResourceQuota
 metadata:

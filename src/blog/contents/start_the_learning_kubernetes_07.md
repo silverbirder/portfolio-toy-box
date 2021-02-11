@@ -30,7 +30,8 @@ https://qiita.com/silverbirder/items/937e1b5f6b3589452932
 
 # StatefulSet
 
-```sample-statefulset.yaml
+```yaml
+# sample-statefulset.yaml
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -137,7 +138,8 @@ Deploymentでは試してませんでしたが、こちらで試してみよう�
 
 デフォルトの戦略はRollingUpdateです。これは何度も動作して確認できているので、OnDeleteを試そうと思います。(partitionは置いとく）
 
-```sample-statefulset.yaml
+```yaml
+# sample-statefulset.yaml
 ...
 spec:
   updateStrategy:
@@ -175,7 +177,8 @@ replicaSetのように複製ができる。
 
 10秒sleepするだけのjobを実行してみます。
 
-```sample-job.yaml
+```yaml
+# sample-job.yaml
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -218,7 +221,8 @@ DeploymentとReplicaSetの関係と似ていて、Cronjobがjobを管理する�
 
 1分毎に50%の確率で成功するjobを用意して、試してみます。
 
-```sample-cronjob.yaml
+```yaml
+# sample-cronjob.yaml
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:

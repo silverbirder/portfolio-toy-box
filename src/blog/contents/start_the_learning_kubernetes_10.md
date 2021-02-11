@@ -46,7 +46,8 @@ Kubernetesには、下記のようにリソースの種類が存在します。
 
 静的設定や、Podやコンテナの情報を設定、シークレットでの設定があるみたいです。
 
-```sample-env.yaml
+```yaml
+# sample-env.yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -114,7 +115,8 @@ pi@raspi001:~/tmp $ k get secrets sample-db-auth -o json | jq .data
 
 ## envfile参照
 
-```env-secret.txt
+```text
+# env-secret.txt
 username=root
 password=rootpassword
 ```
@@ -141,7 +143,8 @@ pi@raspi001:~/tmp $ k get secrets sample-db-auth3 -o json | jq .data
 
 ## マニュフェスト指定
 
-```sample-db-auth.yaml
+```yaml
+# sample-db-auth.yaml
 apiVersion: v1
 kind: Secret
 metadata:
@@ -171,7 +174,8 @@ Genericは扱いやすくて良いですね。
 
 ## 環境変数からSecretを使う
 
-```sample-secret-single-env.yaml
+```yaml
+# sample-secret-single-env.yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -198,7 +202,8 @@ DB_USERNAME=root
 
 ## VolumeからSecretを使う
 
-```sample-secret-single-volume.yaml
+```yaml
+# sample-secret-single-volume.yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -250,7 +255,8 @@ amin
 こちらも手段としては、ファイル参照、直接参照、マニフェスト参照があります。
 さっきと同じなので、ファイル参照のみ試してみます。
 
-```sample.txt
+```text
+# sample.txt
 hogehoge
 fugafuga
 ```

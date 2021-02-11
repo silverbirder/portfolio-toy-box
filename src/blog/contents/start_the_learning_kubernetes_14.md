@@ -84,7 +84,8 @@ pi@raspi001:~/tmp $ k label node raspi003 cputype=low disksize=300
 
 では、disksizeが300のNode(raspi003)にPodを配置しましょう。
 
-```sample-nodeselector.yaml
+```yaml
+# sample-nodeselector.yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -113,7 +114,8 @@ nodeSelectorはイコールでしか表現できないので、柔軟性に欠�
 Affinityは、NodeSelectorよりも柔軟に設定できます。つまり、set-basedの指定方法です。
 詳しくは[こちら](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement)を参照下さい。今回はInオペレータを使います。
 
-```sample-node-affinity.yaml
+```yaml
+# sample-node-affinity.yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -182,7 +184,8 @@ pi@raspi001:~/tmp $ k uncordon raspi002
 
 nodeSelectorTermsやmatchExpressionsは配列なので複数指定できます。
 
-```sample.yaml
+```yaml
+# sample.yaml
 nodeSelectorTerms:
   - matchExpressions:
     - A
@@ -211,7 +214,8 @@ NAME                  READY   STATUS    RESTARTS   AGE   IP             NODE    
 sample-nodeselector   1/1     Running   0          36m   10.244.2.130   raspi003   <none>           <none>
 ```
 
-```sample-pod-affinity-host.yaml
+```yaml
+# sample-pod-affinity-host.yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -244,7 +248,8 @@ sample-pod-affinity-host   0/1     ContainerCreating   0          11s   <none>  
 期待通りraspi003にできています。
 また、requiredだけでなく、preferredも設定できます。
 
-```sample-pod-affinity-arch.yaml
+```yaml
+# sample-pod-affinity-arch.yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -327,7 +332,8 @@ Taints:             env=prd:NoSchedule
 
 keyとvalue(env=prd)とEffect(NoSchedule)が設定されたPodのみ許容されます。作ってみます。
 
-```sample-tolerations.yaml
+```yaml
+# sample-tolerations.yaml
 apiVersion: v1
 kind: Pod
 metadata:

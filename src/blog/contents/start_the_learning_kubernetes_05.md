@@ -66,7 +66,8 @@ Pod毎にIPアドレスが振られる。ボリュームは共有。
 
 ※ `alias k=kubectl`
 
-```sample-2pod.yaml
+```yaml
+# sample-2pod.yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -117,7 +118,8 @@ pi@raspi001:~/tmp $ k exec -it sample-2pod -c redis-container /bin/sh
 
 さっそく、動かしてみます。
 
-```sample-rs.yaml
+```yaml
+# sample-rs.yaml
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
@@ -271,7 +273,8 @@ sample-rsは、全てraspi002で動いているので、下記を試してみま
 その結果、「sample-rsはraspi002が動いていないので、セルフヒーリングしない」ことを期待します。
 
 
-```sample-rs.yaml
+```yaml
+# sample-rs.yaml
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
@@ -391,7 +394,8 @@ Name:               sample-rs-4srpp
 podは変化なしのようです。
 では、Deploymentを使ってみます。
 
-```sample-deployment.yaml
+```yaml
+# sample-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -448,7 +452,8 @@ sample-deploymentが、deployment,replicaset,podを作成しました。
 
 では、sample-deploymentのnginxコンテナを1.12から1.13に更新してみます。
 
-```sample-deployment.yaml
+```yaml
+# sample-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:

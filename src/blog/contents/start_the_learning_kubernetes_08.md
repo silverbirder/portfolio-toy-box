@@ -63,7 +63,8 @@ Kubernetesでは、Pod毎にIPアドレスが割り振られています。
 説明するために、準備します。
 
 
-```sample-deployment.yaml
+```yaml
+# sample-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -181,7 +182,8 @@ Serviceは、下記の２つの大きな機能が存在します。
 さっそく、試してみます。
 
 
-```sample-clusterip.yaml
+```yaml
+# sample-clusterip.yaml
 apiVersion: v1
 kind: Service
 metadata:

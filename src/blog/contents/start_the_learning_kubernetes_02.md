@@ -80,7 +80,8 @@ No resources found.
 また、DockerForMacでは、もちろん動かしているマシンは一台（VMとか使えば増やせますが）なので、
 MasterNodeとWorkerNodeが同一になっているはずです。試してみます。
 
-```nginx.yaml
+```yaml
+# nginx.yaml
 apiVersion: v1
 kind: Pod
 metadata:

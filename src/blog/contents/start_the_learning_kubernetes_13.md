@@ -50,7 +50,8 @@ LoadBalancerのサービスは、ICMPによる簡易ヘルスチェックがデ�
 
 では、試してみましょう。
 
-```sample-healthcheck.yaml
+```yaml
+# sample-healthcheck.yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -145,7 +146,8 @@ sample-healthcheck                        1/1     Running   2          17m
 
 試してみましょう。
 
-```sample-restart-always.yaml
+```yaml
+# sample-restart-always.yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -181,7 +183,8 @@ sample-restart-always   0/1     Error               2          37s
 
 成功、失敗どちらも再起動していることがわかります。
 
-```sample-restart-onfailure.yaml
+```yaml
+# sample-restart-onfailure.yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -222,7 +225,8 @@ initContainersは、spec.initContainersで設定でき、複数指定できま�
 
 試してみましょう。
 
-```sample-initcontainer.yaml
+```yaml
+# sample-initcontainer.yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -272,7 +276,8 @@ pi@raspi001:~/tmp $ k exec -it sample-initcontainer cat /usr/share/nginx/html/in
 コンテナ起動後に実行するコマンドをpostStart,
 コンテナ終了前に実行するコマンドをpreStopという機能で実現できます。
 
-```sample-lifecycle.yaml
+```yaml
+# sample-lifecycle.yaml
 apiVersion: v1
 kind: Pod
 metadata:

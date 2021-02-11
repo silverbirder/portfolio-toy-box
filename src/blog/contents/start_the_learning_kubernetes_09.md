@@ -41,7 +41,8 @@ https://qiita.com/silverbirder/items/f6290a7868849d57b9f1
 # ExternalIP
 こちらは、外向けのIPアドレスを割り振ります。
 
-```sample-externalip.yaml
+```yaml
+# sample-externalip.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -71,7 +72,8 @@ spec:
 ここで、spec. externalIPsに、公開したいIPアドレスを上記NodeのIPアドレスより設定します。
 今回は、１つだけ(raspi002:193.168.3.33)にしました。
 
-```sample-deployment.yaml
+```yaml
+# sample-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -128,7 +130,8 @@ ExternalIPのような特定Nodeを公開するのと違って、NodePortは、*
 
 試してみます。
 
-```sample-nodeport.yaml
+```yaml
+# sample-nodeport.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -173,7 +176,8 @@ metallbと呼ばれるロードバランサを適用します。
 https://metallb.universe.tf
 > MetalLB is a load-balancer implementation for bare metal Kubernetes clusters, using standard routing protocols.
 
-```l2-config.yaml
+```yaml
+# l2-config.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -194,7 +198,8 @@ pi@raspi001:~/tmp $ k apply -f l2-config.yaml
 
 これで、raspberryPi環境でもloadBalancerが使えます。さっそくつかってみましょう。
 
-```sample-lb.yaml
+```yaml
+# sample-lb.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -243,7 +248,8 @@ DNS ラウンドロビンによる転送先のPodのIPアドレスを取得で�
 つまり、Headlessのサービスへ問い合わせすると、spec.selectorで登録したPodのIPアドレスが手に入ります。
 PodのIPアドレスがほしいときには便利です。（Envoyとか?）
 
-```sample-statefulset-headless.yaml
+```yaml
+# sample-statefulset-headless.yaml
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -264,7 +270,8 @@ spec:
           image: nginx:1.12
 ```
 
-```sample-headless.yaml
+```yaml
+# sample-headless.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -302,7 +309,8 @@ sample-headless.default.svc.cluster.local. 5 IN	A 10.244.2.70
 外部のドメイン宛のCNAMEを返すサービスです。
 例えば、Podから外部の[example.com](http://example.com/)へアクセスする場合、下記のように設定します。
 
-```sample-externalname.yaml
+```yaml
+# sample-externalname.yaml
 kind: Service
 apiVersion: v1
 metadata:
@@ -327,7 +335,8 @@ example.com.		5	IN	A	93.184.216.34
 # None-Selector
 外部のサービスに対してロードバランシングします。
 
-```sample-none-selector.yaml
+```yaml
+# sample-none-selector.yaml
 ---
 kind: Service
 apiVersion: v1
