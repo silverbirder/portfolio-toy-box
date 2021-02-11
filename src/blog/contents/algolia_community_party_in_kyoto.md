@@ -1,6 +1,6 @@
 <!-- 
 title: Algolia Community Party in 京都 - 2019年5月10日 参加レポート
-date: 2020-12-01T22:43:36+09:00
+date: 2019-05-11T13:32:22+09:00
 draft: false
 description: description
 -->
