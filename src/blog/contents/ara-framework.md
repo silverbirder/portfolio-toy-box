@@ -12,7 +12,7 @@ https://silverbirder180.hatenablog.com/entry/2020/08/23/183713
 
 みなさん、こんにちは。silverbirder です。
 私の最近の興味として、Micro Frontends があります。
-[https://silverbirder180.hatenablog.com/entry/2020/05/04/182921:embed:cite]
+[https://silverbirder180.hatenablog.com/entry/2020/05/04/182921:embed]
 今、Ara-Frameworkというフレームワークを使った Micro Frontends のアプローチ方法を学んでいます。
 
 # Ara-Framework とは
@@ -62,7 +62,7 @@ Ara-Frameworkのアーキテクチャ図は、次のようなものです。
 # Ara-Framework サンプルコード
 
 Ara-Frameworkを実際に使ってみました。サンプルコードは下記にあげています。
-[https://github.com/Silver-birder/micro-frontends-sample-code-2:embed:cite]
+[https://github.com/Silver-birder/micro-frontends-sample-code-2:embed]
 
 package.json はこんな感じです。
 

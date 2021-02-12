@@ -17,10 +17,10 @@ https://silverbirder180.hatenablog.com/entry/2020/03/08/175607
 Hangouts MeetやZoomといったビデオ会議ツールを使う機会が増えたと思います。
 
 そんな中、次の記事が流行りました。
-[https://level69.net/archives/26902:embed:cite]
+[https://level69.net/archives/26902:embed]
 
 > バ美肉（バびにく）とは、バーチャル美少女受肉またはバーチャル美少女セルフ受肉の略語
-[https://ja.wikipedia.org/wiki/バ美肉:embed:cite]
+[https://ja.wikipedia.org/wiki/バ美肉:embed]
 
 これにより、ビデオ会議(例はZoom)で、次のようなバーチャル美少女 (になりきった私)が参加できるようになります。もちろん、声もボイスチェンジできます。
 <figure class="figure-image figure-image-fotolife" title="バーチャル美少女 (私)">[f:id:silverbirder180:20200308101851p:plain]<figcaption>バーチャル美少女 (私)</figcaption></figure>
@@ -46,7 +46,7 @@ Mac + Bootcamp → Windows10 + Facering  でもできると思いますが、動
 野太い声じゃなくて、かわいい声が聞きたいですよね。そうですよね。はい。  
 
 Gachikoeを使いました。
-[https://booth.pm/ja/items/1236505:embed:cite]
+[https://booth.pm/ja/items/1236505:embed]
 
 Gachikoeは、次のような設定にしました。
 
@@ -58,10 +58,10 @@ Outputを soundflower (2ch)にしています。
 ## 仮想マイク
 
 仮想マイクは、Soundflowerを使います。
-[https://github.com/mattingalls/Soundflower/tags:embed:cite]
+[https://github.com/mattingalls/Soundflower/tags:embed]
 
 音声出力のルーティングを制御するために、LadioCastも使いました。
-[https://apps.apple.com/jp/app/ladiocast/id411213048?mt=12:embed:cite]
+[https://apps.apple.com/jp/app/ladiocast/id411213048?mt=12:embed]
 
 LadioCastは、次のような設定にしました。
 
@@ -74,7 +74,7 @@ Inputを soundflower (2ch)とし、Outputを soundflower (64ch)としていま�
 ### Desktop: 3tene
 デスクトップで動かす場合は、3tene(ミテネ)を使いました。
 
-[https://3tene.com/:embed:cite]
+[https://3tene.com/:embed]
 
 3teneは、特に設定は必要ありません。
 撮影前には、Webカメラとリップシンク(口の動きの同期)を起動しておきましょう。
@@ -86,13 +86,13 @@ Inputを soundflower (2ch)とし、Outputを soundflower (64ch)としていま�
 肝心のキャラクターですが、3teneはVRM形式でなければならないそうです。(よくわかっていません)  
 私は、次のサイトでダウンロードしました。
 
-[https://hub.vroid.com/:embed:cite]
-[https://3d.nicovideo.jp/:embed:cite]
+[https://hub.vroid.com/:embed]
+[https://3d.nicovideo.jp/:embed]
 
 ### Mobile: Reality
 モバイルで動かす場合は、Realityを使いました。
 
-[https://apps.apple.com/jp/app/reality-%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%AB%E3%83%A9%E3%82%A4%E3%83%96%E9%85%8D%E4%BF%A1%E3%82%A2%E3%83%97%E3%83%AA/id1404176564:embed:cite]
+[https://apps.apple.com/jp/app/reality-%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%AB%E3%83%A9%E3%82%A4%E3%83%96%E9%85%8D%E4%BF%A1%E3%82%A2%E3%83%97%E3%83%AA/id1404176564:embed]
 
 Realityは、特に設定は必要ありません。
 好みのキャラクターをカスタマイズして簡単に作れます。
@@ -110,7 +110,7 @@ noneは、私のiPhoneデバイス名です。
 ## 仮想カメラ
 
 CamTwistという仮想カメラを使いました。
-[http://camtwiststudio.com/download/:embed:cite]
+[http://camtwiststudio.com/download/:embed]
 
 CamTwistは、次のような設定にしました。
 
@@ -141,14 +141,14 @@ Zoomは、次のような設定にしました。
 ネタ的には『可愛い女の子と会話すると、生産性があがる』なのですが...脳が震える。
 
 # 参考リンク
-[https://kumak1.hatenablog.com/entry/2018/09/27/234203:embed:cite]
+[https://kumak1.hatenablog.com/entry/2018/09/27/234203:embed]
 
-[http://kuroyam.hatenablog.com/entry/2020/02/27/204246:embed:cite]
+[http://kuroyam.hatenablog.com/entry/2020/02/27/204246:embed]
 
-[https://mzyy94.com/blog/2020/02/25/virtual-bishoujo-meeting/:embed:cite]
+[https://mzyy94.com/blog/2020/02/25/virtual-bishoujo-meeting/:embed]
 
-[https://www.excite.co.jp/news/article/MoguraVR_voice-changer-pickup5/:embed:cite]
+[https://www.excite.co.jp/news/article/MoguraVR_voice-changer-pickup5/:embed]
 
-[https://www.cg-method.com/entry/gachikoe/#Gachikoe:embed:cite]
+[https://www.cg-method.com/entry/gachikoe/#Gachikoe:embed]
 
-[https://vtuberkaibougaku.site/2019/01/31/post-3176/:embed:cite]
+[https://vtuberkaibougaku.site/2019/01/31/post-3176/:embed]

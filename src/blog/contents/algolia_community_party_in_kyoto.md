@@ -7,7 +7,8 @@ description: description
 # Links
 https://silverbirder180.hatenablog.com/entry/2019/05/11/133222
 
-[https://algolia.connpass.com/event/128524/:embed:cite]
+[https://algolia.connpass.com/event/128524/:embed]
+
 こちらに参加しましたので、ご報告までに記事を書こうと思います。
 
 <figure class="figure-image figure-image-fotolife" title="Algolia Community Party in 京都 - 2019年5月10日">[f:id:silverbirder180:20190511105346p:plain:alt=Algolia Community Party in 京都 - 2019年5月10日]<figcaption>Algolia Community Party in 京都 - 2019年5月10日</figcaption></figure>
@@ -20,12 +21,12 @@ https://silverbirder180.hatenablog.com/entry/2019/05/11/133222
 まずは下記サイトで、色々検索してみて下さい！
 
 * Algolia Community Sample
-  * [https://community.algolia.com/instantsearch.js/v2/examples/e-commerce/:title]
-  * [https://community.algolia.com/instantsearch.js/v2/examples/tourism/:title]
-  * [https://community.algolia.com/instantsearch.js/v2/examples/media/:title]
+  * [https://community.algolia.com/instantsearch.js/v2/examples/e-commerce/](https://community.algolia.com/instantsearch.js/v2/examples/e-commerce/)
+  * [https://community.algolia.com/instantsearch.js/v2/examples/tourism/](https://community.algolia.com/instantsearch.js/v2/examples/tourism/)
+  * [https://community.algolia.com/instantsearch.js/v2/examples/media/](https://community.algolia.com/instantsearch.js/v2/examples/media/)
 * 実際にProductとして使われているサイト
-  * [https://www.bringmeister.de/:title]
-  * [https://8tracks.com/explore/all:title]
+  * [https://www.bringmeister.de/](https://www.bringmeister.de/)
+  * [https://8tracks.com/explore/all](https://8tracks.com/explore/all)
 
 
 どれも**爆速**に結果が返ってきませんか !? 
@@ -33,7 +34,7 @@ https://silverbirder180.hatenablog.com/entry/2019/05/11/133222
 
 ## 概要
 
-[https://www.algolia.com/:embed:cite]
+[https://www.algolia.com/:embed]
 
 > Products to accelerate search and discovery experiences across any device and platform.
 
@@ -45,15 +46,16 @@ Alogliaでは、そういった全文検索に関わる機能をSaaSとして提
 使われているところでは、ブログサービスである[medium](https://medium.com/)や、オンライン決算処理である[Stripeのドキュメント](https://stripe.com/docs/api)がメジャーでしょうか。
 エンジニア向けとしては、[Docker Hub](https://hub.docker.com/)にも使われています。また、Firebaseの公式でも使用事例として紹介されています。これは驚きですね。
 
-[https://firebase.google.com/docs/firestore/solutions/search?hl=ja:embed:cite]
+[https://firebase.google.com/docs/firestore/solutions/search?hl=ja:embed]
 
 Algoliaの会社としては、フランスから2012年よりスタートしました。
 ベンチャー企業であり、日本人のエンジニア募集もあるそうです。
 
 SaaSコミュニティ用のイベントがあるそうで、こちらにAlgoliaさんも登壇されています。
-[https://www.saastr.com/:embed:cite]
-[https://www.saastr.com/watch-the-saastr-masterclass-from-0-to-10m-in-arr-from-algolia-in-paris-video/:embed:cite]
 
+[https://www.saastr.com/:embed]
+
+[https://www.saastr.com/watch-the-saastr-masterclass-from-0-to-10m-in-arr-from-algolia-in-paris-video/:embed]
 
 ## どんな機能があるの？
 
@@ -76,11 +78,11 @@ SaaSコミュニティ用のイベントがあるそうで、こちらにAlgolia
 
 ## どうやって使うの？
 
-[https://github.com/algolia:embed:cite]
+[https://github.com/algolia:embed]
 OSSとしてライブラリを提供されています。
 手っ取り早く使いたいときは、instantsearch.jsでしょうか。
 
-[https://community.algolia.com:embed:cite]
+[https://community.algolia.com:embed]
 こちらも参考になるかと思います。
 
 ## Algoliaは知っていたの？
@@ -92,17 +94,17 @@ Algoliaは、全文検索システムを構築せずとも、お手軽に使え�
 
 その後、下記の記事で書いた通りOSS Gateの対象にもさせてもらいました。
 
-[https://tech-blog.monotaro.com/entry/2018/10/17/115442:embed:cite]
+[https://tech-blog.monotaro.com/entry/2018/10/17/115442:embed]
 
 また、作りたいものリストに溜まっていたアプリを作る時間があったので、
 最近では、下記のような書籍管理を作りました。検索はAlgoliaを使っています。
 
-[https://github.com/Silver-birder/book-store-vue:embed:cite]
+[https://github.com/Silver-birder/book-store-vue:embed]
 
 # なぜ会場が、はてな株式会社なの？
 はてなの社長であるid:chris4403さんが、[@shinodogg](https://twitter.com/shinodogg)と前職での知り合いだったからだそうです。
 
-[https://mackerel.io/ja/:embed:cite]
+[https://mackerel.io/ja/:embed]
 
 はてなも、サーバー監視サービスであるmackerel（鯖）をSaaSとして提供しています。
 このお二方が、前職を離れてからも、同様の事業に携わっているということに、不思議な縁だな〜と思いました。

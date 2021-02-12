@@ -34,10 +34,10 @@ ECサイトのようなWebアプリケーションでは、様々な専門知識
 要は、バックエンドだけでなく、バックエンドからフロントエンドまでをマイクロサービス化することです。
 
 さらに詳しく知りたい方は、次のページをご参考下さい。とてもわかりやすいです。
-[https://micro-frontends-japanese.org/:embed:cite]
+[https://micro-frontends-japanese.org/:embed]
 
 また、次の書籍を読むと、
-[https://www.manning.com/books/micro-frontends-in-action:embed:cite]
+[https://www.manning.com/books/micro-frontends-in-action:embed]
 
 > Amazon does not talk a lot about its internal development structure. However, there are reports that <b>the teams who run its e-commerce site have been working like this </b>for a long time.  ...
 
@@ -112,7 +112,7 @@ ECサイトだけでなく、Spotifyのようなサービスにも適用され�
 Hydrationは、サーバーサイドでレンダリングした静的HTMLに、クライアントサイドの動的レンダリングができるようにするようなものです。
 
 ちなみにWeb Componentsは、次の入門書(500円)を執筆したため、ご興味がある人は見てみて下さい。
-[https://silverbirder.booth.pm/items/1572900:embed:cite]
+[https://silverbirder.booth.pm/items/1572900:embed]
 
 ※ クライアントサイド統合(Web Components)でも良かったのですが、私都合により却下となりました。
 
@@ -125,7 +125,7 @@ apple, banana, orangeという商品を検索するだけのサンプルWebア�
 ※ [http://team-page.fly.dev/]
 
 サンプルコードは、ここに置いています。
-[https://github.com/Silver-birder/micro-frontends-sample-code:embed:cite]
+[https://github.com/Silver-birder/micro-frontends-sample-code:embed]
 
 ## サービス
 
@@ -139,7 +139,7 @@ apple, banana, orangeという商品を検索するだけのサンプルWebア�
 ##  仕組み
 Podium というライブラリを採用しました。
 
-[https://github.com/podium-lib/:embed:cite]
+[https://github.com/podium-lib/:embed]
 
 これは、フロントエンドのサービスを簡単に統合できるようなライブラリになっています。
 Podium には大きく分けて3つの機能があります。
@@ -272,7 +272,7 @@ messageBus.subscribe('search', 'search.word', event => {
 
 各サービスは、fly.io というPaaSへデプロイしています。
 
-[https://fly.io/:embed:cite]
+[https://fly.io/:embed]
 
 CDNでSSRが実行できる <b>Edge Worker</b>を使用しています。
 これにより、SSR結果をキャッシュし、高速にレスポンスを返却できます。
@@ -280,7 +280,7 @@ CDNでSSRが実行できる <b>Edge Worker</b>を使用しています。
 ただ、サンプルWebアプリでは、全くその力を引き出せていないです...
 
 ※ 参考記事
-[https://mizchi.hatenablog.com/entry/2019/02/21/235403:embed:cite]
+[https://mizchi.hatenablog.com/entry/2019/02/21/235403:embed]
 
 # サンプルWebアプリで分かったこと
 ## SSR + CSR (Hydration) が実現可能
@@ -292,12 +292,12 @@ CDNでSSRが実行できる <b>Edge Worker</b>を使用しています。
 例えば、次のリポジトリにある "shared_vendor_webpack_dll" のように、vendorファイルを共有することで、
 javascriptのsizeを減らすといった手段があります。
 
-[https://github.com/naltatis/micro-frontends-in-action-code:embed:cite]
+[https://github.com/naltatis/micro-frontends-in-action-code:embed]
 
 また、次のリポジトリにある zalando tailorは、script loadをstreamingすることで、
 全体のscript load完了時間を短縮するツールもあります。
 
-[https://github.com/zalando/tailor:embed:cite]
+[https://github.com/zalando/tailor:embed]
 
 ## サービス内で技術スタックを選択できる
 
@@ -339,4 +339,4 @@ Micro Frontendsは、このような<b>複雑化するフロントエンドに�
 最後まで読んで頂き、ありがとうございました。
 
 # 参考リンク
-[https://github.com/ChristianUlbrich/awesome-microfrontends:embed:cite]
+[https://github.com/ChristianUlbrich/awesome-microfrontends:embed]

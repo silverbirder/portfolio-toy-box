@@ -13,13 +13,13 @@ https://silverbirder180.hatenablog.com/entry/2020/10/07/190727
 Micro Frontendsに関わる記事を100件以上読みました(参考記事に記載しています)。そこから得たMicro Frontendsについてこの投稿に記録します。
 また、調査メモについて、次のリポジトリに残しています。
 
-[https://github.com/Silver-birder/think-micro-frontends:embed:cite]
+[https://github.com/Silver-birder/think-micro-frontends:embed]
 
 [:contents]
 
 # 発端
 
-[https://www.thoughtworks.com/radar/techniques/micro-frontends:embed:cite]
+[https://www.thoughtworks.com/radar/techniques/micro-frontends:embed]
 
 # 実績企業
 
@@ -72,7 +72,7 @@ Micro Frontendsに関わる記事を100件以上読みました(参考記事に�
 
 # 統合パターン
 
-[https://bluesoft.com/micro-frontends-the-missing-piece-of-the-puzzle-in-feature-teams/:embed:cite]
+[https://bluesoft.com/micro-frontends-the-missing-piece-of-the-puzzle-in-feature-teams/:embed]
 
 |統合|選択基準|技術|
 |--|--|--|
@@ -84,9 +84,9 @@ Micro Frontendsに関わる記事を100件以上読みました(参考記事に�
 # 機能
 ## コミュニケーション
 
-[https://developer.mozilla.org/ja/docs/Web/API/CustomEvent:embed:cite]
+[https://developer.mozilla.org/ja/docs/Web/API/CustomEvent:embed]
 
-[https://github.com/postaljs/postal.js:embed:cite]
+[https://github.com/postaljs/postal.js:embed]
 
 ## データ共有
 
@@ -100,29 +100,29 @@ Micro Frontendsに関わる記事を100件以上読みました(参考記事に�
 
 * webpack
 
-[https://webpack.js.org/concepts/module-federation/:embed:cite]
+[https://webpack.js.org/concepts/module-federation/:embed]
 
-[https://webpack.js.org/configuration/externals/:embed:cite]
+[https://webpack.js.org/configuration/externals/:embed]
 
-[https://webpack.js.org/plugins/dll-plugin/:embed:cite]
+[https://webpack.js.org/plugins/dll-plugin/:embed]
 
 ## ルーティング
 
 Vaddin router
 
-[https://vaadin.com/router:embed:cite]
+[https://vaadin.com/router:embed]
 
 ## キャッシュ
 
-[https://developer.mozilla.org/ja/docs/Web/API/Service_Worker_API:embed:cite]
+[https://developer.mozilla.org/ja/docs/Web/API/Service_Worker_API:embed]
 
-[https://developer.mozilla.org/ja/docs/Web/API/IndexedDB_API:embed:cite]
+[https://developer.mozilla.org/ja/docs/Web/API/IndexedDB_API:embed]
 
 ## 認証
 
 * JWT
 
-[https://jwt.io/:embed:cite]
+[https://jwt.io/:embed]
 
 ## 計測
 
@@ -153,11 +153,11 @@ Vaddin router
 
 コンポジションプロキシ。テンプレートを組み合わせる。
 
-[https://github.com/tes/compoxure:embed:cite]
+[https://github.com/tes/compoxure:embed]
 
 ## アクセス履歴
 
-[https://developer.mozilla.org/ja/docs/Web/API/History_API:embed:cite]
+[https://developer.mozilla.org/ja/docs/Web/API/History_API:embed]
 
 # 分割ポリシー
 
@@ -194,7 +194,7 @@ Vaddin router
 
 #  書籍
 
-[https://www.manning.com/books/micro-frontends-in-action:embed:cite]
+[https://www.manning.com/books/micro-frontends-in-action:embed]
 
 # 参考記事
 * https://blog.bitsrc.io/communication-between-micro-frontends-67a745c6cfbe

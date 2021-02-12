@@ -16,7 +16,7 @@ ZoomのMeetingを自動生成するGASライブラリを公開しましたので
 # きっかけ
 社のSlackで次のqiitaの記事を知りました。
 
-[https://qiita.com/kudota/items/b480610cc3f575a8ec6f:embed:cite]
+[https://qiita.com/kudota/items/b480610cc3f575a8ec6f:embed]
 
 GASからZoomのMeetingを作れるのって、簡単なんだな〜と思いつつ、
 "cronのように使いたい"というSlackのコメントがあったので、サクッと一日で作ってみました。
@@ -26,7 +26,7 @@ GASからZoomのMeetingを作れるのって、簡単なんだな〜と思いつ
 
 # 作ったもの
 
-[https://github.com/Silver-birder/zoom-meeting-creator:embed:cite]
+[https://github.com/Silver-birder/zoom-meeting-creator:embed]
 
 これをGAS側でライブラリ追加すると使えます。
 このGASでは、

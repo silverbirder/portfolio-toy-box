@@ -19,9 +19,9 @@ Twitterに投稿されているLinkを収集するツール Cotlin を作りま�
 
 から、Cotlinという名前にしました。Androidのアレに似ています。
 
-[https://github.com/Silver-birder/Cotlin:embed:cite]
+[https://github.com/Silver-birder/Cotlin:embed]
 
-[https://www.npmjs.com/package/@silverbirder/cotlin:embed:cite]
+[https://www.npmjs.com/package/@silverbirder/cotlin:embed]
 
 [:contents]
 # 動機
@@ -37,7 +37,7 @@ Tweetに記述したリンクは、全て[t.co](https://help.twitter.com/ja/usin
 この短縮URLからオリジナルURLを手に入れるために、リダイレクトする必要があります。
 実際に作ってみると、次のような記事に書いたとおり、GASで書くと、少し困ったことがありました。
 
-[https://silverbirder180.hatenablog.com/entry/2020/02/24/094442:embed:cite]
+[https://silverbirder180.hatenablog.com/entry/2020/02/24/094442:embed]
 
 そこで、複数のリダイレクトURLへリクエストする処理を並列化するために、Golangで開発していました。
 
@@ -48,7 +48,7 @@ Tweetに記述したリンクは、全て[t.co](https://help.twitter.com/ja/usin
 毎日、プレゼンテーション資料を収集し、スプレットシートに記録するよう、自動化しました。  
 ※ 都合により、URLのリンクとTweetのリンクのみ記載しています。
 
-[https://docs.google.com/spreadsheets/d/1IaJOw9-GdoHhz3D0CzvJfFitrmEN8KpgIleer9rmxiw/edit?usp=sharing:embed:cite]
+[https://docs.google.com/spreadsheets/d/1IaJOw9-GdoHhz3D0CzvJfFitrmEN8KpgIleer9rmxiw/edit?usp=sharing:embed]
 
 次のような資料を発見できるようになりました。
 

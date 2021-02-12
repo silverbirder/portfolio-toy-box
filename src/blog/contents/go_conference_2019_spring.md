@@ -8,13 +8,13 @@ description: description
 https://silverbirder180.hatenablog.com/entry/2019/05/21/224143
 
 <figure class="figure-image figure-image-fotolife" title="Go Conference 2019 Spring Coffee">[f:id:silverbirder180:20190521224335j:plain]<figcaption>Go Conference 2019 Spring Coffee</figcaption></figure>
-[https://gocon.connpass.com/event/124530/:embed:cite]
+[https://gocon.connpass.com/event/124530/:embed]
 こちらに参加してきましたので、ご報告します！
 
 公式:
-[https://gocon.jp/:embed:cite]
+[https://gocon.jp/:embed]
 twitter:
-[https://twitter.com/hashtag/gocon:embed:cite]
+[https://twitter.com/hashtag/gocon:embed]
 
 場所:
 リクルートライフスタイル本社
@@ -29,9 +29,9 @@ Since the previous talk at Go Con 2014 Autumn, lots of things in the internals h
 
 ### 資料
 #### 今回
-[https://speakerdeck.com/moriyoshi/hacking-go-compiler-internals-2nd-season:embed:cite]
+[https://speakerdeck.com/moriyoshi/hacking-go-compiler-internals-2nd-season:embed]
 #### 前回
-[https://www.slideshare.net/moriyoshi/hacking-go-compiler-internals-gocon-2014-autumn:embed:cite]
+[https://www.slideshare.net/moriyoshi/hacking-go-compiler-internals-gocon-2014-autumn:embed]
 
 ### 感想
 このセッションでは、Golangのソースコードが機械語になるまでのステップ、要はコンパイラの動きを紹介されていました。
@@ -56,8 +56,8 @@ Since the previous talk at Go Con 2014 Autumn, lots of things in the internals h
 Go言語でのアプリケーション開発で、特にコンテナを前提とする場合の設計考慮点について話します。 例えば、Go言語でAPIを開発する場合、コンテナとして動かすことを前提とするケースが多いと感じます。コンテナベースで動かすことを前提とした場合、コンテナイメージ作成・アプリケーション監視において、考慮すべき点が出てくるでしょう。このトークでは、Go言語での実装にまで踏み込んだ上で、コンテナベースアプリケーションにおける設計の考慮点について話します。
 
 ### 資料
-[https://speakerdeck.com/hgsgtk/design-considerations-for-container-based-go-application:embed:cite]
-[https://www.redhat.com/ja/resources/cloud-native-container-design-whitepaper:embed:cite]
+[https://speakerdeck.com/hgsgtk/design-considerations-for-container-based-go-application:embed]
+[https://www.redhat.com/ja/resources/cloud-native-container-design-whitepaper:embed]
 
 ### 感想
 Golangの話というより、コンテナで開発する上でのTipsの話でした。
@@ -81,7 +81,7 @@ Tipsは３つ紹介されていて、「Configuration」「Logging」「Moniteri
 基本的なCPUやメモリを簡単に触れ、Goの最適化、コンパイラの最適化、Goで実装したときのCPUやメモリの振る舞いを紹介します。 またこれら最適化の様子やパフォーマンスを実際にGoの標準ツールを使いながら確認していきます。
 
 ### 資料
-[https://speakerdeck.com/sonatard/cpu-memory-and-go:embed:cite]
+[https://speakerdeck.com/sonatard/cpu-memory-and-go:embed]
 
 ### 感想
 Golangにおけるパフォーマンス・チューニングについて勉強になりました。
@@ -116,5 +116,5 @@ Google TeamであるKatie Hockmanのspeakingが英語だったために、ほと
 実にもったいないと感じました。
 
 ※　資料まとめ
-[https://engineer-fumi.hatenablog.com/entry/2019/05/18/172000:embed:cite]
+[https://engineer-fumi.hatenablog.com/entry/2019/05/18/172000:embed]
 

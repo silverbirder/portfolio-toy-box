@@ -15,13 +15,13 @@ https://silverbirder180.hatenablog.com/entry/2020/07/10/
 
 サンプルリポジトリは、下記に載せています。
 
-[https://github.com/Silver-birder/apache-beam-kotlin-example/tree/master/src/main/kotlin:embed:cite]
+[https://github.com/Silver-birder/apache-beam-kotlin-example/tree/master/src/main/kotlin:embed]
 
 [:contents]
 
 # Apache Beam とは
 
-[https://www.st-hakky-blog.com/entry/2020/04/29/172220:embed:cite]
+[https://www.st-hakky-blog.com/entry/2020/04/29/172220:embed]
 
 ** BatchやStreaming を1つのパイプライン処理 ** として実現できるデータパイプライン、それがApache Beamです。(Batch + Stream → Beam)
 

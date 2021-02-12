@@ -8,17 +8,17 @@ description: description
 https://silverbirder180.hatenablog.com/entry/2019/06/01/182255
 
 <figure class="figure-image figure-image-fotolife" title="kubernetes osaka satellite">[f:id:silverbirder180:20190601112302p:plain]<figcaption>kubernetes osaka Satellite</figcaption></figure>
-[https://k8sjp-osaka.connpass.com/event/131981/:embed:cite]
+[https://k8sjp-osaka.connpass.com/event/131981/:embed]
 
 大阪からKubernetes Meetup Tokyoに参加できるとのことで、こちらに参加してきました。
 Kubernetesの生みの親である3人の内の1人のJoe Bedaから、**Kubernetesの歴史**の経緯について教えて頂きました。
 その話がとてもわかりやすく、なるほどなと思ったので、ぜひとも共有したいと思います。
 
-[https://twitter.com/hashtag/k8sjp:embed:cite]
+[https://twitter.com/hashtag/k8sjp:embed]
 
 ※ 以降の内容は、私なりの解釈が入っており誤った認識かもしれません。ご了承下さい。
 発表の内容は全てYoutubeにありますので、そちらが正しいものです。ご参考下さい。
-[https://www.youtube.com/watch?v=ETHGx8_Q-1k:embed:cite]
+[https://www.youtube.com/watch?v=ETHGx8_Q-1k:embed]
 
 [:contents]
 
@@ -94,20 +94,20 @@ PodやReplication,Deploymentなど様々なリソースがあります。
 そこで、Custom Resource Definitions (CRD)です。
 なんだそれは...?
 
-[https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/:embed:cite]
-[https://qiita.com/cvusk/items/773e222e0971a5391a51:embed:cite]
+[https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/:embed]
+[https://qiita.com/cvusk/items/773e222e0971a5391a51:embed]
 
 要は、PodやDeploymentのようなリソースを独自に作ることができるのですね。おぉなんだそれ！
 独自に機能を作るためには、Custom Resource と Costom Controllerが必要になり、両方をあわせて
 Operatorsというものが生まれました。
 
 例えば、下記のようなものがあります。
-[https://github.com/oracle/mysql-operator:embed:cite]
-[https://github.com/kubeflow/tf-operator:embed:cite]
+[https://github.com/oracle/mysql-operator:embed]
+[https://github.com/kubeflow/tf-operator:embed]
 
 Yahooでは、gimbalというOSSを使ってKubernetesを導入したみたいです。
-[https://github.com/heptio/gimbal:embed:cite]
-[https://techblog.yahoo.co.jp/advent-calendar-2018/oss-gimbal/:embed:cite]
+[https://github.com/heptio/gimbal:embed]
+[https://techblog.yahoo.co.jp/advent-calendar-2018/oss-gimbal/:embed]
 
 詳しくは分かりませんが、こういった拡張しやすい機能があるおかげでドンドン普及するのだなと勉強になりました。
 
@@ -140,7 +140,7 @@ Yahooでは、gimbalというOSSを使ってKubernetesを導入したみたい�
 # Osaka会場
 会場提供は、株式会社Aimingさんでした。
 
-[https://aiming-inc.com/ja/:embed:cite]
+[https://aiming-inc.com/ja/:embed]
 
 会場場所は、グランフロント大阪タワーBの18階にありました。(高い!)
 今回使わさせて頂いた場所は、会議室でしょうか。

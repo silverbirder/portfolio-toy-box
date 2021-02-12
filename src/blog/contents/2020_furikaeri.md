@@ -4,9 +4,6 @@ date: 2020-12-30T13:04:03+09:00
 draft: false
 description: description
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2020/12/30/130403
-
 2020年も、もう残りわずかになりました。今年の振り返りをはじめてブログに残そうと思います。
 
 # 技術
@@ -17,7 +14,7 @@ https://silverbirder180.hatenablog.com/entry/2020/12/30/130403
 
 下記のスプレッドシートに、技術資料リンクを自動登録しています。
 
-[https://docs.google.com/spreadsheets/d/1IaJOw9-GdoHhz3D0CzvJfFitrmEN8KpgIleer9rmxiw/edit:embed:cite]
+[https://docs.google.com/spreadsheets/d/1IaJOw9-GdoHhz3D0CzvJfFitrmEN8KpgIleer9rmxiw/edit:embed]
 
 日本だけじゃなく、海外の技術資料も発見できるので、色々な観点の技術を知ることができました。例えば、テスト手法、アーキテクチャの考え方、働き方の考え方などです。これを毎日欠かさずキャッチアップし続けていました。
 

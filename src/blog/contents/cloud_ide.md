@@ -47,28 +47,28 @@ Cloud IDEは、クラウドにある統合開発環境(IDE)のことで、主に
 
 ブラウザで見ると、どんなUIでしょうか。いくつか例を載せておきます。
 
-<figure class="figure-image figure-image-fotolife" title="github-codespaces">![visual studio codespaces](https://visualstudio.microsoft.com/wp-content/uploads/2020/09/codespaces-vs.png)<figcaption>[https://github.co.jp/features/codespaces:title]</figcaption></figure>
+<figure class="figure-image figure-image-fotolife" title="github-codespaces">![visual studio codespaces](https://visualstudio.microsoft.com/wp-content/uploads/2020/09/codespaces-vs.png)<figcaption>[https://github.co.jp/features/codespaces](https://github.co.jp/features/codespaces)</figcaption></figure>
 
-<figure class="figure-image figure-image-fotolife" title="cloud-shell-editor">![cloud shell editor](https://storage.googleapis.com/gweb-cloudblog-publish/images/Cloud_shell_editor.max-2000x2000.jpg)<figcaption>[https://cloud.google.com/blog/ja/products/application-development/introducing-cloud-shell-editor:title]</figcaption></figure>
+<figure class="figure-image figure-image-fotolife" title="cloud-shell-editor">![cloud shell editor](https://storage.googleapis.com/gweb-cloudblog-publish/images/Cloud_shell_editor.max-2000x2000.jpg)<figcaption>[https://cloud.google.com/blog/ja/products/application-development/introducing-cloud-shell-editor](https://cloud.google.com/blog/ja/products/application-development/introducing-cloud-shell-editor)</figcaption></figure>
 
-<figure class="figure-image figure-image-fotolife" title="gitpod">![gitpod](https://www.gitpod.io/static/screenshot-500034efe425da10cf38587a9294a4d8.png)<figcaption>[https://www.gitpod.io:title]</figcaption></figure>
+<figure class="figure-image figure-image-fotolife" title="gitpod">![gitpod](https://www.gitpod.io/static/screenshot-500034efe425da10cf38587a9294a4d8.png)<figcaption>[https://www.gitpod.io](https://www.gitpod.io)</figcaption></figure>
 
 Cloud Shell EditorやGitpodは、OSSの **Theia** というものを使っています。
 また、全体的にUIがとても似ていますよね。これは、次の記事でわかりやすく説明されていますので、ご興味があればお読みください。
 
-[https://qiita.com/monamour555/items/f93287c273a388261968:embed:cite]
+[https://qiita.com/monamour555/items/f93287c273a388261968:embed]
 
 これらのCloud IDEは、ここ最近Publickeyでよく目にします。記事と投稿日時をまとめてみました。
 
-* [https://www.publickey1.jp/blog/20/visual_studio_codeeclipse_theia_10vs_codeweb.html:title]
+* [https://www.publickey1.jp/blog/20/visual_studio_codeeclipse_theia_10vs_codeweb.html](https://www.publickey1.jp/blog/20/visual_studio_codeeclipse_theia_10vs_codeweb.html)
   * 2020年4月3日 投稿
-* [https://www.publickey1.jp/blog/20/githubwebidecodespacesgithub.html:title]
+* [https://www.publickey1.jp/blog/20/githubwebidecodespacesgithub.html](https://www.publickey1.jp/blog/20/githubwebidecodespacesgithub.html)
   * 2020年5月7日 投稿
-* [https://www.publickey1.jp/blog/20/webidevisual_studio_codespaecsgithub_codespaces.html:title]
+* [https://www.publickey1.jp/blog/20/webidevisual_studio_codespaecsgithub_codespaces.html](https://www.publickey1.jp/blog/20/webidevisual_studio_codespaecsgithub_codespaces.html)
   * 2020年9月7日 投稿
-* [https://www.publickey1.jp/blog/20/githubgitlabwebidegitpodgithub_codespaces.html:title]
+* [https://www.publickey1.jp/blog/20/githubgitlabwebidegitpodgithub_codespaces.html](https://www.publickey1.jp/blog/20/githubgitlabwebidegitpodgithub_codespaces.html)
   * 2020年9月11日 投稿
-* [https://www.publickey1.jp/blog/20/googlevscodeeclipse_theiagoogle_cloud_shell.html:title]
+* [https://www.publickey1.jp/blog/20/googlevscodeeclipse_theiagoogle_cloud_shell.html](https://www.publickey1.jp/blog/20/googlevscodeeclipse_theiagoogle_cloud_shell.html)
   * 2020年11月10日 投稿
 
 稚拙な推測ですが、リモートワークが普及し、働く環境も変化したためかなと思っています。
@@ -84,15 +84,15 @@ Theiaとは何か、Githubのaboutより引用します。
 
 このOSSの興味深いところの1つに、設計書が公開されているところです。
 
-[https://docs.google.com/document/d/1aodR1LJEF_zu7xBis2MjpHRyv7JKJzW7EWI9XRYCt48:embed:cite]
+[https://docs.google.com/document/d/1aodR1LJEF_zu7xBis2MjpHRyv7JKJzW7EWI9XRYCt48:embed]
 
 Theiaは、ローカルで動かすことができます。Webアプリだけじゃなく、ネイティブアプリ(Electron)もあります。
 
-[https://github.com/eclipse-theia/theia/blob/master/doc/Developing.md#quick-start:embed:cite]
+[https://github.com/eclipse-theia/theia/blob/master/doc/Developing.md#quick-start:embed]
 
 また、Dockerコンテナも公開されています。
 
-[https://github.com/theia-ide/theia-apps:embed:cite]
+[https://github.com/theia-ide/theia-apps:embed]
 
 ベンダーニュートラルなので、VMインスタンスにTheiaを入れて独自に運用するなど、ベンダーに依存しません。
 
@@ -100,7 +100,7 @@ Theiaは、ローカルで動かすことができます。Webアプリだけじ
 
 個人的に、Gitpodを使いたいのですが無料だと月50時間までしか使えません。
 
-[https://www.gitpod.io/pricing/:embed:cite]
+[https://www.gitpod.io/pricing/:embed]
 
 "Professional Open Source" というものを応募したところ、[Gitpodの組織](https://github.com/gitpod-io) へ招待頂き、公開リポジトリの無制限利用ができるようになりました。
 
@@ -108,16 +108,16 @@ Theiaは、ローカルで動かすことができます。Webアプリだけじ
 
 Gitpodは、.gitpod.ymlというファイルで環境構築されます。
 
-[https://www.gitpod.io/docs/configuration/:embed:cite]
+[https://www.gitpod.io/docs/configuration/:embed]
 
 ベースとなるDockerイメージを指定して、必要なライブラリを事前にインストールできたりします。
 公式ブログに、Gitpodの完全ガイドがあります。
 
-[https://www.gitpod.io/blog/gitpodify/:embed:cite]
+[https://www.gitpod.io/blog/gitpodify/:embed]
 
 また、様々なOSSをGitpodで簡単に動作確認できます。
 
-[https://contribute.dev/:title]
+[https://contribute.dev/](https://contribute.dev/)
 
 実際にGitpodを使ってみると、確かに便利です。
 アクセス元のPCは、非力なノートPCでも良く、GithubのRepository毎にGitpodのコンテナがあるため、相互に影響しません。

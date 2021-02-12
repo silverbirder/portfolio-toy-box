@@ -16,7 +16,7 @@ https://silverbirder180.hatenablog.com/entry/2019/09/06/205253
 
 実際に販売する本は↓のものです。
 
-[https://techbookfest.org/event/tbf07/circle/5117648689954816:embed:cite]
+[https://techbookfest.org/event/tbf07/circle/5117648689954816:embed]
 
 [:contents]
 
@@ -24,14 +24,14 @@ https://silverbirder180.hatenablog.com/entry/2019/09/06/205253
 
 大学時代の友人であるcastaneaiくんが技術書典6で初執筆しました。
 
-[https://castaneai.hatenablog.com/entry/2019/04/24/093514:embed:cite]
+[https://castaneai.hatenablog.com/entry/2019/04/24/093514:embed]
 
 castaneaiくんの話を聞いていると、得られるメリット(実績、交流)が大きいことと、
 製本までのフローがそこまで難しくないことを知りました。
 そこから、私も参加しようと思えるようになりました。
 castaneaiくんは、今回の技術書典7も参加するみたいです。興味がある方は是非お立ち寄りください。
 
-[https://techbookfest.org/event/tbf07/circle/5182251830607872:embed:cite]
+[https://techbookfest.org/event/tbf07/circle/5182251830607872:embed]
 
 # 何をするのか
 大きく分けて３つのステップになります。
@@ -52,7 +52,7 @@ castaneaiくんは、今回の技術書典7も参加するみたいです。興�
 文章を書き、本っぽい見た目にする必要があります。
 Re:VIEW Starterというツールを使うと、学習コストゼロで、良い感じの本が出来上がります。
 
-[https://kauplan.org/reviewstarter/:embed:cite]
+[https://kauplan.org/reviewstarter/:embed]
 
 次のコマンド１つで本のPDFが作られます。
 
@@ -138,7 +138,7 @@ $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake p
 
 表紙用のテンプレートがありますので、それを使います。
 
-[http://www.nikko-pc.com/offset/template/tonbo.html:embed:cite]
+[http://www.nikko-pc.com/offset/template/tonbo.html:embed]
 
 <b>背表紙の幅はページ数によって変化します</b>。
 私は、70ページほど予定していたので4mm幅で背表紙を描きました。
@@ -200,7 +200,7 @@ iPad, Magic Pencilは買って正解でした。
 |本文はじまりのページ|1ページ目|
 |遊び紙|有り, 上質90kg/イエロー/前|
 
-[https://jumpei-ikegami.hatenablog.com/entry/2018/10/21/084634:embed:cite]
+[https://jumpei-ikegami.hatenablog.com/entry/2018/10/21/084634:embed]
 
 を参考にしました。
 
@@ -213,7 +213,7 @@ $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake p
 
 用紙についてこだわりたい方は、次のリンクにあるようにサンプルを手に入れると良いでしょう。
 
-[https://natuna.jp/marcket/10282/:embed:cite]
+[https://natuna.jp/marcket/10282/:embed]
 
 # 3. 販売準備
 ## 3.1. 物品購入
@@ -244,11 +244,11 @@ $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake p
 |スケッチブック|ダイソー|作業|-|不|
 |ダンボールカッター|ダイソー|作業|-|不|
 
-[https://note.mu/mochikoastech/n/nf484f114855c:embed:cite]
+[https://note.mu/mochikoastech/n/nf484f114855c:embed]
 
-[https://blog.vtryo.me/entry/techbookfest5-preparation-of-journey#登壇ブログなどによる宣伝活動:embed:cite]
+[https://blog.vtryo.me/entry/techbookfest5-preparation-of-journey#登壇ブログなどによる宣伝活動:embed]
 
-[https://note.mu/yagitch/n/nc796a0c2c796:embed:cite]
+[https://note.mu/yagitch/n/nc796a0c2c796:embed]
 
 
 印刷する手段は3つあります。
@@ -264,7 +264,7 @@ $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake p
 
 ピクシブ社のサービスであるBoothを利用しました。
 
-[https://booth.pm/ja:embed:cite]
+[https://booth.pm/ja:embed]
 
 特に専門的な知識が必要なことがなく、本のPDFを登録するだけです。
 せっかく足を運んで会場に来て頂いた方のために、電子書籍と物理本の違いを出そうと考えました。
@@ -275,7 +275,7 @@ $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake p
 また、サンプルの本をアップロードし、無料でダウンロードできるようにすることで、
 事前に本の中身を確認できるようにしました。
 
-[https://silverbirder.booth.pm/items/1536228:embed:cite]
+[https://silverbirder.booth.pm/items/1536228:embed]
 
 ただ、ダウンロード数を見る限り、あまり数は多くありませんでした。
 Google Analytics (<b>初登録</b>)とBoothが連携できるので、流入数を見れるのですが、
@@ -328,11 +328,11 @@ Twitterで宣伝するために、16:9の画像を用意したりもしました
 被チェック数は、お客さんが気になる本をチェックした数になります。
 この数字から、印刷する冊数を決める大きな要因になります。
 
-[https://note.mu/yagitch/n/n2b5576363f4e:embed:cite]
+[https://note.mu/yagitch/n/n2b5576363f4e:embed]
 
 恥ずかしい話になりますが、私は毎朝この数字を見ていました。（笑）
 
-[https://github.com/Silver-birder/get-checked-number-for-techbook:embed:cite]
+[https://github.com/Silver-birder/get-checked-number-for-techbook:embed]
 
 被チェック数を定期的に取得するAPIをサクッと作って、CloudFunctionで稼働させています。
 
@@ -344,7 +344,7 @@ Twitterで宣伝するために、16:9の画像を用意したりもしました
 今回、300冊を印刷することにしました。間違いなく残ってしまうと思うので、
 とらのあなさんへ委託しようと考えています。
 
-[https://news.toranoana.jp/107460:embed:cite]
+[https://news.toranoana.jp/107460:embed]
 
 残ってしまったいくつかの本は、お家に保存用として持ち帰ろうと考えています。（笑）
 
@@ -352,7 +352,7 @@ Twitterで宣伝するために、16:9の画像を用意したりもしました
 
 公式ツイッターアカウントをフォローしておくと、なにかと便利です。
 
-[https://twitter.com/techbookfest:embed:cite]
+[https://twitter.com/techbookfest:embed]
 
 ## Google カレンダー 登録
 技術書典のスケジュールが登録されているGoogleカレンダーを、ご自身のカレンダーにも登録することをオススメします。
@@ -417,4 +417,4 @@ Twitterで宣伝するために、16:9の画像を用意したりもしました
 
 ※ PS. よければフォロー下さい〜!
 
-[https://twitter.com/silver_birder:embed:cite]
+[https://twitter.com/silver_birder:embed]

@@ -23,6 +23,7 @@
     "markdown-it": "^12.0.4",
     "probe-image-size": "^6.0.0",
     "serve": "^11.3.2",
-    "through2": "^4.0.2"
+    "through2": "^4.0.2",
+    "toc": "^0.4.0"
   }
 }

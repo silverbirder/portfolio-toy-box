@@ -10,14 +10,14 @@ https://silverbirder180.hatenablog.com/entry/2019/06/27/231339
 今回は、ヤフー株式会社主催の下記セミナーに参加してきました。
 Google/Appleどちらも大好きで、けど海外カンファレンスにいけなかった私にとって、今回の報告会は<b>新鮮な内容</b>ばかりでした。
 その内容を記事に書こうと思います。
-[https://yahoo-osaka.connpass.com/event/132601/:embed:cite]
+[https://yahoo-osaka.connpass.com/event/132601/:embed]
 
 [f:id:silverbirder180:20190627095615p:plain]
 [f:id:silverbirder180:20190627095612p:plain]
 [f:id:silverbirder180:20190627095619p:plain]
 
 hashtagはこちら
-[https://twitter.com/hashtag/mixleap:embed:cite]
+[https://twitter.com/hashtag/mixleap:embed]
 
 [:contents]
 
@@ -55,7 +55,7 @@ Web好きの私としてはTOP2というのが悔しいですね。(笑)
 ML/ALが3番目とは驚きです。
 
 ### Deplex on the web
-[https://www.gizmodo.jp/2019/05/190305.html:embed:cite]
+[https://www.gizmodo.jp/2019/05/190305.html:embed]
 ウェブベースでも使えるGoogleAssistantのことで、レンタカーや映画の予約ができるみたいです。
 これのすごいところは、レンタカーを予約するまでのステップを<b>全て自動入力</b>してくれるみたいです。
 そこまで便利になったのかと驚きました。
@@ -64,13 +64,13 @@ ML/ALが3番目とは驚きです。
 ### WebAuthn
 パスワードレスな生体認証のことを指すそうです。
 こちらについてのセッションが下記のようです。
-[https://developers.google.com/web/updates/2018/05/webauthn:embed:cite]
+[https://developers.google.com/web/updates/2018/05/webauthn:embed]
 
 ひとまず知ることができてよかったです。
 
 ## ML
 ML Kitの発表があったそうです。
-[https://developers.google.com/ml-kit/:embed:cite]
+[https://developers.google.com/ml-kit/:embed]
 
 その中でも、翻訳APIについて報告会では熱く話されていました。
 
@@ -81,10 +81,10 @@ ML Kitの発表があったそうです。
 つまり、オフラインでも動作します。  
 
 また、59言語に対応しているというすごい数です。
-[https://firebase.google.com/docs/ml-kit/translation-language-support:embed:cite]
+[https://firebase.google.com/docs/ml-kit/translation-language-support:embed]
 
 一部無料で使えるとのことで、こういうスタンスは本当に大好きです。
-[https://firebase.google.com/docs/ml-kit/android/translate-text:embed:cite]
+[https://firebase.google.com/docs/ml-kit/android/translate-text:embed]
 
 ※ 翻訳する際は中間に英語を挟むような作りになっているみたいです。
 
@@ -102,7 +102,7 @@ Web好きなら知っていると思いますが、PWAという技術があり�
 # Googleアシスタントの他プラットフォームへの拡張方法の紹介 一円 真治さん
 
 いろいろとお話されていたのですが、下記の内容が一番衝撃でした。
-[https://japanese.engadget.com/2019/05/08/google-web-duplex/:embed:cite]
+[https://japanese.engadget.com/2019/05/08/google-web-duplex/:embed]
 
 > Googleはまったくあたらしい音声認識と言語理解モデルを開発し、100GB必要だった学習モデルを0.5GB以下まで削減したとしています。これにより、学習モデルをスマートフォン内部に格納できるようになり、AI機能の動作にネットワーク接続不要に。この結果、ほぼ遅延なくデバイス上で音声認識が行えるようになるとのことです。
 
@@ -123,7 +123,7 @@ Swiftであんまり開発したことがないので、ほぼ想像で話しま
 この件について登壇者さんに質問してみました。そのとおりとのことです。
 swiftUIを手軽に動かしたい場合は、playgroundでも試せるそうなので、近い内にやってみようかなと思います。
 
-[https://qiita.com/shtnkgm/items/387132cd9633a59e7390:embed:cite]
+[https://qiita.com/shtnkgm/items/387132cd9633a59e7390:embed]
 
 ## ショートカットアプリ
 標準でiphoneにインストールされるようになったアプリで、正直あんまり使った覚えはありません。
@@ -143,10 +143,10 @@ AppleのIDで認証ができるようになります。
 特に、JSライブラリや、REST APIの提供もあるそうです。
 
 JSライブラリ
-[https://developer.apple.com/documentation/signinwithapplejs:embed:cite]
+[https://developer.apple.com/documentation/signinwithapplejs:embed]
 
 REST API
-[https://developer.apple.com/documentation/signinwithapplerestapi:embed:cite]
+[https://developer.apple.com/documentation/signinwithapplerestapi:embed]
 
 良いっすね〜！これで認証の種類が増えました！
 
@@ -154,7 +154,7 @@ REST API
 Google I/OやWWDCには参加したいという気持ちがあるのですが、
 やはり英語のちからがまだまだ自信がありません。
 徐々に聞き取れるように勉強していきます。
-[https://note.mu/silverbirder/m/mcad08e0f384b:embed:cite]
+[https://note.mu/silverbirder/m/mcad08e0f384b:embed]
 
 今回の報告会で何度も耳にした「デバイス上で動作、オフライン環境」は、
 今後、Googleでは力を入れていきたいのかなと思いました。

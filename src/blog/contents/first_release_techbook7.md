@@ -17,11 +17,11 @@ https://silverbirder180.hatenablog.com/entry/2019/08/30/103159
 # 技術書典7って？
 コミックマーケットのエンジニア向けみたいなものです。
 詳しくは、下記のリンクを参照下さい。
-[https://techbookfest.org/event/tbf07:embed:cite]
+[https://techbookfest.org/event/tbf07:embed]
 
 # あなたは誰？
 詳しくは、私のポートフォリオを参照下さい。
-[https://silver-birder.github.io/:embed:cite]
+[https://silver-birder.github.io/:embed]
 
 Webアプリケーションが大好きなエンジニアです。
 今は、ECサイトのフロントエンドエンジニアをしています。
@@ -141,10 +141,10 @@ Webが大好きな私にとっては、Web Componentsという技術に興味が
 
 # 関連リンク
 ## 見本誌
-[https://silverbirder.booth.pm/items/1536228:embed:cite]
+[https://silverbirder.booth.pm/items/1536228:embed]
 
 ## 技術書典7
-[https://techbookfest.org/event/tbf07/circle/5117648689954816:embed:cite]
+[https://techbookfest.org/event/tbf07/circle/5117648689954816:embed]
 
 ## Twitter宣伝
 [https://twitter.com/silver_birder/status/1166171153875886080:embed]

@@ -4,14 +4,11 @@ date: 2021-01-16T10:22:44+09:00
 draft: false
 description: description
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2021/01/16/102244
-
 2021年、あけましておめでとうございます。本年も宜しくおねがいします。最近、体重が増えてしまったため、有酸素運動を頑張っています。
 
 本記事は、昨年の冬あたりから検証していた クライアントサイド統合でのMicro Frontendsについて話そうと思います。検証したソースコードは、次のリポジトリにあります。
 
-[https://github.com/Silver-birder/micro-frontends-sample-code-6:embed:cite]
+[https://github.com/Silver-birder/micro-frontends-sample-code-6:embed]
 
 [:contents]
 
@@ -55,7 +52,7 @@ Javascript(index.js)には、次のModuleを含めようと考えていました
 Routerは、アプリケーション全体のRoutingを管理します。例えば、`/` はTopページ、 `/s` は検索ページといった具合です。
 Routerには、後ほど説明するWebComponentsとの相性が良いvaadin/router を使用しました。
 
-[https://vaadin.com/router:embed:cite]
+[https://vaadin.com/router:embed]
 
 vaadin/routerでは、WebComponentsを指定してRoutingするため、指定されたWebComponentsは、Importerより取得します。
 

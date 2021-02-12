@@ -9,8 +9,8 @@ https://silverbirder180.hatenablog.com/entry/2019/07/20/151731
 
 今回はDeNAさん主催のFrontendのイベントに参加してきましたので、
 報告しようと思います。
-[https://frokan.connpass.com/event/135584/:embed:cite]
-[https://twitter.com/hashtag/frokan:embed:cite]
+[https://frokan.connpass.com/event/135584/:embed]
+[https://twitter.com/hashtag/frokan:embed]
 
 <figure class="figure-image figure-image-fotolife" title="frontend de kanpai">[f:id:silverbirder180:20190720095423j:plain]<figcaption>frontend de kanpai
 </figcaption></figure>
@@ -64,7 +64,7 @@ VanillaなJSでCustomElementsを進めて行こうという経緯があるそう
 プロダクトの特徴に応じてコンポーネント選択すべきね。
 
 ※ CustomElementsっていろんなフレームワークで対応しているんですね。
-[https://custom-elements-everywhere.com/:embed:cite]
+[https://custom-elements-everywhere.com/:embed]
 
 ## 実録フグ料理
 ### 株式会社ディー・エヌ・エー Takepepe さん
@@ -72,7 +72,7 @@ VanillaなJSでCustomElementsを進めて行こうという経緯があるそう
 予想以上に面白いお話でした。
 
 Project Fuguというものがあります。
-[https://www.heise.de/developer/artikel/Google-Projekt-Fugu-Die-Macht-des-Kugelfisches-4255636.html:embed:cite]
+[https://www.heise.de/developer/artikel/Google-Projekt-Fugu-Die-Macht-des-Kugelfisches-4255636.html:embed]
 
 > Unter dem Codenamen Fugu plant Google die Einführung zahlreicher Webschnittstellen in seinem Webbrowser Chrome, welche die Lücke zwischen Progressive Web Apps und ihren nativen Gegenstücken schließen wollen.
 
@@ -97,7 +97,7 @@ Google翻訳を通すと
 
 ## 新しいAPI
 ### 株式会社ディー・エヌ・エー feb19 さん
-[https://speakerdeck.com/feb19/xin-sii-api:embed:cite]
+[https://speakerdeck.com/feb19/xin-sii-api:embed]
 
 いきなりポエムを語り始めたfeb19さん。
 「DeNAの人たちは、みんなこうなのか？」と面白く見ていました。

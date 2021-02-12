@@ -22,13 +22,13 @@ Webアプリでは、様々なCacheが使われます。
 Cacheは、便利な反面、使いすぎると、どこがどうCacheしているのか迷子になってしまいます。
 Webアプリでも、Cacheをテストする必要がありそうです。
 
-[https://github.com/http-tests/cache-tests:embed:cite]
+[https://github.com/http-tests/cache-tests:embed]
 
 ## Code Size Test
 
 大きなサイズのJSライブラリを読み込むと、レスポンスタイムが悪化してしまいます。そこで、常にコードサイズを計測する必要があります。
 
-[https://github.com/ai/size-limit:embed:cite]
+[https://github.com/ai/size-limit:embed]
 
 <figure class="figure-image figure-image-fotolife" title="https://github.com/ai/size-limit">[f:id:silverbirder180:20200617070042p:plain]<figcaption>https://github.com/ai/size-limit</figcaption></figure>
 
@@ -37,13 +37,13 @@ Webアプリでも、Cacheをテストする必要がありそうです。
 循環的複雑度(Cyclomatic complexity)は、制御文(ifやfor)の複雑さを計測します。
 複雑なコードは、バグの温床になりがちなので、極力シンプルなコードを心がけたいところです。
 
-[https://eslint.org/docs/rules/complexity:embed:cite]
+[https://eslint.org/docs/rules/complexity:embed]
 
 ## Copy&Paste Test
 
 Copy&Pasteは、DRYの原則に反するため、特別な理由がない限りは、してはいけません。Copy&Pasteを検出するツールがあるみたいです。
 
-[https://github.com/kucherenko/jscpd:embed:cite]
+[https://github.com/kucherenko/jscpd:embed]
 
 <figure class="figure-image figure-image-fotolife" title="https://github.com/kucherenko/jscpd">[f:id:silverbirder180:20200617070137p:plain]<figcaption>https://github.com/kucherenko/jscpd</figcaption></figure>
 
@@ -53,7 +53,7 @@ Copy&Pasteは、DRYの原則に反するため、特別な理由がない限り�
 そのため、サポートするブラウザやプラットフォームの環境を準備しなければなりません。
 そういう環境を手軽に使えるサービスがあったりします。
 
-[https://github.com/browserstack:embed:cite]
+[https://github.com/browserstack:embed]
 
 ## E2E Test
 
@@ -62,7 +62,7 @@ Webアプリを、端から端まで (End To End: E2E)を検証します。
 このテストは、不安定なテスト(よく失敗する)になりがちなので、安定稼働できるような取り組みが必要です。
 例えば、操作する処理の抽象化や、データ固定などです。
 
-[https://github.com/cypress-io/cypress:embed:cite]
+[https://github.com/cypress-io/cypress:embed]
 
 ## Exception Test
 正常系、準正常系、異常系などのテストが必要です。
@@ -79,7 +79,7 @@ Webアプリを、端から端まで (End To End: E2E)を検証します。
 [https://static.googleusercontent.com/media/research.google.com/ja//pubs/archive/45880.pdf]
 
 日本人がまとめて頂いたものが、次の資料です。
-[https://speakerdeck.com/nihonbuson/flakytests:embed:cite]
+[https://speakerdeck.com/nihonbuson/flakytests:embed]
 
 ## Integration Test
 Integration Testは、Unit Testのような単一機能を統合した検証になります。
@@ -98,7 +98,7 @@ INFO, WARN, ERRORなどがルールに基づいて使い分けされているか
 お猿さんがランダムにテストするような、モンキーテストです。
 テストのパターン網羅が難しい場合や、パターン網羅できているけどダメ押しで、このテストをします。
 
-[https://github.com/marmelab/gremlins.js/:embed:cite]
+[https://github.com/marmelab/gremlins.js/:embed]
 <figure class="figure-image figure-image-fotolife" title="https://github.com/marmelab/gremlins.js">[f:id:silverbirder180:20200617070229g:plain]<figcaption>https://github.com/marmelab/gremlins.js</figcaption></figure>
 
 ## Multi Tenanct Test
@@ -112,14 +112,14 @@ INFO, WARN, ERRORなどがルールに基づいて使い分けされているか
 プロダクトコードを破壊することで、テストも壊れるかどうかを検証します。
 もし、プロダクトコードを壊しても、テストが成功してしまうと、それは正しくテストできていません。
 
-[https://github.com/stryker-mutator/stryker:embed:cite]
+[https://github.com/stryker-mutator/stryker:embed]
 <figure class="figure-image figure-image-fotolife" title="https://stryker-mutator.io/stryker/quickstart">[f:id:silverbirder180:20200617070455g:plain]<figcaption>https://stryker-mutator.io/stryker/quickstart</figcaption></figure>
 
 ## Chaos Test
 
 障害を注入した際に、どういった動きになるのかを検証するテストです。
 
-[https://github.com/goldbergyoni/node-chaos-monkey:embed:cite]
+[https://github.com/goldbergyoni/node-chaos-monkey:embed]
 
 ## Performance Test
 
@@ -127,13 +127,13 @@ INFO, WARN, ERRORなどがルールに基づいて使い分けされているか
 CPU使用率、メモリ使用率、レスポンスタイム、RPS など様々な指標があります。
 これらを計測し、SLOなどの基準値を満たせているかを検証しておく必要があります。
 
-[https://github.com/bestiejs/benchmark.js/:embed:cite]
+[https://github.com/bestiejs/benchmark.js/:embed]
 
 ## Property Based Test
 
 データを半自動生成し、テストをする手法です。
 
-[https://github.com/dubzzz/fast-check:embed:cite]
+[https://github.com/dubzzz/fast-check:embed]
 
 ## Regression Test
 Regression Testは、修正した内容が意図せず他の箇所に影響を及ぼしていないか(デグレーション)を確認するテストです。
@@ -160,7 +160,7 @@ npm audit fix
 Webアプリへ流入数を改善するためには、SEOは不可欠です。
 lighthouseというツールでSEOスコアを見ることができるみたいです。
 
-[https://github.com/GoogleChrome/lighthouse-ci:embed:cite]
+[https://github.com/GoogleChrome/lighthouse-ci:embed]
 <figure class="figure-image figure-image-fotolife" title="https://github.com/GoogleChrome/lighthouse-ci">[f:id:silverbirder180:20200617214926p:plain]<figcaption>https://github.com/GoogleChrome/lighthouse-ci</figcaption></figure>
 
 ## Smoke Test
@@ -177,7 +177,7 @@ Webアプリへリクエストし、そのレスポンスであるHTML(スナッ
 このHTMLが、変更前と比較して変化がないかの検証をするのが、Snapshot testです。
 リファクタリングなど、変化がない修正に対して有効です。
 
-[https://jestjs.io/docs/ja/snapshot-testing:embed:cite]
+[https://jestjs.io/docs/ja/snapshot-testing:embed]
 
 ## Static Test
 
@@ -185,57 +185,57 @@ Static Testは、Webアプリを動かさなくても検証できるテストで
 よくあるのが、Linter です。
 
 * HTML
-[https://github.com/htmlhint/HTMLHint:embed:cite]
+[https://github.com/htmlhint/HTMLHint:embed]
 
 * CSS
 
-[https://github.com/CSSLint/csslint:embed:cite]
+[https://github.com/CSSLint/csslint:embed]
 
 * JS
 
-[https://github.com/eslint/eslint:embed:cite]
+[https://github.com/eslint/eslint:embed]
 
 * SVG
 
-[https://github.com/birjolaxew/svglint:embed:cite]
+[https://github.com/birjolaxew/svglint:embed]
 
 * Commit
 
-[https://github.com/conventional-changelog/commitlint:embed:cite]
+[https://github.com/conventional-changelog/commitlint:embed]
 
 * Docker
 
-[https://github.com/RedCoolBeans/dockerlint/:embed:cite]
+[https://github.com/RedCoolBeans/dockerlint/:embed]
 
 これらは、プルリクエストで機械的に指摘する Danger との相性が良いです。
 
-[https://github.com/danger/danger:embed:cite]
+[https://github.com/danger/danger:embed]
 
 ## Unit Test
 
 単一機能をテストするUnit Testがあります。このUnit Testが全てPASSしたら、
 他のテストを進めるのが一般的かなと思います。
 
-[https://github.com/facebook/jest:embed:cite]
+[https://github.com/facebook/jest:embed]
 
 ### Code Coverage
 
 Unitテストで、どこをテストできたかのカバレッジを見ることができます。
 感覚としては、全体の8割を満たしていれば良いかなと思います。
 
-[https://jestjs.io/docs/en/cli.html#--coverageboolean:title]
+[https://jestjs.io/docs/en/cli.html#--coverageboolean](https://jestjs.io/docs/en/cli.html#--coverageboolean)
 
 実際に動作しているJSやCSSのカバレッジを収集することもできます。
 
-[https://speakerdeck.com/pirosikick/puppeteerdeiranaicsswoxiao-su:embed:cite]
-[https://gist.github.com/Silver-birder/71135913192fbca51a7e26924bd36b8b:title]
+[https://speakerdeck.com/pirosikick/puppeteerdeiranaicsswoxiao-su:embed]
+[https://gist.github.com/Silver-birder/71135913192fbca51a7e26924bd36b8b](https://gist.github.com/Silver-birder/71135913192fbca51a7e26924bd36b8b)
 
 
 ## Visual Regression Test
 
 見た目の変化を監視する必要があります。例えば、リンク切れとかがあれば、検出するべきです。
 
-[https://github.com/garris/BackstopJS:embed:cite]
+[https://github.com/garris/BackstopJS:embed]
 <figure class="figure-image figure-image-fotolife" title="https://github.com/garris/BackstopJS">[f:id:silverbirder180:20200617070556p:plain]<figcaption>https://github.com/garris/BackstopJS</figcaption></figure>
 
 # 最後に

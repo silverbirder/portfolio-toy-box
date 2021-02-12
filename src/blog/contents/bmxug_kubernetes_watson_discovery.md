@@ -8,11 +8,11 @@ description: description
 https://silverbirder180.hatenablog.com/entry/2019/05/22/230753
 
 <figure class="figure-image figure-image-fotolife" title="BMXUG">[f:id:silverbirder180:20190522223722p:plain]<figcaption>BMXUG</figcaption></figure>
-[https://bmxug.connpass.com/event/117966/:embed:cite]
+[https://bmxug.connpass.com/event/117966/:embed]
 今回、k8sの体験を目的として参加したのですが、意外な収穫があったので、
 共有したく、記事を書くことにしました。
 
-[https://twitter.com/hashtag/bmxug:embed:cite]
+[https://twitter.com/hashtag/bmxug:embed]
 [:contents]
 
 # Watson Discovery

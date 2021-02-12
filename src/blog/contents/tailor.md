@@ -13,7 +13,7 @@ https://silverbirder180.hatenablog.com/entry/2020/10/04/095230
 Zalando社が開発したTailorを使って、サンプルWebアプリをMicro Frontendsで構築してみました。Tailorはサーバーサイドで統合するアーキテクチャです。クライアントサイドは、Web Componentsで作られているLit Elementを使って統合しました。どういった内容か、ここに投稿しようと思います。
 
 作ったリポジトリは、下記に残しています。
-[https://github.com/Silver-birder/micro-frontends-sample-code-4:embed:cite]
+[https://github.com/Silver-birder/micro-frontends-sample-code-4:embed]
 
 [:contents]
 
@@ -25,7 +25,7 @@ Zalando社が開発したTailorを使って、サンプルWebアプリをMicro F
 # Tailor
 ![image](https://camo.githubusercontent.com/3018354754cc0c9f1f6b27ac68bd8060a11db5a7/68747470733a2f2f7261776769746875622e636f6d2f7a616c616e646f2f7461696c6f722f6d61737465722f6c6f676f2f7461696c6f722d6c6f676f2e737667)
 
-[https://github.com/zalando/tailor:embed:cite]
+[https://github.com/zalando/tailor:embed]
 
 > A streaming layout service for front-end microservices
 
@@ -139,7 +139,7 @@ package.json
 # LitElement
 [f:id:silverbirder180:20201004092637j:plain]
 
-[https://lit-element.polymer-project.org/:embed:cite]
+[https://lit-element.polymer-project.org/:embed]
 > LitElement
 A simple base class for creating fast, lightweight web components
 
@@ -181,11 +181,11 @@ declare global {
 ```
 
 LitElement + Typescript では、open-testing を使ってテストすることができます。
-[https://github.com/PolymerLabs/lit-element-starter-ts/blob/master/src/test/my-element_test.ts:embed:cite]
+[https://github.com/PolymerLabs/lit-element-starter-ts/blob/master/src/test/my-element_test.ts:embed]
 
 また、jestでもテストができるようです。
 
-[https://www.ninkovic.dev/blog/2020/testing-web-components-with-jest-and-lit-element:embed:cite]
+[https://www.ninkovic.dev/blog/2020/testing-web-components-with-jest-and-lit-element:embed]
 
 # DynamicRendering
 [f:id:silverbirder180:20201004092807p:plain]
@@ -194,11 +194,11 @@ LitElement + Typescript では、open-testing を使ってテストすること�
 『SEOガー！』とSSRしなきゃと思う訳ですが、正直SSRを考えたくないです。(ハイドレーションなんて無駄なロードをブラウザにさせたくない）
 次の記事のように、ボットのアクセスのみに、ダイナミックレンダリングした結果（SPAのレンダリング結果HTML）を返すようにしたいです。
 
-[https://developers.google.com/search/docs/guides/dynamic-rendering?hl=ja:embed:cite]
+[https://developers.google.com/search/docs/guides/dynamic-rendering?hl=ja:embed]
 
 技術的には、次のようなものを使えば良いです。
 
-[https://github.com/GoogleChrome/rendertron:embed:cite]
+[https://github.com/GoogleChrome/rendertron:embed]
 
 function-renderer-proxy/src/renderer.ts
 ```
@@ -214,7 +214,7 @@ const result = await page.content() as string;  // Puppeteerのレンダリン�
 
 フラグメント同士は、CustomEventを通して連携します。
 
-[https://developer.mozilla.org/ja/docs/Web/Guide/Events/Creating_and_triggering_events:embed:cite]
+[https://developer.mozilla.org/ja/docs/Web/Guide/Events/Creating_and_triggering_events:embed]
 
 全て、このCustomEventとAddEventListenerを管理するEventHub(packages名)を経由するようにします。(理想)
 
@@ -222,18 +222,18 @@ const result = await page.content() as string;  // Puppeteerのレンダリン�
 
 ページ全体のヒストリーは、HistoryNavigation(packages名)で管理したいと考えています。(理想)
 
-[https://developer.mozilla.org/en-US/docs/Web/API/History_API:embed:cite]
+[https://developer.mozilla.org/en-US/docs/Web/API/History_API:embed]
 
 また、ルーティングを制御する Web Components向けライブラリ vaadin/router も便利そうだったので導入してみました。
 
-[https://vaadin.com/router:embed:cite]
+[https://vaadin.com/router:embed]
 
 # ShareModule
 
 LitElementのようなどこでも使っているライブラリは、共通化してバンドルサイズを縮めたいです。
 Webpackのようなバンドルツールには、ExternalやDLLPlugin、ModuleFederationなどの共通化機能があります。
 
-[https://webpack.js.org/concepts/module-federation/:embed:cite]
+[https://webpack.js.org/concepts/module-federation/:embed]
 
 今回は、externalを使っています。
 
@@ -312,11 +312,11 @@ APIは、雑にGraphQLを採用しました。特に理由はありません。
 
 Skelton UIも使ってみたいなと思っていました。
 
-[https://material-ui.com/components/skeleton/:embed:cite]
+[https://material-ui.com/components/skeleton/:embed]
 
 Reactを使わなくても、CSSの@keyframesを使えば良いでしょう。が、まあ使っていません。(笑)
 
-[https://developer.mozilla.org/ja/docs/Web/CSS/@keyframes:embed:cite]
+[https://developer.mozilla.org/ja/docs/Web/CSS/@keyframes:embed]
 
 ## Rxjs
 
@@ -324,13 +324,13 @@ typescriptの処理をリアクティブな雰囲気でコーディングした�
 
 (リアクティブに詳しい人には、怒られそうな理由ですね...笑)
 
-[https://rxjs.dev/:embed:cite]
+[https://rxjs.dev/:embed]
 
 # 所感
 これまで、Podium、Ara-Framework, そして Tailor といったMicro Frontendsに関わるサーバーサイド統合ライブラリを使ってみました。
 
-[https://silverbirder180.hatenablog.com/entry/2020/05/04/182921:embed:cite]
-[https://silverbirder180.hatenablog.com/entry/2020/08/23/183713:embed:cite]
+[https://silverbirder180.hatenablog.com/entry/2020/05/04/182921:embed]
+[https://silverbirder180.hatenablog.com/entry/2020/08/23/183713:embed]
 
 これらは、どれも考え方が良いなと思っています。
 Podiumのフラグメントのインターフェース設計、Ara-FrameworkのRenderとデータ取得の明確な分離、そしてTailorのストリーム統合です。
