@@ -142,8 +142,13 @@ Zoomは、次のような設定にしました。
 
 # 参考リンク
 [https://kumak1.hatenablog.com/entry/2018/09/27/234203:embed:cite]
+
 [http://kuroyam.hatenablog.com/entry/2020/02/27/204246:embed:cite]
+
 [https://mzyy94.com/blog/2020/02/25/virtual-bishoujo-meeting/:embed:cite]
+
 [https://www.excite.co.jp/news/article/MoguraVR_voice-changer-pickup5/:embed:cite]
+
 [https://www.cg-method.com/entry/gachikoe/#Gachikoe:embed:cite]
+
 [https://vtuberkaibougaku.site/2019/01/31/post-3176/:embed:cite]

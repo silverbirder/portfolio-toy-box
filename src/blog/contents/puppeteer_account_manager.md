@@ -13,6 +13,7 @@ GoogleやGithubなど、様々なサービスのプロフィール情報(画像,
 開発の目的や、開発から得た知見を紹介します。
 
 リポジトリは、こちらです。
+
 [https://github.com/Silver-birder/puppeteer-account-manager:embed:cite]
 
 [:contents]

@@ -8,10 +8,13 @@ description: description
 https://silverbirder180.hatenablog.com/entry/2019/05/22/001426
 
 <figure class="figure-image figure-image-fotolife" title="GCPUG Kansai Cloud Next Extended 案内板">[f:id:silverbirder180:20190521230529j:plain]<figcaption>GCPUG Kansai Cloud Next Extended 案内板</figcaption></figure>
+
 [https://gcpug-osaka.connpass.com/event/128130/:embed:cite]
+
 こちらの参加しましたので、ご報告します。
 
 twitter
+
 [https://twitter.com/hashtag/next19extended:embed:cite]
 
 [:contents]
@@ -54,6 +57,7 @@ GoogleでKubernetesの担当されているそうです。
 ・一貫したエクスペリエンス  
 
 よーわからないので、ggってみた。
+
 [https://www.publickey1.jp/blog/19/googleanthoskubernetesgoogle_cloud_next_19.html:embed:cite]
 
 > コンテナ化したアプリケーションをオンプレミスとクラウドのどちらでも実行可能にする、ハイブリッドクラウドおよびマルチクラウドのためのプラットフォーム。
@@ -77,11 +81,13 @@ Anthosは、その対象範囲をクラウドだけでなく、オンプレ(GKE 
 
 ## CloudRun
 これは、下記で一度試した経験があります。
+
 [https://qiita.com/silverbirder/items/6981461a756a48f6e25d:embed:cite]
 
 コンテナとしてdeployできるようになります。
 正直、AppEngine, CloudFunction, CoundRunとデプロイサービスが増えてきて、
 どれが何に良いのか分からなくなりそうです...。下記に、まとまっていました。
+
 [https://docs.google.com/presentation/d/1DCJlrXQKWN63pAz9vtdVNFhMPHceyiKHK0IrFjcwOcU/edit#slide=id.g5693476139_0_155:embed:cite]
 
 ## CloudRun on GKE
@@ -89,7 +95,9 @@ Anthosは、その対象範囲をクラウドだけでなく、オンプレ(GKE 
 詳しくは分かりません。
 
 ## Knative
+
 [https://cloud.google.com/knative/?hl=ja:embed:cite]
+
 > Knative は、オンプレミス、クラウド、サードパーティのデータセンターなど、場所を選ばず実行できるソース中心でコンテナベースの最新アプリケーションを構築する際には不可欠な一連のミドルウェア コンポーネントです。
 
 んー、なんとなくわからなくないですが、他のサイトを見てみます。

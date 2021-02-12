@@ -22,13 +22,13 @@
 </ul>
 <p>とても<span style="color: #d32f2f"><b>ストレスフル</b></span>です。単純なGASなら別に良いんですが、少し複雑なGASを作ろうと思うと、問題に感じます。</p>
 <h1 id="ローカルで動かそう"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#ローカルで動かそう"></a>ローカルで動かそう</h1>
-<p>GASをローカル環境で動かすことができる ClaspというコマンドラインツールがGoogleより公開されています。
-[https://github.com/google/clasp:embed:cite]</p>
-<p>また、ClaspはTypescriptをサポートしているため、型を中心としたコーディングが可能となりました。
-[https://www.npmjs.com/package/@types/google-apps-script:embed:cite]</p>
+<p>GASをローカル環境で動かすことができる ClaspというコマンドラインツールがGoogleより公開されています。</p>
+<p>[https://github.com/google/clasp:embed:cite]</p>
+<p>また、ClaspはTypescriptをサポートしているため、型を中心としたコーディングが可能となりました。</p>
+<p>[https://www.npmjs.com/package/@types/google-apps-script:embed:cite]</p>
 <p>Typescriptを選択すると、Interface設計が容易になります。もちろん、<code>.gs</code> ファイルでも同様の事は実現できると思います。</p>
-<p>次に、Jestと呼ばれるテストツールを組み合わせることで、ローカル環境でテストが可能になります。
-[https://jestjs.io/docs/getting-started:embed:cite]</p>
+<p>次に、Jestと呼ばれるテストツールを組み合わせることで、ローカル環境でテストが可能になります。</p>
+<p>[https://jestjs.io/docs/getting-started:embed:cite]</p>
 <p>ただ、単純にテストコードが書けません。
 例えば、カレンダーイベントを取得するテストをコーディングするとき、次のようなスクリプトを書いたとします。</p>
 <pre><code class="language-typescript hljs"><span class="hljs-keyword">const</span> calendar: Calendar = CalendarApp.getCalendarById(<span class="hljs-string">'&lt;your google calendar id&gt;'</span>);
@@ -77,11 +77,11 @@ calendar.getEvents(<span class="hljs-keyword">new</span> <span class="hljs-built
 </code></pre>
 <p>結果、<code>CalendarApp</code> の代わりにMockオブジェクトを差し込めるようになりました。ローカルテストが可能となります。</p>
 <p>もちろん、プロダクトコードでは、<code>CalendarAppMock</code> ではなく、 <code>CalendarAppImpl</code> を使用すれば良いです。
-Mockで差し替えるオブジェクトが増えると、InversifyJSのようなDIコンテナを検討してみると良いかもしれません。
-[https://github.com/inversify/InversifyJS:embed:cite]</p>
+Mockで差し替えるオブジェクトが増えると、InversifyJSのようなDIコンテナを検討してみると良いかもしれません。</p>
+<p>[https://github.com/inversify/InversifyJS:embed:cite]</p>
 <p>こうすることで、Jestによるテストが動作するようになります。<br>
-実際に、開発・公開したライブラリでも十分にテストをすることができました。
-[https://www.npmjs.com/package/@silverbirder/caat:embed:cite]</p>
+実際に、開発・公開したライブラリでも十分にテストをすることができました。</p>
+<p>[https://www.npmjs.com/package/@silverbirder/caat:embed:cite]</p>
 <pre><code class="language-shell hljs">CaAT $ npm run test -- --coverage
 <span class="hljs-meta">
 &gt;</span><span class="bash"> jest <span class="hljs-string">"--coverage"</span></span>
@@ -122,8 +122,8 @@ Ran all test suites.
 常にクリーンであり続けるためには、テストコードは<b>必須</b>です。
 GASを運用する方々には、是非ともテストコードを検討下さい。</p>
 <h1 id="え、あ、ちょっとまって。ライブラリの紹介！"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#え、あ、ちょっとまって。ライブラリの紹介！"></a>え、あ、ちょっとまって。ライブラリの紹介！</h1>
-<p>アジャイル開発で、かつ、Google Calendarで予定管理しているチームには是非とも使って頂きたいライブラリです。
-[https://github.com/Silver-birder/caat:embed:cite]</p>
+<p>アジャイル開発で、かつ、Google Calendarで予定管理しているチームには是非とも使って頂きたいライブラリです。</p>
+<p>[https://github.com/Silver-birder/caat:embed:cite]</p>
 <blockquote>
 <p>CaAT is the Google Apps Script Library that Calculate the Assigned Time in Google Calendar.</p>
 </blockquote>

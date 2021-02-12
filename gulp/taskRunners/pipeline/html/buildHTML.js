@@ -89,6 +89,38 @@ const highlight = (layoutDOM) => {
     });
 };
 
+const replaceEmbed = (layoutDOM) => {
+    const result = layoutDOM.window.document.evaluate('//*[contains(text(), \':embed\')]', layoutDOM.window.document, null, 0, null);
+    while(true) {
+        const element = result.iterateNext();
+        if (element === null) {
+            break;
+        }
+        const embedMatch = element.innerHTML.match(/\[(?<url>[^\[]+):embed]/);
+        if (embedMatch && embedMatch.groups && embedMatch.groups.url) {
+            const url = embedMatch.groups.url;
+            const ampEmbedlyCardTag = `
+                <amp-embedly-card
+                    media="(prefers-color-scheme: dark)"
+                    data-url="${url}"
+                    layout="responsive"
+                    data-card-theme="dark"
+                    width="100"
+                    height="50">
+                </amp-embedly-card>
+                <amp-embedly-card
+                        media="(prefers-color-scheme: light)"
+                        data-url="${url}"
+                        layout="responsive"
+                        data-card-theme="light"
+                        width="100"
+                        height="50">
+                </amp-embedly-card>`;
+            element.innerHTML = element.innerHTML.replace(/\[(?<url>[^\[]+):embed(:cite)]/, ampEmbedlyCardTag);
+        }
+    }
+};
+
 const buildHTML = (content, layout, canonicalUrl) => {
     const contentDOM = new JSDOM(content);
     const layoutDOM = new JSDOM(layout);
@@ -97,6 +129,7 @@ const buildHTML = (content, layout, canonicalUrl) => {
     replaceUrl(layoutDOM, canonicalUrl);
     addLdJson(layoutDOM, canonicalUrl);
     highlight(layoutDOM);
+    replaceEmbed(layoutDOM);
     return layoutDOM.serialize();
 };
 

@@ -24,6 +24,7 @@ https://silverbirder180.hatenablog.com/entry/2020/02/08/101638
 # Tiqav2
 ## Tiqavとは？
 画像を使って会話をするためのサービスとして、Tiqavがあります。
+
 [http://dev.tiqav.com/:embed:cite]
 
 現在は、サービス終了しています。
@@ -40,14 +41,17 @@ Tiqav2は、大きく分けて2つの機能があります。
 <figure class="figure-image figure-image-fotolife" title="Saving flow by Tiqav2">[f:id:silverbirder180:20200207231047p:plain]<figcaption>Saving flow by Tiqav2</figcaption></figure>
 
 検索する為には、全文検索サービスのAlgoliaを使います。
+
 [https://www.algolia.com/:embed:cite]
 
 Algoliaに保存する情報は、主に3つです。画像URLと拡張子、そしてテキストです。
 画像は画像変換&管理サービスのCloudinaryに保存します。保存後、Cloudinaryより、画像URLと拡張子が手に入ります。
+
 [https://cloudinary.com/:embed:cite]
 
 テキストは、Google Cloud Vision APIへ画像を渡すことでテキストを抽出します。
 もちろん、手動でテキストを設定することもできます。
+
 [https://cloud.google.com/vision/:embed:cite]
 
 ### 画像を検索&表示
@@ -65,6 +69,7 @@ Algoliaに保存する情報は、主に3つです。画像URLと拡張子、そ
 <figure class="figure-image figure-image-fotolife" title="Send Tiqav2 URL on Slack">[f:id:silverbirder180:20200207230322p:plain]<figcaption>Send Tiqav2 URL on Slack</figcaption></figure>
 
 詳しい機能は、次のリポジトリをご確認下さい。
+
 [https://github.com/Silver-birder/tiqav2:embed:cite]
 
 # SaaSは個人開発には最適
@@ -74,6 +79,7 @@ Algoliaに保存する情報は、主に3つです。画像URLと拡張子、そ
 SaaSは、１つのことを上手くやってくれるし、個人の利用範囲であれば無料なものが多いです。
 ニッチなカスタマイズしたい要求がない限り、SaaSは大体の要望を叶えてくれます。
 どんな種類のSaaSがあるか知りたい方は、↓のサイトを見てみて下さい。参考になるはずです。
+
 [https://saasblocks.io/:embed:cite]
 
 <b>『SaaSに面倒なことは任せて、プロダクトコードに集中する』</b>ことは、私にとって、とても大切にしています。
@@ -85,5 +91,6 @@ Tiqav2は、OSSとして公開していますので、誰でも無料で構築�
 
 # その他
 ↓のアカウントで技術的なことをつぶやいています。
+
 [https://twitter.com/silver_birder:embed:cite]
 

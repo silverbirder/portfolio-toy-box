@@ -20,6 +20,7 @@ Twitterに投稿されているLinkを収集するツール Cotlin を作りま�
 から、Cotlinという名前にしました。Androidのアレに似ています。
 
 [https://github.com/Silver-birder/Cotlin:embed:cite]
+
 [https://www.npmjs.com/package/@silverbirder/cotlin:embed:cite]
 
 [:contents]

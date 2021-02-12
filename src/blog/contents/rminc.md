@@ -35,6 +35,7 @@ Googleは気を利かせて、次のような予定を勝手に登録してく�
 # rMinc is 何？
 
 [https://www.npmjs.com/package/@silverbirder/rminc:embed:cite]
+
 > rMinc is the Google Apps Script Library that register Mail in Calendar.
 
 以下サービスからのGMailが届いたときに、その内容を抽出してGCalendarに登録します。

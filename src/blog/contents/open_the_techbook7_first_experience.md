@@ -15,6 +15,7 @@ https://silverbirder180.hatenablog.com/entry/2019/09/06/205253
 * <b>執筆を考えている人</b>の助けになりたい
 
 実際に販売する本は↓のものです。
+
 [https://techbookfest.org/event/tbf07/circle/5117648689954816:embed:cite]
 
 [:contents]
@@ -136,6 +137,7 @@ $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake p
 * サークルカット（グレートーン）
 
 表紙用のテンプレートがありますので、それを使います。
+
 [http://www.nikko-pc.com/offset/template/tonbo.html:embed:cite]
 
 <b>背表紙の幅はページ数によって変化します</b>。
@@ -199,6 +201,7 @@ iPad, Magic Pencilは買って正解でした。
 |遊び紙|有り, 上質90kg/イエロー/前|
 
 [https://jumpei-ikegami.hatenablog.com/entry/2018/10/21/084634:embed:cite]
+
 を参考にしました。
 
 本文はじまりのページは、nombreをというものを設定する必要があります。
@@ -209,6 +212,7 @@ $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake p
 ```
 
 用紙についてこだわりたい方は、次のリンクにあるようにサンプルを手に入れると良いでしょう。
+
 [https://natuna.jp/marcket/10282/:embed:cite]
 
 # 3. 販売準備
@@ -241,7 +245,9 @@ $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake p
 |ダンボールカッター|ダイソー|作業|-|不|
 
 [https://note.mu/mochikoastech/n/nf484f114855c:embed:cite]
+
 [https://blog.vtryo.me/entry/techbookfest5-preparation-of-journey#登壇ブログなどによる宣伝活動:embed:cite]
+
 [https://note.mu/yagitch/n/nc796a0c2c796:embed:cite]
 
 
@@ -257,6 +263,7 @@ $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake p
 ## 3.2. 電子書籍の準備
 
 ピクシブ社のサービスであるBoothを利用しました。
+
 [https://booth.pm/ja:embed:cite]
 
 特に専門的な知識が必要なことがなく、本のPDFを登録するだけです。
@@ -267,6 +274,7 @@ $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake p
 
 また、サンプルの本をアップロードし、無料でダウンロードできるようにすることで、
 事前に本の中身を確認できるようにしました。
+
 [https://silverbirder.booth.pm/items/1536228:embed:cite]
 
 ただ、ダウンロード数を見る限り、あまり数は多くありませんでした。
@@ -313,6 +321,7 @@ pixiv ID登録しないとダウンロードできないので、ここが駄目
 また、積極的に1番を実施していると、他のサークル参加さんがリツイートしてくれるため、とても助かりました。
 
 Twitterで宣伝するために、16:9の画像を用意したりもしました。
+
 [https://twitter.com/silver_birder/status/1172097536510676994:embed]
 
 ## 被チェック数と販売冊数
@@ -326,7 +335,9 @@ Twitterで宣伝するために、16:9の画像を用意したりもしました
 [https://github.com/Silver-birder/get-checked-number-for-techbook:embed:cite]
 
 被チェック数を定期的に取得するAPIをサクッと作って、CloudFunctionで稼働させています。
+
 [https://twitter.com/silver_birder/status/1171178281380405248:embed]
+
 このようにどの時間やどの曜日にチェックされるのかがわかるようになります。
 
 
@@ -405,4 +416,5 @@ Twitterで宣伝するために、16:9の画像を用意したりもしました
 あとは、技術書典7 当日を楽しむだけ！！
 
 ※ PS. よければフォロー下さい〜!
+
 [https://twitter.com/silver_birder:embed:cite]

@@ -12,6 +12,7 @@ https://silverbirder180.hatenablog.com/entry/2020/10/07/190727
 
 Micro Frontendsに関わる記事を100件以上読みました(参考記事に記載しています)。そこから得たMicro Frontendsについてこの投稿に記録します。
 また、調査メモについて、次のリポジトリに残しています。
+
 [https://github.com/Silver-birder/think-micro-frontends:embed:cite]
 
 [:contents]
@@ -84,6 +85,7 @@ Micro Frontendsに関わる記事を100件以上読みました(参考記事に�
 ## コミュニケーション
 
 [https://developer.mozilla.org/ja/docs/Web/API/CustomEvent:embed:cite]
+
 [https://github.com/postaljs/postal.js:embed:cite]
 
 ## データ共有
@@ -99,17 +101,21 @@ Micro Frontendsに関わる記事を100件以上読みました(参考記事に�
 * webpack
 
 [https://webpack.js.org/concepts/module-federation/:embed:cite]
+
 [https://webpack.js.org/configuration/externals/:embed:cite]
+
 [https://webpack.js.org/plugins/dll-plugin/:embed:cite]
 
 ## ルーティング
 
 Vaddin router
+
 [https://vaadin.com/router:embed:cite]
 
 ## キャッシュ
 
 [https://developer.mozilla.org/ja/docs/Web/API/Service_Worker_API:embed:cite]
+
 [https://developer.mozilla.org/ja/docs/Web/API/IndexedDB_API:embed:cite]
 
 ## 認証
@@ -146,6 +152,7 @@ Vaddin router
 ## Proxy
 
 コンポジションプロキシ。テンプレートを組み合わせる。
+
 [https://github.com/tes/compoxure:embed:cite]
 
 ## アクセス履歴

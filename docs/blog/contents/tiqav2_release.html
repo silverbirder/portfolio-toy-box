@@ -19,8 +19,8 @@
 <p>[https://res.cloudinary.com/silverbirder/image/upload/v1580997144/LGTM/golia.png:image=https://res.cloudinary.com/silverbirder/image/upload/v1580997144/LGTM/golia.png]</p>
 <h1 id="tiqav2"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#tiqav2"></a>Tiqav2</h1>
 <h2 id="tiqavとは？"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#tiqavとは？"></a>Tiqavとは？</h2>
-<p>画像を使って会話をするためのサービスとして、Tiqavがあります。
-[http://dev.tiqav.com/:embed:cite]</p>
+<p>画像を使って会話をするためのサービスとして、Tiqavがあります。</p>
+<p>[http://dev.tiqav.com/:embed:cite]</p>
 <p>現在は、サービス終了しています。
 Tiqav2は、そのTiqavを参考にして作りました。</p>
 <h2 id="tiqav2とは？"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#tiqav2とは？"></a>Tiqav2とは？</h2>
@@ -32,14 +32,14 @@ Tiqav2は、そのTiqavを参考にして作りました。</p>
 <h2 id="2つの機能"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#2つの機能"></a>2つの機能</h2>
 <h3 id="画像とテキストを保存"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#画像とテキストを保存"></a>画像とテキストを保存</h3>
 <figure class="figure-image figure-image-fotolife" title="Saving flow by Tiqav2">[f:id:silverbirder180:20200207231047p:plain]<figcaption>Saving flow by Tiqav2</figcaption></figure>
-<p>検索する為には、全文検索サービスのAlgoliaを使います。
-[https://www.algolia.com/:embed:cite]</p>
+<p>検索する為には、全文検索サービスのAlgoliaを使います。</p>
+<p>[https://www.algolia.com/:embed:cite]</p>
 <p>Algoliaに保存する情報は、主に3つです。画像URLと拡張子、そしてテキストです。
-画像は画像変換&amp;管理サービスのCloudinaryに保存します。保存後、Cloudinaryより、画像URLと拡張子が手に入ります。
-[https://cloudinary.com/:embed:cite]</p>
+画像は画像変換&amp;管理サービスのCloudinaryに保存します。保存後、Cloudinaryより、画像URLと拡張子が手に入ります。</p>
+<p>[https://cloudinary.com/:embed:cite]</p>
 <p>テキストは、Google Cloud Vision APIへ画像を渡すことでテキストを抽出します。
-もちろん、手動でテキストを設定することもできます。
-[https://cloud.google.com/vision/:embed:cite]</p>
+もちろん、手動でテキストを設定することもできます。</p>
+<p>[https://cloud.google.com/vision/:embed:cite]</p>
 <h3 id="画像を検索&amp;amp;表示"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#画像を検索&amp;表示"></a>画像を検索&amp;表示</h3>
 <figure class="figure-image figure-image-fotolife" title="Searching Flow  By Tiqav2">[f:id:silverbirder180:20200207074256p:plain]<figcaption>Searching Flow By Tiqav2</figcaption></figure>
 <p>テキストで全文検索を行います。その結果のIDとExtensionを組み合わせることで、
@@ -49,23 +49,23 @@ Tiqav2は、そのTiqavを参考にして作りました。</p>
 <p>[https://cloudinary.com/documentation/image_transformations#supported_image_formats:embed:cite]</p>
 <p>この画像を表示する機能を使うと、次のようにSlack上で画像を送信することができます。</p>
 <figure class="figure-image figure-image-fotolife" title="Send Tiqav2 URL on Slack">[f:id:silverbirder180:20200207230322p:plain]<figcaption>Send Tiqav2 URL on Slack</figcaption></figure>
-<p>詳しい機能は、次のリポジトリをご確認下さい。
-[https://github.com/Silver-birder/tiqav2:embed:cite]</p>
+<p>詳しい機能は、次のリポジトリをご確認下さい。</p>
+<p>[https://github.com/Silver-birder/tiqav2:embed:cite]</p>
 <h1 id="saasは個人開発には最適"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#saasは個人開発には最適"></a>SaaSは個人開発には最適</h1>
 <p>今回、全文検索であったり画像管理は、SaaSに全て任せました。テキスト抽出はなくてもよかったのですが、Google Cloud Vision APIが、そこそこ使えたため、そちらも使いました。</p>
 <p>個人で開発する際、リソース（時間、お金、人）は組織に比べて<b>とても小さい</b>です。
 SaaSは、１つのことを上手くやってくれるし、個人の利用範囲であれば無料なものが多いです。
 ニッチなカスタマイズしたい要求がない限り、SaaSは大体の要望を叶えてくれます。
-どんな種類のSaaSがあるか知りたい方は、↓のサイトを見てみて下さい。参考になるはずです。
-[https://saasblocks.io/:embed:cite]</p>
+どんな種類のSaaSがあるか知りたい方は、↓のサイトを見てみて下さい。参考になるはずです。</p>
+<p>[https://saasblocks.io/:embed:cite]</p>
 <p><b>『SaaSに面倒なことは任せて、プロダクトコードに集中する』</b>ことは、私にとって、とても大切にしています。
 ちなみに今回のプロダクトコードは、CleanArchitecture + InversifyJSで作りました。</p>
 <h1 id="終わりに"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#終わりに"></a>終わりに</h1>
 <p>Tiqav2は、OSSとして公開していますので、誰でも無料で構築できます。
 ぜひ、使ってみて下さい。快適なコミュニケーションを目指しましょう！</p>
 <h1 id="その他"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#その他"></a>その他</h1>
-<p>↓のアカウントで技術的なことをつぶやいています。
-[https://twitter.com/silver_birder:embed:cite]</p> </main>
+<p>↓のアカウントで技術的なことをつぶやいています。</p>
+<p>[https://twitter.com/silver_birder:embed:cite]</p> </main>
 <amp-social-share type="twitter" aria-label="Share on Twitter" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:60px;height:44px;" i-amphtml-layout="fixed"></amp-social-share>
 <amp-social-share type="hatena_bookmark" data-share-endpoint="http://b.hatena.ne.jp/entry/https://silver-birder.github.io/portfolio-toy-box/blog/contents/tiqav2_release" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:60px;height:44px;" i-amphtml-layout="fixed"></amp-social-share>
 <amp-social-share type="facebook" aria-label="Share on Facebook" data-param-app_id="757288804895366" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:60px;height:44px;" i-amphtml-layout="fixed"></amp-social-share>

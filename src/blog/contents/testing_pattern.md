@@ -29,6 +29,7 @@ Webアプリでも、Cacheをテストする必要がありそうです。
 大きなサイズのJSライブラリを読み込むと、レスポンスタイムが悪化してしまいます。そこで、常にコードサイズを計測する必要があります。
 
 [https://github.com/ai/size-limit:embed:cite]
+
 <figure class="figure-image figure-image-fotolife" title="https://github.com/ai/size-limit">[f:id:silverbirder180:20200617070042p:plain]<figcaption>https://github.com/ai/size-limit</figcaption></figure>
 
 ## Complexity Test
@@ -43,6 +44,7 @@ Webアプリでも、Cacheをテストする必要がありそうです。
 Copy&Pasteは、DRYの原則に反するため、特別な理由がない限りは、してはいけません。Copy&Pasteを検出するツールがあるみたいです。
 
 [https://github.com/kucherenko/jscpd:embed:cite]
+
 <figure class="figure-image figure-image-fotolife" title="https://github.com/kucherenko/jscpd">[f:id:silverbirder180:20200617070137p:plain]<figcaption>https://github.com/kucherenko/jscpd</figcaption></figure>
 
 ## Cross Browser/Platform Test
@@ -186,21 +188,27 @@ Static Testは、Webアプリを動かさなくても検証できるテストで
 [https://github.com/htmlhint/HTMLHint:embed:cite]
 
 * CSS
+
 [https://github.com/CSSLint/csslint:embed:cite]
 
 * JS
+
 [https://github.com/eslint/eslint:embed:cite]
 
 * SVG
+
 [https://github.com/birjolaxew/svglint:embed:cite]
 
 * Commit
+
 [https://github.com/conventional-changelog/commitlint:embed:cite]
 
 * Docker
+
 [https://github.com/RedCoolBeans/dockerlint/:embed:cite]
 
 これらは、プルリクエストで機械的に指摘する Danger との相性が良いです。
+
 [https://github.com/danger/danger:embed:cite]
 
 ## Unit Test
