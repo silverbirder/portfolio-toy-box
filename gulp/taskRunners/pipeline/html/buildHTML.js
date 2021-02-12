@@ -96,7 +96,7 @@ const replaceEmbed = (layoutDOM) => {
         if (element === null) {
             break;
         }
-        const embedMatch = element.innerHTML.match(/\[(?<url>[^\[]+):embed]/);
+        const embedMatch = element.innerHTML.match(/\[(?<url>[^\[]+):embed(:cite)]/);
         if (embedMatch && embedMatch.groups && embedMatch.groups.url) {
             const url = embedMatch.groups.url;
             const ampEmbedlyCardTag = `
