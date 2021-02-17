@@ -3,6 +3,7 @@ title: GDG DevFest Tokyo 2019に参加したら、Webの未来にワクワクし
 date: 2019-12-16T20:29:42+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://silverbirder180.hatenablog.com/entry/2019/12/16/202942

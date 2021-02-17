@@ -3,6 +3,7 @@ title: Cloud Runをたった3ステップでデプロイしてみた (golang)
 date: 2019-04-11T00:00:00+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://qiita.com/silverbirder/items/6981461a756a48f6e25d

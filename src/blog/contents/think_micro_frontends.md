@@ -3,6 +3,7 @@ title: Micro Frontends を調べたすべて
 date: 2020-10-07T19:07:27+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://silverbirder180.hatenablog.com/entry/2020/10/07/190727

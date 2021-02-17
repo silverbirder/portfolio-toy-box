@@ -15,9 +15,9 @@ const buildMarkdownPipeline = async (file, enc, cb) => {
     await extractMarkdownToJSONPipeline(cloneFile, enc, (_1, _2) => {
     });
     const markdownJson = JSON.parse(cloneFile.contents.toString());
-    const headHtml = `<head>\n<title>${markdownJson.title} - silverbirder's page</title>\n<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✍</text></svg>">\n</head>\n`;
+    markdownJson['canonical'] = canonicalUrl;
     const html = await optimizeAMP(
-        buildHTML(`${headHtml}<main>\n${markdownHtml}\n</main>`, layout, canonicalUrl), {
+        buildHTML(`<main>${markdownHtml}</main>`, layout, markdownJson), {
             markdown: true
         }, {canonical: canonicalUrl});
     file.contents = Buffer.from(html);

@@ -3,6 +3,7 @@ title: 一足遅れて Kubernetes を学び始める - 07. workloads その3 -
 date: 2019-05-06T00:00:00+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://qiita.com/silverbirder/items/937e1b5f6b3589452932

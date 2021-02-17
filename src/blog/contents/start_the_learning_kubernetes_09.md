@@ -3,6 +3,7 @@ title: 一足遅れて Kubernetes を学び始める - 09. discovery&LB その2 
 date: 2019-05-15T00:00:00+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://qiita.com/silverbirder/items/f6290a7868849d57b9f1

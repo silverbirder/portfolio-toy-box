@@ -3,6 +3,7 @@ title: ZoomのMeetingを自動生成するGASライブラリ zoom-meeting-creato
 date: 2020-06-06T22:28:00+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://silverbirder180.hatenablog.com/entry/2020/06/06/222800

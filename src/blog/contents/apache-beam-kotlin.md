@@ -3,6 +3,7 @@ title: Apache Beam + Kotlin 開発 実践入門
 date: 2020-07-10T21:36:21+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://silverbirder180.hatenablog.com/entry/2020/07/10/

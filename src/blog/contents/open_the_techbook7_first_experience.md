@@ -3,6 +3,7 @@ title: 技術書典7で初執筆した経験をすべて公開
 date: 2019-09-06T20:52:53+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://silverbirder180.hatenablog.com/entry/2019/09/06/205253

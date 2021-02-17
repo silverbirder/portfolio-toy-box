@@ -3,6 +3,7 @@ title: 技術におけるアンテナの張り方 (巨人の肩に乗れ!)
 date: 2020-10-16T21:39:23+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://silverbirder180.hatenablog.com/entry/2020/10/16/213923

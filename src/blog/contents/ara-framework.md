@@ -3,6 +3,7 @@ title: Ara-Framework で Micro Frontends with SSR
 date: 2020-08-23T18:37:13+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://silverbirder180.hatenablog.com/entry/2020/08/23/183713

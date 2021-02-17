@@ -138,7 +138,32 @@ const replaceTableContent = (layoutDOM) => {
     element.innerHTML = toc.toc(headers, {TOC: '<div class="table-of-contents"><%= toc %></div>'});
 };
 
-const buildHTML = (content, layout, canonicalUrl) => {
+const addHeadTag = (layoutDOM, option) => {
+    const headElement = layoutDOM.window.document.querySelector('head');
+    const descriptionElement = layoutDOM.window.document.querySelector('meta[name="description"]');
+    const titleElement = layoutDOM.window.document.querySelector('title');
+    const iconElement = layoutDOM.window.document.querySelector('link[rel="icon"]');
+    if (descriptionElement === null && option['description'] !== null) {
+        const newDescriptionElement = layoutDOM.window.document.createElement('meta');
+        newDescriptionElement.setAttribute('name', 'description');
+        newDescriptionElement.setAttribute('content', option['description']);
+        headElement.appendChild(newDescriptionElement);
+    }
+    if (titleElement === null && option['title'] !== null) {
+        const newTitleElement = layoutDOM.window.document.createElement('title');
+        newTitleElement.textContent = `${option['title']} - silverbirder's page`;
+        headElement.appendChild(newTitleElement);
+    }
+    if (iconElement === null && option['icon'] !== null) {
+        const newIconElement = layoutDOM.window.document.createElement('link');
+        newIconElement.setAttribute('rel', 'icon');
+        newIconElement.setAttribute('href', `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>${option['icon']}</text></svg>`);
+        headElement.appendChild(newIconElement);
+    }
+};
+
+const buildHTML = (content, layout, option) => {
+    const canonicalUrl = option['canonical'];
     const contentDOM = new JSDOM(content);
     const layoutDOM = new JSDOM(layout);
     concatHeadAndMain(contentDOM, layoutDOM);
@@ -148,6 +173,7 @@ const buildHTML = (content, layout, canonicalUrl) => {
     highlight(layoutDOM);
     replaceEmbed(layoutDOM);
     replaceTableContent(layoutDOM);
+    addHeadTag(layoutDOM, option);
     return layoutDOM.serialize();
 };
 

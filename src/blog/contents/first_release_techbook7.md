@@ -3,6 +3,7 @@ title: 技術書典7 で「はじめてのWeb Components入門」を初出版し
 date: 2019-08-30T10:31:59+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://silverbirder180.hatenablog.com/entry/2019/08/30/103159

@@ -3,6 +3,7 @@ title: コロナ禍におけるエンジニアのためのCloud IDE
 date: 2020-12-12T16:48:33+09:00
 draft: false
 description: description
+icon: 😎
 -->
 ![header image](https://res.cloudinary.com/silverbirder/image/upload/v1613138210/silver-birder.github.io/blog/20201211224606.png)
 

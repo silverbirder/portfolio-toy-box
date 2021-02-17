@@ -3,6 +3,7 @@ title: フィリピンに行ってきたら、日本は良いなって思うよ�
 date: 2019-10-27T00:00:00+09:00
 draft: false
 description: description
+icon: 😎
 -->
 #Links
 https://medium.com/@silverbirder/フィリピンに行ってきたら-日本は良いなって思うようになった-d444d8f2fcf8

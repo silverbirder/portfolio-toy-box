@@ -3,6 +3,7 @@ title: SESAME(セサミ) が届いたよ！
 date: 2019-04-08T00:00:00+09:00
 draft: false
 description: description
+icon: 😎
 -->
 #Links
 https://medium.com/@silverbirder/sesame-セサミ-が届いたよ-5c04fd969a2

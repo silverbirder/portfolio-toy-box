@@ -3,6 +3,7 @@ title: 一足遅れて Kubernetes を学び始める - 10. config&storage その
 date: 2019-05-23T00:00:00+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://qiita.com/silverbirder/items/cb17f02f52c7b5c2aafd

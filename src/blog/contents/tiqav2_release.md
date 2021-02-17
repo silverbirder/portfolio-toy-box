@@ -3,6 +3,7 @@ title: 1コマ漫画検索サービスTiqav2 (Algolia + Cloudinary + Google Clou
 date: 2020-02-08T10:16:38+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://silverbirder180.hatenablog.com/entry/2020/02/08/101638

@@ -3,6 +3,7 @@ title: Google Apps Script で FetchAllとRedirctURL の組み合わせは悪い
 date: 2020-02-24T09:44:42+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://silverbirder180.hatenablog.com/entry/2020/02/24/094442

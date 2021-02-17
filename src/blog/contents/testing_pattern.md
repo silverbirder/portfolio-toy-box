@@ -3,6 +3,7 @@ title: Webアプリのテスト観点を調べてまとめてみた (25選)
 date: 2020-06-18T12:26:58+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://silverbirder180.hatenablog.com/entry/2020/06/18/122658

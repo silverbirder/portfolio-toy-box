@@ -3,6 +3,7 @@ title: Zalando tailor で Micro Frontends with ( LitElement  & etcetera)
 date: 2020-10-04T09:52:30+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://silverbirder180.hatenablog.com/entry/2020/10/04/095230

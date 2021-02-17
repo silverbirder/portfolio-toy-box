@@ -3,6 +3,7 @@ title: 【増枠】Mix Leap Study #45 - Google I/O、WWDCまとめて報告会�
 date: 2019-06-27T23:13:39+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://silverbirder180.hatenablog.com/entry/2019/06/27/231339

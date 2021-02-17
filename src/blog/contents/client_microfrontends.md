@@ -3,6 +3,7 @@ title: クライアントサイド(ES Module)でMicro Frontends
 date: 2021-01-16T10:22:44+09:00
 draft: false
 description: description
+icon: 😎
 -->
 2021年、あけましておめでとうございます。本年も宜しくおねがいします。最近、体重が増えてしまったため、有酸素運動を頑張っています。
 

@@ -3,6 +3,7 @@ title: Cloud Native Days Tokyo 2019 -2019年7月22-23日参加レポート
 date: 2019-07-27T11:08:11+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://silverbirder180.hatenablog.com/entry/2019/07/27/110811

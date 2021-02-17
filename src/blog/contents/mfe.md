@@ -3,6 +3,7 @@ title: [覚書] Micro Frontends 📚
 date: 2020-11-19T00:00:00+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://zenn.dev/silverbirder/articles/f74e219ffdef26b4a37b

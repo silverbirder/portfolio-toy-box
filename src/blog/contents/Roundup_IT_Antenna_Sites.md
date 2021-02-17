@@ -3,6 +3,7 @@ title: Roundup IT Antenna Sites
 date: 2019-07-03T00:00:00+09:00
 draft: false
 description: description
+icon: 😎
 -->
 #Links
 https://medium.com/@silverbirder/roundup-it-antenna-sites-4d14d84ea6bf

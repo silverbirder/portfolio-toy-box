@@ -3,6 +3,7 @@ title: ユニットテストを書く上で守りたいこと
 date: 2020-01-12T00:00:00+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://qiita.com/silverbirder/items/f99dc7fa6cdbd6e194a1

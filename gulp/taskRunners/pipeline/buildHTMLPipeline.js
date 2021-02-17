@@ -8,7 +8,7 @@ const buildHTMLPipeline = async (file, enc, cb) => {
     const filePath = file.history[0];
     const canonicalUrl = generateCanonicalUrl(filePath).replace(/index\.html$/, '');
     const html = await optimizeAMP(
-        buildHTML(file.contents.toString(), layout, canonicalUrl),
+        buildHTML(file.contents.toString(), layout, {canonical: canonicalUrl}),
         {},
         {canonical: canonicalUrl}
     );

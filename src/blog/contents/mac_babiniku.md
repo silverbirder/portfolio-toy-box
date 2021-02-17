@@ -3,6 +3,7 @@ title: Mac で バ美肉 りたい！  (Zoom + Gachikoe + 3Tene or Reality)
 date: 2020-03-08T17:56:07+09:00
 draft: false
 description: description
+icon: 😎
 -->
 # Links
 https://silverbirder180.hatenablog.com/entry/2020/03/08/175607

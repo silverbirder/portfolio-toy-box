@@ -3,6 +3,7 @@ title: スマート家電のよさをしってほしい
 date: 2019-03-26T00:00:00+09:00
 draft: false
 description: description
+icon: 😎
 -->
 #Link
 https://medium.com/@silverbirder/スマート家電のよさをしってほしい-21ed05cdd47b
