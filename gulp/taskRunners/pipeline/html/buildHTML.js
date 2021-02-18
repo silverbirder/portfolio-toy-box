@@ -172,10 +172,10 @@ const addOGP = (layoutDOM, option) => {
         src = imgElement.getAttribute('src');
     }
     if (src) {
-        const title = `${option['title']}%20silverbirder's page`;
+        const title = `${option['title']}`;
         const ogMetaImage = layoutDOM.window.document.createElement('meta');
         ogMetaImage.setAttribute('property', 'og:image');
-        ogMetaImage.setAttribute('content', `https://res.cloudinary.com/silverbirder/image/fetch/o_30,f_auto,w_500/w_400,c_fit,l_text:Arial_15_bold:${title}/${src}`);
+        ogMetaImage.setAttribute('content', `https://res.cloudinary.com/silverbirder/image/fetch/o_30,f_auto/l_text:Arial_15_bold:${title}/${src}`);
         layoutDOM.window.document.querySelector('head').appendChild(ogMetaImage);
     }
 };
