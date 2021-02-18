@@ -3,6 +3,7 @@ title: CircleCI + BackstopJS (Puppeteer) でビジュアルリグレッション
 date: 2019-11-15T00:00:00+09:00
 draft: false
 description: description
+image: 
 icon: 😎
 -->
 # Links

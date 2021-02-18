@@ -3,6 +3,7 @@ title: 【大阪】GCPUG Kansai 〜 Cloud Next Extended ～ - 2019年5月14日 �
 date: 2019-05-22T00:14:26+09:00
 draft: false
 description: description
+image: 
 icon: 😎
 -->
 # Links

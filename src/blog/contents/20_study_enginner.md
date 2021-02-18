@@ -3,6 +3,7 @@ title: 20代後半エンジニアである私がこれから学ぶべきこと
 date: 2020-10-29T20:18:58+09:00
 draft: false
 description: description
+image: 
 icon: 😎
 -->
 # Links

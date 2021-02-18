@@ -3,6 +3,7 @@ title: 一足遅れて Kubernetes を学び始める - 08. discovery&LB その1 
 date: 2019-05-07T00:00:00+09:00
 draft: false
 description: description
+image: 
 icon: 😎
 -->
 # Links

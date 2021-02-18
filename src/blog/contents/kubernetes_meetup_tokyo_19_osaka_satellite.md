@@ -3,6 +3,7 @@ title: 【大阪・梅田】Kubernetes Meetup Tokyo #19 大阪サテライト- 2
 date: 2019-06-01T18:22:55+09:00
 draft: false
 description: description
+image: 
 icon: 😎
 -->
 # Links

@@ -3,6 +3,7 @@ title: 一足遅れて Kubernetes を学び始める - 13. ヘルスチェック
 date: 2019-05-30T00:00:00+09:00
 draft: false
 description: description
+image: 
 icon: 😎
 -->
 # Links

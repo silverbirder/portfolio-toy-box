@@ -162,6 +162,23 @@ const addHeadTag = (layoutDOM, option) => {
     }
 };
 
+const addOGP = (layoutDOM, option) => {
+    let src = '';
+    const imgElement = layoutDOM.window.document.querySelector('img');
+    const imgOption = option['image'];
+    if (imgOption) {
+        src = imgOption;
+    } else if (imgElement !== null) {
+        src = imgElement.getAttribute('src');
+    }
+    if (src) {
+        const ogMetaImage = layoutDOM.window.document.createElement('meta');
+        ogMetaImage.setAttribute('property', 'og:image');
+        ogMetaImage.setAttribute('content', `https://res.cloudinary.com/silverbirder/image/fetch/${src}`);
+        layoutDOM.window.document.querySelector('head').appendChild(ogMetaImage);
+    }
+};
+
 const buildHTML = (content, layout, option) => {
     const canonicalUrl = option['canonical'];
     const contentDOM = new JSDOM(content);
@@ -174,6 +191,7 @@ const buildHTML = (content, layout, option) => {
     replaceEmbed(layoutDOM);
     replaceTableContent(layoutDOM);
     addHeadTag(layoutDOM, option);
+    addOGP(layoutDOM, option);
     return layoutDOM.serialize();
 };
 

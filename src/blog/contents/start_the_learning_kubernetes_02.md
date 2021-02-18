@@ -3,6 +3,7 @@ title: 一足遅れて Kubernetes を学び始める - 02. Docker For Mac -
 date: 2019-04-27T00:00:00+09:00
 draft: false
 description: description
+image: 
 icon: 😎
 -->
 # Links

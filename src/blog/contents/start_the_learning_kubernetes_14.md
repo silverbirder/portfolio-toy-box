@@ -3,6 +3,7 @@ title: 一足遅れて Kubernetes を学び始める - 14. スケジューリン
 date: 2019-06-05T00:00:00+09:00
 draft: false
 description: description
+image: 
 icon: 😎
 -->
 # Links
