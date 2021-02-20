@@ -6,66 +6,88 @@ description: description
 image: 
 icon: 😎
 -->
-#Link
-https://medium.com/@silverbirder/スマート家電のよさをしってほしい-21ed05cdd47b
 
-つかってみて便利だと感じたオススメ商品を３つ紹介
-Photo by BENCE BOROS on Unsplashスマート家電？なにそれ？
+私が実際に使ってみて便利だと感じたオススメ商品を３つ紹介します！
+
+[:contents]
+
+<figure title="Photo by BENCE BOROS on Unsplash">
+<img src="https://miro.medium.com/max/1400/0*aqKmFEcSeAsoO4Iw">
+<figcaption>Photo by <a href="https://unsplash.com/@benceboros?utm_source=medium&utm_medium=referral">BENCE BOROS</a> on <a href="https://unsplash.com/?utm_source=medium&utm_medium=referral">Unsplash</a></figcaption>
+</figure>
+
+# スマート家電？なにそれ？
+
 ハマる前までは、スマート家電という言葉自体よくわかっておらず、「なんだか賢い家電なんでしょ（適当）」と興味ありませんでした。
-とある職場での会話をきっかけにして、その便利さにドンドンとスマート家電にハマっていき、「これはもっとはやくに知っておきたった！」と後悔すら感じるほどでした。以降では、以下３つのスマート家電を紹介します！
-・Nature Remo
-・Switch Bot
-・Google Home Mini
+
+とある職場での会話をきっかけにして、その**便利さ**にドンドンとスマート家電にハマっていき、「**これはもっとはやくに知っておきたった！**」と後悔すら感じるほどでした。以降では、以下３つのスマート家電を紹介します！
+
+* [Nature Remo](https://nature.global/jp/top)
+* [Switch Bot](https://www.switchbot.jp/)
+* [Google Home Mini](https://store.google.com/jp/magazine/compare_nest_speakers_displays?hl=ja-JP&srp=/jp/product/google_home_mini)
+
 決して回し者ではないです（笑）
 
 ## オススメ１： Nature Remo
-Nature
 
 赤外線送信している媒体に対して、nature remoが代わりに送信してくれます。ですので、例えば照明にリモコンでポチポチON/OFFしていたことを、代わりにnature remoがしてくれます。
+
 これのよいところは、つぎのとおりです。
-・スマートフォンからON/OFFできるので、わざわざリモコンを探さなくてすむ。
-・タイマー機能と一連の動作を設定できるので、「朝7時に電気とエアコンとテレビをつける」ということが自動的にしてくれる。
-・Google HomeやAlexaなどのスマートスピーカーと連動できるので、音声による制御もできる。（ok google, ただいま〜 → 電気エアコンテレビがつく）
-・（つかってないけど）湿度、温度、照明の明るさ、スマートフォンとの距離をトリガーにできる
+
+* スマートフォンからON/OFFできるので、わざわざリモコンを探さなくてすむ。
+* タイマー機能と一連の動作を設定できるので、「朝7時に電気とエアコンとテレビをつける」ということが自動的にしてくれる。
+* Google HomeやAlexaなどのスマートスピーカーと連動できるので、音声による制御もできる。（ok google, ただいま〜 → 電気エアコンテレビがつく）
+* （つかってないけど）湿度、温度、照明の明るさ、スマートフォンとの距離をトリガーにできる
+
 ↓ スマートフォンからnature remo経由で電気をつけてみます。
 
-
+[https://youtu.be/_j-qXrxtsyU:embed]
 
 ## オススメ２： Switch Bot
-SwitchBot | スマートホーム化できる簡単スイッチ| Alexa | Google Home
-SwitchBot はアプリや音声で制御させる無線ロボットです。 物理的に様々なボタンやスイッチを操作できます。www.switchbot.jp
+
 物理的に押すボタンに対してswitch botが代わりに押してくれます。
 nature remoでは制御できなかった物理ボタンに対応しています。
+
 これのよいところは、つぎのとおりです。
-・スマートフォンから物理ボタンを押したり引いたりできる。
-・タイマーやスケジューリングも可能。
-・両面テープでしっかり固定されるので、どこでも使える。
+
+* スマートフォンから物理ボタンを押したり引いたりできる。
+* タイマーやスケジューリングも可能。
+* 両面テープでしっかり固定されるので、どこでも使える。
+
 これを使えば、帰宅中に、お風呂のお湯沸かしボタンを押せるので、
 帰宅したらすぐにお風呂に入れます！
-※ SwitchBot Hubというものを経由しないと自宅外から制御できないのが難点。
+
+※ [SwitchBot Hub](https://www.switchbot.jp/hub-plus)というものを経由しないと自宅外から制御できないのが難点。
+
 ↓ スマートフォンからswitch bot経由でボタンを押しています。
 
-
+[https://youtu.be/wkrPf-FuXFU:embed]
 
 ## オススメ３： Google Home Mini
-Google Home Mini
-Google Home Mini is Google Assistant anywhere you want it.store.google.com
+
 これは無知な僕でも知っていた商品です。音声でgoogleアシスタントにサポートしてくれるすぐれものですよね。
+
 また、
+
 さきほど紹介したNature RemoやSwitch Botとも連携できるので、
 「スマートフォンからの操作」から「音声から操作」できるようになります。これはすごく便利で、「スマートフォンを開く→アプリをタップ→操作」という流れをgoogle home miniに「電気をつけて」って言うだけで済みます。
+
 また、一連の操作を登録できる「ルーティン」があるので、「電気をつける、エアコンをつける、テレビをつける」→「ただいま」と登録すると「ok google, ただいま」というだけで３つの家電がつきます。
+
 この「nature remo + switchbot + google home mini」の組み合わせは、僕の生活スタイルにピッタリで、とても楽になりました。
+
 ↓ google home miniから「ただいま」を言ってみる
 
-
+[https://youtu.be/_XGMBIXC3pU:embed]
 
 ## おわりに
 とある友達にこのことを伝えると「自分でやれば良いじゃん（笑）」と言われてしまいました。しかし、どっぷりハマった僕には、もう引き返せません。朝起きて、電気をつけて、エアコンをつけて、テレビをつけてる生活なんて…。
+
 むしろ、「ほかにも便利なものないのか！？」とamazonで調べまくってます。（笑）
+
 ぜひとも、スマート家電のよさを知って頂ければ幸いです。
-近況
+
+## 近況
+
 近々、セサミというスマートロックが自宅に届きます。こちらは、家の扉にある鍵をスマート化します。
-セサミ スマートロック | CANDY HOUSE, Inc. JAPAN
-あなたは家を出る時に何を持つ?鍵、財布、スマホ...?「SESAME(セサミ)」はスマホで家の鍵を開閉出来るスマートロックです。取付も簡単で鍵も簡単にシェア。Google…jp.candyhouse.co
 こちらが届きましたら、また記事を書いてみようかなと思います。

@@ -6,10 +6,8 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2020/03/08/175607
 
-[f:id:silverbirder180:20200308172732p:plain]
+![バ美肉](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308172732.png)
 
 [:contents]
 
@@ -19,14 +17,24 @@ https://silverbirder180.hatenablog.com/entry/2020/03/08/175607
 Hangouts MeetやZoomといったビデオ会議ツールを使う機会が増えたと思います。
 
 そんな中、次の記事が流行りました。
+
 [https://level69.net/archives/26902:embed]
 
 > バ美肉（バびにく）とは、バーチャル美少女受肉またはバーチャル美少女セルフ受肉の略語
-[https://ja.wikipedia.org/wiki/バ美肉:embed]
+
+>[https://ja.wikipedia.org/wiki/バ美肉:embed]
 
 これにより、ビデオ会議(例はZoom)で、次のようなバーチャル美少女 (になりきった私)が参加できるようになります。もちろん、声もボイスチェンジできます。
-<figure title="バーチャル美少女 (私)">[f:id:silverbirder180:20200308101851p:plain]<figcaption>バーチャル美少女 (私)</figcaption></figure>
-<figure title="Whiteboard in Zoom">[f:id:silverbirder180:20200308173549p:plain]<figcaption>Whiteboard in Zoom</figcaption></figure>
+
+<figure title="バーチャル美少女 (私)">
+<img alt="バーチャル美少女 (私)" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308101851.png">
+<figcaption>バーチャル美少女 (私)</figcaption>
+</figure>
+
+<figure title="Whiteboard in Zoom">
+<img alt="Whiteboard in Zoom" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308173549.png">
+<figcaption>Whiteboard in Zoom</figcaption>
+</figure>
 
 Windowsでは、[Facerig](https://store.steampowered.com/app/274920/FaceRig/?l=japanese)というアプリで簡単に構築できるみたいです。
 
@@ -37,7 +45,10 @@ Mac + Bootcamp → Windows10 + Facering  でもできると思いますが、動
 
 私は、次のような構成になりました。
 
-<figure title="&quot;バ美肉&quot; &#x27;s structure">[f:id:silverbirder180:20200308123745p:plain]<figcaption>&quot;バ美肉&quot; &#x27;s structure</figcaption></figure>
+<figure title="バ美肉's structure">
+<img alt="バ美肉's structure" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308123745.png">
+<figcaption>バ美肉's structure</figcaption>
+</figure>
 
 音声と動画の2つに分かれます。
 また、ビデオ会議ツールと連携するため、仮想デバイス(Soundflower, CamTwist)が必要になります。
@@ -47,13 +58,19 @@ Mac + Bootcamp → Windows10 + Facering  でもできると思いますが、動
 
 野太い声じゃなくて、かわいい声が聞きたいですよね。そうですよね。はい。  
 
-Gachikoeを使いました。
-[https://booth.pm/ja/items/1236505:embed]
+[Gachikoe](https://booth.pm/ja/items/1236505)を使いました。
 
 Gachikoeは、次のような設定にしました。
 
-<figure title="Gachikoe">[f:id:silverbirder180:20200308171514p:plain]<figcaption>Gachikoe</figcaption></figure>
-<figure title="Gachikoe settings">[f:id:silverbirder180:20200308171539p:plain]<figcaption>Gachikoe settings</figcaption></figure>
+<figure title="Gachikoe">
+<img alt="Gachikoe" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308171514.png">
+<figcaption>Gachikoe</figcaption>
+</figure>
+
+<figure title="Gachikoe settings">
+<img alt="Gachikoe settings" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308171539.png">
+<figcaption>Gachikoe settings</figcaption>
+</figure>
 
 Outputを soundflower (2ch)にしています。
 
@@ -67,7 +84,10 @@ Outputを soundflower (2ch)にしています。
 
 LadioCastは、次のような設定にしました。
 
-<figure title="LadioCast">[f:id:silverbirder180:20200308171630p:plain]<figcaption>LadioCast</figcaption></figure>
+<figure title="LadioCast">
+<img alt="LadioCast" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308171630.png">
+<figcaption>LadioCast</figcaption>
+</figure>
 
 Inputを soundflower (2ch)とし、Outputを soundflower (64ch)としています。
 
@@ -81,7 +101,10 @@ Inputを soundflower (2ch)とし、Outputを soundflower (64ch)としていま�
 3teneは、特に設定は必要ありません。
 撮影前には、Webカメラとリップシンク(口の動きの同期)を起動しておきましょう。
 
-<figure title="3tene">[f:id:silverbirder180:20200308171751p:plain]<figcaption>3tene</figcaption></figure>
+<figure title="3tene">
+<img alt="3tene" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308171751.png">
+<figcaption>3tene</figcaption>
+</figure>
 
 
 #### Asserts
@@ -89,6 +112,7 @@ Inputを soundflower (2ch)とし、Outputを soundflower (64ch)としていま�
 私は、次のサイトでダウンロードしました。
 
 [https://hub.vroid.com/:embed]
+
 [https://3d.nicovideo.jp/:embed]
 
 ### Mobile: Reality
@@ -100,12 +124,18 @@ Realityは、特に設定は必要ありません。
 好みのキャラクターをカスタマイズして簡単に作れます。
 
 私は、これです。
-<figure title="https://reality.wrightflyer.net/profile/443e9213">[f:id:silverbirder180:20200308135013j:plain]<figcaption>https://reality.wrightflyer.net/profile/443e9213</figcaption></figure>
+<figure title="reality me">
+<img alt="reality me" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308135013.jpg">
+<figcaption><a href="https://reality.wrightflyer.net/profile/443e9213">reality me</a></figcaption>
+</figure>
 
 iPhoneで撮影している画面をMacに反映する必要があります。
 MacとiPhoneを接続し、QuickTime Playerへ出力します。こんな感じです。
 
-<figure title="iPhone To QuickTime Player">[f:id:silverbirder180:20200308172222p:plain]<figcaption>iPhone To QuickTime Player</figcaption></figure>
+<figure title="iPhone To QuickTime Player">
+<img alt="iPhone To QuickTime Player" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308172222.png">
+<figcaption>iPhone To QuickTime Player</figcaption>
+</figure>
 
 noneは、私のiPhoneデバイス名です。
 
@@ -116,7 +146,11 @@ CamTwistという仮想カメラを使いました。
 
 CamTwistは、次のような設定にしました。
 
-<figure title="CamTwist">[f:id:silverbirder180:20200308172329p:plain]<figcaption>CamTwist</figcaption></figure>
+<figure title="CamTwist">
+<img alt="CamTwist" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308172329.png">
+<figcaption>CamTwist</figcaption>
+</figure>
+
 例では、QuickTime Playerのアプリケーションを選択しています。3teneの場合は、3teneの選択肢を選択すれば良いです。
 
 # 使い方 (Zoom)
@@ -124,11 +158,17 @@ CamTwistは、次のような設定にしました。
 今まで説明したものを起動した状態で、Zoomを起動します。
 Zoomは、次のような設定にしました。
 
-<figure title="Zoom &gt; Settings &gt; Video">[f:id:silverbirder180:20200308174057p:plain]<figcaption>Zoom &gt; Settings &gt; Video</figcaption></figure>
+<figure title="Zoom > Settings > Video">
+<img alt="Zoom > Settings > Video" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308174057.png">
+<figcaption>Zoom > Settings > Video</figcaption>
+</figure>
 
 動画は、CamTwistから取得するようにします。
 
-<figure title="Zoom &gt; Settings &gt; Audio">[f:id:silverbirder180:20200308174235p:plain]<figcaption>Zoom &gt; Settings &gt; Audio</figcaption></figure>
+<figure title="Zoom > Settings > Audio">
+<img alt="Zoom > Settings > Audio" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308174235.png">
+<figcaption>Zoom > Settings > Audio</figcaption>
+</figure>
 
 音声は、Soundeflower (64ch)から取得するようにします。
 
@@ -143,6 +183,7 @@ Zoomは、次のような設定にしました。
 ネタ的には『可愛い女の子と会話すると、生産性があがる』なのですが...脳が震える。
 
 # 参考リンク
+
 [https://kumak1.hatenablog.com/entry/2018/09/27/234203:embed]
 
 [http://kuroyam.hatenablog.com/entry/2020/02/27/204246:embed]

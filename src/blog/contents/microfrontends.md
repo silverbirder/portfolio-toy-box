@@ -9,7 +9,7 @@ icon: 😎
 # Links
 https://silverbirder180.hatenablog.com/entry/2020/05/04/182921
 
-[f:id:silverbirder180:20200504140846j:plain]
+![Everything I've learned about Micro Frontends](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200504/20200504140846.jpg)
 
 Micro FrontendsというWebフロントエンドアーキテクチャがあります。
 このアーキテクチャを知るために、書籍を読み、簡単なサンプルWebアプリを開発しました。
@@ -29,13 +29,17 @@ ECサイトのようなWebアプリケーションでは、様々な専門知識
 # Micro Frontends とは
 
 > それはマイクロサービスの考え方をフロントエンドに拡張したものです。
-[https://micro-frontends-japanese.org/resources/monolith-frontback-microservices.png:image=https://micro-frontends-japanese.org/resources/monolith-frontback-microservices.png]
-[https://micro-frontends-japanese.org/resources/verticals-headline.png:image=https://micro-frontends-japanese.org/resources/verticals-headline.png]
+
+![micro frontends monolith-frontback-microservices](https://micro-frontends-japanese.org/resources/monolith-frontback-microservices.png)
+
+![micro frontends verticals-headline](https://micro-frontends-japanese.org/resources/verticals-headline.png)
+
 ※ [https://micro-frontends-japanese.org](https://micro-frontends-japanese.org)
 
 要は、バックエンドだけでなく、バックエンドからフロントエンドまでをマイクロサービス化することです。
 
 さらに詳しく知りたい方は、次のページをご参考下さい。とてもわかりやすいです。
+
 [https://micro-frontends-japanese.org/:embed]
 
 また、次の書籍を読むと、
@@ -123,7 +127,9 @@ Hydrationは、サーバーサイドでレンダリングした静的HTMLに、�
 apple, banana, orangeという商品を検索するだけのサンプルWebアプリを作りました。
 
 概要図はこちらです。
-[https://res.cloudinary.com/silverbirder/image/upload/v1588513402/micro-frontends-sample-code/micro_frontends_sample.jpg:image=https://res.cloudinary.com/silverbirder/image/upload/v1588513402/micro-frontends-sample-code/micro_frontends_sample.jpg]
+
+![micro frontends sample overview](https://res.cloudinary.com/silverbirder/image/upload/v1588513402/micro-frontends-sample-code/micro_frontends_sample.jpg)
+
 ※ [http://team-page.fly.dev/]
 
 サンプルコードは、ここに置いています。
@@ -164,7 +170,7 @@ menifest.jsonには、サービスのエンドポイントや、Asset(JSやCSS)�
 
 team-search では
 
-```sh
+```shell
 $ curl https://team-search.fly.dev/manifest.json | jq .
   {
     "name": "search",
@@ -341,4 +347,5 @@ Micro Frontendsは、このような<b>複雑化するフロントエンドに�
 最後まで読んで頂き、ありがとうございました。
 
 # 参考リンク
+
 [https://github.com/ChristianUlbrich/awesome-microfrontends:embed]

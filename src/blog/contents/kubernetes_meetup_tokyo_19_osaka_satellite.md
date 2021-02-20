@@ -6,20 +6,21 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2019/06/01/182255
 
-<figure title="kubernetes osaka satellite">[f:id:silverbirder180:20190601112302p:plain]<figcaption>kubernetes osaka Satellite</figcaption></figure>
-[https://k8sjp-osaka.connpass.com/event/131981/:embed]
+<figure title="kubernetes osaka satellite">
+<img alt="kubernetes osaka satellite" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190601/20190601112302.png">
+<figcaption>kubernetes osaka Satellite</figcaption>
+</figure>
 
 大阪からKubernetes Meetup Tokyoに参加できるとのことで、こちらに参加してきました。
 Kubernetesの生みの親である3人の内の1人のJoe Bedaから、**Kubernetesの歴史**の経緯について教えて頂きました。
 その話がとてもわかりやすく、なるほどなと思ったので、ぜひとも共有したいと思います。
 
-[https://twitter.com/hashtag/k8sjp:embed]
+[https://k8sjp-osaka.connpass.com/event/131981/:embed]
 
 ※ 以降の内容は、私なりの解釈が入っており誤った認識かもしれません。ご了承下さい。
 発表の内容は全てYoutubeにありますので、そちらが正しいものです。ご参考下さい。
+
 [https://www.youtube.com/watch?v=ETHGx8_Q-1k:embed]
 
 [:contents]
@@ -55,6 +56,7 @@ CPCAmerica(?)の田中さんが通訳をされていたのですが、ものす�
 [https://twitter.com/mumoshu/status/1134438272518635521?s=20:embed]
 
 ※ 以下、[@‏apstndb](https://twitter.com/apstndb) さんの要約Tweetを参考にしました。神!!!
+
 [https://twitter.com/silver_birder/status/1134406467744804864?s=20:embed]
 
 ## kubernetesの歴史
@@ -75,7 +77,10 @@ Kubernetesとは、「コンテナオーケストレーター」と多くの人�
 他の観点で「１つのデータベースだけでクラスタを管理している設計」が魅力的だという話がありました。
 （勝手な解釈かもしれません。すみません）
 
-<figure title="kubernetes overview">[f:id:silverbirder180:20190601152418p:plain]<figcaption>kubernetes overview</figcaption></figure>
+<figure title="kubernetes overview">
+<img alt="kubernetes overview" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190601/20190601152418.png">
+<figcaption>kubernetes overview</figcaption>
+</figure>
 
 Kubernetesでは、クラスタの状態を管理するために分散型KVSである[etcd](https://github.com/etcd-io/etcd)を使っています(その他の状態管理はキャッシュしているそうです。)。
 etcdには、APIServerを経由しなければアクセスできないため、一貫したデータの維持が実現できます。
@@ -85,7 +90,10 @@ etcdには、APIServerを経由しなければアクセスできないため、�
 kubernetesのcontrol planeである、APIServer, Scheduler, Controller Managerがあれば、シングルノードでもマルチノードでも動きます。
 kubernetesをDockerForMacで動かしたときは、そういえばシングルノードでしたね。マルチノードってイメージでしたけど。
 
-<figure title="kubernetes jazz Improv">[f:id:silverbirder180:20190601154007p:plain]<figcaption>kubernetes jazz Improv</figcaption></figure>
+<figure title="kubernetes jazz Improv">
+<img alt="kubernetes jazz Improv" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190601/20190601154007.png">
+<figcaption>kubernetes jazz Improv</figcaption>
+</figure>
 
 Kubernetesはコンテナオーケストレーションとよく言われますが、事前にすべてがプランされたオーケストレーションではなく、ジャズのように即興で計画して組み立てていくものに近い思想だそうです。
 私は音楽に疎い人なのですが意味は理解しました。（笑）性格的には即興は苦手っす。
@@ -97,6 +105,7 @@ PodやReplication,Deploymentなど様々なリソースがあります。
 なんだそれは...?
 
 [https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/:embed]
+
 [https://qiita.com/cvusk/items/773e222e0971a5391a51:embed]
 
 要は、PodやDeploymentのようなリソースを独自に作ることができるのですね。おぉなんだそれ！
@@ -105,10 +114,12 @@ Operatorsというものが生まれました。
 
 例えば、下記のようなものがあります。
 [https://github.com/oracle/mysql-operator:embed]
+
 [https://github.com/kubeflow/tf-operator:embed]
 
 Yahooでは、gimbalというOSSを使ってKubernetesを導入したみたいです。
 [https://github.com/heptio/gimbal:embed]
+
 [https://techblog.yahoo.co.jp/advent-calendar-2018/oss-gimbal/:embed]
 
 詳しくは分かりませんが、こういった拡張しやすい機能があるおかげでドンドン普及するのだなと勉強になりました。
@@ -125,12 +136,15 @@ Yahooでは、gimbalというOSSを使ってKubernetesを導入したみたい�
 #### Q3. Kubernetes はなぜ etcd を使っているか
 
 [https://twitter.com/apstndb/status/1134411776009785345?s=20:embed]
+
 [https://twitter.com/apstndb/status/1134412148237512705?s=20:embed]
+
 [https://twitter.com/apstndb/status/1134412317439844352?s=20:embed]
 
 #### Q4. Virtual Kubelet とか k3s みたいなエッジで活用する動きがコミュニティでは感じられるが、どう見ている?
 
 [https://twitter.com/apstndb/status/1134413224839745536?s=20:embed]
+
 [https://twitter.com/apstndb/status/1134413431316987904?s=20:embed]
 
 #### そのほか
@@ -148,7 +162,10 @@ Yahooでは、gimbalというOSSを使ってKubernetesを導入したみたい�
 今回使わさせて頂いた場所は、会議室でしょうか。
 30,40人ぐらい入れるスペースで、清潔感がありました。
 
-<figure title="kubernetes osaka satelite aiming">[f:id:silverbirder180:20190601172018j:plain]<figcaption>kubernetes osaka satelite aiming</figcaption></figure>
+<figure title="kubernetes osaka satelite aiming">
+<img alt="kubernetes osaka satelite aiming" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190601/20190601172018.jpg">
+<figcaption>kubernetes osaka satelite aiming</figcaption>
+</figure>
 
 東京との中継は、ときどき音声が途切れてしまうときもありますが、しっかりと写っていました。
 ただ、コンテンツとしては、YouTubeにあげらているので、わざわざOsakaに出席しなくても良いのでは？とも思いました。

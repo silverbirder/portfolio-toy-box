@@ -6,27 +6,32 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://zenn.dev/silverbirder/articles/f74e219ffdef26b4a37b
+
+[:contents]
 
 # Micro Frontends とは?🤔
 皆さん、**Micro Fronends**(以下、MFE)をご存知でしょうか。説明をざっくりしますと、Microservicesの考え方をフロントエンドまで拡張した考え方です。Microservicesは、バックエンド側で適用される事例をよく耳にしますが、フロントエンドでの適用事例は、あまり聞いたことがありません。
 
 従来、Webサービス開発ではモノリスな構成からスタートします。そこから、規模が拡大するにつれて様々な理由により、フロントエンドとバックエンドの分離、バックエンドのMicroservices化が行われます。
 
-![monolith-frontback-microservices](https://micro-frontends-japanese.org/resources/monolith-frontback-microservices.png)
-*[[翻訳記事]マイクロフロントエンド](https://micro-frontends-japanese.org/)*
+<figure title="[翻訳記事]マイクロフロントエンド > monolith-frontback-microservices">
+<img alt="[翻訳記事]マイクロフロントエンド > monolith-frontback-microservices" src="https://micro-frontends-japanese.org/resources/monolith-frontback-microservices.png">
+<figcaption><a href="https://micro-frontends-japanese.org/">[翻訳記事]マイクロフロントエンド</a></figcaption>
+</figure>
 
 Microservices化によって、Scalability、Agility、Independency、Availabilityの大幅な向上が期待できます。しかし、依然フロントエンドはモノリスなままです。そこで、次の画像のように、Microservicesと同様にフロントエンドも縦(専門領域)に分割します。
 
-![verticals-headline](https://micro-frontends-japanese.org/resources/verticals-headline.png)
-*[[翻訳記事]マイクロフロントエンド](https://micro-frontends-japanese.org/)*
+<figure title="[翻訳記事]マイクロフロントエンド > verticals-headline">
+<img alt="[翻訳記事]マイクロフロントエンド > verticals-headline" src="https://micro-frontends-japanese.org/resources/verticals-headline.png">
+<figcaption><a href="https://micro-frontends-japanese.org/">[翻訳記事]マイクロフロントエンド</a></figcaption>
+</figure>
 
 ただし、全てのWebサービスをMFEにする必要はありません。先程の説明にもあった通り、規模が拡大した際にMFEを検討する必要があるため、小・中規模のWebサービスでは時期尚早です。また、次の画像にもある通り、静的ページ(Webサイト,Webドキュメント)や動的ページ(Webアプリ)の両極端に位置するWebサービスはMFEの適用するのには不向きです(と書いています)。両方の要素が求められるWebサービスにMFEが役立ちます。MFEの適用されるWebサービス事例では、ECサイトが挙げられます。
 
-![mfe-web-document-to-web-app](https://media-exp1.licdn.com/dms/image/C5612AQEMjY51MwQMww/article-inline_image-shrink_1000_1488/0?e=1611187200&v=beta&t=EGumrK4ul8MRLTYa-gGjT93c4b7qSFWyzH9mwp5mq0w)
-*[Microfrontends: An approach to building Scalable Web Apps](https://www.linkedin.com/pulse/microfrontends-approach-building-scalable-web-apps-vinci-rufus)*
-
+<figure title="mfe-web-document-to-web-app">
+<img alt="mfe-web-document-to-web-app" src="https://res.cloudinary.com/silverbirder/image/upload/v1613832627/silver-birder.github.io/blog/mfe-web-document-to-web-app.png">
+<figcaption><a href="https://www.linkedin.com/pulse/microfrontends-approach-building-scalable-web-apps-vinci-rufus">Microfrontends: An approach to building Scalable Web Apps</a></figcaption>
+</figure>
 
 ※ MFEという言葉は、[Micro frontends | Technology Radar | ThoughtWorks](https://www.thoughtworks.com/radar/techniques/micro-frontends) の記事より生まれたみたいです。
 ※ [Micro Frontends in Action](https://www.manning.com/books/micro-frontends-in-action)にも記載されていますが、この考え方はWebサービスを対象としており、ネイティブアプリは対象としていません。
@@ -49,30 +54,37 @@ MFEを導入することによるメリット・デメリットについて、(�
 MFEでは、各フロントエンドのフラグメント(HTML)を、どのタイミングで統合するのかが重要です。今回はその統合パターンをざっくり紹介します。
 例えば、次のMFEの例で言えば、Team-Product、Team-Checkout、Team-Inspireの3つのフロントエンドフラグメント(HTML)があります。これらをどのタイミングで統合するのかがポイントです。
 
-![mfe-three-teams](https://micro-frontends-japanese.org/resources/three-teams.png)
-*[[翻訳記事]マイクロフロントエンド](https://micro-frontends-japanese.org/)*
-
+<figure title="[翻訳記事]マイクロフロントエンド > mfe-three-teams">
+<img alt="[翻訳記事]マイクロフロントエンド > mfe-three-teams" src="https://micro-frontends-japanese.org/resources/three-teams.png">
+<figcaption><a href="https://micro-frontends-japanese.org/">[翻訳記事]マイクロフロントエンド</a></figcaption>
+</figure>
 
 詳しくは、[Micro Frontends を調べたすべて#統合パターン](https://silverbirder180.hatenablog.com/entry/2020/10/07/190727#%E7%B5%B1%E5%90%88%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3) をご覧ください。
 
 ## ビルド時統合パターン
 ビルド時統合とは、WebサービスをPublishする前のBuildの段階で統合するパターンです。このパターンは、[bit.dev](https://bit.dev)がよく使われます。
 
-![bit.dev toppage](https://storage.googleapis.com/zenn-user-upload/e74w0sjnj1r0zpzvd5xfvsk7k1bd)
-*[bit.dev](https://bit.dev/)*
+<figure title="bit.dev toppage">
+<img alt="bit.dev toppage" src="https://storage.googleapis.com/zenn-user-upload/e74w0sjnj1r0zpzvd5xfvsk7k1bd">
+<figcaption><a href="https://bit.dev/">bit.dev</a></figcaption>
+</figure>
 
 フラグメントをPackagingし、Packagingしたライブラリをimportさせてbuild(統合)します。あとは、buildした静的コンテンツをPublishさせるだけになります。
 
 ## サーバーサイド統合パターン
 サーバーサイド統合とは、Webサーバー側のHTML構築段階で統合するパターンです。このパターンは、SSIやESI、Podium、Tailor、Ara-Frameworkなどが使われます。
 
-![ssi](https://www.st-andrews.ac.uk/itsnew/web/images/ssi1.jpg)
-*[Server-side includes (SSI)](https://www.st-andrews.ac.uk/itsnew/web/ssi/index.shtml)*
+<figure title="ssi">
+<img alt="ssi" src="https://www.st-andrews.ac.uk/itsnew/web/images/ssi1.jpg">
+<figcaption><a href="https://www.st-andrews.ac.uk/itsnew/web/ssi/index.shtml">Server-side includes (SSI)</a></figcaption>
+</figure>
 
 フラグメントを提供するサーバーを準備し、それらからフラグメント情報を収集し、全体のページHTMLを構築します。それをSSRとしてユーザーへ提供します。
 
-![cloudflare-worker](https://raw.githubusercontent.com/Silver-birder/micro-frontends-sample-code-5/f3c20954e6196cb578cd16caaf5999e07306fb51/overview.svg)
-*[github.com/Silver-birder/micro-frontends-sample-code-5](https://github.com/Silver-birder/micro-frontends-sample-code-5)*
+<figure title="cloudflare-worker">
+<img alt="cloudflare-worker" src="https://raw.githubusercontent.com/Silver-birder/micro-frontends-sample-code-5/f3c20954e6196cb578cd16caaf5999e07306fb51/overview.svg">
+<figcaption><a href="https://github.com/Silver-birder/micro-frontends-sample-code-5">github.com/Silver-birder/micro-frontends-sample-code-5</a></figcaption>
+</figure>
 
 サーバーサイドのサンプルコードは、次にまとめています。
 
@@ -91,8 +103,10 @@ MFEでは、各フロントエンドのフラグメント(HTML)を、どのタ�
 
 iframeを使ったページ(フラグメント)埋め込み、全体のページHTMLを統合させたり、WebComponentsのようにカスタムエレメントを定義したHTMLタグでページを構成したりします。
 
-![client side integration pattern](https://bluesoft.com/wp-content/uploads/2020/04/Micro-Frontends-11.jpg)
-*[Micro Frontends – The Missing Piece Of The Puzzle In Feature Teams | BlueSoft](https://bluesoft.com/micro-frontends-the-missing-piece-of-the-puzzle-in-feature-teams/)*
+<figure title="client side integration pattern">
+<img alt="client side integration pattern" src="https://bluesoft.com/wp-content/uploads/2020/04/Micro-Frontends-11.jpg">
+<figcaption><a href="https://bluesoft.com/micro-frontends-the-missing-piece-of-the-puzzle-in-feature-teams/">Micro Frontends – The Missing Piece Of The Puzzle In Feature Teams | BlueSoft</a></figcaption>
+</figure>
 
 # 終わりに👨‍💻👩‍💻
 MFEのアプローチを実際に導入した企業は、国内だとまだ比較的少なく、どういった場面で役立つのかあまり明確ではありません。また、書籍や知見も多くはないため、未知な領域と思います。

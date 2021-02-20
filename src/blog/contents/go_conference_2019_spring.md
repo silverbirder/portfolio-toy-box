@@ -6,28 +6,29 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2019/05/21/224143
+<figure title="Go Conference 2019 Spring Coffee">
+<img alt="Go Conference 2019 Spring Coffee" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190521/20190521224335.jpg">
+<figcaption>Go Conference 2019 Spring Coffee</figcaption>
+</figure>
 
-<figure title="Go Conference 2019 Spring Coffee">[f:id:silverbirder180:20190521224335j:plain]<figcaption>Go Conference 2019 Spring Coffee</figcaption></figure>
 [https://gocon.connpass.com/event/124530/:embed]
+
+[https://gocon.jp/:embed]
+
 こちらに参加してきましたので、ご報告します！
 
-公式:
-[https://gocon.jp/:embed]
-twitter:
-[https://twitter.com/hashtag/gocon:embed]
-
-場所:
+```text
+// 場所
 リクルートライフスタイル本社
 東京都千代田区丸の内1-9-2 グラントーキョーサウスタワー
+```
 
 [:contents]
 
 # よかったセッション
 ## H1 (S): Hacking Go Compiler Internals 2
 ### 概要
-Since the previous talk at Go Con 2014 Autumn, lots of things in the internals have changed. In this talk, I will try to give an overview of Go compiler internals and update the information as much as possible, along with my new hacks.
+> Since the previous talk at Go Con 2014 Autumn, lots of things in the internals have changed. In this talk, I will try to give an overview of Go compiler internals and update the information as much as possible, along with my new hacks.
 
 ### 資料
 #### 今回
@@ -59,6 +60,7 @@ Go言語でのアプリケーション開発で、特にコンテナを前提と
 
 ### 資料
 [https://speakerdeck.com/hgsgtk/design-considerations-for-container-based-go-application:embed]
+
 [https://www.redhat.com/ja/resources/cloud-native-container-design-whitepaper:embed]
 
 ### 感想
