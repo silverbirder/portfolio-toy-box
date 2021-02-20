@@ -9,7 +9,7 @@ icon: 😎
 # Links
 https://silverbirder180.hatenablog.com/entry/2020/02/01/235534
 
-<figure class="figure-image figure-image-fotolife" title="Google Apps Script + Typescript + Jest">[f:id:silverbirder180:20200201212044p:plain]<figcaption>Google Apps Script + Typescript + Jest</figcaption></figure>
+<figure title="Google Apps Script + Typescript + Jest">[f:id:silverbirder180:20200201212044p:plain]<figcaption>Google Apps Script + Typescript + Jest</figcaption></figure>
 
 Google Apps Script(以下,GAS)でライブラリを公開しました。ライブラリを開発する際、<b>テストのフィードバックサイクルを短くする</b>ため、`Clasp + Typescript + Jest` という技術スタックを選択しました。
 その開発体験について共有しようと思います。特段変わったことはしていません。
@@ -20,7 +20,7 @@ Google Apps Script(以下,GAS)でライブラリを公開しました。ライ�
 
 [script.google.com](https://script.google.com/)にアクセスしてデバッグ実行って、しんどくないですか？
 
-<figure class="figure-image figure-image-fotolife" title="Google Apps Script Debugging ...">[f:id:silverbirder180:20200201234221p:plain]<figcaption>Google Apps Script Debugging ...</figcaption></figure>
+<figure title="Google Apps Script Debugging ...">[f:id:silverbirder180:20200201234221p:plain]<figcaption>Google Apps Script Debugging ...</figcaption></figure>
 
 * ネットワーク越しでステップ実行するため、<b>遅い</b>
 * G Suite系のサービスと連携すると、サービス側の調整(データ準備とか)が<b>面倒</b>

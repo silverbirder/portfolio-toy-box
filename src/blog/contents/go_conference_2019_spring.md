@@ -9,7 +9,7 @@ icon: 😎
 # Links
 https://silverbirder180.hatenablog.com/entry/2019/05/21/224143
 
-<figure class="figure-image figure-image-fotolife" title="Go Conference 2019 Spring Coffee">[f:id:silverbirder180:20190521224335j:plain]<figcaption>Go Conference 2019 Spring Coffee</figcaption></figure>
+<figure title="Go Conference 2019 Spring Coffee">[f:id:silverbirder180:20190521224335j:plain]<figcaption>Go Conference 2019 Spring Coffee</figcaption></figure>
 [https://gocon.connpass.com/event/124530/:embed]
 こちらに参加してきましたので、ご報告します！
 

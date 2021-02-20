@@ -40,7 +40,7 @@ Tiqav2は、大きく分けて2つの機能があります。
 
 ## 2つの機能
 ### 画像とテキストを保存
-<figure class="figure-image figure-image-fotolife" title="Saving flow by Tiqav2">[f:id:silverbirder180:20200207231047p:plain]<figcaption>Saving flow by Tiqav2</figcaption></figure>
+<figure title="Saving flow by Tiqav2">[f:id:silverbirder180:20200207231047p:plain]<figcaption>Saving flow by Tiqav2</figcaption></figure>
 
 検索する為には、全文検索サービスのAlgoliaを使います。
 
@@ -57,7 +57,7 @@ Algoliaに保存する情報は、主に3つです。画像URLと拡張子、そ
 [https://cloud.google.com/vision/:embed]
 
 ### 画像を検索&表示
-<figure class="figure-image figure-image-fotolife" title="Searching Flow  By Tiqav2">[f:id:silverbirder180:20200207074256p:plain]<figcaption>Searching Flow  By Tiqav2</figcaption></figure>
+<figure title="Searching Flow  By Tiqav2">[f:id:silverbirder180:20200207074256p:plain]<figcaption>Searching Flow  By Tiqav2</figcaption></figure>
 
 テキストで全文検索を行います。その結果のIDとExtensionを組み合わせることで、
 画像を表示することができます。Extensionの種類は、Cloudinaryのサポートするもの全てになります。
@@ -68,7 +68,7 @@ Algoliaに保存する情報は、主に3つです。画像URLと拡張子、そ
 [https://cloudinary.com/documentation/image_transformations#supported_image_formats:embed]
 
 この画像を表示する機能を使うと、次のようにSlack上で画像を送信することができます。
-<figure class="figure-image figure-image-fotolife" title="Send Tiqav2 URL on Slack">[f:id:silverbirder180:20200207230322p:plain]<figcaption>Send Tiqav2 URL on Slack</figcaption></figure>
+<figure title="Send Tiqav2 URL on Slack">[f:id:silverbirder180:20200207230322p:plain]<figcaption>Send Tiqav2 URL on Slack</figcaption></figure>
 
 詳しい機能は、次のリポジトリをご確認下さい。
 

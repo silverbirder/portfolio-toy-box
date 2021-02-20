@@ -20,7 +20,7 @@ Zalando社が開発したTailorを使って、サンプルWebアプリをMicro F
 [:contents]
 
 # 全体構成
-<figure class="figure-image figure-image-fotolife" title="アプリケーション構成">[f:id:silverbirder180:20201003200516p:plain]<figcaption>アプリケーション構成</figcaption></figure>
+<figure title="アプリケーション構成">[f:id:silverbirder180:20201003200516p:plain]<figcaption>アプリケーション構成</figcaption></figure>
 
 ざっくり説明すると、HTMLからTailorに対してフラグメント(コンポーネント)を取得・返却するようにします。各フラグメントは、LitElementでWebComponentsを定義させたJavascriptを指します。フラグメントを読み込むだけで、カスタムエレメントを使えるようになります。
 

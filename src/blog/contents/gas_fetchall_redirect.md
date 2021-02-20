@@ -31,7 +31,7 @@ GASでは、リクエストメソッドであるfetchがあります。そのfet
 複数リクエストが同時にできるfeatchAllを使うことで、並列処理ができ、パフォーマンスが良いです。
 要するに次のようなコードで解決しようと考えていました。
 
-<figure class="figure-image figure-image-fotolife" title="FetchAllとRedirectURL">[f:id:silverbirder180:20200224084938p:plain]<figcaption>FetchAllとRedirectURL</figcaption></figure>
+<figure title="FetchAllとRedirectURL">[f:id:silverbirder180:20200224084938p:plain]<figcaption>FetchAllとRedirectURL</figcaption></figure>
 
 ```typescript
 let urlList: Array<string> = ['https://t.co/XXXX', 'https://t.co/YYYY'];
@@ -94,7 +94,7 @@ TwitterのAPIレスポンスに `urls` がありました。説明はありま�
 fetchやfetchAllは、`muteHttpExceptions: true` としたとしても、ExceptionErrorが発生してしまいます。
 そうすると、例えば1000件のURLをfetchAllした場合、<b>どれが成功で、どれが失敗で、どれが未実施か</b> がわからないというところです。
 
-<figure class="figure-image figure-image-fotolife" title="FetchAllとRedirectURL (Error)">[f:id:silverbirder180:20200224090136p:plain]<figcaption>FetchAllとRedirectURL (Error)</figcaption></figure>
+<figure title="FetchAllとRedirectURL (Error)">[f:id:silverbirder180:20200224090136p:plain]<figcaption>FetchAllとRedirectURL (Error)</figcaption></figure>
 
 Promise.allSettled が使えれば、解決できるのかなと思いますが、現状Promiseは使えません。
 

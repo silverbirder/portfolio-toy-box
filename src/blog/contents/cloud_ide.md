@@ -46,17 +46,17 @@ Cloud IDEは、クラウドにある統合開発環境(IDE)のことで、主に
 
 ブラウザで見ると、どんなUIでしょうか。いくつか例を載せておきます。
 
-<figure class="figure-image figure-image-fotolife" title="github-codespaces">
+<figure title="github-codespaces">
 <img alt="visual studio codespaces" src="https://visualstudio.microsoft.com/wp-content/uploads/2020/09/codespaces-vs.png">
 <figcaption><a href="https://github.co.jp/features/codespaces">https://github.co.jp/features/codespaces</a></figcaption>
 </figure>
 
-<figure class="figure-image figure-image-fotolife" title="cloud-shell-editor">
+<figure title="cloud-shell-editor">
 <img alt="cloud shell editor" src="https://storage.googleapis.com/gweb-cloudblog-publish/images/Cloud_shell_editor.max-2000x2000.jpg">
 <figcaption><a href="https://cloud.google.com/blog/ja/products/application-development/introducing-cloud-shell-editor">https://cloud.google.com/blog/ja/products/application-development/introducing-cloud-shell-editor</a></figcaption>
 </figure>
 
-<figure class="figure-image figure-image-fotolife" title="gitpod">
+<figure title="gitpod">
 <img alt="gitpod" src="https://www.gitpod.io/static/04a67274312aeedce08b6b7a46e0046a/6346c/screenshot.png">
 <figcaption><a href="https://www.gitpod.io">https://www.gitpod.io</a></figcaption>
 </figure>

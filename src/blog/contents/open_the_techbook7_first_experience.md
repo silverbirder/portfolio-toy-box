@@ -61,7 +61,7 @@ Re:VIEW Starterというツールを使うと、学習コストゼロで、良�
 ```shell
 $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake pdf"
 ```
-<figure class="figure-image figure-image-fotolife" title="ReViewStarter sample page"><div class="images-row mceNonEditable">[f:id:silverbirder180:20190904204630p:plain][f:id:silverbirder180:20190904204703p:plain]</div><figcaption>ReViewStarter sample page</figcaption></figure>
+<figure title="ReViewStarter sample page"><div class="images-row mceNonEditable">[f:id:silverbirder180:20190904204630p:plain][f:id:silverbirder180:20190904204703p:plain]</div><figcaption>ReViewStarter sample page</figcaption></figure>
 
 <b>良い感じの本</b>のPDFが作成されました、最高です。
 
@@ -177,7 +177,7 @@ iPad, Magic Pencilは買って正解でした。
 
 お絵かきが苦手だったので、知人に助けてもらい、なんとか作れました。
 
-<figure class="figure-image figure-image-fotolife" title="表表紙">[f:id:silverbirder180:20190829230747p:plain]<figcaption>表表紙</figcaption></figure>
+<figure title="表表紙">[f:id:silverbirder180:20190829230747p:plain]<figcaption>表表紙</figcaption></figure>
 
 
 # 2. 製本
@@ -283,7 +283,7 @@ $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake p
 Google Analytics (<b>初登録</b>)とBoothが連携できるので、流入数を見れるのですが、
 離脱率が86%という悲しい結果を知りました。ここは改善の余地がありそうです。
 
-<figure class="figure-image figure-image-fotolife" title="Booth on Google Analytics">[f:id:silverbirder180:20190906070005p:plain]<figcaption>Booth on Google Analytics</figcaption></figure>
+<figure title="Booth on Google Analytics">[f:id:silverbirder180:20190906070005p:plain]<figcaption>Booth on Google Analytics</figcaption></figure>
 
 pixiv ID登録しないとダウンロードできないので、ここが駄目ならサービスを使わない方が良いかもしれません。
 見本誌に限っては、GoogleDriveで渡すようにするとかですかね。

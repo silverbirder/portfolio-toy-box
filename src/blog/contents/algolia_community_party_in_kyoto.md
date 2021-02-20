@@ -6,14 +6,14 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2019/05/11/133222
-
 [https://algolia.connpass.com/event/128524/:embed]
 
 こちらに参加しましたので、ご報告までに記事を書こうと思います。
 
-<figure class="figure-image figure-image-fotolife" title="Algolia Community Party in 京都 - 2019年5月10日">[f:id:silverbirder180:20190511105346p:plain:alt=Algolia Community Party in 京都 - 2019年5月10日]<figcaption>Algolia Community Party in 京都 - 2019年5月10日</figcaption></figure>
+<figure title="Algolia Community Party in 京都 - 2019年5月10日">
+<img alt="Algolia Community Party in 京都 - 2019年5月10日" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190511/20190511105346.png">
+<figcaption>Algolia Community Party in 京都 - 2019年5月10日</figcaption>
+</figure>
 
 [:contents]
 

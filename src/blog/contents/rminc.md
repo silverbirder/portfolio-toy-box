@@ -9,7 +9,7 @@ icon: 😎
 # Links
 https://silverbirder180.hatenablog.com/entry/2020/02/17/184514
 
-<figure class="figure-image figure-image-fotolife" title="rMinc">[f:id:silverbirder180:20200216214751p:plain]<figcaption>rMinc</figcaption></figure>
+<figure title="rMinc">[f:id:silverbirder180:20200216214751p:plain]<figcaption>rMinc</figcaption></figure>
 # ターゲットユーザー
 
 * GMailとGCalendarを使っている人
@@ -25,7 +25,7 @@ https://silverbirder180.hatenablog.com/entry/2020/02/17/184514
 『いつ商品が届くのかな？メールを確認しよう』が、<b><span style="color: #d32f2f">面倒と感じませんか</span></b>？私は面倒と思います。
 Googleは気を利かせて、次のような予定を勝手に登録してくれることがあります。（良い悪いがありますが...）
 
-<figure class="figure-image figure-image-fotolife" title="unknownorganizer@calendar.google.com">[f:id:silverbirder180:20200216115925p:plain]<figcaption>unknownorganizer@calendar.google.com</figcaption></figure>
+<figure title="unknownorganizer@calendar.google.com">[f:id:silverbirder180:20200216115925p:plain]<figcaption>unknownorganizer@calendar.google.com</figcaption></figure>
 
 この気を利かせるかどうかは、Googleの判断によるため未知数です。
 先程あげた例のメールも、同様のことが勝手にしてくれたら良いな〜と思っていました。

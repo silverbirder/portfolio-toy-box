@@ -6,11 +6,10 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2020/08/23/183713
-
-[f:id:silverbirder180:20200822174934j:plain]
-<div style="text-align:center;"><span>Photo by <a href="https://unsplash.com/@sapegin?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Artem Sapegin</a> on <a href="https://unsplash.com/s/photos/html?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></div>
+<figure title="Photo by Artem Sapegin on Unsplash">
+<img alt="Photo by Artem Sapegin on Unsplash" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200822/20200822174934.jpg">
+<figcaption><span>Photo by <a href="https://unsplash.com/@sapegin?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Artem Sapegin</a> on <a href="https://unsplash.com/s/photos/html?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></figcaption>
+</figure>
 
 みなさん、こんにちは。silverbirder です。
 私の最近の興味として、Micro Frontends があります。
@@ -21,14 +20,14 @@ https://silverbirder180.hatenablog.com/entry/2020/08/23/183713
 
 > Build Micro-frontends easily using Airbnb Hypernova
 
-※ [https://ara-framework.github.io/website/]
+※ [https://ara-framework.github.io/website/](https://ara-framework.github.io/website/)
 
 Ara-Frameworkは、Airbnbが開発したHypernovaというフレームワークを使って、Micro Frontendsを構築します。
 
 # Airbnb Hypernova とは
 > A service for server-side rendering your JavaScript views
 
-※ [https://github.com/airbnb/hypernova]
+※ [https://github.com/airbnb/hypernova](https://github.com/airbnb/hypernova)
 
 簡単に説明すると、Hypernovaはデータを渡せばレンダリング結果(HTML)を返却してくれるライブラリです。
 これにより、データ構築とレンダリングを明確に分離することができるメリットがあります。
@@ -36,9 +35,9 @@ Ara-Frameworkは、Airbnbが開発したHypernovaというフレームワーク�
 # Ara-Framework アーキテクチャ
 Ara-Frameworkのアーキテクチャ図は、次のようなものです。
 
-[https://cdn-images-1.medium.com/max/2400/1*43CBDwIZ8P2q_ZfGg_ktUQ.png:image=https://cdn-images-1.medium.com/max/2400/1*43CBDwIZ8P2q_ZfGg_ktUQ.png]
+![ara framework overview](https://cdn-images-1.medium.com/max/2400/1*43CBDwIZ8P2q_ZfGg_ktUQ.png)
 
-※ [https://ara-framework.github.io/website/docs/nova-architecture]
+※ [https://ara-framework.github.io/website/docs/nova-architecture](https://ara-framework.github.io/website/docs/nova-architecture)
 
 構成要素は、次のとおりです。(↑の公式ページにも説明があります)
 
@@ -129,7 +128,7 @@ $ npx express-generator -v hbs layout
 
 詳細は割愛しますが、次のHTMLファイル(hbs)を作成します。  
 
-※ 詳しくはこちら [https://ara-framework.github.io/website/docs/render-on-page]
+※ 詳しくはこちら [https://ara-framework.github.io/website/docs/render-on-page](https://ara-framework.github.io/website/docs/render-on-page)
 
 layout/index.hbs
 ```
@@ -250,7 +249,7 @@ $ concurrently -n cluster,layout,proxy,search,product "npm run cluster" "npm run
 
 動作として、次のような画像になります。
 
-[f:id:silverbirder180:20200823170828p:plain]
+![nova results](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200823/20200823170828.png)
 
 # 最後に
 繰り返しますが、Ara-Framework を使うとデータ構築(Nova Directive)とレンダリング(Nova Bindings)を明確に分離できます。

@@ -6,11 +6,11 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2020/07/10/
 
-[f:id:silverbirder180:20200709204821j:plain]
-<span>Photo by <a href="https://unsplash.com/@realaxer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">tian kuan</a> on <a href="https://unsplash.com/s/photos/pipeline?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+<figure title="Photo by tian kuan on Unsplash">
+<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200709/20200709204821.jpg" alt="Photo by tian kuan on Unsplash">
+<figcaption><span>Photo by <a href="https://unsplash.com/@realaxer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">tian kuan</a> on <a href="https://unsplash.com/s/photos/pipeline?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></figcaption>
+</figure>
 
 どうも、こんにちは。Re:ゼロ2期 始まりましたね👏、 [@silver_birder](https://twitter.com/silver_birder) です。
 最近、仕事の関係上、Apache Beam + Kotlin を使うことになりました。それらの技術が一切知らなかったので、この記事に学んだことを書いていきます✍️。

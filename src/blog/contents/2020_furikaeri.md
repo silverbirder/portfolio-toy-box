@@ -24,7 +24,7 @@ icon: 😎
 
 UseCotlinは、主に技術のインプットばかりで、アウトプットができていません。インプットのし過ぎで、頭でっかちにならないよう、毎日アウトプットを心がけていました。
 
-[f:id:silverbirder180:20201230130209p:plain]
+![Github Contribution](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201230/20201230130209.png)
 
 ほぼ毎日、contributeするようにしました。InputとOutputのバランスは難しいですが、取り組んで良かったです。
 

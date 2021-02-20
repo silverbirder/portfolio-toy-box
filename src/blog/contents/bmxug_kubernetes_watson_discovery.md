@@ -6,15 +6,17 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2019/05/22/230753
 
-<figure class="figure-image figure-image-fotolife" title="BMXUG">[f:id:silverbirder180:20190522223722p:plain]<figcaption>BMXUG</figcaption></figure>
-[https://bmxug.connpass.com/event/117966/:embed]
+<figure title="BMXUG">
+<img alt="BMXUG" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190522/20190522223722.png">
+<figcaption>BMXUG</figcaption>
+</figure>
+
 今回、k8sの体験を目的として参加したのですが、意外な収穫があったので、
-共有したく、記事を書くことにしました。
+共有したく、記事を書くことにしました。hashtagはこちら [#bmxug](https://twitter.com/hashtag/bmxug)
 
-[https://twitter.com/hashtag/bmxug:embed]
+[https://bmxug.connpass.com/event/117966/:embed]
+
 [:contents]
 
 # Watson Discovery
@@ -50,7 +52,6 @@ https://silverbirder180.hatenablog.com/entry/2019/05/22/230753
 ## 隠れたコンセプトをみつける
 文章にあるワードだけでなく、文章にないワードのコンセプトも見出してくれるそうです。
 どうなってるんだ！？
-
 
 ## クローラも提供されている(WebCrewl)
 日本語のニュースを定期的にクロールして、ディスカバリーの辞書を更新してくれる機能もあるそうです。

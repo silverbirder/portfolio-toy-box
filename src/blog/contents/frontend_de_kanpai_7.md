@@ -14,22 +14,22 @@ https://silverbirder180.hatenablog.com/entry/2019/07/20/151731
 [https://frokan.connpass.com/event/135584/:embed]
 [https://twitter.com/hashtag/frokan:embed]
 
-<figure class="figure-image figure-image-fotolife" title="frontend de kanpai">[f:id:silverbirder180:20190720095423j:plain]<figcaption>frontend de kanpai
+<figure title="frontend de kanpai">[f:id:silverbirder180:20190720095423j:plain]<figcaption>frontend de kanpai
 </figcaption></figure>
-<figure class="figure-image figure-image-fotolife" title="frontend de kanpai tech board">[f:id:silverbirder180:20190720095451j:plain]<figcaption>frontend de kanpai tech board</figcaption></figure>
+<figure title="frontend de kanpai tech board">[f:id:silverbirder180:20190720095451j:plain]<figcaption>frontend de kanpai tech board</figcaption></figure>
 firebaseの勢いがすごい。あとnowも多少人気で、now信者の私とっては嬉しい 。
-<figure class="figure-image figure-image-fotolife" title="frontend de kanpai novelty">[f:id:silverbirder180:20190720095654j:plain]<figcaption>frontend de kanpai novelty</figcaption></figure> 
+<figure title="frontend de kanpai novelty">[f:id:silverbirder180:20190720095654j:plain]<figcaption>frontend de kanpai novelty</figcaption></figure> 
 
-※ [https://twitter.com/DeNACreators/status/1152199891860389888]  
-※ [https://twitter.com/antidotech/status/1152154690617872384]  
-※ [https://twitter.com/wanami3103/status/1152202843618603008]  
+※ [https://twitter.com/DeNACreators/status/1152199891860389888](https://twitter.com/DeNACreators/status/1152199891860389888)  
+※ [https://twitter.com/antidotech/status/1152154690617872384](https://twitter.com/antidotech/status/1152154690617872384)  
+※ [https://twitter.com/wanami3103/status/1152202843618603008](https://twitter.com/wanami3103/status/1152202843618603008)  
 
 [:contents]
 
 # イベント概要
 > 「Frontend de KANPAI!」（以下、FROKAN）は、フロントエンドエンジニアやフロントエンドに興味がある人が集い、ドリンク片手にゆるく交流・技術交換ができるコミュニティを目指しています。
 
-※ [https://frokan.connpass.com/event/135584/]
+※ [https://frokan.connpass.com/event/135584/](https://frokan.connpass.com/event/135584/)
 
 特徴的だったのが立食形式という点です。
 会場には多少の椅子が用意されているものの、ほとんどの人が立ってドリンクを持ちながら、登壇者のお話を聞いていました。
@@ -88,8 +88,8 @@ Google翻訳を通すと
 どれもサクッと簡単に動作していましたが、まだ実験的な機能なため安定しない部分もあるそうです。
 
 次の画像は顔検出した箇所にモザイクを入れるデモです。これは笑いました。
-<figure class="figure-image figure-image-fotolife" title="Shape Detection API Demo">[f:id:silverbirder180:20190720110709j:plain]<figcaption>Shape Detection API Demo</figcaption></figure>
-※ [https://twitter.com/antidotech/status/1152180161413931008]
+<figure title="Shape Detection API Demo">[f:id:silverbirder180:20190720110709j:plain]<figcaption>Shape Detection API Demo</figcaption></figure>
+※ [https://twitter.com/antidotech/status/1152180161413931008](https://twitter.com/antidotech/status/1152180161413931008)
 
 ちなみに、Fuguという名前の由来は、
 「ネイティブな部分を操作することは色々な事ができるようになり夢が広がるが、使い所を誤ると危険なもの」という話から

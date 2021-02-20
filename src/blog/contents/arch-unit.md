@@ -6,8 +6,6 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2020/11/28/
 
 ArchUnitをというものを最近知りました。依存関係のテストができるそうです。さっそく試してみたいと思いますので、その備忘録として残しておきます。
 
@@ -22,8 +20,10 @@ ArchUnitをというものを最近知りました。依存関係のテストが
 Javaのアーキテクチャをテストできるライブラリで、パッケージやクラス、レイヤー、スライス（？）の依存関係をテストできるそうです。
 そこで、親の顔よりも見たこの図をテストしたいと思います。
 
-[https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg:image=https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg]
-※ [https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html]
+<figure title="Clean Coder Blog > The Clean Architecture">
+<img alt="clean architecture overview" src="https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg">
+<figcaption><a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">Clean Coder Blog > The Clean Architecture</a></figcaption>
+</figure>
 
 # TypescriptでもArchUnitしたい
 
@@ -106,7 +106,10 @@ import "../../1_enterprise_business_rules/entities/Entity"
 
 UMLを可視化すると、下記の図のとおりです。
 
-<figure class="figure-image figure-image-fotolife" title="clean_architecture.puml">[f:id:silverbirder180:20201128114839p:plain]<figcaption>clean_architecture.puml</figcaption></figure>
+<figure title="clean_architecture.puml">
+<img alt="clean_architecture.puml" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201128/20201128114839.png">
+<figcaption>clean_architecture.puml</figcaption>
+</figure>
 
 テストコードは、下記のとおりです。
 
@@ -126,7 +129,10 @@ describe("architecture", () => {
 ```
 
 このテストケースはPASSします。
-<figure class="figure-image figure-image-fotolife" title="src/clean_architecture.test.ts &gt; architecture &gt; Check dependency #Succeed">[f:id:silverbirder180:20201128115326p:plain]<figcaption>src/clean_architecture.test.ts &gt; architecture &gt; Check dependency #Succeed</figcaption></figure>
+<figure title="src/clean_architecture.test.ts > architecture > Check dependency #Succeed">
+<img alt="src/clean_architecture.test.ts > architecture > Check dependency #Succeed" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201128/20201128115326.png">
+<figcaption>src/clean_architecture.test.ts > architecture > Check dependency #Succeed</figcaption>
+</figure>
 
 では、違反コードを書いてみます。
 
@@ -138,8 +144,10 @@ import "../../4_frameworks_and_drivers/web/Web"
 
 3レイヤーが上位の4レイヤーを使用しています。この状態でテストを実行すると、
 
-<figure class="figure-image figure-image-fotolife" title="src/clean_architecture.test.ts &gt; architecture &gt; Check dependency #Failed">[f:id:silverbirder180:20201128115543p:plain]<figcaption>src/clean_architecture.test.ts &gt; architecture &gt; Check dependency #Failed</figcaption></figure>
-
+<figure title="src/clean_architecture.test.ts > architecture > Check dependency #Failed">
+<img alt="src/clean_architecture.test.ts > architecture > Check dependency #Failed" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201128/20201128115543.png">
+<figcaption>src/clean_architecture.test.ts > architecture > Check dependency #Failed</figcaption>
+</figure>
 
 見事Failedとなりました。つまり、依存関係の誤りを自動的に検出することができます。
 

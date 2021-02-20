@@ -9,7 +9,7 @@ icon: 😎
 # Links
 https://silverbirder180.hatenablog.com/entry/2019/07/27/110811
 
-<figure class="figure-image figure-image-fotolife" title="cloud native days tokyo 2019">[f:id:silverbirder180:20190722232033p:plain]<figcaption>cloud native days tokyo 2019</figcaption></figure>
+<figure title="cloud native days tokyo 2019">[f:id:silverbirder180:20190722232033p:plain]<figcaption>cloud native days tokyo 2019</figcaption></figure>
 
 今回、東京が開催されましたCloud Native Days Tokyo 2019に2日間とも参加してきましたので、報告しようと思います。
 セッション毎の報告というより、全体を通した感想を話そうかなと思います。
@@ -31,7 +31,7 @@ https://silverbirder180.hatenablog.com/entry/2019/07/27/110811
 
 次の図では、CNCFプロジェクトの180日間におけるCommit数をグラフ化したものです。
 生みの親であるGoogleが1位でindependent(個人)が2番目、日本企業Fujitsuが6位です。熱意が伝わってきますね。  　
-<figure class="figure-image figure-image-fotolife" title="https://www.stackalytics.com/cncf?date=180">[f:id:silverbirder180:20190724211327p:plain]<figcaption>https://www.stackalytics.com/cncf?date=180</figcaption></figure>
+<figure title="https://www.stackalytics.com/cncf?date=180">[f:id:silverbirder180:20190724211327p:plain]<figcaption>https://www.stackalytics.com/cncf?date=180</figcaption></figure>
 ※ 2019/07/24時点
 
 ただ、CNCFのメンバーとして日本企業は<b>17社</b>しかないそうで、まだまだこれからといったところでしょうか。
@@ -47,7 +47,7 @@ https://silverbirder180.hatenablog.com/entry/2019/07/27/110811
 # CloudNativeとは？
 > クラウドネイティブ技術は、パブリッククラウド、プライベートクラウド、ハイブリッドクラウドなどの近代的でダイナミックな環境において、スケーラブルなアプリケーションを構築および実行するための能力を組織にもたらします。 このアプローチの代表例に、コンテナ、サービスメッシュ、マイクロサービス、イミューダブルインフラストラクチャ、および宣言型APIがあります。
 
-※ [https://github.com/cncf/toc/blob/master/DEFINITION.md#日本語版]
+※ [https://github.com/cncf/toc/blob/master/DEFINITION.md#日本語版](https://github.com/cncf/toc/blob/master/DEFINITION.md#日本語版)
 
 「スケーラブルなアプリケーションを構築および実行」が重要です。これを実現する手段の１つにKubernetesがあります。
 「CloudNative = Kubernetes」ではなく、「CloudNative ∋　Kubernetes」という感じです。
@@ -171,7 +171,7 @@ Kubernetesでアプリケーションを構築すると、分散システムの�
 [https://twitter.com/ca_adtechstudio/status/1152080444445167616:embed]
 
 さっそく、キーボードにとりつけてみました。最高です！
-<figure class="figure-image figure-image-fotolife" title="ergodox with k8s keycap (cyberAgent)">[f:id:silverbirder180:20190724202409j:plain]<figcaption>ergodox with k8s keycap (cyberAgent)</figcaption></figure>
+<figure title="ergodox with k8s keycap (cyberAgent)">[f:id:silverbirder180:20190724202409j:plain]<figcaption>ergodox with k8s keycap (cyberAgent)</figcaption></figure>
 
 こちらのサービスから作られたそうで、私も自前で何か作ってみようかなと思いました。
 [http://www.wasdkeyboards.com/index.php/products/printed-keycap-singles/custom-art-cherry-mx-keycaps.html]

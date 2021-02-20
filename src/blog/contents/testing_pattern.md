@@ -32,7 +32,7 @@ Webアプリでも、Cacheをテストする必要がありそうです。
 
 [https://github.com/ai/size-limit:embed]
 
-<figure class="figure-image figure-image-fotolife" title="https://github.com/ai/size-limit">[f:id:silverbirder180:20200617070042p:plain]<figcaption>https://github.com/ai/size-limit</figcaption></figure>
+<figure title="https://github.com/ai/size-limit">[f:id:silverbirder180:20200617070042p:plain]<figcaption>https://github.com/ai/size-limit</figcaption></figure>
 
 ## Complexity Test
 
@@ -47,7 +47,7 @@ Copy&Pasteは、DRYの原則に反するため、特別な理由がない限り�
 
 [https://github.com/kucherenko/jscpd:embed]
 
-<figure class="figure-image figure-image-fotolife" title="https://github.com/kucherenko/jscpd">[f:id:silverbirder180:20200617070137p:plain]<figcaption>https://github.com/kucherenko/jscpd</figcaption></figure>
+<figure title="https://github.com/kucherenko/jscpd">[f:id:silverbirder180:20200617070137p:plain]<figcaption>https://github.com/kucherenko/jscpd</figcaption></figure>
 
 ## Cross Browser/Platform Test
 
@@ -78,7 +78,7 @@ Webアプリを、端から端まで (End To End: E2E)を検証します。
 
 不安定なテストのことを指します。これに対するアプローチ方法の１つに、Google社の資料があります。
 
-[https://static.googleusercontent.com/media/research.google.com/ja//pubs/archive/45880.pdf]
+[https://static.googleusercontent.com/media/research.google.com/ja//pubs/archive/45880.pdf](https://static.googleusercontent.com/media/research.google.com/ja//pubs/archive/45880.pdf)
 
 日本人がまとめて頂いたものが、次の資料です。
 [https://speakerdeck.com/nihonbuson/flakytests:embed]
@@ -101,7 +101,7 @@ INFO, WARN, ERRORなどがルールに基づいて使い分けされているか
 テストのパターン網羅が難しい場合や、パターン網羅できているけどダメ押しで、このテストをします。
 
 [https://github.com/marmelab/gremlins.js/:embed]
-<figure class="figure-image figure-image-fotolife" title="https://github.com/marmelab/gremlins.js">[f:id:silverbirder180:20200617070229g:plain]<figcaption>https://github.com/marmelab/gremlins.js</figcaption></figure>
+<figure title="https://github.com/marmelab/gremlins.js">[f:id:silverbirder180:20200617070229g:plain]<figcaption>https://github.com/marmelab/gremlins.js</figcaption></figure>
 
 ## Multi Tenanct Test
 
@@ -115,7 +115,7 @@ INFO, WARN, ERRORなどがルールに基づいて使い分けされているか
 もし、プロダクトコードを壊しても、テストが成功してしまうと、それは正しくテストできていません。
 
 [https://github.com/stryker-mutator/stryker:embed]
-<figure class="figure-image figure-image-fotolife" title="https://stryker-mutator.io/stryker/quickstart">[f:id:silverbirder180:20200617070455g:plain]<figcaption>https://stryker-mutator.io/stryker/quickstart</figcaption></figure>
+<figure title="https://stryker-mutator.io/stryker/quickstart">[f:id:silverbirder180:20200617070455g:plain]<figcaption>https://stryker-mutator.io/stryker/quickstart</figcaption></figure>
 
 ## Chaos Test
 
@@ -163,7 +163,7 @@ Webアプリへ流入数を改善するためには、SEOは不可欠です。
 lighthouseというツールでSEOスコアを見ることができるみたいです。
 
 [https://github.com/GoogleChrome/lighthouse-ci:embed]
-<figure class="figure-image figure-image-fotolife" title="https://github.com/GoogleChrome/lighthouse-ci">[f:id:silverbirder180:20200617214926p:plain]<figcaption>https://github.com/GoogleChrome/lighthouse-ci</figcaption></figure>
+<figure title="https://github.com/GoogleChrome/lighthouse-ci">[f:id:silverbirder180:20200617214926p:plain]<figcaption>https://github.com/GoogleChrome/lighthouse-ci</figcaption></figure>
 
 ## Smoke Test
 
@@ -238,7 +238,7 @@ Unitテストで、どこをテストできたかのカバレッジを見るこ�
 見た目の変化を監視する必要があります。例えば、リンク切れとかがあれば、検出するべきです。
 
 [https://github.com/garris/BackstopJS:embed]
-<figure class="figure-image figure-image-fotolife" title="https://github.com/garris/BackstopJS">[f:id:silverbirder180:20200617070556p:plain]<figcaption>https://github.com/garris/BackstopJS</figcaption></figure>
+<figure title="https://github.com/garris/BackstopJS">[f:id:silverbirder180:20200617070556p:plain]<figcaption>https://github.com/garris/BackstopJS</figcaption></figure>
 
 # 最後に
 どういうテストの観点があるのか、調べたり、経験則よりざっと書いてみました。

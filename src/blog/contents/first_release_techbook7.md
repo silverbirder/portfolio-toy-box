@@ -9,7 +9,7 @@ icon: 😎
 # Links
 https://silverbirder180.hatenablog.com/entry/2019/08/30/103159
 
-<figure class="figure-image figure-image-fotolife" title="はじめてのWeb Components入門 表紙">[f:id:silverbirder180:20190829230747p:plain]<figcaption>はじめてのWeb Components入門 表紙</figcaption></figure>
+<figure title="はじめてのWeb Components入門 表紙">[f:id:silverbirder180:20190829230747p:plain]<figcaption>はじめてのWeb Components入門 表紙</figcaption></figure>
 
 この度、初めて書籍を出版することになりました！
 「はじめてのWeb Components入門」本を技術書典7で販売します。
@@ -109,7 +109,7 @@ Webが大好きな私にとっては、Web Componentsという技術に興味が
 2019年09月22日で、「池袋サンシャインシティ 展示ホールC/D」で販売します。
 弊サークル「silverbirder」の配置は「う03C」です。
 
-<figure class="figure-image figure-image-fotolife" title="貴サークル「silverbirder」う03C ">[f:id:silverbirder180:20190830002719p:plain]<figcaption>貴サークル「silverbirder」う03C </figcaption></figure>
+<figure title="貴サークル「silverbirder」う03C ">[f:id:silverbirder180:20190830002719p:plain]<figcaption>貴サークル「silverbirder」う03C </figcaption></figure>
 
 
 # 販売形態は？

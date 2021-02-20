@@ -25,8 +25,8 @@ Hangouts MeetやZoomといったビデオ会議ツールを使う機会が増え
 [https://ja.wikipedia.org/wiki/バ美肉:embed]
 
 これにより、ビデオ会議(例はZoom)で、次のようなバーチャル美少女 (になりきった私)が参加できるようになります。もちろん、声もボイスチェンジできます。
-<figure class="figure-image figure-image-fotolife" title="バーチャル美少女 (私)">[f:id:silverbirder180:20200308101851p:plain]<figcaption>バーチャル美少女 (私)</figcaption></figure>
-<figure class="figure-image figure-image-fotolife" title="Whiteboard in Zoom">[f:id:silverbirder180:20200308173549p:plain]<figcaption>Whiteboard in Zoom</figcaption></figure>
+<figure title="バーチャル美少女 (私)">[f:id:silverbirder180:20200308101851p:plain]<figcaption>バーチャル美少女 (私)</figcaption></figure>
+<figure title="Whiteboard in Zoom">[f:id:silverbirder180:20200308173549p:plain]<figcaption>Whiteboard in Zoom</figcaption></figure>
 
 Windowsでは、[Facerig](https://store.steampowered.com/app/274920/FaceRig/?l=japanese)というアプリで簡単に構築できるみたいです。
 
@@ -37,7 +37,7 @@ Mac + Bootcamp → Windows10 + Facering  でもできると思いますが、動
 
 私は、次のような構成になりました。
 
-<figure class="figure-image figure-image-fotolife" title="&quot;バ美肉&quot; &#x27;s structure">[f:id:silverbirder180:20200308123745p:plain]<figcaption>&quot;バ美肉&quot; &#x27;s structure</figcaption></figure>
+<figure title="&quot;バ美肉&quot; &#x27;s structure">[f:id:silverbirder180:20200308123745p:plain]<figcaption>&quot;バ美肉&quot; &#x27;s structure</figcaption></figure>
 
 音声と動画の2つに分かれます。
 また、ビデオ会議ツールと連携するため、仮想デバイス(Soundflower, CamTwist)が必要になります。
@@ -52,8 +52,8 @@ Gachikoeを使いました。
 
 Gachikoeは、次のような設定にしました。
 
-<figure class="figure-image figure-image-fotolife" title="Gachikoe">[f:id:silverbirder180:20200308171514p:plain]<figcaption>Gachikoe</figcaption></figure>
-<figure class="figure-image figure-image-fotolife" title="Gachikoe settings">[f:id:silverbirder180:20200308171539p:plain]<figcaption>Gachikoe settings</figcaption></figure>
+<figure title="Gachikoe">[f:id:silverbirder180:20200308171514p:plain]<figcaption>Gachikoe</figcaption></figure>
+<figure title="Gachikoe settings">[f:id:silverbirder180:20200308171539p:plain]<figcaption>Gachikoe settings</figcaption></figure>
 
 Outputを soundflower (2ch)にしています。
 
@@ -67,7 +67,7 @@ Outputを soundflower (2ch)にしています。
 
 LadioCastは、次のような設定にしました。
 
-<figure class="figure-image figure-image-fotolife" title="LadioCast">[f:id:silverbirder180:20200308171630p:plain]<figcaption>LadioCast</figcaption></figure>
+<figure title="LadioCast">[f:id:silverbirder180:20200308171630p:plain]<figcaption>LadioCast</figcaption></figure>
 
 Inputを soundflower (2ch)とし、Outputを soundflower (64ch)としています。
 
@@ -81,7 +81,7 @@ Inputを soundflower (2ch)とし、Outputを soundflower (64ch)としていま�
 3teneは、特に設定は必要ありません。
 撮影前には、Webカメラとリップシンク(口の動きの同期)を起動しておきましょう。
 
-<figure class="figure-image figure-image-fotolife" title="3tene">[f:id:silverbirder180:20200308171751p:plain]<figcaption>3tene</figcaption></figure>
+<figure title="3tene">[f:id:silverbirder180:20200308171751p:plain]<figcaption>3tene</figcaption></figure>
 
 
 #### Asserts
@@ -100,12 +100,12 @@ Realityは、特に設定は必要ありません。
 好みのキャラクターをカスタマイズして簡単に作れます。
 
 私は、これです。
-<figure class="figure-image figure-image-fotolife" title="https://reality.wrightflyer.net/profile/443e9213">[f:id:silverbirder180:20200308135013j:plain]<figcaption>https://reality.wrightflyer.net/profile/443e9213</figcaption></figure>
+<figure title="https://reality.wrightflyer.net/profile/443e9213">[f:id:silverbirder180:20200308135013j:plain]<figcaption>https://reality.wrightflyer.net/profile/443e9213</figcaption></figure>
 
 iPhoneで撮影している画面をMacに反映する必要があります。
 MacとiPhoneを接続し、QuickTime Playerへ出力します。こんな感じです。
 
-<figure class="figure-image figure-image-fotolife" title="iPhone To QuickTime Player">[f:id:silverbirder180:20200308172222p:plain]<figcaption>iPhone To QuickTime Player</figcaption></figure>
+<figure title="iPhone To QuickTime Player">[f:id:silverbirder180:20200308172222p:plain]<figcaption>iPhone To QuickTime Player</figcaption></figure>
 
 noneは、私のiPhoneデバイス名です。
 
@@ -116,7 +116,7 @@ CamTwistという仮想カメラを使いました。
 
 CamTwistは、次のような設定にしました。
 
-<figure class="figure-image figure-image-fotolife" title="CamTwist">[f:id:silverbirder180:20200308172329p:plain]<figcaption>CamTwist</figcaption></figure>
+<figure title="CamTwist">[f:id:silverbirder180:20200308172329p:plain]<figcaption>CamTwist</figcaption></figure>
 例では、QuickTime Playerのアプリケーションを選択しています。3teneの場合は、3teneの選択肢を選択すれば良いです。
 
 # 使い方 (Zoom)
@@ -124,11 +124,11 @@ CamTwistは、次のような設定にしました。
 今まで説明したものを起動した状態で、Zoomを起動します。
 Zoomは、次のような設定にしました。
 
-<figure class="figure-image figure-image-fotolife" title="Zoom &gt; Settings &gt; Video">[f:id:silverbirder180:20200308174057p:plain]<figcaption>Zoom &gt; Settings &gt; Video</figcaption></figure>
+<figure title="Zoom &gt; Settings &gt; Video">[f:id:silverbirder180:20200308174057p:plain]<figcaption>Zoom &gt; Settings &gt; Video</figcaption></figure>
 
 動画は、CamTwistから取得するようにします。
 
-<figure class="figure-image figure-image-fotolife" title="Zoom &gt; Settings &gt; Audio">[f:id:silverbirder180:20200308174235p:plain]<figcaption>Zoom &gt; Settings &gt; Audio</figcaption></figure>
+<figure title="Zoom &gt; Settings &gt; Audio">[f:id:silverbirder180:20200308174235p:plain]<figcaption>Zoom &gt; Settings &gt; Audio</figcaption></figure>
 
 音声は、Soundeflower (64ch)から取得するようにします。
 

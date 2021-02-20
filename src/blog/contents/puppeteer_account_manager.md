@@ -99,7 +99,7 @@ Dockerコンテナで動作できるようにしているので、ローカル�
 |  LinkedIn  |  通常認証  |
 
 詳しくは、
-[https://github.com/Silver-birder/puppeteer-account-manager/blob/master/src/index.ts] をご確認下さい。
+[https://github.com/Silver-birder/puppeteer-account-manager/blob/master/src/index.ts](https://github.com/Silver-birder/puppeteer-account-manager/blob/master/src/index.ts) をご確認下さい。
 
 # どんな学びがあった？
 
@@ -114,7 +114,7 @@ Webサービスが返すHTMLは、いつもずっと変わらないことはあ�
 例えば、
 
 * ボタンやリンクをクリックしてページ遷移するのではなく、目的のページへ最短で直接遷移する
-    * [https://medium.com/me] とか。
+    * [https://medium.com/me](https://medium.com/me) とか。
 * submitボタンをクリックするのではなく、エンターキーを入力する
 
 です。こうすることで、安定した自動化ができました。

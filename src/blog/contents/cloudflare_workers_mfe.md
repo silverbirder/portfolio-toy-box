@@ -43,7 +43,7 @@ ESIは、SSIと似たようなもので、サーバーサイド側でコンテ�
 
 次のような構成を考えてみました。
 
-<figure class="figure-image figure-image-fotolife" title="Cloudflare worker + Micro Frontends">[f:id:silverbirder180:20201114000721p:plain]<figcaption>Cloudflare Workers + Micro Frontends</figcaption></figure>
+<figure title="Cloudflare worker + Micro Frontends">[f:id:silverbirder180:20201114000721p:plain]<figcaption>Cloudflare Workers + Micro Frontends</figcaption></figure>
 
 ※ [Podium](https://podium-lib.io/)と[Ara-Framework](https://ara-framework.github.io/website/) に影響されています。  
 ※ [draw.io](https://draw.io/)のsketch styleで書きました。

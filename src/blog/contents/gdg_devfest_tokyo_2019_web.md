@@ -46,7 +46,7 @@ GDG DevFest Tokyo 2019というイベントに参加してきました。
 DevFests自体は、グローバルで活動されているGDGがホストのイベントです。
 下の図は、<b>2019年</b>の活動実績&予定です。全国各地で広く活発的に行われていることが分かると思います。
 
-<figure class="figure-image figure-image-fotolife" title="Find an upcoming community-led  DevFest near you">[f:id:silverbirder180:20191215102950p:plain]<figcaption>Find an upcoming community-led  DevFest near you</figcaption></figure>
+<figure title="Find an upcoming community-led  DevFest near you">[f:id:silverbirder180:20191215102950p:plain]<figcaption>Find an upcoming community-led  DevFest near you</figcaption></figure>
 
 また、コミュニティのYoutubeのチャンネルもあります。
 

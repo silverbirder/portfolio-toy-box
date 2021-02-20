@@ -9,7 +9,7 @@ icon: 😎
 # Links
 https://silverbirder180.hatenablog.com/entry/2019/06/01/182255
 
-<figure class="figure-image figure-image-fotolife" title="kubernetes osaka satellite">[f:id:silverbirder180:20190601112302p:plain]<figcaption>kubernetes osaka Satellite</figcaption></figure>
+<figure title="kubernetes osaka satellite">[f:id:silverbirder180:20190601112302p:plain]<figcaption>kubernetes osaka Satellite</figcaption></figure>
 [https://k8sjp-osaka.connpass.com/event/131981/:embed]
 
 大阪からKubernetes Meetup Tokyoに参加できるとのことで、こちらに参加してきました。
@@ -27,7 +27,7 @@ Kubernetesの生みの親である3人の内の1人のJoe Bedaから、**Kuberne
 # Who is Joe Beda ?
 > Joe Beda は、Kubernetes の co-founder（共同創設者/最初に開発した3人のうちの1人）/ 昨年 VMware に買収された Heptio の CTO / O'Reilly「Kubernetes: Up & Running」 (邦題「入門Kubernetes」）の共著者で、現在も Kubernetes をリードしている1人です。今回は、Kubernetes のこれまでと未来についてお話いただきます。
 
-※ [https://k8sjp.connpass.com/event/126207/]
+※ [https://k8sjp.connpass.com/event/126207/](https://k8sjp.connpass.com/event/126207/)
 
 Kubernetesの最初のコミッターで、超有名人。
 Googleで働いていたときは、KubernetesやCompute Engineを作っていたそうです。
@@ -75,7 +75,7 @@ Kubernetesとは、「コンテナオーケストレーター」と多くの人�
 他の観点で「１つのデータベースだけでクラスタを管理している設計」が魅力的だという話がありました。
 （勝手な解釈かもしれません。すみません）
 
-<figure class="figure-image figure-image-fotolife" title="kubernetes overview">[f:id:silverbirder180:20190601152418p:plain]<figcaption>kubernetes overview</figcaption></figure>
+<figure title="kubernetes overview">[f:id:silverbirder180:20190601152418p:plain]<figcaption>kubernetes overview</figcaption></figure>
 
 Kubernetesでは、クラスタの状態を管理するために分散型KVSである[etcd](https://github.com/etcd-io/etcd)を使っています(その他の状態管理はキャッシュしているそうです。)。
 etcdには、APIServerを経由しなければアクセスできないため、一貫したデータの維持が実現できます。
@@ -85,7 +85,7 @@ etcdには、APIServerを経由しなければアクセスできないため、�
 kubernetesのcontrol planeである、APIServer, Scheduler, Controller Managerがあれば、シングルノードでもマルチノードでも動きます。
 kubernetesをDockerForMacで動かしたときは、そういえばシングルノードでしたね。マルチノードってイメージでしたけど。
 
-<figure class="figure-image figure-image-fotolife" title="kubernetes jazz Improv">[f:id:silverbirder180:20190601154007p:plain]<figcaption>kubernetes jazz Improv</figcaption></figure>
+<figure title="kubernetes jazz Improv">[f:id:silverbirder180:20190601154007p:plain]<figcaption>kubernetes jazz Improv</figcaption></figure>
 
 Kubernetesはコンテナオーケストレーションとよく言われますが、事前にすべてがプランされたオーケストレーションではなく、ジャズのように即興で計画して組み立てていくものに近い思想だそうです。
 私は音楽に疎い人なのですが意味は理解しました。（笑）性格的には即興は苦手っす。
@@ -148,7 +148,7 @@ Yahooでは、gimbalというOSSを使ってKubernetesを導入したみたい�
 今回使わさせて頂いた場所は、会議室でしょうか。
 30,40人ぐらい入れるスペースで、清潔感がありました。
 
-<figure class="figure-image figure-image-fotolife" title="kubernetes osaka satelite aiming">[f:id:silverbirder180:20190601172018j:plain]<figcaption>kubernetes osaka satelite aiming</figcaption></figure>
+<figure title="kubernetes osaka satelite aiming">[f:id:silverbirder180:20190601172018j:plain]<figcaption>kubernetes osaka satelite aiming</figcaption></figure>
 
 東京との中継は、ときどき音声が途切れてしまうときもありますが、しっかりと写っていました。
 ただ、コンテンツとしては、YouTubeにあげらているので、わざわざOsakaに出席しなくても良いのでは？とも思いました。

@@ -6,18 +6,23 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2019/06/29/171518
 
 大阪のグランフロント大阪で開かれました「AWS Summit Osaka 2019」に参加してきましたので、
 私の中で良かった３つのセッションを紹介したいなと思います。
 
 [https://aws.amazon.com/jp/summits/osaka-2019/:embed]
-<figure class="figure-image figure-image-fotolife" title="AWS Summit Osaka 2019">[f:id:silverbirder180:20190627232406p:plain]<figcaption>AWS Summit Osaka 2019</figcaption></figure>
-<figure class="figure-image figure-image-fotolife" title="もらったもの">[f:id:silverbirder180:20190627232409p:plain]<figcaption>もらったもの</figcaption></figure>
 
-hastagはこちら
-[https://twitter.com/hashtag/AWSSummit:embed]
+<figure title="AWS Summit Osaka 2019">
+<img alt="AWS Summit Osaka 2019" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190627/20190627232406.png">
+<figcaption>AWS Summit Osaka 2019</figcaption>
+</figure>
+
+<figure title="もらったもの">
+<img alt="もらったもの" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190627/20190627232409.png">
+<figcaption>もらったもの</figcaption>
+</figure>
+
+hastagはこちら [#AWSSummit](https://twitter.com/hashtag/AWSSummit)
 
 私のメモはこちら
 [https://scrapbox.io/silverbirder-memo/AWS_Summit_Osaka_2019:embed]
@@ -38,14 +43,17 @@ xRと呼ばれる３つのRについて説明がありました。
 
 VRやARについては、広く知れ渡っていると思いますが、MRははじめて聞きました。  
 
-VRは、Oculus Questのようなヘッドセットで仮想世界に没入できます。    
+VRは、Oculus Questのようなヘッドセットで仮想世界に没入できます。  
+  
 [https://www.youtube.com/watch?v=BqM27iLnDJs:embed]
 
 ARは、ポケモンGoのようなアプリで現実世界に仮想のキャラクタを投影できます。
+
 [https://www.youtube.com/watch?time_continue=11&v=E7nwr6sA6Es:embed]
   
 MRは、VRとARのMixみたいな感じですね。ヘッドセットをかぶりながら、現実世界に仮想世界がmixされた景色が見えます。  
 代表的なものとして、Microsoft HoloLensがあります。  
+
 [https://www.youtube.com/watch?time_continue=69&v=KXkmyhoIcGQ:embed]
 
 Amazon Sumerianは、このVR/ARにフォーカスしたサービスになります。
@@ -78,6 +86,7 @@ xRはWeb好きな私でも興味がある技術です。Sumerianをつかうこ�
 （他のクラウドサービスにはxR向けサービスないのですかね...?）
 
 [https://aws.amazon.com/jp/sumerian/pricing/:embed]
+
 [https://aws.amazon.com/jp/sumerian/:embed]
 
 ※ 下記のレポートもご参考下さい

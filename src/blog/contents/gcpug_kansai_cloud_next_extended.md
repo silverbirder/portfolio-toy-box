@@ -9,7 +9,7 @@ icon: 😎
 # Links
 https://silverbirder180.hatenablog.com/entry/2019/05/22/001426
 
-<figure class="figure-image figure-image-fotolife" title="GCPUG Kansai Cloud Next Extended 案内板">[f:id:silverbirder180:20190521230529j:plain]<figcaption>GCPUG Kansai Cloud Next Extended 案内板</figcaption></figure>
+<figure title="GCPUG Kansai Cloud Next Extended 案内板">[f:id:silverbirder180:20190521230529j:plain]<figcaption>GCPUG Kansai Cloud Next Extended 案内板</figcaption></figure>
 
 [https://gcpug-osaka.connpass.com/event/128130/:embed]
 

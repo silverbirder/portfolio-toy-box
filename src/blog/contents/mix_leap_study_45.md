@@ -28,14 +28,14 @@ Googleが主催する、開発者向けイベントです。
 Google I/Oでは、WEBやGoogleが出しているガジェットなど様々な技術情報についてセッションが行われています。
 https://events.google.com/io/
 
-※ [https://yahoo-osaka.connpass.com/event/132601/]
+※ [https://yahoo-osaka.connpass.com/event/132601/](https://yahoo-osaka.connpass.com/event/132601/)
 
 # WWDC（Worldwide Developers Conference）とは？
 Appleが毎年開発している、開発者向けイベントです。
 WWDCでは、appleの新製品の紹介や新しい技術についての発表が行われています。  
 https://developer.apple.com/wwdc19/
 
-※ [https://yahoo-osaka.connpass.com/event/132601/]
+※ [https://yahoo-osaka.connpass.com/event/132601/](https://yahoo-osaka.connpass.com/event/132601/)
 
 ヤフーでは、google I/OとWWDCの両方に約30名の社員が参加したそうです。
 すごい数ですね。

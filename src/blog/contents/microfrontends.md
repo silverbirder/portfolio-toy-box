@@ -31,7 +31,7 @@ ECサイトのようなWebアプリケーションでは、様々な専門知識
 > それはマイクロサービスの考え方をフロントエンドに拡張したものです。
 [https://micro-frontends-japanese.org/resources/monolith-frontback-microservices.png:image=https://micro-frontends-japanese.org/resources/monolith-frontback-microservices.png]
 [https://micro-frontends-japanese.org/resources/verticals-headline.png:image=https://micro-frontends-japanese.org/resources/verticals-headline.png]
-※ [https://micro-frontends-japanese.org]
+※ [https://micro-frontends-japanese.org](https://micro-frontends-japanese.org)
 
 要は、バックエンドだけでなく、バックエンドからフロントエンドまでをマイクロサービス化することです。
 
@@ -109,7 +109,7 @@ ECサイトだけでなく、Spotifyのようなサービスにも適用され�
 
 > Hydration refers to the client-side process during which Vue takes over the static HTML sent by the server and turns it into dynamic DOM that can react to client-side data changes.
 
-※ [https://ssr.vuejs.org/guide/hydration.html]
+※ [https://ssr.vuejs.org/guide/hydration.html](https://ssr.vuejs.org/guide/hydration.html)
 
 Hydrationは、サーバーサイドでレンダリングした静的HTMLに、クライアントサイドの動的レンダリングができるようにするようなものです。
 

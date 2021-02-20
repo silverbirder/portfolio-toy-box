@@ -6,10 +6,9 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2020/10/29/201858
-
-<figure class="figure-image figure-image-fotolife" title="PexelsのAkil Mazumderによる写真">[f:id:silverbirder180:20201027191727j:plain]<figcaption>PexelsのAkil Mazumderによる写真</figcaption></figure>
+<figure title="PexelsのAkil Mazumderによる写真">
+<img alt="PexelsのAkil Mazumderによる写真" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201027/20201027191727.jpg"><figcaption>PexelsのAkil Mazumderによる写真</figcaption>
+</figure>
 
 私は、現在26歳のWebエンジニアです。これまでの技術に対する学び方と、これからの技術に対する学び方について、少し考えたいと思っています。
 
