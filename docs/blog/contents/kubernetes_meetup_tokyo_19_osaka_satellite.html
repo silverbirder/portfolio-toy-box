@@ -7,7 +7,7 @@
 <main>
 <h1 id="links"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#links"></a>Links</h1>
 <p>https://silverbirder180.hatenablog.com/entry/2019/06/01/182255</p>
-<figure class="figure-image figure-image-fotolife" title="kubernetes osaka satellite">[f:id:silverbirder180:20190601112302p:plain]<figcaption>kubernetes osaka Satellite</figcaption></figure>
+<figure title="kubernetes osaka satellite">[f:id:silverbirder180:20190601112302p:plain]<figcaption>kubernetes osaka Satellite</figcaption></figure>
 [https://k8sjp-osaka.connpass.com/event/131981/:embed]
 <p>大阪からKubernetes Meetup Tokyoに参加できるとのことで、こちらに参加してきました。
 Kubernetesの生みの親である3人の内の1人のJoe Bedaから、<strong>Kubernetesの歴史</strong>の経緯について教えて頂きました。
@@ -20,7 +20,7 @@ Kubernetesの生みの親である3人の内の1人のJoe Bedaから、<strong>K
 <blockquote>
 <p>Joe Beda は、Kubernetes の co-founder（共同創設者/最初に開発した3人のうちの1人）/ 昨年 VMware に買収された Heptio の CTO / O'Reilly「Kubernetes: Up &amp; Running」 (邦題「入門Kubernetes」）の共著者で、現在も Kubernetes をリードしている1人です。今回は、Kubernetes のこれまでと未来についてお話いただきます。</p>
 </blockquote>
-<p>※ [https://k8sjp.connpass.com/event/126207/]</p>
+<p>※ <a href="https://k8sjp.connpass.com/event/126207/">https://k8sjp.connpass.com/event/126207/</a></p>
 <p>Kubernetesの最初のコミッターで、超有名人。
 Googleで働いていたときは、KubernetesやCompute Engineを作っていたそうです。</p>
 <p>Joeさん曰く、プラットフォームで開発する上でおもしろいことは、下記２点のバランスだと仰っていました。</p>
@@ -57,14 +57,14 @@ OSSとしてKubernetesが誕生しました。
 <p>Kubernetesとは、「コンテナオーケストレーター」と多くの人は知っていると思います。普及した大きなポイントですね。
 他の観点で「１つのデータベースだけでクラスタを管理している設計」が魅力的だという話がありました。
 （勝手な解釈かもしれません。すみません）</p>
-<figure class="figure-image figure-image-fotolife" title="kubernetes overview">[f:id:silverbirder180:20190601152418p:plain]<figcaption>kubernetes overview</figcaption></figure>
+<figure title="kubernetes overview">[f:id:silverbirder180:20190601152418p:plain]<figcaption>kubernetes overview</figcaption></figure>
 <p>Kubernetesでは、クラスタの状態を管理するために分散型KVSである<a href="https://github.com/etcd-io/etcd">etcd</a>を使っています(その他の状態管理はキャッシュしているそうです。)。
 etcdには、APIServerを経由しなければアクセスできないため、一貫したデータの維持が実現できます。
 そのetcdの周りにある、ビジネスロジックを実現するコントローラー(<a href="https://kubernetes.io/docs/concepts/overview/components/">Scheduler, Controller Manager</a>)が価値を提供します。
 例えば、PodをNodeにアサインしたり、エンドポイントを提供したり、レプリケーションしたりなどなど...。</p>
 <p>kubernetesのcontrol planeである、APIServer, Scheduler, Controller Managerがあれば、シングルノードでもマルチノードでも動きます。
 kubernetesをDockerForMacで動かしたときは、そういえばシングルノードでしたね。マルチノードってイメージでしたけど。</p>
-<figure class="figure-image figure-image-fotolife" title="kubernetes jazz Improv">[f:id:silverbirder180:20190601154007p:plain]<figcaption>kubernetes jazz Improv</figcaption></figure>
+<figure title="kubernetes jazz Improv">[f:id:silverbirder180:20190601154007p:plain]<figcaption>kubernetes jazz Improv</figcaption></figure>
 <p>Kubernetesはコンテナオーケストレーションとよく言われますが、事前にすべてがプランされたオーケストレーションではなく、ジャズのように即興で計画して組み立てていくものに近い思想だそうです。
 私は音楽に疎い人なのですが意味は理解しました。（笑）性格的には即興は苦手っす。</p>
 <h3 id="crdとoperators"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#crdとoperators"></a>CRDとOperators</h3>
@@ -103,7 +103,7 @@ Operatorsというものが生まれました。</p>
 <p>会場場所は、グランフロント大阪タワーBの18階にありました。(高い!)
 今回使わさせて頂いた場所は、会議室でしょうか。
 30,40人ぐらい入れるスペースで、清潔感がありました。</p>
-<figure class="figure-image figure-image-fotolife" title="kubernetes osaka satelite aiming">[f:id:silverbirder180:20190601172018j:plain]<figcaption>kubernetes osaka satelite aiming</figcaption></figure>
+<figure title="kubernetes osaka satelite aiming">[f:id:silverbirder180:20190601172018j:plain]<figcaption>kubernetes osaka satelite aiming</figcaption></figure>
 <p>東京との中継は、ときどき音声が途切れてしまうときもありますが、しっかりと写っていました。
 ただ、コンテンツとしては、YouTubeにあげらているので、わざわざOsakaに出席しなくても良いのでは？とも思いました。</p>
 <p>しかし、それでもOsakaに出席しても良い面もあるのかなと思います。</p>

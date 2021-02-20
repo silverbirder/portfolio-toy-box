@@ -23,7 +23,7 @@ Webアプリでも、Cacheをテストする必要がありそうです。</p>
 <h2 id="code_size_test"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#code_size_test"></a>Code Size Test</h2>
 <p>大きなサイズのJSライブラリを読み込むと、レスポンスタイムが悪化してしまいます。そこで、常にコードサイズを計測する必要があります。</p>
 <p> <amp-embedly-card data-url="https://github.com/ai/size-limit" layout="responsive" data-card-theme="dark" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-2"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card> <amp-embedly-card data-url="https://github.com/ai/size-limit" layout="responsive" data-card-theme="light" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-3"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card></p>
-<figure class="figure-image figure-image-fotolife" title="https://github.com/ai/size-limit">[f:id:silverbirder180:20200617070042p:plain]<figcaption>https://github.com/ai/size-limit</figcaption></figure>
+<figure title="https://github.com/ai/size-limit">[f:id:silverbirder180:20200617070042p:plain]<figcaption>https://github.com/ai/size-limit</figcaption></figure>
 <h2 id="complexity_test"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#complexity_test"></a>Complexity Test</h2>
 <p>循環的複雑度(Cyclomatic complexity)は、制御文(ifやfor)の複雑さを計測します。
 複雑なコードは、バグの温床になりがちなので、極力シンプルなコードを心がけたいところです。</p>
@@ -31,7 +31,7 @@ Webアプリでも、Cacheをテストする必要がありそうです。</p>
 <h2 id="copy&amp;amp;paste_test"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#copy&amp;paste_test"></a>Copy&amp;Paste Test</h2>
 <p>Copy&amp;Pasteは、DRYの原則に反するため、特別な理由がない限りは、してはいけません。Copy&amp;Pasteを検出するツールがあるみたいです。</p>
 <p> <amp-embedly-card data-url="https://github.com/kucherenko/jscpd" layout="responsive" data-card-theme="dark" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-6"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card> <amp-embedly-card data-url="https://github.com/kucherenko/jscpd" layout="responsive" data-card-theme="light" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-7"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card></p>
-<figure class="figure-image figure-image-fotolife" title="https://github.com/kucherenko/jscpd">[f:id:silverbirder180:20200617070137p:plain]<figcaption>https://github.com/kucherenko/jscpd</figcaption></figure>
+<figure title="https://github.com/kucherenko/jscpd">[f:id:silverbirder180:20200617070137p:plain]<figcaption>https://github.com/kucherenko/jscpd</figcaption></figure>
 <h2 id="cross_browser/platform_test"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#cross_browser/platform_test"></a>Cross Browser/Platform Test</h2>
 <p>サポートするブラウザや、プラットフォーム(iOS,Android,Desktopなど)の動作検証が必要です。
 そのため、サポートするブラウザやプラットフォームの環境を準備しなければなりません。
@@ -51,7 +51,7 @@ Webアプリでも、Cacheをテストする必要がありそうです。</p>
 基本的には検査例外はエラーハンドリングし、非検査例外はエラーハンドリングしない方針が良いです。</p>
 <h2 id="flaky_test"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#flaky_test"></a>Flaky Test</h2>
 <p>不安定なテストのことを指します。これに対するアプローチ方法の１つに、Google社の資料があります。</p>
-<p>[https://static.googleusercontent.com/media/research.google.com/ja//pubs/archive/45880.pdf]</p>
+<p><a href="https://static.googleusercontent.com/media/research.google.com/ja//pubs/archive/45880.pdf">https://static.googleusercontent.com/media/research.google.com/ja//pubs/archive/45880.pdf</a></p>
 <p>日本人がまとめて頂いたものが、次の資料です。 <amp-embedly-card data-url="https://speakerdeck.com/nihonbuson/flakytests" layout="responsive" data-card-theme="dark" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-12"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card> <amp-embedly-card data-url="https://speakerdeck.com/nihonbuson/flakytests" layout="responsive" data-card-theme="light" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-13"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card></p>
 <h2 id="integration_test"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#integration_test"></a>Integration Test</h2>
 <p>Integration Testは、Unit Testのような単一機能を統合した検証になります。
@@ -66,7 +66,7 @@ INFO, WARN, ERRORなどがルールに基づいて使い分けされているか
 <p>お猿さんがランダムにテストするような、モンキーテストです。
 テストのパターン網羅が難しい場合や、パターン網羅できているけどダメ押しで、このテストをします。</p>
 <p> <amp-embedly-card data-url="https://github.com/marmelab/gremlins.js/" layout="responsive" data-card-theme="dark" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-14"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card> <amp-embedly-card data-url="https://github.com/marmelab/gremlins.js/" layout="responsive" data-card-theme="light" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-15"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card></p>
-<figure class="figure-image figure-image-fotolife" title="https://github.com/marmelab/gremlins.js">[f:id:silverbirder180:20200617070229g:plain]<figcaption>https://github.com/marmelab/gremlins.js</figcaption></figure>
+<figure title="https://github.com/marmelab/gremlins.js">[f:id:silverbirder180:20200617070229g:plain]<figcaption>https://github.com/marmelab/gremlins.js</figcaption></figure>
 <h2 id="multi_tenanct_test"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#multi_tenanct_test"></a>Multi Tenanct Test</h2>
 <p>マルチテナントは、企業者（利用者）毎に区別した、同一のシステムを提供する方式です。
 これは、企業毎にサブドメインを分けたりするため、その環境毎のテストが必要になります。</p>
@@ -75,7 +75,7 @@ INFO, WARN, ERRORなどがルールに基づいて使い分けされているか
 プロダクトコードを破壊することで、テストも壊れるかどうかを検証します。
 もし、プロダクトコードを壊しても、テストが成功してしまうと、それは正しくテストできていません。</p>
 <p> <amp-embedly-card data-url="https://github.com/stryker-mutator/stryker" layout="responsive" data-card-theme="dark" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-16"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card> <amp-embedly-card data-url="https://github.com/stryker-mutator/stryker" layout="responsive" data-card-theme="light" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-17"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card></p>
-<figure class="figure-image figure-image-fotolife" title="https://stryker-mutator.io/stryker/quickstart">[f:id:silverbirder180:20200617070455g:plain]<figcaption>https://stryker-mutator.io/stryker/quickstart</figcaption></figure>
+<figure title="https://stryker-mutator.io/stryker/quickstart">[f:id:silverbirder180:20200617070455g:plain]<figcaption>https://stryker-mutator.io/stryker/quickstart</figcaption></figure>
 <h2 id="chaos_test"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#chaos_test"></a>Chaos Test</h2>
 <p>障害を注入した際に、どういった動きになるのかを検証するテストです。</p>
 <p> <amp-embedly-card data-url="https://github.com/goldbergyoni/node-chaos-monkey" layout="responsive" data-card-theme="dark" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-18"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card> <amp-embedly-card data-url="https://github.com/goldbergyoni/node-chaos-monkey" layout="responsive" data-card-theme="light" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-19"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card></p>
@@ -104,7 +104,7 @@ CPU使用率、メモリ使用率、レスポンスタイム、RPS など様々�
 <p>Webアプリへ流入数を改善するためには、SEOは不可欠です。
 lighthouseというツールでSEOスコアを見ることができるみたいです。</p>
 <p> <amp-embedly-card data-url="https://github.com/GoogleChrome/lighthouse-ci" layout="responsive" data-card-theme="dark" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-24"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card> <amp-embedly-card data-url="https://github.com/GoogleChrome/lighthouse-ci" layout="responsive" data-card-theme="light" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-25"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card></p>
-<figure class="figure-image figure-image-fotolife" title="https://github.com/GoogleChrome/lighthouse-ci">[f:id:silverbirder180:20200617214926p:plain]<figcaption>https://github.com/GoogleChrome/lighthouse-ci</figcaption></figure>
+<figure title="https://github.com/GoogleChrome/lighthouse-ci">[f:id:silverbirder180:20200617214926p:plain]<figcaption>https://github.com/GoogleChrome/lighthouse-ci</figcaption></figure>
 <h2 id="smoke_test"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#smoke_test"></a>Smoke Test</h2>
 <p>Smoke Testは、Webアプリが最低限動作するために必要なケースを確保する検証です。
 例えば、トップページへリクエストしたら、レスポンスがHTTP 200で返却されるとかです。</p>
@@ -159,7 +159,7 @@ lighthouseというツールでSEOスコアを見ることができるみたい�
 <h2 id="visual_regression_test"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#visual_regression_test"></a>Visual Regression Test</h2>
 <p>見た目の変化を監視する必要があります。例えば、リンク切れとかがあれば、検出するべきです。</p>
 <p> <amp-embedly-card data-url="https://github.com/garris/BackstopJS" layout="responsive" data-card-theme="dark" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-46"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card> <amp-embedly-card data-url="https://github.com/garris/BackstopJS" layout="responsive" data-card-theme="light" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-47"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card></p>
-<figure class="figure-image figure-image-fotolife" title="https://github.com/garris/BackstopJS">[f:id:silverbirder180:20200617070556p:plain]<figcaption>https://github.com/garris/BackstopJS</figcaption></figure>
+<figure title="https://github.com/garris/BackstopJS">[f:id:silverbirder180:20200617070556p:plain]<figcaption>https://github.com/garris/BackstopJS</figcaption></figure>
 <h1 id="最後に"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#最後に"></a>最後に</h1>
 <p>どういうテストの観点があるのか、調べたり、経験則よりざっと書いてみました。
 全てをテストする必要はなく、『どういう動作の品質を担保したいか』を意識して、

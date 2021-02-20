@@ -7,7 +7,7 @@
 <main>
 <h1 id="links"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#links"></a>Links</h1>
 <p>https://silverbirder180.hatenablog.com/entry/2019/07/27/110811</p>
-<figure class="figure-image figure-image-fotolife" title="cloud native days tokyo 2019">[f:id:silverbirder180:20190722232033p:plain]<figcaption>cloud native days tokyo 2019</figcaption></figure>
+<figure title="cloud native days tokyo 2019">[f:id:silverbirder180:20190722232033p:plain]<figcaption>cloud native days tokyo 2019</figcaption></figure>
 <p>今回、東京が開催されましたCloud Native Days Tokyo 2019に2日間とも参加してきましたので、報告しようと思います。
 セッション毎の報告というより、全体を通した感想を話そうかなと思います。</p>
 <p></p><div class="table-of-contents"><ul><li><a href="#links">Links</a></li><li><a href="#cncfの利用率">CNCFの利用率</a></li><li><a href="#cloudnativeとは？">CloudNativeとは？</a></li><li><a href="#なぜcrdがホットなのか？">なぜCRDがホットなのか？</a></li><li><a href="#kubernetesは必要ですか？">Kubernetesは必要ですか？</a></li><li><a href="#circuit_breaker">Circuit Breaker</a></li><li><a href="#twelve_factor_app">twelve factor app</a></li><li><a href="#技術にフォーカスした発表">技術にフォーカスした発表</a><ul><li><a href="#chaos_engineering">Chaos Engineering</a></li><li><a href="#docker">Docker</a></li><li><a href="#envoy">Envoy</a></li><li><a href="#logging">Logging</a></li><li><a href="#linuxkernel">LinuxKernel</a></li><li><a href="#prometheus">Prometheus</a></li><li><a href="#sandbox">Sandbox</a></li><li><a href="#scheduler">Scheduler</a></li><li><a href="#spinnaker">Spinnaker</a></li><li><a href="#istio">Istio</a></li></ul></li><li><a href="#その他">その他</a></li><li><a href="#最後に">最後に</a></li><li><a href="#蛇足（参加するまでの経緯）">蛇足（参加するまでの経緯）</a></li></ul></div><p></p>
@@ -22,7 +22,7 @@
 このイベントに参加している時点である程度フィルターはかかっていると思いますが、それでも大きな割合だと感じました。</p>
 <p>次の図では、CNCFプロジェクトの180日間におけるCommit数をグラフ化したものです。
 生みの親であるGoogleが1位でindependent(個人)が2番目、日本企業Fujitsuが6位です。熱意が伝わってきますね。</p>
-<figure class="figure-image figure-image-fotolife" title="https://www.stackalytics.com/cncf?date=180">[f:id:silverbirder180:20190724211327p:plain]<figcaption>https://www.stackalytics.com/cncf?date=180</figcaption></figure>
+<figure title="https://www.stackalytics.com/cncf?date=180">[f:id:silverbirder180:20190724211327p:plain]<figcaption>https://www.stackalytics.com/cncf?date=180</figcaption></figure>
 ※ 2019/07/24時点
 <p>ただ、CNCFのメンバーとして日本企業は<b>17社</b>しかないそうで、まだまだこれからといったところでしょうか。
 [https://landscape.cncf.io/format=members:embed]</p>
@@ -35,7 +35,7 @@
 <blockquote>
 <p>クラウドネイティブ技術は、パブリッククラウド、プライベートクラウド、ハイブリッドクラウドなどの近代的でダイナミックな環境において、スケーラブルなアプリケーションを構築および実行するための能力を組織にもたらします。 このアプローチの代表例に、コンテナ、サービスメッシュ、マイクロサービス、イミューダブルインフラストラクチャ、および宣言型APIがあります。</p>
 </blockquote>
-<p>※ [https://github.com/cncf/toc/blob/master/DEFINITION.md#日本語版]</p>
+<p>※ <a href="https://github.com/cncf/toc/blob/master/DEFINITION.md#%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88">https://github.com/cncf/toc/blob/master/DEFINITION.md#日本語版</a></p>
 <p>「スケーラブルなアプリケーションを構築および実行」が重要です。これを実現する手段の１つにKubernetesがあります。
 「CloudNative = Kubernetes」ではなく、「CloudNative ∋　Kubernetes」という感じです。</p>
 <p>ただ、最近ではKubernetesを違う観点で考える人が増えてきたそうです。
@@ -152,7 +152,7 @@ CRD、Operatorが生まれました。
 <h1 id="その他"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#その他"></a>その他</h1>
 <p>サイバーエージェントさんより、エンジニアにとってとても嬉しいアイテムを頂きました。 <amp-embedly-card data-url="https://twitter.com/ca_adtechstudio/status/1152080444445167616" layout="responsive" data-card-theme="dark" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-38"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card> <amp-embedly-card data-url="https://twitter.com/ca_adtechstudio/status/1152080444445167616" layout="responsive" data-card-theme="light" width="100" height="50" class="i-amphtml-layout-responsive i-amphtml-layout-size-defined" i-amphtml-layout="responsive" id="i-amp-39"><i-amphtml-sizer style="display:block;padding-top:50%"></i-amphtml-sizer> </amp-embedly-card></p>
 <p>さっそく、キーボードにとりつけてみました。最高です！</p>
-<figure class="figure-image figure-image-fotolife" title="ergodox with k8s keycap (cyberAgent)">[f:id:silverbirder180:20190724202409j:plain]<figcaption>ergodox with k8s keycap (cyberAgent)</figcaption></figure>
+<figure title="ergodox with k8s keycap (cyberAgent)">[f:id:silverbirder180:20190724202409j:plain]<figcaption>ergodox with k8s keycap (cyberAgent)</figcaption></figure>
 <p>こちらのサービスから作られたそうで、私も自前で何か作ってみようかなと思いました。
 [http://www.wasdkeyboards.com/index.php/products/printed-keycap-singles/custom-art-cherry-mx-keycaps.html]</p>
 <h1 id="最後に"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#最後に"></a>最後に</h1>
