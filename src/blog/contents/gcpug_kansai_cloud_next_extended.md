@@ -6,18 +6,15 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2019/05/22/001426
 
-<figure title="GCPUG Kansai Cloud Next Extended 案内板">[f:id:silverbirder180:20190521230529j:plain]<figcaption>GCPUG Kansai Cloud Next Extended 案内板</figcaption></figure>
+<figure title="GCPUG Kansai Cloud Next Extended 案内板">
+<img alt="GCPUG Kansai Cloud Next Extended 案内板" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190521/20190521230529.jpg">
+<figcaption>GCPUG Kansai Cloud Next Extended 案内板</figcaption>
+</figure>
 
 [https://gcpug-osaka.connpass.com/event/128130/:embed]
 
-こちらの参加しましたので、ご報告します。
-
-twitter
-
-[https://twitter.com/hashtag/next19extended:embed]
+こちらの参加しましたので、ご報告します。hashtagはこちらです。[#next19extended](https://twitter.com/hashtag/next19extended)
 
 [:contents]
 
@@ -72,6 +69,7 @@ GoogleでKubernetesの担当されているそうです。
 また、IstioをベースとしてAnthosが作られたとも発表されていました。
 Istioについては、[こちら](https://cloud.google.com/istio/?hl=ja)をご確認下さい。   
 Istioの機能の特徴として下記があるそうです。
+
 [https://twitter.com/nankouyuukichi/status/1128245474215858176?s=20:embed]
 
 k8sでは、対象とするクラスタを管理します。規模が拡大するにつれ、
@@ -174,6 +172,3 @@ Googleでは、もはや当たり前のようにKubernetesのサービスを進�
 これは、kubernetesを使えるようにならないと！
 下記で、勉強中です！
 [https://qiita.com/silverbirder/items/cfaaba136b74b3140902:embed]
-
-
-

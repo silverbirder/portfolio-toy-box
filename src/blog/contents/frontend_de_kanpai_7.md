@@ -6,23 +6,31 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2019/07/20/151731
 
 今回はDeNAさん主催のFrontendのイベントに参加してきましたので、
-報告しようと思います。
-[https://frokan.connpass.com/event/135584/:embed]
-[https://twitter.com/hashtag/frokan:embed]
+報告しようと思います。hashtagはこちら [#frokan](https://twitter.com/hashtag/frokan)
 
-<figure title="frontend de kanpai">[f:id:silverbirder180:20190720095423j:plain]<figcaption>frontend de kanpai
-</figcaption></figure>
-<figure title="frontend de kanpai tech board">[f:id:silverbirder180:20190720095451j:plain]<figcaption>frontend de kanpai tech board</figcaption></figure>
+<figure title="frontend de kanpai">
+<img alt="frontend de kanpai" src="https://res.cloudinary.com/silverbirder/image/upload/v1613819448/silver-birder.github.io/blog/20190720095423.jpg">
+<figcaption>frontend de kanpai</figcaption>
+</figure>
+
+<figure title="frontend de kanpai tech board">
+<img alt="frontend de kanpai tech board" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190720/20190720095451.jpg">
+<figcaption>frontend de kanpai tech board</figcaption>
+</figure>
+
 firebaseの勢いがすごい。あとnowも多少人気で、now信者の私とっては嬉しい 。
-<figure title="frontend de kanpai novelty">[f:id:silverbirder180:20190720095654j:plain]<figcaption>frontend de kanpai novelty</figcaption></figure> 
+<figure title="frontend de kanpai novelty">
+<img alt="frontend de kanpai novelty" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190720/20190720095654.jpg">
+<figcaption>frontend de kanpai novelty</figcaption>
+</figure> 
 
 ※ [https://twitter.com/DeNACreators/status/1152199891860389888](https://twitter.com/DeNACreators/status/1152199891860389888)  
 ※ [https://twitter.com/antidotech/status/1152154690617872384](https://twitter.com/antidotech/status/1152154690617872384)  
 ※ [https://twitter.com/wanami3103/status/1152202843618603008](https://twitter.com/wanami3103/status/1152202843618603008)  
+
+[https://frokan.connpass.com/event/135584/:embed]
 
 [:contents]
 
@@ -40,6 +48,7 @@ firebaseの勢いがすごい。あとnowも多少人気で、now信者の私と
 照明が暗かったというところもあると思います。ちなみに、お酒は一切飲んでないです。（笑）
 
 ただ、翌日は少しつらかったです...。
+
 [https://twitter.com/silver_birder/status/1152348180643627008:embed]
 
 普段は、メモをがっつり書いてtwitterに投稿している私ですが、
@@ -50,6 +59,7 @@ firebaseの勢いがすごい。あとnowも多少人気で、now信者の私と
 ## ReactとWebComponentsでVanillaな開発
 ### 日本経済新聞社 宮本 将 さん
 WebComponentsに興味がある私は、この発表は気になっていました。
+
 [https://twitter.com/silver_birder/status/1149648900627693572:embed]
 
 内容をざっくり説明すると「CustomElementsをプロダクトとして使っていたけど、つらみがあったのでtypescriptで縛るようにしたよ」
@@ -66,6 +76,7 @@ VanillaなJSでCustomElementsを進めて行こうという経緯があるそう
 プロダクトの特徴に応じてコンポーネント選択すべきね。
 
 ※ CustomElementsっていろんなフレームワークで対応しているんですね。
+
 [https://custom-elements-everywhere.com/:embed]
 
 ## 実録フグ料理
@@ -74,6 +85,7 @@ VanillaなJSでCustomElementsを進めて行こうという経緯があるそう
 予想以上に面白いお話でした。
 
 Project Fuguというものがあります。
+
 [https://www.heise.de/developer/artikel/Google-Projekt-Fugu-Die-Macht-des-Kugelfisches-4255636.html:embed]
 
 > Unter dem Codenamen Fugu plant Google die Einführung zahlreicher Webschnittstellen in seinem Webbrowser Chrome, welche die Lücke zwischen Progressive Web Apps und ihren nativen Gegenstücken schließen wollen.
@@ -88,7 +100,12 @@ Google翻訳を通すと
 どれもサクッと簡単に動作していましたが、まだ実験的な機能なため安定しない部分もあるそうです。
 
 次の画像は顔検出した箇所にモザイクを入れるデモです。これは笑いました。
-<figure title="Shape Detection API Demo">[f:id:silverbirder180:20190720110709j:plain]<figcaption>Shape Detection API Demo</figcaption></figure>
+
+<figure title="Shape Detection API Demo">
+<img alt="Shape Detection API Demo" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190720/20190720110709.jpg">
+<figcaption>Shape Detection API Demo</figcaption>
+</figure>
+
 ※ [https://twitter.com/antidotech/status/1152180161413931008](https://twitter.com/antidotech/status/1152180161413931008)
 
 ちなみに、Fuguという名前の由来は、

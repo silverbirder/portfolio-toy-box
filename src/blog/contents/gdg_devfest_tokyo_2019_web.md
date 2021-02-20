@@ -6,19 +6,27 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2019/12/16/202942
-
-[f:id:silverbirder180:20191215100223j:plain]
-[f:id:silverbirder180:20191215100227j:plain]
-[f:id:silverbirder180:20191215100242j:plain]
-
 
 GDG DevFest Tokyo 2019というイベントに参加してきました。
 最近はプライベートの都合上、中々時間が取れていませんでした。
 しかし今回、会社の都合上、良い感じに時間を確保できたため、こちらのイベントに参加してきました。
 `大阪→東京` でわざわざ新幹線を使ってまで参加しましたが、それに見合う発見が多くありました。
 今回、私が学んだ内容について、報告しようかなと思います。
+
+<figure title="GDG DevFest Tokyo 2019 ゲート">
+<img alt="GDG DevFest Tokyo 2019 ゲート" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20191215/20191215100223.jpg">
+<figcaption>GDG DevFest Tokyo 2019 ゲート</figcaption>
+</figure>
+
+<figure title="GDG DevFest Tokyo 2019 スポンサー">
+<img alt="GDG DevFest Tokyo 2019 スポンサー" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20191215/20191215100227.jpg">
+<figcaption>GDG DevFest Tokyo 2019 スポンサー</figcaption>
+</figure>
+
+<figure title="GDG DevFest Tokyo 2019 提灯">
+<img alt="GDG DevFest Tokyo 2019 提灯" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20191215/20191215100242.jpg">
+<figcaption>GDG DevFest Tokyo 2019 提灯</figcaption>
+</figure>
 
 [https://gdg-tokyo.connpass.com/event/137666/:embed]
 
@@ -46,7 +54,10 @@ GDG DevFest Tokyo 2019というイベントに参加してきました。
 DevFests自体は、グローバルで活動されているGDGがホストのイベントです。
 下の図は、<b>2019年</b>の活動実績&予定です。全国各地で広く活発的に行われていることが分かると思います。
 
-<figure title="Find an upcoming community-led  DevFest near you">[f:id:silverbirder180:20191215102950p:plain]<figcaption>Find an upcoming community-led  DevFest near you</figcaption></figure>
+<figure title="Find an upcoming community-led  DevFest near you">
+<img alt="Find an upcoming community-led  DevFest near yo" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20191215/20191215102950.png">
+<figcaption>Find an upcoming community-led  DevFest near you</figcaption>
+</figure>
 
 また、コミュニティのYoutubeのチャンネルもあります。
 
@@ -123,9 +134,6 @@ Chrome Dev Summit(CDS) は、今まで以下のようなテーマが中心でし
 
 HTMLは、まだ成熟されたものではなく、まだまだ改善の余地があるという考えから、
 いくつかの改善提案の話が紹介されていました。
-いくつか例の紹介をされていましたが、次のqiitaの記事がわかりやすかったです。
-
-[https://qiita.com/yk_irsw/items/4659fa0af747ddf1dd72:embed]
 
 丸裸な純粋のHTMLでも、わかりやすいUIを標準で表現できるのであれば、ユーザーにとっては
 ありがたいことですよね。だって、いろんなサイトのいろんなUIを知らなくて済むのですから。
@@ -136,11 +144,7 @@ HTMLは、まだ成熟されたものではなく、まだまだ改善の余地�
 
 [https://www.youtube.com/watch?v=-oyeaIirVC0:embed]
 
-以下の記事にあるようなStylingの機能が提案中となっています。
-
-[https://qiita.com/yk_irsw/items/c3834b07e34bfecef002:embed]
-
-例えば、scroll-snapという機能は、スクロールの制御をCSSで実現しようとしています。
+scroll-snapという機能は、スクロールの制御をCSSで実現しようとしています。
 従来は、Javascriptでハックな技を駆使していましたが、不要となります。
 デザイナーだけでなく、JSを担当するエンジニアも必見です。
 
@@ -332,9 +336,7 @@ Web Packagingには、大きく２つのものが含まれています。
 ## Yearly Web 2019
 Speaker: Jxckさん  
 2019に起きたWebに関するTopicをざっくりと紹介されていました。
-ご本人のブログに、詳細が載っていますので、こちらでは項目だけリストアップします。
-
-[https://blog.jxck.io/:embed]
+[ご本人のブログ](https://blog.jxck.io)に、詳細が載っていますので、こちらでは項目だけリストアップします。
 
 |  Topics  |  補足  |
 | ---- | ---- |
@@ -353,16 +355,10 @@ Speaker: Jxckさん
 |Same Site Cookie Lax by default|Cookieを同じサイトでしか送られなくする|
 |TLS 1.0/1.1 → 1.2||
 
-（宣伝：WebComponentsの入門書、いいぞ〜！）
-
-[https://booth.pm/ja/items/1572900:embed]
-
 ## Perspective of Angular in 2020
 Speaker:稲富 駿さん 
 
 セッション内容は、Angularにおける2019年のアップデート内容と、2020年とその先の未来についてです。
-
-[https://docs.google.com/presentation/d/e/2PACX-1vQqaDZLnSTHZWlQ-SBljyKY_Q5_jCQYG8t5nx3-b5nYjld8q9J9haaYVUnioETVvG9padqOF9AXW9r3/pub?slide=id.p1:embed]
 
 以下を要チェック！
 

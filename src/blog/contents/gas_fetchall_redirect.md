@@ -6,9 +6,6 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2020/02/24/094442
-
 Google Apps Script (以下、GAS)で、困ったことがあったので備忘録として残しておこうと思います。
 
 [:contents]
@@ -31,7 +28,10 @@ GASでは、リクエストメソッドであるfetchがあります。そのfet
 複数リクエストが同時にできるfeatchAllを使うことで、並列処理ができ、パフォーマンスが良いです。
 要するに次のようなコードで解決しようと考えていました。
 
-<figure title="FetchAllとRedirectURL">[f:id:silverbirder180:20200224084938p:plain]<figcaption>FetchAllとRedirectURL</figcaption></figure>
+<figure title="FetchAllとRedirectURL">
+<img alt="FetchAllとRedirectURL" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200224/20200224084938.png">
+<figcaption>FetchAllとRedirectURL</figcaption>
+</figure>
 
 ```typescript
 let urlList: Array<string> = ['https://t.co/XXXX', 'https://t.co/YYYY'];
@@ -94,7 +94,10 @@ TwitterのAPIレスポンスに `urls` がありました。説明はありま�
 fetchやfetchAllは、`muteHttpExceptions: true` としたとしても、ExceptionErrorが発生してしまいます。
 そうすると、例えば1000件のURLをfetchAllした場合、<b>どれが成功で、どれが失敗で、どれが未実施か</b> がわからないというところです。
 
-<figure title="FetchAllとRedirectURL (Error)">[f:id:silverbirder180:20200224090136p:plain]<figcaption>FetchAllとRedirectURL (Error)</figcaption></figure>
+<figure title="FetchAllとRedirectURL (Error)">
+<img alt="FetchAllとRedirectURL (Error)" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200224/20200224090136.png">
+<figcaption>FetchAllとRedirectURL (Error)</figcaption>
+</figure>
 
 Promise.allSettled が使えれば、解決できるのかなと思いますが、現状Promiseは使えません。
 

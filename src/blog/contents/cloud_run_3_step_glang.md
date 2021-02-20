@@ -6,27 +6,29 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://qiita.com/silverbirder/items/6981461a756a48f6e25d
-
 # Cloud Run とは？
 
 > Cloud Run is a managed compute platform that enables you to run stateless containers that are invocable via HTTP requests. Cloud Run is serverless
 
-※ https://cloud.google.com/run/
+※ [https://cloud.google.com/run/](https://cloud.google.com/run/)
 
 詳しくは割愛するが、Cloud FunctionsやApp Engineと同じようなサーバーレスで動作するもの。
 コンテナをdeployするため、GKEから制御することもできる。
 
-![deploy](https://japan.zdnet.com/storage/2019/04/10/2f758123dc855c1aa3533aea8d507950/190410-abrigednews-02-google-devops-with-serverless.png)
-※ https://japan.zdnet.com/article/35135525/
+<figure title="Cloud Run Deploy">
+<img alt="Cloud Run Deploy" src="https://japan.zdnet.com/storage/2019/04/10/2f758123dc855c1aa3533aea8d507950/190410-abrigednews-02-google-devops-with-serverless.png">
+<figcaption><a href="https://japan.zdnet.com/article/35135525/">Cloud Run Deploy</a></figcaption>
+</figure>
 
 # デプロイしてみた
-https://cloud.google.com/run/docs/quickstarts/build-and-deploy?_ga=2.161504639.-2138276196.1534942258
+
+[https://cloud.google.com/run/docs/quickstarts/build-and-deploy](https://cloud.google.com/run/docs/quickstarts/build-and-deploy)
+
 を参考に進めていく。
 
 ちなみに、動作環境は下記コンテナ内に行う。
-https://hub.docker.com/r/google/cloud-sdk
+
+[https://hub.docker.com/r/google/cloud-sdk](https://hub.docker.com/r/google/cloud-sdk)
 
 ## step1. gcloudの各種設定
 
@@ -45,7 +47,7 @@ $ mkdir helloworld-go && cd helloworld-go
 $ touch helloworld.go Dockerfile
 ```
 
-```go:helloworld.go
+```go
 package main
 
 import (
@@ -78,7 +80,7 @@ func main() {
 }
 ```
 
-```dockerfile:Dockerfile
+```Dockerfile
 # Use the offical Golang image to create a build artifact.
 # This is based on Debian and sets the GOPATH to /go.
 # https://hub.docker.com/_/golang
@@ -109,8 +111,8 @@ CMD ["/helloworld"]
 $ gcloud builds submit --tag gcr.io/[PROJECT-ID]/helloworld
 $ gcloud beta run deploy --image gcr.io/[PROJECT-ID]/helloworld
 ```
-↓
-![result](https://pbs.twimg.com/media/D34Fl0ZU4AA-dhU?format=png&name=small)
+
+![result](https://res.cloudinary.com/silverbirder/image/upload/v1613818551/silver-birder.github.io/blog/D34Fl0ZU4AA-dhU.png)
 
 # 感想
 普段私は、個人開発をしているときによくつかっている [now.sh](https://zeit.co/now)というServerless Deploymentsを使っている。こちらは、v1のときはdockerコンテナを使えていたのだが、v2になると使えなくなってしまった。ただ、無料で簡単にデプロイできるものを選んでいると、こちらのサービスが最善だと感じていた。

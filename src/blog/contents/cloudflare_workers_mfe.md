@@ -6,8 +6,6 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2020/11/15/121730
 
 今回、またMicro Frontendsの構築を試みようと思います。構築パターンの内、サーバーサイド統合パターン、特にエッジサイド統合を試しました。
 その内容を紹介します。サンプルコードは、下記に残しています。
@@ -15,6 +13,7 @@ https://silverbirder180.hatenablog.com/entry/2020/11/15/121730
 [https://github.com/Silver-birder/micro-frontends-sample-code-5/:embed]
 
 [:contents]
+
 # Edge Side Include (ESI)って？
 
 [https://www.w3.org/TR/esi-lang/:embed]
@@ -30,7 +29,7 @@ ESIは、SSIと似たようなもので、サーバーサイド側でコンテ�
 
 > EdgeWorkersは、世界中に分散配置されたAkamaiのEdgeサーバー上で、カスタムしたプログラムコードを実行できるようになる新しいサービスです
 
-※ https://blogs.akamai.com/jp/2019/10/edgeworker.html
+※ [https://blogs.akamai.com/jp/2019/10/edgeworker.html](https://blogs.akamai.com/jp/2019/10/edgeworker.html)
 
 要は、Edge WorkersとはCDNが提供するプラットフォーム上で、プログラムコード、例えばJavascriptなどが実行できるサービスです。
 
@@ -43,7 +42,10 @@ ESIは、SSIと似たようなもので、サーバーサイド側でコンテ�
 
 次のような構成を考えてみました。
 
-<figure title="Cloudflare worker + Micro Frontends">[f:id:silverbirder180:20201114000721p:plain]<figcaption>Cloudflare Workers + Micro Frontends</figcaption></figure>
+<figure title="Cloudflare worker + Micro Frontends">
+<img alt="Cloudflare worker + Micro Frontends" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201114/20201114000721.png">
+<figcaption>Cloudflare Workers + Micro Frontends</figcaption>
+</figure>
 
 ※ [Podium](https://podium-lib.io/)と[Ara-Framework](https://ara-framework.github.io/website/) に影響されています。  
 ※ [draw.io](https://draw.io/)のsketch styleで書きました。
@@ -93,6 +95,7 @@ Cloudflare Workersをローカル開発する場合、[wrangler:dev](https://git
 そのため、下記のようなサービスを使って、私は解決させました。
 
 [https://ngrok.com/:embed]
+
 [https://github.com/localtunnel/localtunnel:embed]
 
 ## Cloudflare Workersによる制約が大きい
