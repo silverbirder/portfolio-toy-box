@@ -172,11 +172,12 @@ const addOGP = (layoutDOM, option) => {
         src = imgElement.getAttribute('src');
     }
     if (src) {
-        const title = `${option['title']}`;
-        const encodedTitle = `${encodeURIComponent(title)}`;
         const ogMetaImage = layoutDOM.window.document.createElement('meta');
         ogMetaImage.setAttribute('property', 'og:image');
-        ogMetaImage.setAttribute('content', `https://res.cloudinary.com/silverbirder/image/fetch/o_15,f_auto,w_500/w_400,c_fit,l_text:Arial_30_bold:${encodedTitle}/${src}`);
+        const header = `w_400,b_black,co_white,c_fit,g_north,y_10,l_text:Arial_30_bold_center:silverbirder`;
+        const title = `w_400,h_50,b_black,co_white,c_fit,g_south,y_10,l_text:Arial_20_bold_center:${encodeURIComponent(option['title'])}`;
+        const imageUrl = `https://res.cloudinary.com/silverbirder/image/fetch/f_auto,w_500/${header}/${title}/${src}`;
+        ogMetaImage.setAttribute('content', `${imageUrl}`);
         layoutDOM.window.document.querySelector('head').appendChild(ogMetaImage);
     }
 };
