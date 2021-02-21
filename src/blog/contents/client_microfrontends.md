@@ -18,7 +18,7 @@ icon: 😎
 
 全体設計イメージ図は、次のとおりです。
 
-![overview](https://raw.githubusercontent.com/Silver-birder/micro-frontends-sample-code-6/main/overview.svg)
+![overview](https://res.cloudinary.com/silverbirder/image/fetch/f_auto/https://raw.githubusercontent.com/Silver-birder/micro-frontends-sample-code-6/main/overview.svg)
 
 サーバーサイドは静的コンテンツを返すだけとし、クライアントサイドでアプリケーションを構築します。
 
