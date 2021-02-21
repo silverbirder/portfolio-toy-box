@@ -6,34 +6,34 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2019/06/27/231339
 
 今回は、ヤフー株式会社主催の下記セミナーに参加してきました。
 Google/Appleどちらも大好きで、けど海外カンファレンスにいけなかった私にとって、今回の報告会は<b>新鮮な内容</b>ばかりでした。
 その内容を記事に書こうと思います。
+
 [https://yahoo-osaka.connpass.com/event/132601/:embed]
 
-[f:id:silverbirder180:20190627095615p:plain]
-[f:id:silverbirder180:20190627095612p:plain]
-[f:id:silverbirder180:20190627095619p:plain]
+![Google I/O WWDC まとめて報告会 看板](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190627/20190627095615.png)
+![YAHOO!Japan](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190627/20190627095612.png)
+![けんさくとえんじん](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190627/20190627095619.png)
 
-hashtagはこちら
-[https://twitter.com/hashtag/mixleap:embed]
+hashtagはこちら [#mixleap](https://twitter.com/hashtag/mixleap)
 
 [:contents]
 
 # Google I/Oとは？
 Googleが主催する、開発者向けイベントです。
 Google I/Oでは、WEBやGoogleが出しているガジェットなど様々な技術情報についてセッションが行われています。
-https://events.google.com/io/
+
+[https://events.google.com/io/:embed]
 
 ※ [https://yahoo-osaka.connpass.com/event/132601/](https://yahoo-osaka.connpass.com/event/132601/)
 
 # WWDC（Worldwide Developers Conference）とは？
 Appleが毎年開発している、開発者向けイベントです。
 WWDCでは、appleの新製品の紹介や新しい技術についての発表が行われています。  
-https://developer.apple.com/wwdc19/
+
+[https://developer.apple.com/wwdc19/](https://developer.apple.com/wwdc19/)
 
 ※ [https://yahoo-osaka.connpass.com/event/132601/](https://yahoo-osaka.connpass.com/event/132601/)
 
@@ -52,12 +52,12 @@ Google I/Oが始まったのは2008年からで、毎年開催しているそう
 * Web 39
 * ML/AI 32
 
-
 Web好きの私としてはTOP2というのが悔しいですね。(笑)
 ML/ALが3番目とは驚きです。
 
 ### Deplex on the web
 [https://www.gizmodo.jp/2019/05/190305.html:embed]
+
 ウェブベースでも使えるGoogleAssistantのことで、レンタカーや映画の予約ができるみたいです。
 これのすごいところは、レンタカーを予約するまでのステップを<b>全て自動入力</b>してくれるみたいです。
 そこまで便利になったのかと驚きました。
@@ -83,7 +83,8 @@ ML Kitの発表があったそうです。
 つまり、オフラインでも動作します。  
 
 また、59言語に対応しているというすごい数です。
-[https://firebase.google.com/docs/ml-kit/translation-language-support:embed]
+
+[https://firebase.google.com/docs/ml-kit/translation-language-support](https://firebase.google.com/docs/ml-kit/translation-language-support)
 
 一部無料で使えるとのことで、こういうスタンスは本当に大好きです。
 [https://firebase.google.com/docs/ml-kit/android/translate-text:embed]

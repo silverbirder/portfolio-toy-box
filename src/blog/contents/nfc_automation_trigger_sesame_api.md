@@ -6,11 +6,11 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://qiita.com/silverbirder/items/ec6d7b61cc61d9501189
 
 # まえおき
 これからiOSを前提として話を進めていきますが、話の主題としてはiOSかどうかはあまり関係ありません。
+
+[:contents]
 
 # NFC Automation Trigger
 [13.1のiOSリリース](https://support.apple.com/ja-jp/HT210393#131)によりNFC Automation Triggerが使えるようになりました。NFCとは、Wikiによると次のようなものです。
@@ -29,16 +29,15 @@ https://qiita.com/silverbirder/items/ec6d7b61cc61d9501189
 # とりあえずこんなの作ったよ！
 登録しているNFCタグをiPhoneが読み取ると、扉に設置しているスマートロックアイテムSESAMEの[SESAME API](https://docs.candyhouse.co/#sesame-api)をRequestして扉の鍵が解錠されます。
 
-<img width="408" alt="スクリーンショット 2019-10-24 20.07.20.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/cebf3e6d-63a6-34e0-9bca-191483281614.png">
+![before](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/cebf3e6d-63a6-34e0-9bca-191483281614.png)
+
 ↓ 白色のNFCタグにスマホを近づけると...?
-<img width="412" alt="スクリーンショット 2019-10-24 20.08.24.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/c3fcec93-0ee9-4734-a197-033e9a21f6cf.png">
+
+![after](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/c3fcec93-0ee9-4734-a197-033e9a21f6cf.png)
+
 NFC Automation Triggerが作動！解錠！
 
-※ https://twitter.com/silver_birder/status/1187016726363299840
-
-<blockquote class="twitter-tweet" lang="ja"><a href="https://twitter.com/silver_birder/status/1187016726363299840"></a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+[https://twitter.com/silver_birder/status/1187016726363299840:embed]
 
 作成方法は、とっても**かんたん**です。iPhone標準アプリshortcutと、[NFCタグ(１枚94円)](https://www.amazon.co.jp/gp/product/B00GXSGL5G/)があれば誰でも作れます。もちろん、**[SESAME](https://www.amazon.co.jp/dp/B0787N1L3M)**が必要ですけどね（笑)。
 

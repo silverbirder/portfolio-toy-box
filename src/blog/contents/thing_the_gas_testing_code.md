@@ -6,12 +6,12 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2020/02/01/235534
 
-<figure title="Google Apps Script + Typescript + Jest">[f:id:silverbirder180:20200201212044p:plain]<figcaption>Google Apps Script + Typescript + Jest</figcaption></figure>
+<figure title="Google Apps Script + Typescript + Jest">
+<img alt="Google Apps Script + Typescript + Jest" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200201/20200201212044.png">
+<figcaption>Google Apps Script + Typescript + Jest</figcaption></figure>
 
-Google Apps Script(以下,GAS)でライブラリを公開しました。ライブラリを開発する際、<b>テストのフィードバックサイクルを短くする</b>ため、`Clasp + Typescript + Jest` という技術スタックを選択しました。
+Google Apps Script(以下,GAS)でライブラリを公開しました。ライブラリを開発する際、**テストのフィードバックサイクルを短くする**ため、`Clasp + Typescript + Jest` という技術スタックを選択しました。
 その開発体験について共有しようと思います。特段変わったことはしていません。
 
 [:contents]
@@ -20,13 +20,16 @@ Google Apps Script(以下,GAS)でライブラリを公開しました。ライ�
 
 [script.google.com](https://script.google.com/)にアクセスしてデバッグ実行って、しんどくないですか？
 
-<figure title="Google Apps Script Debugging ...">[f:id:silverbirder180:20200201234221p:plain]<figcaption>Google Apps Script Debugging ...</figcaption></figure>
+<figure title="Google Apps Script Debugging ...">
+<img alt="Google Apps Script Debugging ..." src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200201/20200201234221.png">
+<figcaption>Google Apps Script Debugging ...</figcaption>
+</figure>
 
-* ネットワーク越しでステップ実行するため、<b>遅い</b>
-* G Suite系のサービスと連携すると、サービス側の調整(データ準備とか)が<b>面倒</b>
-* デバッグ機能が<b>貧弱</b>
+* ネットワーク越しでステップ実行するため、**遅い**
+* G Suite系のサービスと連携すると、サービス側の調整(データ準備とか)が**面倒**
+* デバッグ機能が**貧弱**
 
-とても<span style="color: #d32f2f"><b>ストレスフル</b></span>です。単純なGASなら別に良いんですが、少し複雑なGASを作ろうと思うと、問題に感じます。
+とても**ストレスフル**です。単純なGASなら別に良いんですが、少し複雑なGASを作ろうと思うと、問題に感じます。
 
 # ローカルで動かそう
 GASをローカル環境で動かすことができる ClaspというコマンドラインツールがGoogleより公開されています。
@@ -142,8 +145,8 @@ Time:        2.826s, estimated 6s
 Ran all test suites.
 ```
 
-ライブラリとして提供する機能のテストが、たったの<b>約3秒</b>で終わります。
-<span style="color: #d32f2f"><b>ストレスフリー</b></span>にローカル開発が可能となりました。
+ライブラリとして提供する機能のテストが、たったの**約3秒**で終わります。
+**ストレスフリー**にローカル開発が可能となりました。
 
 詳しくは、実際に作ったライブラリのソースコード([\_\_tests\_\_](https://github.com/Silver-birder/CaAT/tree/master/__tests__))を御覧ください。
 
@@ -151,8 +154,8 @@ Ran all test suites.
 GASは、とても便利です。生産性が向上します。
 サクッとAPIを構築できますし、G Suiteとの連携も(当たり前ですが)簡単です。
 
-ただ、メンテナンス性が低いコードになると、<span style="color: #d32f2f"><b>陳腐化され誰も面倒が見れなくなります</b></span>。
-常にクリーンであり続けるためには、テストコードは<b>必須</b>です。
+ただ、メンテナンス性が低いコードになると、**陳腐化され誰も面倒が見れなくなります**。
+常にクリーンであり続けるためには、テストコードは**必須**です。
 GASを運用する方々には、是非ともテストコードを検討下さい。
 
 # え、あ、ちょっとまって。ライブラリの紹介！
@@ -172,4 +175,3 @@ GASを運用する方々には、是非ともテストコードを検討下さ�
 実際にサンプルコードがあるので、ご参考下さい。
 
 [https://github.com/Silver-birder/SampleCaat:embed]
-

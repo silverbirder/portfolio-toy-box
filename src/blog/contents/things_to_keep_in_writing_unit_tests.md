@@ -6,8 +6,8 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://qiita.com/silverbirder/items/f99dc7fa6cdbd6e194a1
+
+[:contents]
 
 # 背景
 普段、業務でユニットテストを書いたり、レビューをしたりしています。
@@ -36,17 +36,19 @@ https://qiita.com/silverbirder/items/f99dc7fa6cdbd6e194a1
 * それがテストされるシナリオ。
 * シナリオが呼び出されたときに想定される動作。
 
-```:Bad
+```text
+// Bad
 Test_Single
 ```
 
-```:Good
+```text
+// Good
 Add_SingleNumber_ReturnsSameNumber
 ```
 
 ※[テストの名前付け](https://docs.microsoft.com/ja-jp/dotnet/core/testing/unit-testing-best-practices#naming-your-tests)より引用
 
-※ 『正しく表示されていること』という期待値は、極力避けましょう。具体的な値を期待値に設定しましょう。
+※『正しく表示されていること』という期待値は、極力避けましょう。具体的な値を期待値に設定しましょう。
 
 ### 1.2. 論理制御を避ける
 ifやfor等の制御は、テストコードの見通しが悪くなるため、極力避けましょう。
@@ -78,13 +80,15 @@ ifやfor等の制御は、テストコードの見通しが悪くなるため、
 
 これらを上から順番に実行されるようにテストコードを書いていきましょう。
 
-```
+```text
+// Bad
 Arrange => Act => Arrange => Act => Assert
 ```
 
 のように順番をMixするよりも、
 
-```
+```text
+// Good
 Arrange => Arrange => Act => => Act => Assert
 ```
 
@@ -103,14 +107,16 @@ Arrange => Arrange => Act => => Act => Assert
 検証すべき変数をBooleanの形に変換し、AssertTrueすることが多々あります。
 しかし、読みやすさの観点でいうと、Matcherに標準で備わっている関数を使う方が読みやすいです。
 
-```:Bad
+```text
+// Bad
 assertTrue(actual.contains('hello'))
 ```
 
-```:Good
+```text
+// Good
 assertThat(actual, hasItems('hello'))
-```
 -> assert that actual has items "hello".
+```
 
 ### 2.2. 変数名をわかりやすくする
 テストコードを書くときは、期待する値をExpect, 実際の値をActualという

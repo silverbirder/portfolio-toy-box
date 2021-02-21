@@ -6,10 +6,8 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2020/06/04/073523
 
-[f:id:silverbirder180:20200603074753p:plain]
+![puppeteer-account-manager overview](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200603/20200603074753.png)
 
 GoogleやGithubなど、様々なサービスのプロフィール情報(画像, etc)を一括更新するツール、puppeteer-account-manager を開発しました。
 開発の目的や、開発から得た知見を紹介します。
@@ -99,6 +97,7 @@ Dockerコンテナで動作できるようにしているので、ローカル�
 |  LinkedIn  |  通常認証  |
 
 詳しくは、
+
 [https://github.com/Silver-birder/puppeteer-account-manager/blob/master/src/index.ts](https://github.com/Silver-birder/puppeteer-account-manager/blob/master/src/index.ts) をご確認下さい。
 
 # どんな学びがあった？

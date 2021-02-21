@@ -6,11 +6,11 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2020/10/16/213923
 
-[f:id:silverbirder180:20201016213746j:plain]
-<span>Photo by <a href="https://unsplash.com/@jeshoots?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">JESHOOTS.COM</a> on <a href="https://unsplash.com/s/photos/tech-study-book?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+<figure title="Photo by JESHOOTS.COM on Unsplash">
+<img alt="Photo by JESHOOTS.COM on Unsplash" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201016/20201016213746.jpg">
+<figcaption><span>Photo by <a href="https://unsplash.com/@jeshoots?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">JESHOOTS.COM</a> on <a href="https://unsplash.com/s/photos/tech-study-book?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></figcaption>
+</figure>
 
 エンジニアは、普段様々なところから技術をキャッチアップすると思います。それは、SNSであったり、ブログであったり、動画であったりです。
 そこで、私の技術をキャッチアップするためのアンテナの張り方について、紹介しようと思います。

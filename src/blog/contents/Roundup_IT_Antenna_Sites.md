@@ -6,103 +6,113 @@ description: description
 image: 
 icon: 😎
 -->
-#Links
-https://medium.com/@silverbirder/roundup-it-antenna-sites-4d14d84ea6bf
 
-## 背景
+[:contents]
+
+<figure title="Photo by Shahadat Shemul on Unsplash">
+<img alt="Photo by Shahadat Shemul on Unsplash" src="https://miro.medium.com/max/1400/0*VHv6i176VhtChhR7">
+<figcaption>Photo by <a href="https://unsplash.com/@shemul?utm_source=medium&utm_medium=referral">Shahadat Shemul</a> on <a href="https://unsplash.com/?utm_source=medium&utm_medium=referral">Unsplash</a></figcaption>
+</figure>
+
+# 背景
 今年の9月にPyConJP 2019が開催されます。
-PyCon JP 2019
-プログラミング言語PythonのカンファレンスPyCon JP 2019の事前情報を配信します。pycon.jp
+
+[https://pycon.jp/2019/:embed]
+
 LTの募集があったので、LT応募するためのネタ探しをはじめました 😄
 
-
----
-
-## IT Antenna Sites
+# IT Antenna Sites
 私が普段見ているIT系のサイトから調べました。
 その時に使ったサイトを紹介します。
 ※ 色々な人から参考にさせて貰ってます。 :)
 
-## Github
-Build software better, together
-GitHub is where people build software. More than 36 million people use GitHub to discover, fork, and contribute to over…github.com
+# Github
 
-## PublicKey
-「Python」タグの記事一覧（1page） － Publickey
-Publickey － 「「Python」タグの記事一覧（1page） － Publickeywww.publickey1.jp
+[https://github.com/trending/python:embed]
 
-## Dev.to
+# PublicKey
 
-Python
-Python content on dev.todev.to
+[https://www.publickey1.jp/mt6/mt-search.cgi?IncludeBlogs=2&tag=Python:embed]
 
-## Reddit
-r/Python
-A while ago, many people got together and asked the moderators to ban "how do I do this?" style posts on r/Python. The…www.reddit.com
-Hacker News
+# Dev.to
 
-HN Search powered by Algolia
-Hacker News Search, millions articles and comments at your fingertips.hn.algolia.com
+[https://dev.to/t/python:embed]
 
-## Qiita
-Python - Qiita
-Pythonに関する情報が集まっています。現在28845件の記事があります。また56004人のユーザーがPythonタグをフォローしています。qiita.com
+# Reddit
 
-## Hatena
-Pythonの最新人気記事 36412件 - はてなブックマーク
-AmazonのKindleストアで普段セールになりにくいプログラミング、WEB、IT関連技術書のセールが現在大規模展開中。開催されている技術書セールは主にふたつ。 各セールは対象の技術書ラインナップが異な...b.hatena.ne.jp
+[https://www.reddit.com/r/Python:embed]
 
-## Medium
-The most insightful stories about Python - Medium
-Read stories about Python on Medium. Discover smart, unique perspectives on Python and the topics that matter most to…medium.com
+# Hacker News
 
-## Ubersuggest
-Ubersuggest
-Edit descriptionapp.neilpatel.com
+[https://hn.algolia.com/?query=python:embed]
 
-## GoogleTrend
-https://trends.google.co.jp/trends/explore?q=python
+# Qiita
+
+[https://qiita.com/tags/python:embed]
+
+# Hatena
+
+[https://b.hatena.ne.jp/search/tag?q=Python:embed]
+
+# Medium
+
+[https://medium.com/tag/python:embed]
+
+# Ubersuggest
+
+[https://app.neilpatel.com/jp/ubersuggest/overview?keyword=python:embed]
+
+# GoogleTrend
+
+[https://trends.google.co.jp/trends/explore?q=python](https://trends.google.co.jp/trends/explore?q=python)
+
 他にオススメありましたら教えて下さい。 😆
 
+# Pythonネタ
 
----
-
-## Pythonネタ
 次のような技術について知ることができました。
-Deepfacelab
-iperov/DeepFaceLab
-DeepFaceLab is a tool that utilizes machine learning to replace faces in videos. Includes prebuilt ready to work…github.com
-DeepFaceLab is a tool that utilizes machine learning to replace faces in videos. Includes prebuilt ready to work standalone Windows 7,8,10 binary (look readme.md).
-Grumpy
-google/grumpy
-Grumpy is a Python to Go source code transcompiler and runtime. - google/grumpygithub.com
-Grumpy is a Python to Go source code transcompiler and runtime.
-Pyodide
-iodide-project/pyodide
-The Python scientific stack, compiled to WebAssembly - iodide-project/pyodidegithub.com
-The Python scientific stack, compiled to WebAssembly
-PyOxidizer
-indygreg/PyOxidizer
-A modern Python application packaging and distribution tool - indygreg/PyOxidizergithub.com
-A modern Python application packaging and distribution tool
-Pyre
-facebook/pyre-check
-Performant type-checking for python. Contribute to facebook/pyre-check development by creating an account on GitHub.github.com
-Performant type-checking for python.
-Pyxel
-kitao/pyxel
-A retro game engine for Python. Contribute to kitao/pyxel development by creating an account on GitHub.github.com
-A retro game engine for Python
-ScrapydWeb
-my8100/scrapydweb
-Web app for Scrapyd cluster management, Scrapy log analysis & visualization, Auto packaging, Timer tasks, Email notice…github.com
-Web app for Scrapyd cluster management, Scrapy log analysis & visualization, Auto packaging, Timer tasks, Email notice, and Mobile UI
-※ Google Colaboratory
-https://colab.research.google.com
 
+## Deepfacelab
 
----
+[https://github.com/iperov/DeepFaceLab:embed]
 
-## さいごに
+> DeepFaceLab is a tool that utilizes machine learning to replace faces in videos. Includes prebuilt ready to work standalone Windows 7,8,10 binary (look readme.md).
+
+## Grumpy
+
+[https://github.com/google/grumpy:embed]
+
+> Grumpy is a Python to Go source code transcompiler and runtime.
+
+## Pyodide
+
+[https://github.com/iodide-project/pyodide:embed]
+
+> The Python scientific stack, compiled to WebAssembly
+
+## PyOxidizer
+
+[https://github.com/indygreg/PyOxidizer:embed]
+
+> A modern Python application packaging and distribution tool
+
+## Pyre
+
+[https://github.com/facebook/pyre-check:embed]
+
+> Performant type-checking for python.
+
+## Pyxel
+
+[https://github.com/kitao/pyxel:embed]
+
+> A retro game engine for Python
+
+## ScrapydWeb
+
+[https://github.com/my8100/scrapydweb:embed]
+
+> Web app for Scrapyd cluster management, Scrapy log analysis & visualization, Auto packaging, Timer tasks, Email notice, and Mobile UI
+
+# さいごに
 LTのネタとなるようなPythonに関する経験が乏しい私は、こういうアプローチでネタを探しました。まだどれを選択するかは決めていませんが、とりあえず応募はしようと思います！ 💪
-Follow me @silver_birder

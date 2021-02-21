@@ -6,11 +6,11 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2020/10/04/095230
 
-[f:id:silverbirder180:20201003144832j:plain]
-<span>Photo by <a href="https://unsplash.com/@kennyluoping?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Kenny Luo</a> on <a href="https://unsplash.com/s/photos/tailor?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+<figure title="Photo by Kenny Luo on Unsplash">
+<img alt="Photo by Kenny Luo on Unsplash" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201003/20201003144832.jpg">
+<figcaption><span>Photo by <a href="https://unsplash.com/@kennyluoping?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Kenny Luo</a> on <a href="https://unsplash.com/s/photos/tailor?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></figcaption>
+</figure>
 
 Zalando社が開発したTailorを使って、サンプルWebアプリをMicro Frontendsで構築してみました。Tailorはサーバーサイドで統合するアーキテクチャです。クライアントサイドは、Web Componentsで作られているLit Elementを使って統合しました。どういった内容か、ここに投稿しようと思います。
 
@@ -20,7 +20,11 @@ Zalando社が開発したTailorを使って、サンプルWebアプリをMicro F
 [:contents]
 
 # 全体構成
-<figure title="アプリケーション構成">[f:id:silverbirder180:20201003200516p:plain]<figcaption>アプリケーション構成</figcaption></figure>
+
+<figure title="アプリケーション構成">
+<img alt="アプリケーション構成" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201003/20201003200516.png">
+<figcaption>アプリケーション構成</figcaption>
+</figure>
 
 ざっくり説明すると、HTMLからTailorに対してフラグメント(コンポーネント)を取得・返却するようにします。各フラグメントは、LitElementでWebComponentsを定義させたJavascriptを指します。フラグメントを読み込むだけで、カスタムエレメントを使えるようになります。
 
@@ -36,7 +40,7 @@ tailorは、ストリーミングレイアウトサービスというだけあ�
 まず、tailor.jsのHTMLテンプレートは次のとおりです。
 
 templates/index.html
-```
+```html
 <body>
 　　<div id="outlet"></div>
 　　<fragment src="http://localhost:7000" defer></fragment>
@@ -48,7 +52,7 @@ templates/index.html
 これらのfragmentの取得は、tailor.jsを経由します。
 
 tailor.js
-```
+```javascript
 const http = require('http')
 const Tailor = require('node-tailor')
 const tailor = new Tailor({
@@ -68,7 +72,7 @@ x-request-uriは、後ろのフラグメントにURLを引き継ぐためのよ�
 そして、フラグメントサーバーは、次のとおりです。
 
 fragments.js
-```
+```javascript
 const http = require('http')
 const url = require('url')
 const fs = require('fs')
@@ -96,7 +100,8 @@ fragments.jsは、Response HeaderにLinkヘッダを追加するようにしま�
 さらに、fragments.jsは、Linkヘッダで指定されたリクエストを `return fs.createReadStream('./public/bundle.js').pipe(res)`  でストリームのパイプを返すそうです。
 
 # Lerna
-[f:id:silverbirder180:20201004092440p:plain]
+
+![lerna](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201004/20201004092440.png)
 
 それぞれのフラグメントをLernaで管理するようにします。
 私は、下記のようなpackages分けをしました。
@@ -129,7 +134,7 @@ fragments.jsは、Response HeaderにLinkヘッダを追加するようにしま�
 packageを使いたい場合は、次のような依存を設定します。
 
 package.json
-```
+```json
 {
   "dependencies": {
     "@controller/function-event-hub": "^0.0.0",
@@ -139,7 +144,8 @@ package.json
 ```
 
 # LitElement
-[f:id:silverbirder180:20201004092637j:plain]
+
+![LitElement](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201004/20201004092637.jpg)
 
 [https://lit-element.polymer-project.org/:embed]
 > LitElement
@@ -154,7 +160,7 @@ A simple base class for creating fast, lightweight web components
 まあ、特にこだわりはないです。
 書き方は、次のとおりです。
 
-```
+```typescript
 import {LitElement, html, customElement, css, property} from 'lit-element';
 
 @customElement('product-item')
@@ -190,7 +196,8 @@ LitElement + Typescript では、open-testing を使ってテストすること�
 [https://www.ninkovic.dev/blog/2020/testing-web-components-with-jest-and-lit-element:embed]
 
 # DynamicRendering
-[f:id:silverbirder180:20201004092807p:plain]
+
+![rendertron](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201004/20201004092807.png)
 
 このサンプルでは、カスタムエレメントを使って、ブラウザ側でレンダリングする 所謂SPAの動きで構築しています。
 『SEOガー！』とSSRしなきゃと思う訳ですが、正直SSRを考えたくないです。(ハイドレーションなんて無駄なロードをブラウザにさせたくない）
@@ -203,7 +210,7 @@ LitElement + Typescript では、open-testing を使ってテストすること�
 [https://github.com/GoogleChrome/rendertron:embed]
 
 function-renderer-proxy/src/renderer.ts
-```
+```typescript
 ...
 const page = await this.browser.newPage(); // browser: Puppeteer.Browser
 ...
@@ -240,7 +247,7 @@ Webpackのようなバンドルツールには、ExternalやDLLPlugin、ModuleFe
 今回は、externalを使っています。
 
 common-module/common.js
-```
+```javascript
 exports['rxjs'] = require('rxjs')
 exports['lit-element'] = require('lit-element')
 exports['graphql-tag'] = require('graphql-tag')
@@ -251,7 +258,7 @@ exports['apollo-link-http'] = require('apollo-link-http')
 ```
 
 common-module/webpack.config.js
-```
+```javascript
 module.exports = {
     entry: './common.js',
     output: {
@@ -266,7 +273,7 @@ module.exports = {
 共通化したライブラリは、次のTailorのindex.htmlで読み込みます。
 
 templates/index.html
-```
+```html
     <script>
         (function (d) {
             require(d);
@@ -291,7 +298,7 @@ templates/index.html
 そうすると、例えばsearchBoxのwebpackでは、次のようなことが使えます。
 
 fragment-search-box/webpack.config.js
-```
+```javascript
 externals: {
     'lit-element': 'lit-element',
     'graphql-tag': 'graphql-tag',
@@ -332,6 +339,7 @@ typescriptの処理をリアクティブな雰囲気でコーディングした�
 これまで、Podium、Ara-Framework, そして Tailor といったMicro Frontendsに関わるサーバーサイド統合ライブラリを使ってみました。
 
 [https://silverbirder180.hatenablog.com/entry/2020/05/04/182921:embed]
+
 [https://silverbirder180.hatenablog.com/entry/2020/08/23/183713:embed]
 
 これらは、どれも考え方が良いなと思っています。

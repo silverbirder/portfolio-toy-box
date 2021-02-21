@@ -6,14 +6,7 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2020/03/15/161716
-
-# Title
-TwitterにあるLinkを収集するツール Cotlin で、世界中のプレゼンテーション資料を知ろう
-
-# Contents
-[https://res.cloudinary.com/silverbirder/image/upload/v1584017984/cotlin/overview.png:image=https://res.cloudinary.com/silverbirder/image/upload/v1584017984/cotlin/overview.png]
+![cotlin overview](https://res.cloudinary.com/silverbirder/image/upload/v1584017984/cotlin/overview.png)
 
 Twitterに投稿されているLinkを収集するツール Cotlin を作りました。
 
@@ -26,6 +19,7 @@ Twitterに投稿されているLinkを収集するツール Cotlin を作りま�
 [https://www.npmjs.com/package/@silverbirder/cotlin:embed]
 
 [:contents]
+
 # 動機
 私は、[connpass](https://connpass.com/)等を使って、技術系のカンファレンスに参加することがありました。
 カンファレンスで発表された資料は、Twitterで公開されることが多々あるので、それを自動収集できるようにしたいと考えたのが、Cotlinを作った動機です。
@@ -54,9 +48,9 @@ Tweetに記述したリンクは、全て[t.co](https://help.twitter.com/ja/usin
 
 次のような資料を発見できるようになりました。
 
-* <span style="color: #d32f2f"><b>世界中</b></span>のプレゼンテーション資料
-* <span style="color: #d32f2f"><b>知らない技術カンファレンス</b></span>の資料
-* <span style="color: #d32f2f"><b>個人や学生</b></span>が公開した資料
+* **世界中**のプレゼンテーション資料
+* **知らない技術カンファレンス**の資料
+* **個人や学生**が公開した資料
 
 そこから、次のような良かったことがありました。
 

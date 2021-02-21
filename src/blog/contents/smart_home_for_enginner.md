@@ -6,11 +6,11 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2019/09/06/205253
 
-[f:id:silverbirder180:20200116075602j:plain]
-<a href="https://www.freepik.com/free-photos-vectors/banner">Banner vector created by macrovector - www.freepik.com</a>
+<figure title="Banner vector created by macrovector - www.freepik.com">
+<img alt="Banner vector created by macrovector - www.freepik.com" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200116/20200116075602.jpg">
+<figcaption><a href="https://www.freepik.com/free-photos-vectors/banner">Banner vector created by macrovector - www.freepik.com</a></figcaption>
+</figure>
 
 エンジニアの皆さん、IoT使っていますか？
 スマートホームに欠かせないIoT商品を使うことで、生活体験はより良くなります。
@@ -52,11 +52,13 @@ https://silverbirder180.hatenablog.com/entry/2019/09/06/205253
 
 ## スマートボタン
 ### Qmote S
-[http://qblinks.com/ja:embed]
+
+[http://qblinks.com/ja](http://qblinks.com/ja)
 
 ## スマート加湿器
 ### SwitchBot加湿器
-[https://www.switchbot.jp/copy-of-switchbot:embed]
+
+[https://www.switchbot.jp/copy-of-switchbot](https://www.switchbot.jp/copy-of-switchbot)
 
 ## スマートプラグ
 ### TP‐Link HS105
@@ -72,7 +74,8 @@ https://silverbirder180.hatenablog.com/entry/2019/09/06/205253
 
 ## スマートライト
 ### Light Strip Plus
-[https://www2.meethue.com/ja-jp/p/hue-white-and-color-ambiance-lightstrip-plus-jp-base/7190155J8:embed]
+
+[https://www2.meethue.com/ja-jp/p/hue-white-and-color-ambiance-lightstrip-plus-jp-base/7190155J8](https://www2.meethue.com/ja-jp/p/hue-white-and-color-ambiance-lightstrip-plus-jp-base/7190155J8)
 
 ## スマートカメラ
 ### Arlo Ultra
@@ -111,7 +114,8 @@ https://silverbirder180.hatenablog.com/entry/2019/09/06/205253
 
 ##  スマートグラス
 ### Focals
-[https://www.bynorth.com/focals:embed]
+
+[https://www.bynorth.com/focals](https://www.bynorth.com/focals)
 
 ## スマートエナジーハブ
 ### Nature Remo E

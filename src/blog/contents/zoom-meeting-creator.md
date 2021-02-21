@@ -6,9 +6,6 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2020/06/06/222800
-
 みなさん、Zoom使っていますか？ 
 ZoomのMeetingを自動生成するGASライブラリを公開しましたので、
 そのきっかけと使い方について紹介しようと思います。

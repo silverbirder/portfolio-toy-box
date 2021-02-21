@@ -6,16 +6,16 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2020/06/18/122658
 
-[f:id:silverbirder180:20200617223919j:plain]
+![WebApp Test](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200617/20200617223919.jpg)
+
 最近、Property Based Test という言葉を知りました。
 他にどういうテストの種類があるのか気になったので、調べてみました。
 本記事は、テストの種類を列挙します。
 ※ 使用する技術は、私の都合上、node.jsで選んでいます。
 
 [:contents]
+
 # テスト観点一覧
 ## Cache Test
 
@@ -32,7 +32,10 @@ Webアプリでも、Cacheをテストする必要がありそうです。
 
 [https://github.com/ai/size-limit:embed]
 
-<figure title="https://github.com/ai/size-limit">[f:id:silverbirder180:20200617070042p:plain]<figcaption>https://github.com/ai/size-limit</figcaption></figure>
+<figure title="https://github.com/ai/size-limit">
+<img alt="https://github.com/ai/size-limit" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200617/20200617070042.png">
+<figcaption><a href="https://github.com/ai/size-limit">https://github.com/ai/size-limit</a></figcaption>
+</figure>
 
 ## Complexity Test
 
@@ -47,7 +50,10 @@ Copy&Pasteは、DRYの原則に反するため、特別な理由がない限り�
 
 [https://github.com/kucherenko/jscpd:embed]
 
-<figure title="https://github.com/kucherenko/jscpd">[f:id:silverbirder180:20200617070137p:plain]<figcaption>https://github.com/kucherenko/jscpd</figcaption></figure>
+<figure title="https://github.com/kucherenko/jscpd">
+<img alt="jscpd" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200617/20200617070137.png">
+<figcaption><a href="https://github.com/kucherenko/jscpd">https://github.com/kucherenko/jscpd</a></figcaption>
+</figure>
 
 ## Cross Browser/Platform Test
 
@@ -101,7 +107,11 @@ INFO, WARN, ERRORなどがルールに基づいて使い分けされているか
 テストのパターン網羅が難しい場合や、パターン網羅できているけどダメ押しで、このテストをします。
 
 [https://github.com/marmelab/gremlins.js/:embed]
-<figure title="https://github.com/marmelab/gremlins.js">[f:id:silverbirder180:20200617070229g:plain]<figcaption>https://github.com/marmelab/gremlins.js</figcaption></figure>
+
+<figure title="https://github.com/marmelab/gremlins.js">
+<img alt="gremlins.js" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200617/20200617070229.gif">
+<figcaption><a href="https://github.com/marmelab/gremlins.js">https://github.com/marmelab/gremlins.js</a></figcaption>
+</figure>
 
 ## Multi Tenanct Test
 
@@ -115,7 +125,10 @@ INFO, WARN, ERRORなどがルールに基づいて使い分けされているか
 もし、プロダクトコードを壊しても、テストが成功してしまうと、それは正しくテストできていません。
 
 [https://github.com/stryker-mutator/stryker:embed]
-<figure title="https://stryker-mutator.io/stryker/quickstart">[f:id:silverbirder180:20200617070455g:plain]<figcaption>https://stryker-mutator.io/stryker/quickstart</figcaption></figure>
+<figure title="https://stryker-mutator.io/stryker/quickstart">
+<img alt="https://stryker-mutator.io/stryker/quickstart" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200617/20200617070455.gif">
+<figcaption><a href="https://stryker-mutator.io/stryker/quickstart">https://stryker-mutator.io/stryker/quickstart</a></figcaption>
+</figure>
 
 ## Chaos Test
 
@@ -163,7 +176,11 @@ Webアプリへ流入数を改善するためには、SEOは不可欠です。
 lighthouseというツールでSEOスコアを見ることができるみたいです。
 
 [https://github.com/GoogleChrome/lighthouse-ci:embed]
-<figure title="https://github.com/GoogleChrome/lighthouse-ci">[f:id:silverbirder180:20200617214926p:plain]<figcaption>https://github.com/GoogleChrome/lighthouse-ci</figcaption></figure>
+
+<figure title="https://github.com/GoogleChrome/lighthouse-ci">
+<img alt="https://github.com/GoogleChrome/lighthouse-ci" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200617/20200617214926.png">
+<figcaption><a href="https://github.com/GoogleChrome/lighthouse-ci">https://github.com/GoogleChrome/lighthouse-ci</a></figcaption>
+</figure>
 
 ## Smoke Test
 
@@ -230,15 +247,19 @@ Unitテストで、どこをテストできたかのカバレッジを見るこ�
 実際に動作しているJSやCSSのカバレッジを収集することもできます。
 
 [https://speakerdeck.com/pirosikick/puppeteerdeiranaicsswoxiao-su:embed]
-[https://gist.github.com/Silver-birder/71135913192fbca51a7e26924bd36b8b](https://gist.github.com/Silver-birder/71135913192fbca51a7e26924bd36b8b)
 
+[https://gist.github.com/Silver-birder/71135913192fbca51a7e26924bd36b8b:embed]
 
 ## Visual Regression Test
 
 見た目の変化を監視する必要があります。例えば、リンク切れとかがあれば、検出するべきです。
 
 [https://github.com/garris/BackstopJS:embed]
-<figure title="https://github.com/garris/BackstopJS">[f:id:silverbirder180:20200617070556p:plain]<figcaption>https://github.com/garris/BackstopJS</figcaption></figure>
+
+<figure title="https://github.com/garris/BackstopJS">
+<img alt="https://github.com/garris/BackstopJS" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200617/20200617070556.png">
+<figcaption><a href="https://github.com/garris/BackstopJS">https://github.com/garris/BackstopJS</a></figcaption>
+</figure>
 
 # 最後に
 どういうテストの観点があるのか、調べたり、経験則よりざっと書いてみました。

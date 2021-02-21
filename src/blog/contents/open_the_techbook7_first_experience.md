@@ -6,8 +6,6 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2019/09/06/205253
 
 技術書典7で初執筆しました。
 
@@ -61,9 +59,13 @@ Re:VIEW Starterというツールを使うと、学習コストゼロで、良�
 ```shell
 $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake pdf"
 ```
-<figure title="ReViewStarter sample page"><div class="images-row mceNonEditable">[f:id:silverbirder180:20190904204630p:plain][f:id:silverbirder180:20190904204703p:plain]</div><figcaption>ReViewStarter sample page</figcaption></figure>
 
-<b>良い感じの本</b>のPDFが作成されました、最高です。
+<figure title="ReViewStarter sample page">
+<img alt="ReViewStarter sample page" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190904/20190904204630.png">
+<figcaption>ReViewStarter sample page</figcaption>
+</figure>
+
+**良い感じの本**のPDFが作成されました、最高です。
 
 ## 1.2. 他ツール
 
@@ -91,12 +93,12 @@ $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake p
 イメージとしては、各章とそれぞれの第一節ぐらいが書き終えている感じです。
 
 各章の構成がおかしくないかをレビューしてもらいます。構成がおかしいと、読者は困惑してしまいます。
-後々になって構成を変更すると、<b>後戻りコスト</b>が高く付きます。
+後々になって構成を変更すると、**後戻りコスト**が高く付きます。
 
 ※ 実際は時間の都合上していません。
 
 ### 1.3.2. 2nd レビュー
-各章の文章を<b>とりあえず</b>書き終えた段階でレビューしてもらいます。
+各章の文章を**とりあえず**書き終えた段階でレビューしてもらいます。
 これも、1stレビューと同様の目的です。
 2stレビューでは、もう少し細かいレベルで章(節)構成をレビューしてもらいます。
 
@@ -112,7 +114,7 @@ $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake p
 * 誤字脱字
 * 図や表の挿入
 
-また、<b>GoogleDrive上でPDFをレビュー</b>するのが便利です。
+また、**GoogleDrive上でPDFをレビュー**するのが便利です。
 直接文章にコメントできるので、オススメです。
 
 [https://twitter.com/silver_birder/status/1167314554205786112:embed]
@@ -142,7 +144,7 @@ $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake p
 
 [http://www.nikko-pc.com/offset/template/tonbo.html:embed]
 
-<b>背表紙の幅はページ数によって変化します</b>。
+**背表紙の幅はページ数によって変化します**。
 私は、70ページほど予定していたので4mm幅で背表紙を描きました。
 幅計算は、テンプレート内に詳細が記載されていますので、ご参考下さい。
 （日光企画のお姉さんに指摘頂きました）
@@ -177,8 +179,10 @@ iPad, Magic Pencilは買って正解でした。
 
 お絵かきが苦手だったので、知人に助けてもらい、なんとか作れました。
 
-<figure title="表表紙">[f:id:silverbirder180:20190829230747p:plain]<figcaption>表表紙</figcaption></figure>
-
+<figure title="表表紙">
+<img alt="表表紙" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190829/20190829230747.png">
+<figcaption>表表紙</figcaption>
+</figure>
 
 # 2. 製本
 製本には、技術書典オススメの日光企画さんにお願いしました。
@@ -271,19 +275,22 @@ $ docker run --rm -v $PWD:/work kauplan/review2.5 /bin/bash -c "cd /work; rake p
 特に専門的な知識が必要なことがなく、本のPDFを登録するだけです。
 せっかく足を運んで会場に来て頂いた方のために、電子書籍と物理本の違いを出そうと考えました。
 （中身のデータは同じです）
-そこで、物理本を購入して頂いた方には、<b>無料で電子書籍をプレゼント</b>することにしました。
+そこで、物理本を購入して頂いた方には、**無料で電子書籍をプレゼント**することにしました。
 技術書典ではよくある方法だそうです。
 
 また、サンプルの本をアップロードし、無料でダウンロードできるようにすることで、
 事前に本の中身を確認できるようにしました。
 
-[https://silverbirder.booth.pm/items/1536228:embed]
+[[見本誌] はじめてのWeb Components入門 -4つの基本機能から関連ライブラリまで-](https://silverbirder.booth.pm/items/1536228)
 
 ただ、ダウンロード数を見る限り、あまり数は多くありませんでした。
-Google Analytics (<b>初登録</b>)とBoothが連携できるので、流入数を見れるのですが、
+Google Analytics (**初登録**)とBoothが連携できるので、流入数を見れるのですが、
 離脱率が86%という悲しい結果を知りました。ここは改善の余地がありそうです。
 
-<figure title="Booth on Google Analytics">[f:id:silverbirder180:20190906070005p:plain]<figcaption>Booth on Google Analytics</figcaption></figure>
+<figure title="Booth on Google Analytics">
+<img alt="Booth on Google Analytics" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190906/20190906070005.png">
+<figcaption>Booth on Google Analytics</figcaption>
+</figure>
 
 pixiv ID登録しないとダウンロードできないので、ここが駄目ならサービスを使わない方が良いかもしれません。
 見本誌に限っては、GoogleDriveで渡すようにするとかですかね。
@@ -317,7 +324,7 @@ pixiv ID登録しないとダウンロードできないので、ここが駄目
 あとは、勉強会に参加して宣伝する手段もあります。
 
 
-<b>「興味を持ってくれそうな人」が「多い」場</b>を探す必要があります。
+**「興味を持ってくれそうな人」が「多い」場**を探す必要があります。
 例えば、4番は事前に [connpass](https://connpass.com)で関係がありそうな勉強会を調べて、
 該当ハッシュタグで宣伝したりしました。
 また、積極的に1番を実施していると、他のサークル参加さんがリツイートしてくれるため、とても助かりました。
@@ -416,7 +423,3 @@ Twitterで宣伝するために、16:9の画像を用意したりもしました
 初執筆しようと考えている人にとって、何かの助けになれば幸いです。
 
 あとは、技術書典7 当日を楽しむだけ！！
-
-※ PS. よければフォロー下さい〜!
-
-[https://twitter.com/silver_birder:embed]

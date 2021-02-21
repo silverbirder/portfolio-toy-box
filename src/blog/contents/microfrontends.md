@@ -6,8 +6,6 @@ description: description
 image: 
 icon: 😎
 -->
-# Links
-https://silverbirder180.hatenablog.com/entry/2020/05/04/182921
 
 ![Everything I've learned about Micro Frontends](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200504/20200504140846.jpg)
 
@@ -117,9 +115,6 @@ ECサイトだけでなく、Spotifyのようなサービスにも適用され�
 
 Hydrationは、サーバーサイドでレンダリングした静的HTMLに、クライアントサイドの動的レンダリングができるようにするようなものです。
 
-ちなみにWeb Componentsは、次の入門書(500円)を執筆したため、ご興味がある人は見てみて下さい。
-[https://silverbirder.booth.pm/items/1572900:embed]
-
 ※ クライアントサイド統合(Web Components)でも良かったのですが、私都合により却下となりました。
 
 # Micro Frontends サンプルWebアプリ
@@ -129,8 +124,6 @@ apple, banana, orangeという商品を検索するだけのサンプルWebア�
 概要図はこちらです。
 
 ![micro frontends sample overview](https://res.cloudinary.com/silverbirder/image/upload/v1588513402/micro-frontends-sample-code/micro_frontends_sample.jpg)
-
-※ [http://team-page.fly.dev/]
 
 サンプルコードは、ここに置いています。
 [https://github.com/Silver-birder/micro-frontends-sample-code:embed]
