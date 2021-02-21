@@ -5,8 +5,7 @@
 </header>
 <amp-sidebar id="sidebar" layout="nodisplay" side="left" class="i-amphtml-layout-nodisplay" hidden="hidden" i-amphtml-layout="nodisplay"> <div role="button" aria-label="close sidebar" on="tap:sidebar.toggle" tabindex="0" class="close-sidebar">✕</div> <nav> <ul class="sidebar"> <li><a href="https://silver-birder.github.io/portfolio-toy-box/">Top</a></li> <li><a href="https://silver-birder.github.io/portfolio-toy-box/blog">Blog</a></li> <li><a href="https://silver-birder.github.io/portfolio-toy-box/books">Books</a></li> <li><a href="https://silver-birder.github.io/portfolio-toy-box/projects">Projects</a></li> <li><a href="https://silver-birder.github.io/portfolio-toy-box/purchases">Purchases</a></li> <li><a href="https://silver-birder.github.io/portfolio-toy-box/watches">Watches</a></li> </ul> </nav> </amp-sidebar>
 <main>
-<h1 id="links"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#links"></a>Links</h1>
-<p>https://qiita.com/silverbirder/items/f99dc7fa6cdbd6e194a1</p>
+<p></p><div class="table-of-contents"><ul><li><a href="#背景">背景</a></li><li><a href="#守って欲しいこと">守って欲しいこと</a><ul><li><a href="#1._可読性のあるテストコード">1. 可読性のあるテストコード</a><ul><li><a href="#1.1._テストメソッド名の統一">1.1. テストメソッド名の統一</a></li><li><a href="#1.2._論理制御を避ける">1.2. 論理制御を避ける</a></li><li><a href="#1.3._マジックナンバーを避ける">1.3. マジックナンバーを避ける</a></li><li><a href="#1.4._テストデータを外部ファイルに切り出す">1.4. テストデータを外部ファイルに切り出す</a></li><li><a href="#1.5._テストケースの構成を統一する">1.5. テストケースの構成を統一する</a></li><li><a href="#1.6._１つのテストケースで複数の検証をしない">1.6. １つのテストケースで複数の検証をしない</a></li><li><a href="#1.7._テストコードは最小限に">1.7. テストコードは最小限に</a></li></ul></li><li><a href="#2._matcherの活用">2. Matcherの活用</a><ul><li><a href="#2.1._自然言語に近い形式でassertする">2.1. 自然言語に近い形式でAssertする</a></li><li><a href="#2.2._変数名をわかりやすくする">2.2. 変数名をわかりやすくする</a></li></ul></li><li><a href="#3._テストパターン">3. テストパターン</a><ul><li><a href="#3.1._ホワイトボックステストとブラックボックステスト">3.1. ホワイトボックステストとブラックボックステスト</a></li><li><a href="#3.2._正常・準正常・異常系">3.2. 正常・準正常・異常系</a></li><li><a href="#3.3._failのテスト">3.3. Failのテスト</a></li><li><a href="#3.4._privateメソッドの検証">3.4. privateメソッドの検証</a></li></ul></li><li><a href="#4._大量にあるテストコード">4. 大量にあるテストコード</a><ul><li><a href="#4.1._プロダクトコードと同じ階層構造">4.1. プロダクトコードと同じ階層構造</a></li><li><a href="#4.2._単位を分けたテストコード">4.2. 単位を分けたテストコード</a></li><li><a href="#4.3._テスト実行時間が長くなってしまったら">4.3. テスト実行時間が長くなってしまったら</a></li></ul></li></ul></li><li><a href="#終わりに">終わりに</a></li><li><a href="#参考文献">参考文献</a></li></ul></div><p></p>
 <h1 id="背景"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#背景"></a>背景</h1>
 <p>普段、業務でユニットテストを書いたり、レビューをしたりしています。
 ユニットテストがあることは良いことなのですが、困ったことがあります。</p>
@@ -30,12 +29,14 @@
 <li>それがテストされるシナリオ。</li>
 <li>シナリオが呼び出されたときに想定される動作。</li>
 </ul>
-<pre><code class="language-:Bad hljs ebnf"><span class="hljs-attribute">Test_Single</span>
+<pre><code class="language-text hljs plaintext">// Bad
+Test_Single
 </code></pre>
-<pre><code class="language-:Good hljs ebnf"><span class="hljs-attribute">Add_SingleNumber_ReturnsSameNumber</span>
+<pre><code class="language-text hljs plaintext">// Good
+Add_SingleNumber_ReturnsSameNumber
 </code></pre>
 <p>※<a href="https://docs.microsoft.com/ja-jp/dotnet/core/testing/unit-testing-best-practices#naming-your-tests">テストの名前付け</a>より引用</p>
-<p>※ 『正しく表示されていること』という期待値は、極力避けましょう。具体的な値を期待値に設定しましょう。</p>
+<p>※『正しく表示されていること』という期待値は、極力避けましょう。具体的な値を期待値に設定しましょう。</p>
 <h3 id="1.2._論理制御を避ける"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#1.2._論理制御を避ける"></a>1.2. 論理制御を避ける</h3>
 <p>ifやfor等の制御は、テストコードの見通しが悪くなるため、極力避けましょう。
 共通化するよりも、愚直に書いたほうが読みやすいです。パフォーマンスは、そこまで気にしなくて良いですから。</p>
@@ -62,10 +63,12 @@
 <li>Assert (検証)</li>
 </ul>
 <p>これらを上から順番に実行されるようにテストコードを書いていきましょう。</p>
-<pre><code class="hljs arcade">Arrange =&gt; <span class="hljs-function"><span class="hljs-params">Act</span> =&gt;</span> Arrange =&gt; <span class="hljs-function"><span class="hljs-params">Act</span> =&gt;</span> Assert
+<pre><code class="language-text hljs plaintext">// Bad
+Arrange =&gt; Act =&gt; Arrange =&gt; Act =&gt; Assert
 </code></pre>
 <p>のように順番をMixするよりも、</p>
-<pre><code class="hljs coq">Arrange =&gt; Arrange =&gt; Act =&gt; =&gt; Act =&gt; Assert
+<pre><code class="language-text hljs plaintext">// Good
+Arrange =&gt; Arrange =&gt; Act =&gt; =&gt; Act =&gt; Assert
 </code></pre>
 <p>のように順番を揃えるほうが読みやすいです。</p>
 <h3 id="1.6._１つのテストケースで複数の検証をしない"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#1.6._１つのテストケースで複数の検証をしない"></a>1.6. １つのテストケースで複数の検証をしない</h3>
@@ -78,11 +81,13 @@
 <h3 id="2.1._自然言語に近い形式でassertする"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#2.1._自然言語に近い形式でassertする"></a>2.1. 自然言語に近い形式でAssertする</h3>
 <p>検証すべき変数をBooleanの形に変換し、AssertTrueすることが多々あります。
 しかし、読みやすさの観点でいうと、Matcherに標準で備わっている関数を使う方が読みやすいです。</p>
-<pre><code class="language-:Bad hljs reasonml"><span class="hljs-keyword">assert</span><span class="hljs-constructor">True(<span class="hljs-params">actual</span>.<span class="hljs-params">contains</span>('<span class="hljs-params">hello</span>')</span>)
+<pre><code class="language-text hljs plaintext">// Bad
+assertTrue(actual.contains('hello'))
 </code></pre>
-<pre><code class="language-:Good hljs reasonml"><span class="hljs-keyword">assert</span><span class="hljs-constructor">That(<span class="hljs-params">actual</span>, <span class="hljs-params">hasItems</span>('<span class="hljs-params">hello</span>')</span>)
+<pre><code class="language-text hljs plaintext">// Good
+assertThat(actual, hasItems('hello'))
+-&gt; assert that actual has items "hello".
 </code></pre>
-<p>-&gt; assert that actual has items "hello".</p>
 <h3 id="2.2._変数名をわかりやすくする"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#2.2._変数名をわかりやすくする"></a>2.2. 変数名をわかりやすくする</h3>
 <p>テストコードを書くときは、期待する値をExpect, 実際の値をActualという
 変数名にしましょう。そうすると、何を検証しているのかわかりやすくなります。</p>
