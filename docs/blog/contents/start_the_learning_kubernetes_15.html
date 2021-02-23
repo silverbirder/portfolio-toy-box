@@ -117,8 +117,8 @@ type: kubernetes.io/service-account-token
 <p>※ <a href="https://qiita.com/sheepland/items/67a5bb9b19d8686f389d">KubernetesのRBACについて</a></p>
 <p>今回は<a href="https://cstoku.dev/posts/2018/k8sdojo-20/">Kubernetes道場 20日目 - Role / RoleBinding / ClusterRole / ClusterRoleBindingについて</a>を参考に進めます。</p>
 <p>新しく作ったサービスアカウントでコンテキストを作成し、そのアカウントからPod情報を取得できるか試してみます。
-そのためには、サービスアカウントの認証情報を通しておく必要があります。
-※ RoleとClusterRoleに大きな違いはないため、Roleを試します。</p>
+そのためには、サービスアカウントの認証情報を通しておく必要があります。</p>
+<p>※ RoleとClusterRoleに大きな違いはないため、Roleを試します。</p>
 <pre><code class="language-shell hljs">pi@raspi001:~/tmp $ TOKEN=$(k get secret/sample-serviceaccount-token-jd279 -o json | jq -r .data.token)
 pi@raspi001:~/tmp $ DECODE_TOKEN=$(echo -n $TOKEN | base64 -d)
 pi@raspi001:~/tmp $ k config set-credentials sample-serviceaccount --token $DECODE_TOKEN

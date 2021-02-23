@@ -34,10 +34,12 @@ icon: 😎
 
 ## 環境
 
-```text:machine
+```text
+# Machine
 iMac (21.5-inch, 2017)
 ```
-```text:docker
+```text
+# Docker
 Docker Community Edition:
   Version: 18.06.1-ce-mac73 (26764)
 Docker Engine:
@@ -68,6 +70,7 @@ Kubernetesでは、MasterNodeとWorkerNodeの2種類のNodeが存在しており
 
 私なりの理解をアウトプットしたものが下記になります。
 (ほとんど真似した感じです。しかし、アウトプットするだけで理解が深まるため実施。 **アウトプット大事！** )
+
 ![Kubernetes_learning.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/f53b8321-a01c-c03e-77cb-2e90a1ca30ef.png)
 
 

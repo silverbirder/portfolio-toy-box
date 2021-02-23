@@ -30,7 +30,7 @@
 <h1 id="daemonset"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#daemonset"></a>DaemonSet</h1>
 <p>ReplicaSetとほぼ同じ機能のリソース。
 ReplicaSetとの違いは、各ノードに1つずつ配置するのがDaemonSet,バラバラなのがReplicaSet。
-用途として、モニタリングツールやログ収集のPodに使う。</p>
+用途として、モニタリングツールやログ収集のPodに使うそうです。</p>
 <p>さっそく、試してみます。</p>
 <pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-ds.yaml</span>
 <span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>
@@ -121,7 +121,7 @@ daemonset.apps/sample-ds   2         2         1       2            1           
 <h1 id="statefulset"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#statefulset"></a>StatefulSet</h1>
 <p>ステートレスなpodではなく、DBのようなステートフルなpod向けのリソース。
 podを削除しても、データを永続的に保存する仕組みが存在。
-動作自体は、replicaSetと似ている。</p>
+動作自体は、replicaSetと似ています。</p>
 <p>さっそく、試してみます。</p>
 <pre><code class="language-yaml hljs"><span class="hljs-comment"># sample-statefulset.yaml</span>
 <span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>

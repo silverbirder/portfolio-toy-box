@@ -99,7 +99,7 @@ sample-deployment-9dc487867-n8x5w   10.244.2.66   raspi003
 sample-deployment-9dc487867-nxbxc   10.244.2.67   raspi003
 ```
 
-![Kubernetes_learning-Page-2 (1).png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/44e0d3a4-7acd-e5cc-9362-e6ea14850589.png)
+![pod ip adress](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/44e0d3a4-7acd-e5cc-9362-e6ea14850589.png)
 
 このような状況下で、`sample-deployment-9dc487867-n8x5w:redis`を中心に見ていきます。
 

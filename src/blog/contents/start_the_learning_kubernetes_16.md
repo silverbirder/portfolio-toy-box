@@ -34,7 +34,8 @@ icon: 😎
 Kubernetesでは、下記のような構成になっています。
 
 ![スクリーンショット 2019-06-09 20.14.38.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/6d1c59bc-937a-6a5f-91d4-cb0dadd46e2a.png)
-※ https://kubernetes.io/docs/concepts/architecture/cloud-controller/
+
+※ [https://kubernetes.io/docs/concepts/architecture/cloud-controller/](https://kubernetes.io/docs/concepts/architecture/cloud-controller/)
 
 それぞれのコンポーネントについて学習します。
 
@@ -75,6 +76,7 @@ kube-scheduler-raspi001            1/1     Running   87         42d   192.168.3.
 * kube-proxy
 
 corednsは、Master1台とWorker1台で動いています。 
+
 ※ [このとき](BASE_URL/blog/contents/start_the_learning_kubernetes_03)に設定しました。
 
 # etcd

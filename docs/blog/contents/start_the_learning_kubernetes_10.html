@@ -26,7 +26,7 @@
 <li><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/start_the_learning_kubernetes_16">一足遅れて Kubernetes を学び始める - 16. コンポーネント -</a></li>
 </ol>
 <h1 id="前回"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#前回"></a>前回</h1>
-<p><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/start_the_learning_kubernetes_08">一足遅れて Kubernetes を学び始める - 08. discovery&amp;LB その2 -</a>では、様々なserviceを学習しました。
+<p><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/start_the_learning_kubernetes_09">一足遅れて Kubernetes を学び始める - 09. discovery&amp;LB その2 -</a>では、様々なserviceを学習しました。
 今回は、config&amp;storageのconfigを学びます。</p>
 <h1 id="config&amp;amp;storage"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#config&amp;storage"></a>config&amp;storage</h1>
 <p>Kubernetesには、下記のようにリソースの種類が存在します。</p>
@@ -228,8 +228,8 @@ root
 pi@raspi001:~/tmp $ k exec -it sample-secret-single-volume cat /config/username.txt
 amin
 </code></pre>
-<p>動的に書き換わっていますね。OK!
-※ adminのaが文字化けしていた...</p>
+<p>動的に書き換わっていますね。OK!</p>
+<p>※ adminのaが文字化けしていた...</p>
 <h1 id="configmap"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#configmap"></a>ConfigMap</h1>
 <p>設定情報をKey-Value形式で登録することができます。
 こちらも手段としては、ファイル参照、直接参照、マニフェスト参照があります。

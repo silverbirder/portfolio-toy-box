@@ -27,8 +27,7 @@
 </ol>
 <h1 id="前回"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#前回"></a>前回</h1>
 <p><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/start_the_learning_kubernetes_02">一足遅れて Kubernetes を学び始める - 02. Docker For Mac -</a>では、MacでKubernetesを軽く動かしてみました。DockerForMacでは、NodeがMasterのみだったため、Kubernetesを学習するには、ものたりない感がありました。そこで、RaspberryPiを使っておうちKubernetesを構築することになりました。</p>
-<p>@go_vargoさんの<a href="https://qiita.com/go_vargo/items/d1271ab60f2bba375dcc">Raspberry PiでおうちKubernetes構築【物理編】</a>, <a href="https://qiita.com/go_vargo/items/29f6d832ea0a289b4778">Raspberry PiでおうちKubernetes構築【論理編】</a>をベースに進めていきます。</p>
-<p>他、参考サイト</p>
+<p>参考サイト</p>
 <ul>
 <li><a href="https://qiita.com/sotoiwa/items/e350579d4c81c4a65260">ラズパイでKubernetesクラスタを構築する</a></li>
 <li><a href="https://qiita.com/shnmorimoto/items/7ce3c3ef8e962f8e5c59">おうちKubernetes構築でハマったところ - ニッチ編 -</a></li>
@@ -90,10 +89,9 @@
 できたものがこちらです。
 <amp-img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/72661091-1ffa-a9da-76dc-68c53b0f5b39.png" alt="kubernetes_raspberrypi.png" width="500" height="514" layout="intrinsic" i-amphtml-ssr data-hero class="i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" i-amphtml-layout="intrinsic"><i-amphtml-sizer class="i-amphtml-sizer"><img alt aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxNCIgd2lkdGg9IjUwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer><img class="i-amphtml-fill-content i-amphtml-replaced-content" decoding="async" alt="kubernetes_raspberrypi.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/72661091-1ffa-a9da-76dc-68c53b0f5b39.png"></amp-img></p>
 <p>WiFiを使うために、LANケーブルやWiFi親機などがなくなり、スッキリしました。
-電源を確保できるところであれば、家の中なら、どこでも持ち運びできます。 :sparkles:</p>
+電源を確保できるところであれば、家の中なら、どこでも持ち運びできます。 ✨</p>
 <h1 id="構築（論理）"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#構築（論理）"></a>構築（論理）</h1>
-<p><a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Stretch Lite</a>をダウンロードしておきます。
-<code>2019-04-08-raspbian-stretch-lite.img</code></p>
+<p><a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Stretch Lite</a>をダウンロードしておきます。</p>
 <p>Stepの1から3までの手順を<strong>RaspberryPi一台ずつ</strong> 、下記の手続きを踏んでいきます。</p>
 <h2 id="1._初期設定"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#1._初期設定"></a>1. 初期設定</h2>
 <p>microSDカードをMacにつなげた後に、下記を実施します。</p>

@@ -29,9 +29,11 @@
 <p><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/start_the_learning_kubernetes_01">一足遅れて Kubernetes を学び始める - 01. 環境選択編 -</a>にて、Kubernetesを学ぶ環境を考えてみました。いきなりGKEを使うんじゃなくて、お手軽に試せるDockerForMacを使おうとなりました。</p>
 <h1 id="docker_for_mac_を試す"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#docker_for_mac_を試す"></a>Docker For Mac を試す</h1>
 <h2 id="環境"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#環境"></a>環境</h2>
-<pre><code class="language-text:machine hljs plaintext">iMac (21.5-inch, 2017)
+<pre><code class="language-text hljs plaintext"># Machine
+iMac (21.5-inch, 2017)
 </code></pre>
-<pre><code class="language-text:docker hljs plaintext">Docker Community Edition:
+<pre><code class="language-text hljs plaintext"># Docker
+Docker Community Edition:
   Version: 18.06.1-ce-mac73 (26764)
 Docker Engine:
   Version: 18.06.1-ce
@@ -56,8 +58,8 @@ etcd-0               Healthy   {"health": "true"}
 </ol>
 <p>という理解になりました。また、全てのやり取りは、api-serverを経由しているそうです。</p>
 <p>私なりの理解をアウトプットしたものが下記になります。
-(ほとんど真似した感じです。しかし、アウトプットするだけで理解が深まるため実施。 <strong>アウトプット大事！</strong> )
-<amp-img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/f53b8321-a01c-c03e-77cb-2e90a1ca30ef.png" alt="Kubernetes_learning.png" width="615" height="760" layout="intrinsic" i-amphtml-ssr data-hero class="i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" i-amphtml-layout="intrinsic"><i-amphtml-sizer class="i-amphtml-sizer"><img alt aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9Ijc2MCIgd2lkdGg9IjYxNSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer><img class="i-amphtml-fill-content i-amphtml-replaced-content" decoding="async" alt="Kubernetes_learning.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/f53b8321-a01c-c03e-77cb-2e90a1ca30ef.png"></amp-img></p>
+(ほとんど真似した感じです。しかし、アウトプットするだけで理解が深まるため実施。 <strong>アウトプット大事！</strong> )</p>
+<p><amp-img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/f53b8321-a01c-c03e-77cb-2e90a1ca30ef.png" alt="Kubernetes_learning.png" width="615" height="760" layout="intrinsic" i-amphtml-ssr data-hero class="i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" i-amphtml-layout="intrinsic"><i-amphtml-sizer class="i-amphtml-sizer"><img alt aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9Ijc2MCIgd2lkdGg9IjYxNSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer><img class="i-amphtml-fill-content i-amphtml-replaced-content" decoding="async" alt="Kubernetes_learning.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/f53b8321-a01c-c03e-77cb-2e90a1ca30ef.png"></amp-img></p>
 <pre><code class="language-shell hljs">~ $ kubectl get nodes
 NAME                 STATUS    ROLES     AGE       VERSION
 docker-for-desktop   Ready     master    120d      v1.10.3

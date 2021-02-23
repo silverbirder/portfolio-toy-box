@@ -30,10 +30,7 @@ icon: 😎
 # 前回
 [一足遅れて Kubernetes を学び始める - 02. Docker For Mac -](BASE_URL/blog/contents/start_the_learning_kubernetes_02)では、MacでKubernetesを軽く動かしてみました。DockerForMacでは、NodeがMasterのみだったため、Kubernetesを学習するには、ものたりない感がありました。そこで、RaspberryPiを使っておうちKubernetesを構築することになりました。 
 
-
-@go_vargoさんの[Raspberry PiでおうちKubernetes構築【物理編】](https://qiita.com/go_vargo/items/d1271ab60f2bba375dcc), [Raspberry PiでおうちKubernetes構築【論理編】](https://qiita.com/go_vargo/items/29f6d832ea0a289b4778)をベースに進めていきます。
-
-他、参考サイト
+参考サイト
 
 * [ラズパイでKubernetesクラスタを構築する](https://qiita.com/sotoiwa/items/e350579d4c81c4a65260)
 * [おうちKubernetes構築でハマったところ - ニッチ編 -](https://qiita.com/shnmorimoto/items/7ce3c3ef8e962f8e5c59)
@@ -69,11 +66,10 @@ iMac (21.5-inch, 2017)
 ![kubernetes_raspberrypi.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/72661091-1ffa-a9da-76dc-68c53b0f5b39.png)
 
 WiFiを使うために、LANケーブルやWiFi親機などがなくなり、スッキリしました。
-電源を確保できるところであれば、家の中なら、どこでも持ち運びできます。 :sparkles: 
+電源を確保できるところであれば、家の中なら、どこでも持ち運びできます。 ✨ 
 
 # 構築（論理）
 [Raspbian Stretch Lite](https://www.raspberrypi.org/downloads/raspbian/)をダウンロードしておきます。
-`2019-04-08-raspbian-stretch-lite.img`
 
 Stepの1から3までの手順を**RaspberryPi一台ずつ** 、下記の手続きを踏んでいきます。
 

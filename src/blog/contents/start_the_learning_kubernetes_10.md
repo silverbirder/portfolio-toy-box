@@ -28,7 +28,7 @@ icon: 😎
 1. [一足遅れて Kubernetes を学び始める - 16. コンポーネント -](BASE_URL/blog/contents/start_the_learning_kubernetes_16)
 
 # 前回
-[一足遅れて Kubernetes を学び始める - 08. discovery&LB その2 -](BASE_URL/blog/contents/start_the_learning_kubernetes_08)では、様々なserviceを学習しました。
+[一足遅れて Kubernetes を学び始める - 09. discovery&LB その2 -](BASE_URL/blog/contents/start_the_learning_kubernetes_09)では、様々なserviceを学習しました。
 今回は、config&storageのconfigを学びます。
 
 # config&storage
@@ -250,6 +250,7 @@ amin
 ```
 
 動的に書き換わっていますね。OK!
+
 ※ adminのaが文字化けしていた...
 
 # ConfigMap

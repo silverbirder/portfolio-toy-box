@@ -45,6 +45,7 @@ iMac (21.5-inch, 2017)
 ## GKE SetUp
 
 ![GKE 標準クラスタ テンプレート 1](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/ad09881d-d3b7-1e03-48e4-a41466fb857d.png)
+
 ノードってのは、ポッド（コンテナ）を入れるマシンなんだっけな。 ([PodとNode](https://nownabe.github.io/kubernetes-doc/tutorials/kubernetes_basics/3_explore_your_app.html))
 
 ![GKE 標準クラスタ テンプレート 2](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/680b83b8-d59a-e4f7-4497-5b4d542fc796.png)
