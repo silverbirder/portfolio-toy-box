@@ -29,7 +29,7 @@ icon: 😎
 
 
 # 前回
-[一足遅れて Kubernetes を学び始める - 04. kubectl -](https://qiita.com/silverbirder/items/7ae773b6519b940b5be4)では、kubenetesのCLIツールkubectlを学習しました。
+[一足遅れて Kubernetes を学び始める - 04. kubectl -](BASE_URL/blog/contents/start_the_learning_kubernetes_04)では、kubenetesのCLIツールkubectlを学習しました。
 今回は、目玉機能であるworkloadsについて学習します。
 
 # workloads
@@ -545,4 +545,4 @@ pi@raspi001:~/tmp $ k label node raspi003 type-
 # おわりに
 思った以上に、ReplicaSetにハマってしまいました。
 次は、残りのworkloadsを試します。
-次回は[こちら](https://qiita.com/silverbirder/items/d3522237b28703a9adb6)です。
+次回は[こちら](BASE_URL/blog/contents/start_the_learning_kubernetes_06)です。

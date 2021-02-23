@@ -28,7 +28,7 @@ icon: 😎
 1. [一足遅れて Kubernetes を学び始める - 16. コンポーネント -](BASE_URL/blog/contents/start_the_learning_kubernetes_16)
 
 # 前回
-[一足遅れて Kubernetes を学び始める - 06. workloads その2 -](https://qiita.com/silverbirder/items/d3522237b28703a9adb6)にて、DaemonSetとStatefulSet(一部）を学習しました。今回は、StatefulSetの続きとJob,CronJobを学習します。
+[一足遅れて Kubernetes を学び始める - 06. workloads その2 -](BASE_URL/blog/contents/start_the_learning_kubernetes_06)にて、DaemonSetとStatefulSet(一部）を学習しました。今回は、StatefulSetの続きとJob,CronJobを学習します。
 
 # StatefulSet
 
@@ -304,4 +304,4 @@ pi@raspi001:~/tmp $ k delete pvc www-sample-statefulset-{0,1,2,3}
 
 # 終わりに
 ようやく、workloadsが終わりました。最後はざっくり進めてしまった感がありました。
-次回は[こちら](https://qiita.com/silverbirder/items/3a46ab92b45cdcc56ccd)です。
+次回は[こちら](BASE_URL/blog/contents/start_the_learning_kubernetes_08)です。

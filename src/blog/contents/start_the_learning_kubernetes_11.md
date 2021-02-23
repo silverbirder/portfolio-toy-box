@@ -28,7 +28,7 @@ icon: 😎
 1. [一足遅れて Kubernetes を学び始める - 16. コンポーネント -](BASE_URL/blog/contents/start_the_learning_kubernetes_16)
 
 # 前回
-[一足遅れて Kubernetes を学び始める - 10. config&storage その1 -](https://qiita.com/silverbirder/items/cb17f02f52c7b5c2aafd)では、configについて学習しました。
+[一足遅れて Kubernetes を学び始める - 10. config&storage その1 -](BASE_URL/blog/contents/start_the_learning_kubernetes_10)では、configについて学習しました。
 今回は、storageを学びます。
 
 # VolumeとPresistentVolume
@@ -74,7 +74,7 @@ Volumeを残すことができないので、Podを削除する際は気をつ�
 * OpenStack Cinder
 * GlusterFS
 
-[一足遅れて Kubernetes を学び始める - 06. workloads その2 -](https://qiita.com/silverbirder/items/d3522237b28703a9adb6)では、NFSを使いましたね。
+[一足遅れて Kubernetes を学び始める - 06. workloads その2 -](BASE_URL/blog/contents/start_the_learning_kubernetes_06)では、NFSを使いましたね。
 PersistentVolumeの作成方法は、外部の永続ボリュームによって違うのですが、共通して言えるところもあるみたいなので、
 そこを書いてみます。
 
@@ -121,6 +121,6 @@ PersistentVolumeの作成方法は、外部の永続ボリュームによって�
 
 # 最後に
 今回は、書籍をそのまま書いた感じになりました。
-実際に試したのは、[一足遅れて Kubernetes を学び始める - 06. workloads その2 -](https://qiita.com/silverbirder/items/d3522237b28703a9adb6)です。
+実際に試したのは、[一足遅れて Kubernetes を学び始める - 06. workloads その2 -](BASE_URL/blog/contents/start_the_learning_kubernetes_06)です。
 まあ、あんまり深くはハマらない方が良いのではと思いました。
-次回は、[こちら](https://qiita.com/silverbirder/items/5c0703f8fa055ade9f21)です。
+次回は、[こちら](BASE_URL/blog/contents/start_the_learning_kubernetes_12)です。

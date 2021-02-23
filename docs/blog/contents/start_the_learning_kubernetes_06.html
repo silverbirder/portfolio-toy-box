@@ -26,7 +26,7 @@
 <li><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/start_the_learning_kubernetes_16">一足遅れて Kubernetes を学び始める - 16. コンポーネント -</a></li>
 </ol>
 <h1 id="前回"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#前回"></a>前回</h1>
-<p><a href="https://qiita.com/silverbirder/items/7041aa5d4126a6784d59">一足遅れて Kubernetes を学び始める - 05. workloads その1 -</a>では、Pod,ReplicaSet,Deploymentの３つを学習しました。今回はDaemonSet,StatefulSet(一部)を学びます。</p>
+<p><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/start_the_learning_kubernetes_05">一足遅れて Kubernetes を学び始める - 05. workloads その1 -</a>では、Pod,ReplicaSet,Deploymentの３つを学習しました。今回はDaemonSet,StatefulSet(一部)を学びます。</p>
 <h1 id="daemonset"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#daemonset"></a>DaemonSet</h1>
 <p>ReplicaSetとほぼ同じ機能のリソース。
 ReplicaSetとの違いは、各ノードに1つずつ配置するのがDaemonSet,バラバラなのがReplicaSet。
@@ -204,7 +204,7 @@ No resources found.
 <p>3を進めようと思います。</p>
 <h2 id="nfs導入"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#nfs導入"></a>NFS導入</h2>
 <h3 id="サーバ設定"><a class="anchor" aria-label="Anchor" data-anchor-icon="###" href="#サーバ設定"></a>サーバ設定</h3>
-<p>NFS用の新たなraspberryPiを用意します。設定手順は<a href="https://qiita.com/silverbirder/items/cfaaba136b74b3140902#2-raspberrypi%E3%81%AB%E6%8E%A5%E7%B6%9A">こちら</a>を参考にしました。
+<p>NFS用の新たなraspberryPiを用意します。設定手順は<a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/start_the_learning_kubernetes_03">こちら</a>を参考にしました。
 その後の続きは下記です。</p>
 <p>NFSのホスト名は<code>nfspi</code>とします。</p>
 <pre><code class="language-shell hljs">~ $ slogin pi@nfspi.local
@@ -347,7 +347,7 @@ pi@raspi001:~/tmp $　k delete pvc www-sample-statefulset-{0,1,2}
 <h1 id="おわりに"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#おわりに"></a>おわりに</h1>
 <p>StatefulSetを使える状態にするまでに記事が大きくなってしまいました。次回に詳しく学んでいこうと思います。笑
 あと、<a href="https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client">nfs-client</a>を見て思ったのが、kubernetesのパッケージマネージャであるhelmを導入した方が、遥かに便利だと思いつつ、手動設定しました。。。
-次回は、<a href="https://qiita.com/silverbirder/items/937e1b5f6b3589452932">こちら</a>です。</p>
+次回は、<a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/start_the_learning_kubernetes_07">こちら</a>です。</p>
 </main>
 <amp-social-share type="twitter" aria-label="Share on Twitter" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:60px;height:44px;" i-amphtml-layout="fixed"></amp-social-share>
 <amp-social-share type="hatena_bookmark" data-share-endpoint="http://b.hatena.ne.jp/entry/https://silver-birder.github.io/portfolio-toy-box/blog/contents/start_the_learning_kubernetes_06" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:60px;height:44px;" i-amphtml-layout="fixed"></amp-social-share>

@@ -28,7 +28,7 @@ icon: 😎
 1. [一足遅れて Kubernetes を学び始める - 16. コンポーネント -](BASE_URL/blog/contents/start_the_learning_kubernetes_16)
 
 # 前回
-[一足遅れて Kubernetes を学び始める - 08. discovery&LB その1 -](https://qiita.com/silverbirder/items/3a46ab92b45cdcc56ccd)でServiceについての概要を学びました。今回は下記を一気に学びます。
+[一足遅れて Kubernetes を学び始める - 08. discovery&LB その1 -](BASE_URL/blog/contents/start_the_learning_kubernetes_08)でServiceについての概要を学びました。今回は下記を一気に学びます。
 
 * ExternalIP
 * NodePort
@@ -431,4 +431,4 @@ Serviceについて学びました。
 手を動かして確認してみると、理解が深まりました。
 本番でk8sを使った経験はありませんが、今後必要に迫られた際に、こちらの記事を思い返そうと思います。
 
-次回は[こちら](https://qiita.com/silverbirder/items/cb17f02f52c7b5c2aafd)です。
+次回は[こちら](BASE_URL/blog/contents/start_the_learning_kubernetes_10)です。

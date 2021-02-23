@@ -28,7 +28,7 @@ icon: 😎
 1. [一足遅れて Kubernetes を学び始める - 16. コンポーネント -](BASE_URL/blog/contents/start_the_learning_kubernetes_16)
 
 # 前回
-[一足遅れて Kubernetes を学び始める - 08. discovery&LB その2 -](https://qiita.com/silverbirder/items/f6290a7868849d57b9f1)では、様々なserviceを学習しました。
+[一足遅れて Kubernetes を学び始める - 08. discovery&LB その2 -](BASE_URL/blog/contents/start_the_learning_kubernetes_08)では、様々なserviceを学習しました。
 今回は、config&storageのconfigを学びます。
 
 # config&storage
@@ -290,4 +290,4 @@ API_KEYを環境変数として登録して開発しています。
 service_accountを使うのが一般的なのでしょうか？
 
 次回は、Storageについて学習します。
-[こちら](https://qiita.com/silverbirder/items/8d7a5473fa6969954e21)です。
+[こちら](BASE_URL/blog/contents/start_the_learning_kubernetes_11)です。

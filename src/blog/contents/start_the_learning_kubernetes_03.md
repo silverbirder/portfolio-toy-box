@@ -28,7 +28,7 @@ icon: 😎
 1. [一足遅れて Kubernetes を学び始める - 16. コンポーネント -](BASE_URL/blog/contents/start_the_learning_kubernetes_16)
 
 # 前回
-[一足遅れて Kubernetes を学び始める - 02. Docker For Mac -](https://qiita.com/silverbirder/items/d1aa368568885df2e44f)では、MacでKubernetesを軽く動かしてみました。DockerForMacでは、NodeがMasterのみだったため、Kubernetesを学習するには、ものたりない感がありました。そこで、RaspberryPiを使っておうちKubernetesを構築することになりました。 
+[一足遅れて Kubernetes を学び始める - 02. Docker For Mac -](BASE_URL/blog/contents/start_the_learning_kubernetes_02)では、MacでKubernetesを軽く動かしてみました。DockerForMacでは、NodeがMasterのみだったため、Kubernetesを学習するには、ものたりない感がありました。そこで、RaspberryPiを使っておうちKubernetesを構築することになりました。 
 
 
 @go_vargoさんの[Raspberry PiでおうちKubernetes構築【物理編】](https://qiita.com/go_vargo/items/d1271ab60f2bba375dcc), [Raspberry PiでおうちKubernetes構築【論理編】](https://qiita.com/go_vargo/items/29f6d832ea0a289b4778)をベースに進めていきます。
@@ -266,6 +266,6 @@ service "nginx" deleted
 
 # 完成
 すんなりと構築することができました。これは先人たちの記事がたくさんあるので、
-サクサクと進めることができました。これで、Kubernetesを使いまくります!! :muscle: :muscle: 
-次回は[こちら](https://qiita.com/silverbirder/items/7ae773b6519b940b5be4)です。
+サクサクと進めることができました。これで、Kubernetesを使いまくります!! 💪💪 
+次回は[こちら](BASE_URL/blog/contents/start_the_learning_kubernetes_04)です。
 

@@ -143,4 +143,4 @@ pod "nginx" deleted
 やっぱりNode増やしたい！！
 [Raspberry PiでおうちKubernetes構築【論理編】](https://qiita.com/go_vargo/items/29f6d832ea0a289b4778)を見て、これをやるっきゃない！
 すごく今更だけど、試してみようと思います。
-次回は[こちら](https://qiita.com/silverbirder/items/cfaaba136b74b3140902)です。
+次回は[こちら](BASE_URL/blog/contents/start_the_learning_kubernetes_03)です。

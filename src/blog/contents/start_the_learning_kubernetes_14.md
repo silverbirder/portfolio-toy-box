@@ -28,7 +28,7 @@ icon: 😎
 1. [一足遅れて Kubernetes を学び始める - 16. コンポーネント -](BASE_URL/blog/contents/start_the_learning_kubernetes_16)
 
 # 前回
-[一足遅れて Kubernetes を学び始める - 13. ヘルスチェックとコンテナライフサイクル -](https://qiita.com/silverbirder/items/8df21f399c453b9f8e51)では、requestsやlimitといったヘルスチェックの仕方を学びました。今回は、Affinityなどによるスケジューリングについて学習します。
+[一足遅れて Kubernetes を学び始める - 13. ヘルスチェックとコンテナライフサイクル -](BASE_URL/blog/contents/start_the_learning_kubernetes_13)では、requestsやlimitといったヘルスチェックの仕方を学びました。今回は、Affinityなどによるスケジューリングについて学習します。
 
 # スケジューリング
 これから学ぶスケジューリングでは、大きく分けて２つに分類します。
@@ -392,4 +392,4 @@ pi@raspi001:~/tmp $ k label node raspi003 cputype- disksize-
 PodをどのNodeにスケジューリングするのか学習しました。
 汚れ(taint)と許容(tolerations)という考えは面白いなと思いました。
 ただ、あまり使いすぎると複雑に陥りやすそうなので、注意が必要ですね。
-次回は、[こちら](https://qiita.com/silverbirder/items/8ea729949ab3bb4cf540)です。
+次回は、[こちら](BASE_URL/blog/contents/start_the_learning_kubernetes_15)です。

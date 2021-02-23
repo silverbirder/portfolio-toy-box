@@ -58,4 +58,4 @@ iMac (21.5-inch, 2017)
 ちょっと意味がわからない状態で、GKE動かしたらお金がかかる上に、何してるのか分からないから、もったいない。
 Docker For MacにKubernetes使えるみたいだから、まずはそっちを使って学んでいこうかな。。。 :muscle: 
 
-次回は[こちら](https://qiita.com/silverbirder/items/d1aa368568885df2e44f)です。
+次回は[こちら](BASE_URL/blog/contents/start_the_learning_kubernetes_05)です。

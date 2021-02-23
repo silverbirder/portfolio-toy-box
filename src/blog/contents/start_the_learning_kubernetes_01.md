@@ -43,13 +43,15 @@ iMac (21.5-inch, 2017)
 マネージドサービスのGKE使ったほうが、最初は楽で簡単だから、そっちを使ったほうが良いみたいです。 😍
 
 ## GKE SetUp
-![スクリーンショット 2019-04-18 21.11.23.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/ad09881d-d3b7-1e03-48e4-a41466fb857d.png)
+
+![GKE 標準クラスタ テンプレート 1](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/ad09881d-d3b7-1e03-48e4-a41466fb857d.png)
 ノードってのは、ポッド（コンテナ）を入れるマシンなんだっけな。 ([PodとNode](https://nownabe.github.io/kubernetes-doc/tutorials/kubernetes_basics/3_explore_your_app.html))
-***
-![スクリーンショット 2019-04-18 21.11.37.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/680b83b8-d59a-e4f7-4497-5b4d542fc796.png)
+
+![GKE 標準クラスタ テンプレート 2](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/680b83b8-d59a-e4f7-4497-5b4d542fc796.png)
+
 まあ、デフォルトで良いよね 🤔 
-***
-![スクリーンショット 2019-04-18 21.11.54.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/b5f2b248-28a2-77a5-649e-4d9e85d58ace.png)
+
+![GKE 標準クラスタ テンプレート 3](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/b5f2b248-28a2-77a5-649e-4d9e85d58ace.png)
 
 単語がどれも分からなさすぎる...(Istio?自動プロビジョニング?垂直ポッド自動スケーリング？) 🤔🤔🤔 
 
@@ -57,4 +59,4 @@ iMac (21.5-inch, 2017)
 ちょっと意味がわからない状態で、GKE動かしたらお金がかかる上に、何してるのか分からないから、もったいない。
 Docker For MacにKubernetes使えるみたいだから、まずはそっちを使って学んでいこうかな。。。 💪 
 
-次回は[こちら](https://qiita.com/silverbirder/items/d1aa368568885df2e44f)です。
+次回は[こちら](BASE_URL/blog/contents/start_the_learning_kubernetes_02)です。

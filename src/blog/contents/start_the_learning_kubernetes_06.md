@@ -29,7 +29,7 @@ icon: 😎
 
 
 # 前回
-[一足遅れて Kubernetes を学び始める - 05. workloads その1 -](https://qiita.com/silverbirder/items/7041aa5d4126a6784d59)では、Pod,ReplicaSet,Deploymentの３つを学習しました。今回はDaemonSet,StatefulSet(一部)を学びます。
+[一足遅れて Kubernetes を学び始める - 05. workloads その1 -](BASE_URL/blog/contents/start_the_learning_kubernetes_05)では、Pod,ReplicaSet,Deploymentの３つを学習しました。今回はDaemonSet,StatefulSet(一部)を学びます。
 
 # DaemonSet
 ReplicaSetとほぼ同じ機能のリソース。
@@ -245,7 +245,7 @@ No resources found.
 
 ## NFS導入
 ### サーバ設定
-NFS用の新たなraspberryPiを用意します。設定手順は[こちら](https://qiita.com/silverbirder/items/cfaaba136b74b3140902#2-raspberrypi%E3%81%AB%E6%8E%A5%E7%B6%9A)を参考にしました。
+NFS用の新たなraspberryPiを用意します。設定手順は[こちら](BASE_URL/blog/contents/start_the_learning_kubernetes_03)を参考にしました。
 その後の続きは下記です。
 
 NFSのホスト名は`nfspi`とします。
@@ -416,4 +416,4 @@ pi@raspi001:~/tmp $　k delete pvc www-sample-statefulset-{0,1,2}
 # おわりに
 StatefulSetを使える状態にするまでに記事が大きくなってしまいました。次回に詳しく学んでいこうと思います。笑
 あと、[nfs-client](https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client)を見て思ったのが、kubernetesのパッケージマネージャであるhelmを導入した方が、遥かに便利だと思いつつ、手動設定しました。。。
-次回は、[こちら](https://qiita.com/silverbirder/items/937e1b5f6b3589452932)です。
+次回は、[こちら](BASE_URL/blog/contents/start_the_learning_kubernetes_07)です。

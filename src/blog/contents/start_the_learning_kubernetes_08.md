@@ -28,7 +28,7 @@ icon: 😎
 1. [一足遅れて Kubernetes を学び始める - 16. コンポーネント -](BASE_URL/blog/contents/start_the_learning_kubernetes_16)
 
 # 前回
-[一足遅れて Kubernetes を学び始める - 07. workloads その3 -](https://qiita.com/silverbirder/items/937e1b5f6b3589452932)でようやくworkloadsが終了しました。今回は、discovery&LBを進めようと思います。
+[一足遅れて Kubernetes を学び始める - 07. workloads その3 -](BASE_URL/blog/contents/start_the_learning_kubernetes_07)でようやくworkloadsが終了しました。今回は、discovery&LBを進めようと思います。
 
 # discovery&LB
 
@@ -274,6 +274,6 @@ pi@raspi001:~/tmp $ k delete -f sample-deployment.yaml -f sample-clusterip.yaml
 # 最後に
 今回は、Serviceについての概要を学びました。Kubernetesの世界では、自動的にネットワーク構築されているため、特段意識することはありませんでした。
 もう少し理解が進めれば、ネットワークがどのように構築されているのか、クラスタ内DNSがどのように動いているのか知りたいと思います。
-次回は、[こちら](https://qiita.com/silverbirder/items/f6290a7868849d57b9f1)です。
+次回は、[こちら](BASE_URL/blog/contents/start_the_learning_kubernetes_09)です。
 
 ※ お絵かきしてアウトプットすると、理解が深まるのでおすすめです。

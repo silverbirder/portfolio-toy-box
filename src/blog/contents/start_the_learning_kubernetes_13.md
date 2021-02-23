@@ -28,7 +28,7 @@ icon: 😎
 1. [一足遅れて Kubernetes を学び始める - 16. コンポーネント -](BASE_URL/blog/contents/start_the_learning_kubernetes_16)
 
 # 前回
-[一足遅れて Kubernetes を学び始める - 12. リソース制限 -](https://qiita.com/silverbirder/items/5c0703f8fa055ade9f21)では、requestsやlimitなどのリソース制限について学習しました。今回は、ヘルスチェックとコンテナライフサイクルについて学習します。
+[一足遅れて Kubernetes を学び始める - 12. リソース制限 -](BASE_URL/blog/contents/start_the_learning_kubernetes_12)では、requestsやlimitなどのリソース制限について学習しました。今回は、ヘルスチェックとコンテナライフサイクルについて学習します。
 
 # ヘルスチェック
 Kubernetesでは、Podの正常生判断のためのヘルスチェックが2種類用意されています。
@@ -373,4 +373,4 @@ pi@raspi001:~/tmp $ k delete -f sample-healthcheck.yaml -f sample-restart-always
 # 最後に
 今回は、ヘルスチェックの動作と、コンテナを停止するまでのステップを学習しました。
 わざわざヘルスチェックの処理をアプリケーションに用意せずとも、kubernetesに機能として
-存在することに、驚きました。次回は、[こちら](https://qiita.com/silverbirder/items/cae4649d9f9336bc01fd)です。
+存在することに、驚きました。次回は、[こちら](BASE_URL/blog/contents/start_the_learning_kubernetes_14)です。

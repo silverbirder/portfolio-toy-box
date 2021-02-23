@@ -26,7 +26,7 @@
 <li><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/start_the_learning_kubernetes_16">一足遅れて Kubernetes を学び始める - 16. コンポーネント -</a></li>
 </ol>
 <h1 id="前回"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#前回"></a>前回</h1>
-<p><a href="https://qiita.com/silverbirder/items/8ea729949ab3bb4cf540">一足遅れて Kubernetes を学び始める - 15. セキュリティ -</a>では、RBACによる権限について学習しました。今回は最後にKubernetesのコンポーネントについて学習します。</p>
+<p><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/start_the_learning_kubernetes_15">一足遅れて Kubernetes を学び始める - 15. セキュリティ -</a>では、RBACによる権限について学習しました。今回は最後にKubernetesのコンポーネントについて学習します。</p>
 <h1 id="コンポーネント"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#コンポーネント"></a>コンポーネント</h1>
 <p>Kubernetesでは、下記のような構成になっています。</p>
 <p><amp-img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/6d1c59bc-937a-6a5f-91d4-cb0dadd46e2a.png" alt="スクリーンショット 2019-06-09 20.14.38.png" width="878" height="404" layout="intrinsic" i-amphtml-ssr data-hero class="i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" i-amphtml-layout="intrinsic"><i-amphtml-sizer class="i-amphtml-sizer"><img alt aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjQwNCIgd2lkdGg9Ijg3OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer><img class="i-amphtml-fill-content i-amphtml-replaced-content" decoding="async" alt="スクリーンショット 2019-06-09 20.14.38.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/143813/6d1c59bc-937a-6a5f-91d4-cb0dadd46e2a.png"></amp-img>
@@ -66,7 +66,7 @@ kube-scheduler-raspi001            1/1     Running   87         42d   192.168.3.
 <li>kube-proxy</li>
 </ul>
 <p>corednsは、Master1台とWorker1台で動いています。
-※ <a href="https://qiita.com/silverbirder/items/cfaaba136b74b3140902#4-masternode%E3%81%AE%E8%A8%AD%E5%AE%9A">このとき</a>に設定しました。</p>
+※ <a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/start_the_learning_kubernetes_03">このとき</a>に設定しました。</p>
 <h1 id="etcd"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#etcd"></a>etcd</h1>
 <p>MasterNodeに存在するコンポーネントです。
 分散Key-ValueStoreであるetcdは、Kubernetesのクラスタにある全情報が保存されています。そのため、単一障害にならないようクラスタを組むことが推奨されているみたいです。ここのデータにアクセスするのはkube-apiserverから経由しなければなりません。
@@ -102,7 +102,7 @@ Operator Frameworkと呼ばれるもので簡単に作成できるそうです�
 当初は、ここまで記事にアウトプットし続けるつもりはなかったです。
 実際にkubernetesをraspberryPi上で動かしてみると、
 いろいろな発見があってのめり込んでしまいました。</p>
-<p>ただ、<a href="https://qiita.com/silverbirder/items/5c0703f8fa055ade9f21">一足遅れて Kubernetes を学び始める - 12. リソース制限 -</a>ぐらいから、いろいろとあって、
+<p>ただ、<a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/start_the_learning_kubernetes_12">一足遅れて Kubernetes を学び始める - 12. リソース制限 -</a>ぐらいから、いろいろとあって、
 書籍の内容を、ほぼそのまま使わさせてもらいました。（笑)</p>
 <p>これからは、実際にGKEを使ってアプリケーション開発をしてみようと思います。</p>
 </main>

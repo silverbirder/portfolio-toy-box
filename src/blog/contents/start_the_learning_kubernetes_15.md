@@ -28,7 +28,7 @@ icon: 😎
 1. [一足遅れて Kubernetes を学び始める - 16. コンポーネント -](BASE_URL/blog/contents/start_the_learning_kubernetes_16)
 
 # 前回
-[一足遅れて Kubernetes を学び始める - 14. スケジューリング -](https://qiita.com/silverbirder/items/cae4649d9f9336bc01fd)では、AffinityなどでPodのスケジューリングについて学習しました。今回は、セキュリティについて学習します。
+[一足遅れて Kubernetes を学び始める - 14. スケジューリング -](BASE_URL/blog/contents/start_the_learning_kubernetes_14)では、AffinityなどでPodのスケジューリングについて学習しました。今回は、セキュリティについて学習します。
 
 # サービスアカウント
 Podで実行するためのプロセスを制御するために割り振られるアカウントのことをサービスアカウントというそうです。
@@ -279,4 +279,4 @@ pi@raspi001:~/tmp $ k config delete-context sample-sa-context
 今回で取り組んだように、誰がどの権限を持っているかをRBACで管理できるので、
 必要以上の権限を与えられて事故るようなことは少なくなりますね。
 （といっても、まだ個人でしか使ってないので分かりませんが...）
-次回は、最後で[こちら](https://qiita.com/silverbirder/items/a68499a10dd00c192947)です。
+次回は、最後で[こちら](BASE_URL/blog/contents/start_the_learning_kubernetes_16)です。

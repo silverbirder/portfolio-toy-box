@@ -28,7 +28,7 @@ icon: 😎
 1. [一足遅れて Kubernetes を学び始める - 16. コンポーネント -](BASE_URL/blog/contents/start_the_learning_kubernetes_16)
 
 # 前回
-[一足遅れて Kubernetes を学び始める - 10. config&storage その2 -](https://qiita.com/silverbirder/items/8d7a5473fa6969954e21)では、storageについて学習しました。
+[一足遅れて Kubernetes を学び始める - 11. config&storage その2 -](BASE_URL/blog/contents/start_the_learning_kubernetes_11)では、storageについて学習しました。
 今回は、リソース制限について学習します。
 
 ※ リソースの種類から、次は「Metadata」だったのですが、kubernetes完全ガイドによると直接説明するのではなく、内容ベースで説明されていましたので、それに準拠します。
@@ -300,4 +300,4 @@ pi@raspi001:~/tmp $ k delete -f sample-resource.yaml -f sample-resourcequota.yam
 今回は、RequestsやLimitsを操作してリソース制限をしてみました。
 どれがいくらリソースを消費しているのか確認する術を学び、
 ついでにjsonpathの使い方も知りました。
-次回は、[こちら](https://qiita.com/silverbirder/items/8df21f399c453b9f8e51)です。
+次回は、[こちら](BASE_URL/blog/contents/start_the_learning_kubernetes_13)です。
