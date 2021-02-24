@@ -27,11 +27,12 @@ const addAnchorToHeader = (layoutDOM) => {
 };
 
 const replaceUrl = (layoutDOM, canonicalUrl) => {
-    const urlElementList = layoutDOM.window.document.querySelectorAll('[src],[href],[data-share-endpoint]');
+    const urlElementList = layoutDOM.window.document.querySelectorAll('[src],[href],[data-share-endpoint],[config]');
     Array.prototype.forEach.call(urlElementList, (element) => {
         const href = element.getAttribute('href');
         const src = element.getAttribute('src');
         const endpoint = element.getAttribute('data-share-endpoint');
+        const config = element.getAttribute('config');
         if (href && href.match(/(BASE_URL|CANONICAL_URL)/)) {
             element.setAttribute('href', href
                 .replace(/BASE_URL/, BASE_URL)
@@ -49,6 +50,10 @@ const replaceUrl = (layoutDOM, canonicalUrl) => {
                 .replace(/BASE_URL/, BASE_URL)
                 .replace(/CANONICAL_URL/, canonicalUrl)
             );
+        }
+        if (config && config.match(/(BASE_URL|CANONICAL_URL)/)) {
+            element.setAttribute('config', config
+                .replace(/BASE_URL/, BASE_URL))
         }
     });
 };

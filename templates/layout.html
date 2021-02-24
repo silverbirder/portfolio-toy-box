@@ -359,18 +359,27 @@
         </a>
     </section>
 </footer>
-<amp-analytics type="gtag" data-credentials="include">
+<amp-analytics
+        type="googleanalytics"
+        config="BASE_URL/analytics.account.config.json"
+>
     <script type="application/json">
         {
-            "vars": {
-                "gtag_id": "G-VXNWEC7Y03",
-                "linker": {
-                    "domains": ["silver-birder.github.io"]
-                }
-            ,
-                "config": {
-                    "G-VXNWEC7Y03": {
-                        "groups": "default"
+            "extraUrlParams": {
+                "cd1": "AMP"
+            },
+            "triggers": {
+                "trackPageview": {
+                    "on": "visible",
+                    "request": "pageview"
+                },
+                "trackAnchorClicks": {
+                    "on": "click",
+                    "selector": "a",
+                    "request": "event",
+                    "vars": {
+                        "eventId": "42",
+                        "eventLabel": "clicked on a link"
                     }
                 }
             }
