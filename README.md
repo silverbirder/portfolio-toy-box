@@ -7,4 +7,3 @@
 * check dead link
 * rss web push
 * github contribution
-* github ci (npm run build:prod)
