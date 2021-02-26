@@ -9,7 +9,7 @@ icon: 😎
 
 「鍵どこいったっけ？」という悩みから、おさらば！
 
-![SESAME BOX](https://miro.medium.com/max/1400/1*xBA69YHBpfHcJuKUAOEEbw.png)
+![SESAME BOX](https://res.cloudinary.com/silverbirder/image/upload/v1614345786/silver-birder.github.io/blog/SESAME_BOX.png)
 
 [:contents]
 
@@ -60,28 +60,28 @@ icon: 😎
 まず、私の家の扉はつぎの画像の感じです。ここの下の鍵にSESAMEを取り付けたいなと考えていました。
 
 <figure title="私の家の扉">
-<img alt="私の家の扉" src="https://miro.medium.com/max/1400/1*_Wg7UIZfuWX0-zqHq-GaDQ.png">
+<img alt="私の家の扉" src="">
 <figcaption>私の家の扉</figcaption>
 </figure>
 
 ただ、試してみると、私の家の扉ではSESAMEが設置できませんでした…
 
 <figure title="ミスマッチ！">
-<img alt="ミスマッチ！" src="https://miro.medium.com/max/1400/1*RwYebI1LRGsFLQDvZ-ndFg.png">
+<img alt="ミスマッチ！" src="https://res.cloudinary.com/silverbirder/image/upload/v1614345846/silver-birder.github.io/blog/miss_match_sesame_size.png">
 <figcaption>ミスマッチ！</figcaption>
 </figure>
 
 何がダメかというと、SESAMEは両面テープでくっつけるため、壁と設置する必要があります。ただ、私の家の扉には、段差があるため、SESAMEをくっつけることができませんでした…。
 
 <figure title="鍵と扉に奥行きがある">
-<img alt="鍵と扉に奥行きがある" src="https://miro.medium.com/max/1400/1*ulSTPZd4uWgOeO38EdPQpg.png">
+<img alt="鍵と扉に奥行きがある" src="https://res.cloudinary.com/silverbirder/image/upload/v1614345933/silver-birder.github.io/blog/lock_and_door_have_depth_sesame.png">
 <figcaption>鍵と扉に奥行きがある</figcaption>
 </figure>
 
 そこで、カスタマーサポートに連絡したところ、超親切にフォローして頂き、アダプター作成をしてもらえました。（送料無料、ただしアマゾンレビューをする）
 
 <figure title="SESAMEと私のやりとり。ほぼ１日程度に返事がくる">
-<img alt="SESAMEと私のやりとり。ほぼ１日程度に返事がくる" src="https://miro.medium.com/max/1400/1*i91zaMvhc9Oncnpxc2CJ3g.png">
+<img alt="SESAMEと私のやりとり。ほぼ１日程度に返事がくる" src="https://res.cloudinary.com/silverbirder/image/upload/v1614346016/silver-birder.github.io/blog/SESAME_and_my_correspondence_get_a_response_almost_every_day_or_so.png">
 <figcaption>SESAMEと私のやりとり。ほぼ１日程度に返事がくる</figcaption>
 </figure>
 
