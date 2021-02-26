@@ -37,7 +37,7 @@ Microservices化によって、Scalability、Agility、Independency、Availabili
 ※ [Micro Frontends in Action](https://www.manning.com/books/micro-frontends-in-action)にも記載されていますが、この考え方はWebサービスを対象としており、ネイティブアプリは対象としていません。
 
 # 導入企業👨‍💼👩‍💼
-実績企業としては、IKEA、DAZN、Spotifyなどが挙げられます。他の例は、[Micro Frontends を調べたすべて](https://silverbirder180.hatenablog.com/entry/2020/10/07/190727) にリストアップしていますので、興味がある方はご覧ください。
+実績企業としては、IKEA、DAZN、Spotifyなどが挙げられます。他の例は、[Micro Frontends を調べたすべて](BASE_URL/blog/contents/think_micro_frontends) にリストアップしていますので、興味がある方はご覧ください。
 
 # メリット・デメリット🔍
 MFEを導入することによるメリット・デメリットについて、(プロダクション導入経験無しの私が偏見で)簡単に紹介します。Microservicesのメリット・デメリットと似ていると思います。
@@ -48,7 +48,7 @@ MFEを導入することによるメリット・デメリットについて、(�
 私が思う最大のデメリットは、**Independencyの難しさ**だと思います。例えば、UI/UXの指針となるデザインシステムがWebサービスにあったとして、それをすべてのフロントエンドへ適用しなければいけません。そのため、全体を通した**一貫性のあるUI/UXであるかどうか**の品質担保が難しいです。
 他には、あるチームのビルドツールを改善したとしても、他のチームではその恩恵を受けれなかったり、アプリケーション設計における全体共通(アクセス履歴、イベント管理、状態管理など)部分を、どうするか考える必要があります。
 
-こちら [Micro Frontends を調べたすべて#ProsCons](https://silverbirder180.hatenablog.com/entry/2020/10/07/190727#ProsCons) にも簡単にメリット・デメリットを書いていますので、気になる方はご覧ください。
+こちら [Micro Frontends を調べたすべて#ProsCons](BASE_URL/blog/contents/think_micro_frontends#proscons) にも簡単にメリット・デメリットを書いていますので、気になる方はご覧ください。
 
 # 統合パターン🔮
 MFEでは、各フロントエンドのフラグメント(HTML)を、どのタイミングで統合するのかが重要です。今回はその統合パターンをざっくり紹介します。
@@ -59,7 +59,7 @@ MFEでは、各フロントエンドのフラグメント(HTML)を、どのタ�
 <figcaption><a href="https://micro-frontends-japanese.org/">[翻訳記事]マイクロフロントエンド</a></figcaption>
 </figure>
 
-詳しくは、[Micro Frontends を調べたすべて#統合パターン](https://silverbirder180.hatenablog.com/entry/2020/10/07/190727#%E7%B5%B1%E5%90%88%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3) をご覧ください。
+詳しくは、[Micro Frontends を調べたすべて#統合パターン](BASE_URL/blog/contents/think_micro_frontends#統合パターン) をご覧ください。
 
 ## ビルド時統合パターン
 ビルド時統合とは、WebサービスをPublishする前のBuildの段階で統合するパターンです。このパターンは、[bit.dev](https://bit.dev)がよく使われます。
@@ -88,13 +88,13 @@ MFEでは、各フロントエンドのフラグメント(HTML)を、どのタ�
 
 サーバーサイドのサンプルコードは、次にまとめています。
 
-* [Micro Frontends を学んだすべて](https://silverbirder180.hatenablog.com/entry/2020/05/04/182921)
-* [Ara-Framework で Micro Frontends with SSR](https://silverbirder180.hatenablog.com/entry/2020/08/23/183713)
-* [Zalando tailor で Micro Frontends with ( LitElement & etcetera)](https://silverbirder180.hatenablog.com/entry/2020/10/04/095230)
+* [Micro Frontends を学んだすべて](BASE_URL/blog/contents/microfrontends)
+* [Ara-Framework で Micro Frontends with SSR](BASE_URL/blog/contents/ara-framework)
+* [Zalando tailor で Micro Frontends with ( LitElement & etcetera)](BASE_URL/blog/contents/tailor)
 
 また、サーバーサイドというよりEdgeでの統合パターンを下記リンクで紹介しています。
 
-* [Cloudflare Workers (Edge Workers) で Micro Frontends](https://silverbirder180.hatenablog.com/entry/2020/11/15/121730)
+* [Cloudflare Workers (Edge Workers) で Micro Frontends](BASE_URL/blog/contents/cloudflare_workers_mfe)
 
 ※ リッチなインタラクションUIを表現したいなら、サーバーサイドとクライアントのHydrationをする必要があります。
 
@@ -118,12 +118,12 @@ MFEのアプローチを実際に導入した企業は、国内だとまだ比�
 # 関連リンク🔗
 私が書いたMFE関連の記事です。もしよければご覧ください。
 
-* [Micro Frontends を学んだすべて](https://silverbirder180.hatenablog.com/entry/2020/05/04/182921)
-* [Micro Frontends を調べたすべて](https://silverbirder180.hatenablog.com/entry/2020/10/07/190727)
+* [Micro Frontends を学んだすべて](BASE_URL/blog/contents/microfrontends)
+* [Micro Frontends を調べたすべて](BASE_URL/blog/contents/think_micro_frontends)
 * [MFE関連資料リンク集](https://github.com/Silver-birder/think-micro-frontends/blob/master/research/docs/read.md)
-* [Ara-Framework で Micro Frontends with SSR](https://silverbirder180.hatenablog.com/entry/2020/08/23/183713)
-* [Zalando tailor で Micro Frontends with ( LitElement & etcetera)](https://silverbirder180.hatenablog.com/entry/2020/10/04/095230)
-* [Cloudflare Workers (Edge Workers) で Micro Frontends](https://silverbirder180.hatenablog.com/entry/2020/11/15/121730)
+* [Ara-Framework で Micro Frontends with SSR](BASE_URL/blog/contents/ara-framework)
+* [Zalando tailor で Micro Frontends with ( LitElement & etcetera)](BASE_URL/blog/contents/tailor)
+* [Cloudflare Workers (Edge Workers) で Micro Frontends](BASE_URL/blog/contents/cloudflare_workers_mfe)
 * [github.com/Silver-birder/micro-frontends-on-kubernetes](https://github.com/Silver-birder/micro-frontends-on-kubernetes)
 * [speakerdeck.com/silverbirder/micro-frontends-on-kubernetes-trial](https://speakerdeck.com/silverbirder/micro-frontends-on-kubernetes-trial)
 * [github.com/Silver-birder/think-micro-frontends](https://github.com/Silver-birder/think-micro-frontends)

@@ -56,7 +56,7 @@ Micro Frontendsに関わる記事を100件以上読みました(参考記事に�
 * Zalando
 * ZEISS
 
-# Pros/Cons
+# ProsCons
 ## Pros
 |観点|内容|
 |--|--|

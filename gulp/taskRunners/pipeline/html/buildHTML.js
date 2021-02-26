@@ -106,7 +106,7 @@ const replaceEmbed = (layoutDOM) => {
         if (!(embedMatch && embedMatch.groups && embedMatch.groups.url)) {
             continue;
         }
-        const url = embedMatch.groups.url;
+        const url = embedMatch.groups.url.replace(/BASE_URL/, BASE_URL);
         const ampEmbedlyCardTag = `
                 <amp-embedly-card
                     media="(prefers-color-scheme: dark)"

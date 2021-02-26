@@ -82,7 +82,7 @@ Anthosは、その対象範囲をクラウドだけでなく、オンプレ(GKE 
 ## CloudRun
 これは、下記で一度試した経験があります。
 
-[https://qiita.com/silverbirder/items/6981461a756a48f6e25d:embed]
+[BASE_URL/blog/contents/cloud_run_3_step_glang:embed]
 
 コンテナとしてdeployできるようになります。
 正直、AppEngine, CloudFunction, CoundRunとデプロイサービスが増えてきて、
@@ -171,4 +171,5 @@ Googleでは、もはや当たり前のようにKubernetesのサービスを進�
 どこでもkubernetesを動かせるように進めらています。
 これは、kubernetesを使えるようにならないと！
 下記で、勉強中です！
-[https://qiita.com/silverbirder/items/cfaaba136b74b3140902:embed]
+
+[BASE_URL/blog/contents/start_the_learning_kubernetes_03:embed]

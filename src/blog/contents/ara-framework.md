@@ -13,7 +13,9 @@ icon: 😎
 
 みなさん、こんにちは。silverbirder です。
 私の最近の興味として、Micro Frontends があります。
-[https://silverbirder180.hatenablog.com/entry/2020/05/04/182921:embed]
+
+[BASE_URL/blog/contents/microfrontends:embed]
+
 今、Ara-Frameworkというフレームワークを使った Micro Frontends のアプローチ方法を学んでいます。
 
 # Ara-Framework とは
