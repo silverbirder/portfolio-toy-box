@@ -338,9 +338,9 @@ typescriptの処理をリアクティブな雰囲気でコーディングした�
 # 所感
 これまで、Podium、Ara-Framework, そして Tailor といったMicro Frontendsに関わるサーバーサイド統合ライブラリを使ってみました。
 
-[https://silverbirder180.hatenablog.com/entry/2020/05/04/182921:embed]
+[BASE_URL/blog/contents/microfrontends:embed]
 
-[https://silverbirder180.hatenablog.com/entry/2020/08/23/183713:embed]
+[BASE_URL/blog/contents/ara-framework:embed]
 
 これらは、どれも考え方が良いなと思っています。
 Podiumのフラグメントのインターフェース設計、Ara-FrameworkのRenderとデータ取得の明確な分離、そしてTailorのストリーム統合です。

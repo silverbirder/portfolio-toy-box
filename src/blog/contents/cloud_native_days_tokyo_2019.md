@@ -91,7 +91,7 @@ Kubernetesは「platformのためのplatform」と言われるようになりま
 CRDという言葉は様々なセッションで取り上げらていました。
 CRDとOperatorについては、下記をご参考下さい。
 
-[https://silverbirder180.hatenablog.com/entry/2019/06/01/182255#CRD%E3%81%A8Operators:embed]
+[BASE_URL/blog/contents/kubernetes_meetup_tokyo_19_osaka_satellite:embed]
 
 Kubernetesを運用すると、既存のリソースだけでは物足りない所がでてくるそうです。
 そういう部分が「プラットフォームを利用するコスト」を大きくしてしまいます。

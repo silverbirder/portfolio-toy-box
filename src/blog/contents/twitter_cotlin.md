@@ -33,7 +33,7 @@ Tweetに記述したリンクは、全て[t.co](https://help.twitter.com/ja/usin
 この短縮URLからオリジナルURLを手に入れるために、リダイレクトする必要があります。
 実際に作ってみると、次のような記事に書いたとおり、GASで書くと、少し困ったことがありました。
 
-[https://silverbirder180.hatenablog.com/entry/2020/02/24/094442:embed]
+[BASE_URL/blog/contents/gas_fetchall_redirect:embed]
 
 そこで、複数のリダイレクトURLへリクエストする処理を並列化するために、Golangで開発していました。
 
