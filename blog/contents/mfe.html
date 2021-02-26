@@ -26,14 +26,14 @@
 <p>※ MFEという言葉は、<a href="https://www.thoughtworks.com/radar/techniques/micro-frontends">Micro frontends | Technology Radar | ThoughtWorks</a> の記事より生まれたみたいです。
 ※ <a href="https://www.manning.com/books/micro-frontends-in-action">Micro Frontends in Action</a>にも記載されていますが、この考え方はWebサービスを対象としており、ネイティブアプリは対象としていません。</p>
 <h1 id="導入企業👨‍💼👩‍💼"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#導入企業👨‍💼👩‍💼"></a>導入企業👨‍💼👩‍💼</h1>
-<p>実績企業としては、IKEA、DAZN、Spotifyなどが挙げられます。他の例は、<a href="https://silverbirder180.hatenablog.com/entry/2020/10/07/190727">Micro Frontends を調べたすべて</a> にリストアップしていますので、興味がある方はご覧ください。</p>
+<p>実績企業としては、IKEA、DAZN、Spotifyなどが挙げられます。他の例は、<a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/think_micro_frontends">Micro Frontends を調べたすべて</a> にリストアップしていますので、興味がある方はご覧ください。</p>
 <h1 id="メリット・デメリット🔍"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#メリット・デメリット🔍"></a>メリット・デメリット🔍</h1>
 <p>MFEを導入することによるメリット・デメリットについて、(プロダクション導入経験無しの私が偏見で)簡単に紹介します。Microservicesのメリット・デメリットと似ていると思います。</p>
 <p>私が思う最大のメリットは、<strong>Agility</strong>と思います。規模が中・大規模なWebサービスとなると、様々な業務ドメインが詰め込まれます。先程のMFEの例(ECサイト)でいうと、推薦(inspire)、検索(search)、商品(product)、注文(checkout)などにあたります。これらを1つのフロントエンドで構築すると、ドメイン設計を適切に分離できたとしても、<strong>開発者の業務ドメイン知識が追いつかず、開発スピードが低下してしまいます</strong>。結果、特定の開発者の属人化が加速し、ボトルネックとなります。
 そこで、それぞれ<strong>業務ドメインを分割することで、開発者はそこだけにフォーカスできます。結果、開発スピードは維持できるはずです</strong>。</p>
 <p>私が思う最大のデメリットは、<strong>Independencyの難しさ</strong>だと思います。例えば、UI/UXの指針となるデザインシステムがWebサービスにあったとして、それをすべてのフロントエンドへ適用しなければいけません。そのため、全体を通した<strong>一貫性のあるUI/UXであるかどうか</strong>の品質担保が難しいです。
 他には、あるチームのビルドツールを改善したとしても、他のチームではその恩恵を受けれなかったり、アプリケーション設計における全体共通(アクセス履歴、イベント管理、状態管理など)部分を、どうするか考える必要があります。</p>
-<p>こちら <a href="https://silverbirder180.hatenablog.com/entry/2020/10/07/190727#ProsCons">Micro Frontends を調べたすべて#ProsCons</a> にも簡単にメリット・デメリットを書いていますので、気になる方はご覧ください。</p>
+<p>こちら <a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/think_micro_frontends#proscons">Micro Frontends を調べたすべて#ProsCons</a> にも簡単にメリット・デメリットを書いていますので、気になる方はご覧ください。</p>
 <h1 id="統合パターン🔮"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#統合パターン🔮"></a>統合パターン🔮</h1>
 <p>MFEでは、各フロントエンドのフラグメント(HTML)を、どのタイミングで統合するのかが重要です。今回はその統合パターンをざっくり紹介します。
 例えば、次のMFEの例で言えば、Team-Product、Team-Checkout、Team-Inspireの3つのフロントエンドフラグメント(HTML)があります。これらをどのタイミングで統合するのかがポイントです。</p>
@@ -41,7 +41,7 @@
 <amp-img alt="[翻訳記事]マイクロフロントエンド > mfe-three-teams" src="https://micro-frontends-japanese.org/resources/three-teams.png" width="1000" height="722" layout="intrinsic" class="i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" i-amphtml-layout="intrinsic"><i-amphtml-sizer class="i-amphtml-sizer"><img alt aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjcyMiIgd2lkdGg9IjEwMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"></i-amphtml-sizer></amp-img>
 <figcaption><a href="https://micro-frontends-japanese.org/">[翻訳記事]マイクロフロントエンド</a></figcaption>
 </figure>
-<p>詳しくは、<a href="https://silverbirder180.hatenablog.com/entry/2020/10/07/190727#%E7%B5%B1%E5%90%88%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3">Micro Frontends を調べたすべて#統合パターン</a> をご覧ください。</p>
+<p>詳しくは、<a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/think_micro_frontends#%E7%B5%B1%E5%90%88%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3">Micro Frontends を調べたすべて#統合パターン</a> をご覧ください。</p>
 <h2 id="ビルド時統合パターン"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#ビルド時統合パターン"></a>ビルド時統合パターン</h2>
 <p>ビルド時統合とは、WebサービスをPublishする前のBuildの段階で統合するパターンです。このパターンは、<a href="https://bit.dev">bit.dev</a>がよく使われます。</p>
 <figure title="bit.dev toppage">
@@ -62,13 +62,13 @@
 </figure>
 <p>サーバーサイドのサンプルコードは、次にまとめています。</p>
 <ul>
-<li><a href="https://silverbirder180.hatenablog.com/entry/2020/05/04/182921">Micro Frontends を学んだすべて</a></li>
-<li><a href="https://silverbirder180.hatenablog.com/entry/2020/08/23/183713">Ara-Framework で Micro Frontends with SSR</a></li>
-<li><a href="https://silverbirder180.hatenablog.com/entry/2020/10/04/095230">Zalando tailor で Micro Frontends with ( LitElement &amp; etcetera)</a></li>
+<li><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/microfrontends">Micro Frontends を学んだすべて</a></li>
+<li><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/ara-framework">Ara-Framework で Micro Frontends with SSR</a></li>
+<li><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/tailor">Zalando tailor で Micro Frontends with ( LitElement &amp; etcetera)</a></li>
 </ul>
 <p>また、サーバーサイドというよりEdgeでの統合パターンを下記リンクで紹介しています。</p>
 <ul>
-<li><a href="https://silverbirder180.hatenablog.com/entry/2020/11/15/121730">Cloudflare Workers (Edge Workers) で Micro Frontends</a></li>
+<li><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/cloudflare_workers_mfe">Cloudflare Workers (Edge Workers) で Micro Frontends</a></li>
 </ul>
 <p>※ リッチなインタラクションUIを表現したいなら、サーバーサイドとクライアントのHydrationをする必要があります。</p>
 <h2 id="クライアントサイド統合パターン"><a class="anchor" aria-label="Anchor" data-anchor-icon="##" href="#クライアントサイド統合パターン"></a>クライアントサイド統合パターン</h2>
@@ -85,12 +85,12 @@
 <h1 id="関連リンク🔗"><a class="anchor" aria-label="Anchor" data-anchor-icon="#" href="#関連リンク🔗"></a>関連リンク🔗</h1>
 <p>私が書いたMFE関連の記事です。もしよければご覧ください。</p>
 <ul>
-<li><a href="https://silverbirder180.hatenablog.com/entry/2020/05/04/182921">Micro Frontends を学んだすべて</a></li>
-<li><a href="https://silverbirder180.hatenablog.com/entry/2020/10/07/190727">Micro Frontends を調べたすべて</a></li>
+<li><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/microfrontends">Micro Frontends を学んだすべて</a></li>
+<li><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/think_micro_frontends">Micro Frontends を調べたすべて</a></li>
 <li><a href="https://github.com/Silver-birder/think-micro-frontends/blob/master/research/docs/read.md">MFE関連資料リンク集</a></li>
-<li><a href="https://silverbirder180.hatenablog.com/entry/2020/08/23/183713">Ara-Framework で Micro Frontends with SSR</a></li>
-<li><a href="https://silverbirder180.hatenablog.com/entry/2020/10/04/095230">Zalando tailor で Micro Frontends with ( LitElement &amp; etcetera)</a></li>
-<li><a href="https://silverbirder180.hatenablog.com/entry/2020/11/15/121730">Cloudflare Workers (Edge Workers) で Micro Frontends</a></li>
+<li><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/ara-framework">Ara-Framework で Micro Frontends with SSR</a></li>
+<li><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/tailor">Zalando tailor で Micro Frontends with ( LitElement &amp; etcetera)</a></li>
+<li><a href="https://silver-birder.github.io/portfolio-toy-box/blog/contents/cloudflare_workers_mfe">Cloudflare Workers (Edge Workers) で Micro Frontends</a></li>
 <li><a href="https://github.com/Silver-birder/micro-frontends-on-kubernetes">github.com/Silver-birder/micro-frontends-on-kubernetes</a></li>
 <li><a href="https://speakerdeck.com/silverbirder/micro-frontends-on-kubernetes-trial">speakerdeck.com/silverbirder/micro-frontends-on-kubernetes-trial</a></li>
 <li><a href="https://github.com/Silver-birder/think-micro-frontends">github.com/Silver-birder/think-micro-frontends</a></li>
