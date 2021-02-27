@@ -8,7 +8,7 @@ icon: 😎
 -->
 
 <figure title="cloud native days tokyo 2019">
-<img alt="cloud native days tokyo 2019" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190722/20190722232033.png">
+<img alt="cloud native days tokyo 2019" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429605/silver-birder.github.io/blog/cloud_native_days_tokyo_2019.png">
 <figcaption>cloud native days tokyo 2019</figcaption>
 </figure>
 
@@ -35,7 +35,7 @@ icon: 😎
 生みの親であるGoogleが1位でindependent(個人)が2番目、日本企業Fujitsuが6位です。熱意が伝わってきますね。  
 　
 <figure title="https://www.stackalytics.com/cncf?date=180">
-<img alt="https://www.stackalytics.com/cncf?date=180" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190724/20190724211327.png">
+<img alt="https://www.stackalytics.com/cncf?date=180" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429648/silver-birder.github.io/blog/stackalytics_cncf.png">
 <figcaption><a href="https://www.stackalytics.com/cncf?date=180">https://www.stackalytics.com/cncf?date=180</a></figcaption>
 </figure>
 
@@ -215,7 +215,7 @@ Kubernetesでアプリケーションを構築すると、分散システムの�
 
 さっそく、キーボードにとりつけてみました。最高です！
 <figure title="ergodox with k8s keycap (cyberAgent)">
-<img alt="ergodox with k8s keycap (cyberAgent)" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190724/20190724202409.jpg">
+<img alt="ergodox with k8s keycap (cyberAgent)" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429692/silver-birder.github.io/blog/ergodox_with_k8s_keycap.jpg">
 <figcaption>ergodox with k8s keycap (cyberAgent)</figcaption>
 </figure>
 

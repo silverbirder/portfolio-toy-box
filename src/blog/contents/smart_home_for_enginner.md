@@ -8,7 +8,7 @@ icon: 😎
 -->
 
 <figure title="Banner vector created by macrovector - www.freepik.com">
-<img alt="Banner vector created by macrovector - www.freepik.com" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200116/20200116075602.jpg">
+<img alt="Banner vector created by macrovector - www.freepik.com" src="https://res.cloudinary.com/silverbirder/image/upload/v1614431620/silver-birder.github.io/blog/Banner_vector_created_by_macrovector_www_freepik_com.jpg">
 <figcaption><a href="https://www.freepik.com/free-photos-vectors/banner">Banner vector created by macrovector - www.freepik.com</a></figcaption>
 </figure>
 

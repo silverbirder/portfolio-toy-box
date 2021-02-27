@@ -41,7 +41,7 @@ Tiqav2は、大きく分けて2つの機能があります。
 ### 画像とテキストを保存
 
 <figure title="Saving flow by Tiqav2">
-<img alt="Saving flow by Tiqav2" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200207/20200207231047.png">
+<img alt="Saving flow by Tiqav2" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429484/silver-birder.github.io/blog/saving_flow_by_tiqav2.png">
 <figcaption>Saving flow by Tiqav2</figcaption>
 </figure>
 
@@ -62,7 +62,7 @@ Algoliaに保存する情報は、主に3つです。画像URLと拡張子、そ
 ### 画像を検索&表示
 
 <figure title="Searching Flow  By Tiqav2">
-<img alt="Searching Flow  By Tiqav2" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200207/20200207074256.png">
+<img alt="Searching Flow  By Tiqav2" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429523/silver-birder.github.io/blog/searching_flow_by_tiqav2.png">
 <figcaption>Searching Flow  By Tiqav2</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ Algoliaに保存する情報は、主に3つです。画像URLと拡張子、そ
 この画像を表示する機能を使うと、次のようにSlack上で画像を送信することができます。
 
 <figure title="Send Tiqav2 URL on Slack">
-<img alt="Send Tiqav2 URL on Slack" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200207/20200207230322.png">
+<img alt="Send Tiqav2 URL on Slack" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429563/silver-birder.github.io/blog/send_tiqav2_URL_on_slack.png">
 <figcaption>Send Tiqav2 URL on Slack</figcaption>
 </figure>
 

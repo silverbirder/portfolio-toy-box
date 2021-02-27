@@ -8,7 +8,7 @@ icon: 😎
 -->
 
 <figure title="GCPUG Kansai Cloud Next Extended 案内板">
-<img alt="GCPUG Kansai Cloud Next Extended 案内板" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190521/20190521230529.jpg">
+<img alt="GCPUG Kansai Cloud Next Extended 案内板" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429188/silver-birder.github.io/blog/GCPUG_Kansai_Cloud_Next_Extended_guide.jpg">
 <figcaption>GCPUG Kansai Cloud Next Extended 案内板</figcaption>
 </figure>
 

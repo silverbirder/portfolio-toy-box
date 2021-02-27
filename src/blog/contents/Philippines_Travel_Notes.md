@@ -12,7 +12,7 @@ icon: 😎
 2019年10月11日~2019年10月15日の5日間、フィリピンに行ってきました。日本人男性(前職の先輩:Kikuchi)とフィリピン人女性が結婚するため、その結婚式旅行に同伴させて頂きました。Kikuchiさんとは、私が新人の頃に大変お世話になった方なので、お祝いの気持ちが込み上げてきました。:)
 
 <figure title="schedule">
-<img alt="schedule" src="https://miro.medium.com/max/1400/1*NWOQCxni_mK0pekMKY7phQ.png">
+<img alt="schedule" src="https://res.cloudinary.com/silverbirder/image/upload/v1614410969/silver-birder.github.io/blog/philippines_schedule.png">
 <figcaption>schedule</figcaption>
 </figure>
 
@@ -23,7 +23,7 @@ icon: 😎
 フィリピン式トイレ！ 😰 拭き終わったトイレットペーパーをゴミ箱に捨てるだと！？ 😠 💩 信じられない…😵
 
 <figure title="Philippine Toilet">
-<img alt="Philippine Toilet" src="https://miro.medium.com/max/1400/1*fYySa8LWpkLfx6r5WN8Idg.png">
+<img alt="Philippine Toilet" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411005/silver-birder.github.io/blog/philippines_toilet.png">
 <figcaption>Philippine Toilet</figcaption>
 </figure>
 
@@ -32,7 +32,7 @@ Philippine Toiletもう駄目です、先輩。僕は行けません。僕は潔
 # いざ、フィリピンへ！
 
 <figure title="Cebu">
-<img alt="Cebu" src="https://miro.medium.com/max/1000/1*Asz9pOY8svCNPxqP_J_7CQ.jpeg">
+<img alt="Cebu" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411074/silver-birder.github.io/blog/philippines_cebu.jpg">
 <figcaption>Cebu</figcaption>
 </figure>
 
@@ -43,14 +43,14 @@ Philippine Toiletもう駄目です、先輩。僕は行けません。僕は潔
 特にバイクが多く、二人乗りが多かったです。中には、4人家族(父・母・子2人)で１つのバイクを運転していました。生活上仕方がないとは言え、日本に比べると、とても危険です。
 
 <figure title="Ayala Center, Cebu">
-<img alt="Ayala Center, Cebu" src="https://miro.medium.com/max/1000/1*ZsW2xzihi5LiwaNEm5YN_g.jpeg">
+<img alt="Ayala Center, Cebu" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411121/silver-birder.github.io/blog/philippines_ayala_center_cebu.jpg">
 <figcaption>Ayala Center, Cebu</figcaption>
 </figure>
 
 ショッピングセンターにきました。とてもおしゃれ（語彙力）なイルミネーションです。
 
 <figure title="Kare Kare, Ayala CenterKare">
-<img alt="Kare Kare, Ayala CenterKare" src="https://miro.medium.com/max/1000/1*KPqb8eo0SJlPrAG-I5h_rg.jpeg">
+<img alt="Kare Kare, Ayala CenterKare" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411188/silver-birder.github.io/blog/philippines_kare_kare_ayala_center.jpg">
 <figcaption>Kare Kare, Ayala CenterKare</figcaption>
 </figure>
 
@@ -63,14 +63,14 @@ Kareという料理がフィリピン料理で有名です。晩ごはんに注�
 # 2日目の朝、散歩しました。
 
 <figure title="Glass on the wall, Cebu">
-<img alt="Glass on the wall, Cebu" src="https://miro.medium.com/max/1000/1*sgn2a0t4U14gxesnSijIRg.jpeg">
+<img alt="Glass on the wall, Cebu" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411240/silver-birder.github.io/blog/philippines_glass_on_the_wall_cebu.jpg">
 <figcaption>Glass on the wall, Cebu</figcaption>
 </figure>
 
 夜には見えなかったのですが、壁にガラスが刺さっていました。登り防止のようです。なんというか斬新です。
 
 <figure title="Move from Cebu to Bohol by ferry">
-<img alt="Move from Cebu to Bohol by ferry" src="https://miro.medium.com/max/1000/1*TNfgeipjaOyXl3xqRacKGg.jpeg">
+<img alt="Move from Cebu to Bohol by ferry" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411308/silver-birder.github.io/blog/move_from_cebu_to_bohol_by_ferry.jpg">
 <figcaption>Move from Cebu to Bohol by ferry</figcaption>
 </figure>
 
@@ -79,7 +79,7 @@ Kareという料理がフィリピン料理で有名です。晩ごはんに注�
 写真に写っている人は、私ではありません。前職の先輩(Nakamura)で、とても明るくコミュニケーション力が高い兄貴です 👍
 
 <figure title="Tagbilaran, Bohol">
-<img alt="Tagbilaran, Bohol" src="https://miro.medium.com/max/1000/1*7XKluHEGJvQHstdNcOYF2w.jpeg">
+<img alt="Tagbilaran, Bohol" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411369/silver-birder.github.io/blog/philippines_tagbilaran_bohol.jpg">
 <figcaption>Tagbilaran, Bohol</figcaption>
 </figure>
 
@@ -88,7 +88,7 @@ Kareという料理がフィリピン料理で有名です。晩ごはんに注�
 バイクが沢山あって、屋台も多く、とても生活感あふれる世界です。
 
 <figure title="Bohol Quality Mall, Bohol">
-<img alt="Bohol Quality Mall, Bohol" src="https://miro.medium.com/max/944/1*W4bKgcyn5PudzyxXeIvChQ.png">
+<img alt="Bohol Quality Mall, Bohol" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411424/silver-birder.github.io/blog/bohol_quality_mall_bohol.png">
 <figcaption>Bohol Quality Mall, Bohol</figcaption>
 </figure>
 
@@ -97,7 +97,7 @@ Kareという料理がフィリピン料理で有名です。晩ごはんに注�
 あと、従業員が**よくサボっています**。従業員の数が多い印象があり、そのせいか仕事をせずに、従業員同士で喋っていたり、携帯を触っていたり、さらには、お店の商品で投げあいっこすらしていました 😧。そう思うと、日本人はみんな真面目に働いているんだな〜。
 
 <figure title="Buy items">
-<img alt="Buy items" src="https://miro.medium.com/max/1000/1*dE77l32UH__gGrbdsVJ5SQ.png">
+<img alt="Buy items" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411479/silver-birder.github.io/blog/philippines_buy_items.png">
 <figcaption>Buy items</figcaption>
 </figure>
 
@@ -105,7 +105,7 @@ Kareという料理がフィリピン料理で有名です。晩ごはんに注�
 フィリピンの物価はとても安いです。500mlの水が20ペソ、約40円です。そもそも、フィリピンの平均的な月給は、約2万ペソです。貧富の差が激しいため、裸でやせ細った人もたくさんいました。
 
 <figure title="snack">
-<img alt="snack" src="https://miro.medium.com/max/1000/1*7tuHhVuygEtX26qF9ufuFw.jpeg">
+<img alt="snack" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411513/silver-birder.github.io/blog/philippines_snack.jpg">
 <figcaption>snack</figcaption>
 </figure>
 
@@ -116,28 +116,28 @@ Kareという料理がフィリピン料理で有名です。晩ごはんに注�
 💩を出した後、ゴミ箱の臭いがとても気にしていました。絶対その空間臭くなってるだろ！ … そんなことはありませんでした 😲。気にしすぎていたようです。外のトイレは汚かったですが、ホテル内のトイレは、十分に清潔にされていました。**基本的にホテルでトイレを済ませる**ことで、トイレ問題を乗り越えました！ 👍
 
 <figure title="Tasha, Bohol">
-<img alt="Tasha, Bohol" src="https://miro.medium.com/max/1000/1*Xjrar2AFqdzuYF9uTTfMQg.jpeg">
+<img alt="Tasha, Bohol" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411557/silver-birder.github.io/blog/philippines_tasha_bohol.jpg">
 <figcaption>Tasha, Bohol</figcaption>
 </figure>
 
 3日目の朝、ターシャを見に来ました。ターシャはとても小さく寂しがり屋のお猿さんです。聞くところによると、ターシャを驚かせてしまうと、死んでしまうそうです…。 Quiet !!!
 
 <figure title="Loboc river, Bohol">
-<img alt="Loboc river, Bohol" src="https://miro.medium.com/max/1000/1*8f70JTdDNe5Qe2mFzCVk-Q.jpeg">
+<img alt="Loboc river, Bohol" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411614/silver-birder.github.io/blog/philippines_loboc_river_bohol.jpg">
 <figcaption>Loboc river, Bohol</figcaption>
 </figure>
 
 ロボック川を下るツアーに参加しました。この川周辺に暮らしている人たちが、手を降ってくれました。あの人達は、どこで暮らしているのでしょう。 🤔
 
 <figure title="Music & Dance , Loboc riverBuggy, Bohol">
-<img alt="Music & Dance , Loboc riverBuggy, Bohol" src="https://miro.medium.com/max/1400/1*Y9_xnI6xMAFxqop781kzAA.jpeg">
+<img alt="Music & Dance , Loboc riverBuggy, Bohol" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411675/silver-birder.github.io/blog/music_and_dance_loboc_river_buggy_bohol.jpg">
 <figcaption>Music & Dance , Loboc riverBuggy, Bohol</figcaption>
 </figure>
 
 赤色の服を着た少年少女が音楽とダンスを披露してくれました。とっても可愛らしかったです。言葉が分からなくても、楽しめました！
 
 <figure title="Buggy, Bohol">
-<img alt="Buggy, Bohol" src="https://miro.medium.com/max/1000/1*pB61-Q9ZDKqNBJ-RdhMXlg.jpeg">
+<img alt="Buggy, Bohol" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411722/silver-birder.github.io/blog/philippines_buggy_bohol.jpg">
 <figcaption>Buggy, Bohol</figcaption>
 </figure>
 
@@ -145,7 +145,7 @@ Kareという料理がフィリピン料理で有名です。晩ごはんに注�
 国際免許が不要で、敷地内を爆走します。フィリピンの天候は変わりやすいのですが、奇跡的にも、全イベント中は雨に合いませんでした。移動中に毎回雨が降っていました。 **天気の子は、我か！？**
 
 <figure title="Buggy 2, Bohol">
-<img alt="Buggy 2, Bohol" src="https://miro.medium.com/max/1000/1*AoI--PxV_tsya1wks9EOUA.jpeg">
+<img alt="Buggy 2, Bohol" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411769/silver-birder.github.io/blog/philippines_buggy_2_bohol.jpg">
 <figcaption>Buggy 2, Bohol</figcaption>
 </figure>
 
@@ -157,7 +157,7 @@ Kareという料理がフィリピン料理で有名です。晩ごはんに注�
 着替えは必須です！！！
 
 <figure title="Alona beach, Bohol">
-<img alt="Alona beach, Bohol" src="https://miro.medium.com/max/1000/1*h5TCcsLp22iiLxSKeyw3nw.jpeg">
+<img alt="Alona beach, Bohol" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411816/silver-birder.github.io/blog/philippines_alona_beach_bohol.jpg">
 <figcaption>Alona beach, Bohol</figcaption>
 </figure>
 
@@ -165,7 +165,7 @@ Kareという料理がフィリピン料理で有名です。晩ごはんに注�
 水切りして遊んで終わりました…。パラグライダー?をしている人たちをみかけました。楽しそうだな〜したいな〜と思いつつ、疲れていたので、ぼーっと眺めていました。（笑）
 
 <figure title="tricycle, Bohol">
-<img alt="tricycle, Bohol" src="https://miro.medium.com/max/1000/1*pZ9ChjiFXwdDLh5BjiMAcw.jpeg">
+<img alt="tricycle, Bohol" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411857/silver-birder.github.io/blog/philippines_tricycle_bohol.jpg">
 <figcaption>tricycle, Bohol</figcaption>
 </figure>
 
@@ -177,14 +177,14 @@ Kareという料理がフィリピン料理で有名です。晩ごはんに注�
 帰りにチップをたくさん渡しました。とてもにこやかに返っていきました。
 
 <figure title="Halo Halo, Bohol">
-<img alt="Halo Halo, Bohol" src="https://miro.medium.com/max/1000/1*R_bWhCSRQKXRcriiStn4dw.jpeg">
+<img alt="Halo Halo, Bohol" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411902/silver-birder.github.io/blog/philippines_halo_halo_bohol.jpg">
 <figcaption>Halo Halo, Bohol</figcaption>
 </figure>
 
 有名なデザート、Halo Haloを頂きました。上に乗っているのは、紫芋？で、パイナップル、ヨーグルト、シャーベット、スイカが入っていました。これは、当たり 😍 絶品でした！
 
 <figure title="Wedding, Bohol">
-<img alt="Wedding, Bohol" src="https://miro.medium.com/max/1000/1*dYLSWAqsswGkzSXqASHP3g.jpeg">
+<img alt="Wedding, Bohol" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411945/silver-birder.github.io/blog/philippines_wedding_bohol.jpg">
 <figcaption>Wedding, Bohol</figcaption>
 </figure>
 
@@ -193,7 +193,7 @@ Kareという料理がフィリピン料理で有名です。晩ごはんに注�
 実際に生活してみると、少し英語が聞き取れた気がしました。
 
 <figure title="Wedding Road, Bohol">
-<img alt="Wedding Road, Bohol" src="https://miro.medium.com/max/1000/1*oohVEuDTWvybI_gJbfaAxw.jpeg">
+<img alt="Wedding Road, Bohol" src="https://res.cloudinary.com/silverbirder/image/upload/v1614411986/silver-birder.github.io/blog/philippines_wedding_road_bohol.jpg">
 <figcaption>Wedding Road, Bohol</figcaption>
 </figure>
 
@@ -203,7 +203,7 @@ Kareという料理がフィリピン料理で有名です。晩ごはんに注�
 結婚式が2時間ほど続いていました。何も言葉がわからないので、「神父の言葉→国歌→写真撮影」ぐらいのイメージしか伝わらなかったです。（笑）
 
 <figure title="Wedding Reception, Bohol">
-<img alt="Wedding Reception, Bohol" src="https://miro.medium.com/max/1000/1*nroWLZC1ttnmmTBQcN1l1Q.jpeg">
+<img alt="Wedding Reception, Bohol" src="https://res.cloudinary.com/silverbirder/image/upload/v1614412033/silver-birder.github.io/blog/philippines_wedding_reception_bohol.jpg">
 <figcaption>Wedding Reception, Bohol</figcaption>
 </figure>
 

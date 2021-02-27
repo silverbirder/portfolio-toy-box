@@ -9,7 +9,7 @@ icon: 😎
 
 「鍵どこいったっけ？」という悩みから、おさらば！
 
-![SESAME BOX](https://miro.medium.com/max/1400/1*xBA69YHBpfHcJuKUAOEEbw.png)
+![SESAME BOX](https://res.cloudinary.com/silverbirder/image/upload/v1614345786/silver-birder.github.io/blog/SESAME_BOX.png)
 
 [:contents]
 
@@ -60,28 +60,28 @@ icon: 😎
 まず、私の家の扉はつぎの画像の感じです。ここの下の鍵にSESAMEを取り付けたいなと考えていました。
 
 <figure title="私の家の扉">
-<img alt="私の家の扉" src="https://miro.medium.com/max/1400/1*_Wg7UIZfuWX0-zqHq-GaDQ.png">
+<img alt="私の家の扉" src="">
 <figcaption>私の家の扉</figcaption>
 </figure>
 
 ただ、試してみると、私の家の扉ではSESAMEが設置できませんでした…
 
 <figure title="ミスマッチ！">
-<img alt="ミスマッチ！" src="https://miro.medium.com/max/1400/1*RwYebI1LRGsFLQDvZ-ndFg.png">
+<img alt="ミスマッチ！" src="https://res.cloudinary.com/silverbirder/image/upload/v1614345846/silver-birder.github.io/blog/miss_match_sesame_size.png">
 <figcaption>ミスマッチ！</figcaption>
 </figure>
 
 何がダメかというと、SESAMEは両面テープでくっつけるため、壁と設置する必要があります。ただ、私の家の扉には、段差があるため、SESAMEをくっつけることができませんでした…。
 
 <figure title="鍵と扉に奥行きがある">
-<img alt="鍵と扉に奥行きがある" src="https://miro.medium.com/max/1400/1*ulSTPZd4uWgOeO38EdPQpg.png">
+<img alt="鍵と扉に奥行きがある" src="https://res.cloudinary.com/silverbirder/image/upload/v1614345933/silver-birder.github.io/blog/lock_and_door_have_depth_sesame.png">
 <figcaption>鍵と扉に奥行きがある</figcaption>
 </figure>
 
 そこで、カスタマーサポートに連絡したところ、超親切にフォローして頂き、アダプター作成をしてもらえました。（送料無料、ただしアマゾンレビューをする）
 
 <figure title="SESAMEと私のやりとり。ほぼ１日程度に返事がくる">
-<img alt="SESAMEと私のやりとり。ほぼ１日程度に返事がくる" src="https://miro.medium.com/max/1400/1*i91zaMvhc9Oncnpxc2CJ3g.png">
+<img alt="SESAMEと私のやりとり。ほぼ１日程度に返事がくる" src="https://res.cloudinary.com/silverbirder/image/upload/v1614346016/silver-birder.github.io/blog/SESAME_and_my_correspondence_get_a_response_almost_every_day_or_so.png">
 <figcaption>SESAMEと私のやりとり。ほぼ１日程度に返事がくる</figcaption>
 </figure>
 
@@ -89,25 +89,25 @@ icon: 😎
 こちらが提供した情報は、扉の各必要な長さを提供したぐらいです。
 
 <figure title="それぞれの長さを提供">
-<img alt="それぞれの長さを提供 1" src="https://miro.medium.com/max/456/1*80vyGiGnR2VyGZdWa_eSBg.png">
-<img alt="それぞれの長さを提供 2" src="https://miro.medium.com/max/498/1*R6_jyKEaxIq-F-qJZaCoZw.png">
-<img alt="それぞれの長さを提供 3" src="https://miro.medium.com/max/1000/1*Wt7_YmDUuyeVsUEoQEUvcA.png">
-<img alt="それぞれの長さを提供 4" src="https://miro.medium.com/max/1000/1*XvbgwWUkIRWlT_5iUfTurA.png">
+<img alt="それぞれの長さを提供 1" src="https://res.cloudinary.com/silverbirder/image/upload/v1614381654/silver-birder.github.io/blog/provide_the_length_of_each_door_1.png">
+<img alt="それぞれの長さを提供 2" src="https://res.cloudinary.com/silverbirder/image/upload/v1614381654/silver-birder.github.io/blog/provide_the_length_of_each_door_2.png">
+<img alt="それぞれの長さを提供 3" src="https://res.cloudinary.com/silverbirder/image/upload/v1614381657/silver-birder.github.io/blog/provide_the_length_of_each_door_3.png">
+<img alt="それぞれの長さを提供 4" src="https://res.cloudinary.com/silverbirder/image/upload/v1614381657/silver-birder.github.io/blog/provide_the_length_of_each_door_4.png">
 <figcaption>それぞれの長さを提供</figcaption>
 </figure>
 
 それぞれの長さを提供すると、つぎのようなアダプターが完成したとのことで連絡をもらいました。（おそらく3Dプリンターで作成されたのかな)
 
 <figure title="アダプター完成図">
-<img alt="アダプター完成図" src="https://miro.medium.com/max/1400/1*GAdduNnJtPT2WnnkB5pnWg.png">
+<img alt="アダプター完成図" src="https://res.cloudinary.com/silverbirder/image/upload/v1614382012/silver-birder.github.io/blog/SESAME_adapter_complete_diagram.png">
 <figcaption>アダプター完成図</figcaption>
 </figure>
 
 こちらを私の家の扉に設定してみると、ぴったしハマり、無事両面テープが貼れました！ぱちぱち！
 
 <figure title="アダプターを噛ませて設置">
-<img alt="アダプターを噛ませて設置 1" src="https://miro.medium.com/max/1000/1*L084Nxy9gw88Mt6EUk2mMg.png">
-<img alt="アダプターを噛ませて設置 2" src="https://miro.medium.com/max/1000/1*SJDk-T8sYAA91EVHhTjuNQ.png">
+<img alt="アダプターを噛ませて設置 1" src="https://res.cloudinary.com/silverbirder/image/upload/v1614382084/silver-birder.github.io/blog/Installation_by_engaging_the_SESAME_adapter_1.png">
+<img alt="アダプターを噛ませて設置 2" src="https://res.cloudinary.com/silverbirder/image/upload/v1614382086/silver-birder.github.io/blog/Installation_by_engaging_the_SESAME_adapter_2.png">
 <figcaption>アダプターを噛ませて設置</figcaption>
 </figure>
 

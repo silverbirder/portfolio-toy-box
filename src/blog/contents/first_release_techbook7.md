@@ -8,7 +8,7 @@ icon: 😎
 -->
 
 <figure title="はじめてのWeb Components入門 表紙">
-<img alt="はじめてのWeb Components入門 表紙" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190829/20190829230747.png">
+<img alt="はじめてのWeb Components入門 表紙" src="https://res.cloudinary.com/silverbirder/image/upload/v1614430562/silver-birder.github.io/blog/Introduction_to_Web_Components_for_the_First_Time_Cover.png">
 <figcaption>はじめてのWeb Components入門 表紙</figcaption>
 </figure>
 
@@ -113,7 +113,7 @@ Webが大好きな私にとっては、Web Componentsという技術に興味が
 弊サークル「silverbirder」の配置は「う03C」です。
 
 <figure title="貴サークル「silverbirder」う03C">
-<img alt="貴サークル「silverbirder」う03C" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190830/20190830002719.png">
+<img alt="貴サークル「silverbirder」う03C" src="https://res.cloudinary.com/silverbirder/image/upload/v1614430611/silver-birder.github.io/blog/your_circle_silverbirder_03C.png">
 <figcaption>貴サークル「silverbirder」う03C</figcaption>
 </figure>
 

@@ -14,17 +14,17 @@ GDG DevFest Tokyo 2019というイベントに参加してきました。
 今回、私が学んだ内容について、報告しようかなと思います。
 
 <figure title="GDG DevFest Tokyo 2019 ゲート">
-<img alt="GDG DevFest Tokyo 2019 ゲート" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20191215/20191215100223.jpg">
+<img alt="GDG DevFest Tokyo 2019 ゲート" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429012/silver-birder.github.io/blog/GDG_DevFest_Tokyo_2019_Gate.jpg">
 <figcaption>GDG DevFest Tokyo 2019 ゲート</figcaption>
 </figure>
 
 <figure title="GDG DevFest Tokyo 2019 スポンサー">
-<img alt="GDG DevFest Tokyo 2019 スポンサー" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20191215/20191215100227.jpg">
+<img alt="GDG DevFest Tokyo 2019 スポンサー" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429063/silver-birder.github.io/blog/GDG_DevFest_Tokyo_2019_Sponsor.jpg">
 <figcaption>GDG DevFest Tokyo 2019 スポンサー</figcaption>
 </figure>
 
 <figure title="GDG DevFest Tokyo 2019 提灯">
-<img alt="GDG DevFest Tokyo 2019 提灯" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20191215/20191215100242.jpg">
+<img alt="GDG DevFest Tokyo 2019 提灯" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429118/silver-birder.github.io/blog/GDG_DevFest_Tokyo_2019_Lantern.jpg">
 <figcaption>GDG DevFest Tokyo 2019 提灯</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ DevFests自体は、グローバルで活動されているGDGがホストのイ
 下の図は、<b>2019年</b>の活動実績&予定です。全国各地で広く活発的に行われていることが分かると思います。
 
 <figure title="Find an upcoming community-led  DevFest near you">
-<img alt="Find an upcoming community-led  DevFest near yo" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20191215/20191215102950.png">
+<img alt="Find an upcoming community-led  DevFest near yo" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428965/silver-birder.github.io/blog/find_an_upcoming_community-led_dev_fest_near_yo.png">
 <figcaption>Find an upcoming community-led  DevFest near you</figcaption>
 </figure>
 

@@ -8,7 +8,7 @@ icon: 😎
 -->
 
 <figure title="Photo by Kenny Luo on Unsplash">
-<img alt="Photo by Kenny Luo on Unsplash" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201003/20201003144832.jpg">
+<img alt="Photo by Kenny Luo on Unsplash" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429982/silver-birder.github.io/blog/Photo_by_Kenny_Luo_on_Unsplash.jpg">
 <figcaption><span>Photo by <a href="https://unsplash.com/@kennyluoping?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Kenny Luo</a> on <a href="https://unsplash.com/s/photos/tailor?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></figcaption>
 </figure>
 
@@ -22,7 +22,7 @@ Zalando社が開発したTailorを使って、サンプルWebアプリをMicro F
 # 全体構成
 
 <figure title="アプリケーション構成">
-<img alt="アプリケーション構成" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201003/20201003200516.png">
+<img alt="アプリケーション構成" src="https://res.cloudinary.com/silverbirder/image/upload/v1614430036/silver-birder.github.io/blog/tailor_and_application_configuration.png">
 <figcaption>アプリケーション構成</figcaption>
 </figure>
 
@@ -101,7 +101,7 @@ fragments.jsは、Response HeaderにLinkヘッダを追加するようにしま�
 
 # Lerna
 
-![lerna](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201004/20201004092440.png)
+![lerna](https://res.cloudinary.com/silverbirder/image/upload/v1614430061/silver-birder.github.io/blog/Lerna.png)
 
 それぞれのフラグメントをLernaで管理するようにします。
 私は、下記のようなpackages分けをしました。
@@ -145,7 +145,7 @@ package.json
 
 # LitElement
 
-![LitElement](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201004/20201004092637.jpg)
+![LitElement](https://res.cloudinary.com/silverbirder/image/upload/v1614430086/silver-birder.github.io/blog/LitElement.jpg)
 
 [https://lit-element.polymer-project.org/:embed]
 > LitElement
@@ -197,7 +197,7 @@ LitElement + Typescript では、open-testing を使ってテストすること�
 
 # DynamicRendering
 
-![rendertron](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201004/20201004092807.png)
+![rendertron](https://res.cloudinary.com/silverbirder/image/upload/v1614430107/silver-birder.github.io/blog/rendertron.png)
 
 このサンプルでは、カスタムエレメントを使って、ブラウザ側でレンダリングする 所謂SPAの動きで構築しています。
 『SEOガー！』とSSRしなきゃと思う訳ですが、正直SSRを考えたくないです。(ハイドレーションなんて無駄なロードをブラウザにさせたくない）

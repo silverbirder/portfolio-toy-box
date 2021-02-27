@@ -7,7 +7,7 @@ image:
 icon: 😎
 -->
 <figure title="Go Conference 2019 Spring Coffee">
-<img alt="Go Conference 2019 Spring Coffee" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190521/20190521224335.jpg">
+<img alt="Go Conference 2019 Spring Coffee" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428902/silver-birder.github.io/blog/go_conference_2019_spring_coffee.jpg">
 <figcaption>Go Conference 2019 Spring Coffee</figcaption>
 </figure>
 

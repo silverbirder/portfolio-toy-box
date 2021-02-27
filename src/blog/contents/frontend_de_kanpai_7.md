@@ -16,13 +16,13 @@ icon: 😎
 </figure>
 
 <figure title="frontend de kanpai tech board">
-<img alt="frontend de kanpai tech board" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190720/20190720095451.jpg">
+<img alt="frontend de kanpai tech board" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429379/silver-birder.github.io/blog/frontend_de_kanpai_tech_board.jpg">
 <figcaption>frontend de kanpai tech board</figcaption>
 </figure>
 
 firebaseの勢いがすごい。あとnowも多少人気で、now信者の私とっては嬉しい 。
 <figure title="frontend de kanpai novelty">
-<img alt="frontend de kanpai novelty" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190720/20190720095654.jpg">
+<img alt="frontend de kanpai novelty" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429431/silver-birder.github.io/blog/frontend_de_kanpai_novelty.jpg">
 <figcaption>frontend de kanpai novelty</figcaption>
 </figure> 
 
@@ -102,7 +102,7 @@ Google翻訳を通すと
 次の画像は顔検出した箇所にモザイクを入れるデモです。これは笑いました。
 
 <figure title="Shape Detection API Demo">
-<img alt="Shape Detection API Demo" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190720/20190720110709.jpg">
+<img alt="Shape Detection API Demo" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429340/silver-birder.github.io/blog/Shape_Detection_API_Demo.jpg">
 <figcaption>Shape Detection API Demo</figcaption>
 </figure>
 

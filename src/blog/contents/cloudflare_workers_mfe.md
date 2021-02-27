@@ -43,7 +43,7 @@ ESIは、SSIと似たようなもので、サーバーサイド側でコンテ�
 次のような構成を考えてみました。
 
 <figure title="Cloudflare worker + Micro Frontends">
-<img alt="Cloudflare worker + Micro Frontends" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201114/20201114000721.png">
+<img alt="Cloudflare worker + Micro Frontends" src="https://res.cloudinary.com/silverbirder/image/upload/v1614430655/silver-birder.github.io/blog/cloudflare_worker_micro_frontends.png">
 <figcaption>Cloudflare Workers + Micro Frontends</figcaption>
 </figure>
 

@@ -10,7 +10,7 @@ icon: 😎
 [:contents]
 
 <figure title="Photo by Shahadat Shemul on Unsplash">
-<img alt="Photo by Shahadat Shemul on Unsplash" src="https://miro.medium.com/max/1400/0*VHv6i176VhtChhR7">
+<img alt="Photo by Shahadat Shemul on Unsplash" src="https://res.cloudinary.com/silverbirder/image/upload/v1614412165/silver-birder.github.io/blog/photo_by_Shahadat_Shemul_on_Unsplash.jpg">
 <figcaption>Photo by <a href="https://unsplash.com/@shemul?utm_source=medium&utm_medium=referral">Shahadat Shemul</a> on <a href="https://unsplash.com/?utm_source=medium&utm_medium=referral">Unsplash</a></figcaption>
 </figure>
 

@@ -8,7 +8,7 @@ icon: 😎
 -->
 
 <figure title="BMXUG">
-<img alt="BMXUG" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190522/20190522223722.png">
+<img alt="BMXUG" src="https://res.cloudinary.com/silverbirder/image/upload/v1614431137/silver-birder.github.io/blog/BMXUG.png">
 <figcaption>BMXUG</figcaption>
 </figure>
 

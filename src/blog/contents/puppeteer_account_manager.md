@@ -7,7 +7,7 @@ image:
 icon: 😎
 -->
 
-![puppeteer-account-manager overview](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200603/20200603074753.png)
+![puppeteer-account-manager overview](https://res.cloudinary.com/silverbirder/image/upload/v1614431535/silver-birder.github.io/blog/puppeteer-account-manager_overview.png)
 
 GoogleやGithubなど、様々なサービスのプロフィール情報(画像, etc)を一括更新するツール、puppeteer-account-manager を開発しました。
 開発の目的や、開発から得た知見を紹介します。

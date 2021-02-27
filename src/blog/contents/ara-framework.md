@@ -7,7 +7,7 @@ image:
 icon: 😎
 -->
 <figure title="Photo by Artem Sapegin on Unsplash">
-<img alt="Photo by Artem Sapegin on Unsplash" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200822/20200822174934.jpg">
+<img alt="Photo by Artem Sapegin on Unsplash" src="https://res.cloudinary.com/silverbirder/image/upload/v1614430802/silver-birder.github.io/blog/Photo_by_Artem_Sapegin_on_Unsplash.jpg">
 <figcaption><span>Photo by <a href="https://unsplash.com/@sapegin?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Artem Sapegin</a> on <a href="https://unsplash.com/s/photos/html?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></figcaption>
 </figure>
 
@@ -251,7 +251,7 @@ $ concurrently -n cluster,layout,proxy,search,product "npm run cluster" "npm run
 
 動作として、次のような画像になります。
 
-![nova results](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200823/20200823170828.png)
+![nova results](https://res.cloudinary.com/silverbirder/image/upload/v1614430832/silver-birder.github.io/blog/nova_results.png)
 
 # 最後に
 繰り返しますが、Ara-Framework を使うとデータ構築(Nova Directive)とレンダリング(Nova Bindings)を明確に分離できます。

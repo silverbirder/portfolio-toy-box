@@ -7,7 +7,7 @@ image:
 icon: 😎
 -->
 
-![WebApp Test](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200617/20200617223919.jpg)
+![WebApp Test](https://res.cloudinary.com/silverbirder/image/upload/v1614429879/silver-birder.github.io/blog/WebApp_Test.jpg)
 
 最近、Property Based Test という言葉を知りました。
 他にどういうテストの種類があるのか気になったので、調べてみました。
@@ -33,7 +33,7 @@ Webアプリでも、Cacheをテストする必要がありそうです。
 [https://github.com/ai/size-limit:embed]
 
 <figure title="https://github.com/ai/size-limit">
-<img alt="https://github.com/ai/size-limit" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200617/20200617070042.png">
+<img alt="https://github.com/ai/size-limit" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429908/silver-birder.github.io/blog/size-limit.png">
 <figcaption><a href="https://github.com/ai/size-limit">https://github.com/ai/size-limit</a></figcaption>
 </figure>
 
@@ -51,7 +51,7 @@ Copy&Pasteは、DRYの原則に反するため、特別な理由がない限り�
 [https://github.com/kucherenko/jscpd:embed]
 
 <figure title="https://github.com/kucherenko/jscpd">
-<img alt="jscpd" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200617/20200617070137.png">
+<img alt="jscpd" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429933/silver-birder.github.io/blog/jscpd.png">
 <figcaption><a href="https://github.com/kucherenko/jscpd">https://github.com/kucherenko/jscpd</a></figcaption>
 </figure>
 
@@ -109,7 +109,7 @@ INFO, WARN, ERRORなどがルールに基づいて使い分けされているか
 [https://github.com/marmelab/gremlins.js/:embed]
 
 <figure title="https://github.com/marmelab/gremlins.js">
-<img alt="gremlins.js" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200617/20200617070229.gif">
+<img alt="gremlins.js" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429752/silver-birder.github.io/blog/gremlins.gif">
 <figcaption><a href="https://github.com/marmelab/gremlins.js">https://github.com/marmelab/gremlins.js</a></figcaption>
 </figure>
 
@@ -126,7 +126,7 @@ INFO, WARN, ERRORなどがルールに基づいて使い分けされているか
 
 [https://github.com/stryker-mutator/stryker:embed]
 <figure title="https://stryker-mutator.io/stryker/quickstart">
-<img alt="https://stryker-mutator.io/stryker/quickstart" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200617/20200617070455.gif">
+<img alt="https://stryker-mutator.io/stryker/quickstart" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429792/silver-birder.github.io/blog/stryker-mutator.gif">
 <figcaption><a href="https://stryker-mutator.io/stryker/quickstart">https://stryker-mutator.io/stryker/quickstart</a></figcaption>
 </figure>
 
@@ -178,7 +178,7 @@ lighthouseというツールでSEOスコアを見ることができるみたい�
 [https://github.com/GoogleChrome/lighthouse-ci:embed]
 
 <figure title="https://github.com/GoogleChrome/lighthouse-ci">
-<img alt="https://github.com/GoogleChrome/lighthouse-ci" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200617/20200617214926.png">
+<img alt="https://github.com/GoogleChrome/lighthouse-ci" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429818/silver-birder.github.io/blog/lighthouse-ci.png">
 <figcaption><a href="https://github.com/GoogleChrome/lighthouse-ci">https://github.com/GoogleChrome/lighthouse-ci</a></figcaption>
 </figure>
 
@@ -257,7 +257,7 @@ Unitテストで、どこをテストできたかのカバレッジを見るこ�
 [https://github.com/garris/BackstopJS:embed]
 
 <figure title="https://github.com/garris/BackstopJS">
-<img alt="https://github.com/garris/BackstopJS" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200617/20200617070556.png">
+<img alt="https://github.com/garris/BackstopJS" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429842/silver-birder.github.io/blog/BackstopJS.png">
 <figcaption><a href="https://github.com/garris/BackstopJS">https://github.com/garris/BackstopJS</a></figcaption>
 </figure>
 

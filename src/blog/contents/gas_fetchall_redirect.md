@@ -29,7 +29,7 @@ GASでは、リクエストメソッドであるfetchがあります。そのfet
 要するに次のようなコードで解決しようと考えていました。
 
 <figure title="FetchAllとRedirectURL">
-<img alt="FetchAllとRedirectURL" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200224/20200224084938.png">
+<img alt="FetchAllとRedirectURL" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429255/silver-birder.github.io/blog/FetchAll_and_RedirectURL.png">
 <figcaption>FetchAllとRedirectURL</figcaption>
 </figure>
 
@@ -95,7 +95,7 @@ fetchやfetchAllは、`muteHttpExceptions: true` としたとしても、Excepti
 そうすると、例えば1000件のURLをfetchAllした場合、<b>どれが成功で、どれが失敗で、どれが未実施か</b> がわからないというところです。
 
 <figure title="FetchAllとRedirectURL (Error)">
-<img alt="FetchAllとRedirectURL (Error)" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200224/20200224090136.png">
+<img alt="FetchAllとRedirectURL (Error)" src="https://res.cloudinary.com/silverbirder/image/upload/v1614429297/silver-birder.github.io/blog/FetchAll_and_RedirectURL_error.png">
 <figcaption>FetchAllとRedirectURL (Error)</figcaption>
 </figure>
 
