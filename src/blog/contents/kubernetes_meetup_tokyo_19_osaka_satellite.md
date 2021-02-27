@@ -8,7 +8,7 @@ icon: 😎
 -->
 
 <figure title="kubernetes osaka satellite">
-<img alt="kubernetes osaka satellite" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190601/20190601112302.png">
+<img alt="kubernetes osaka satellite" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428700/silver-birder.github.io/blog/kubernetes_osaka_satellite.png">
 <figcaption>kubernetes osaka Satellite</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ Kubernetesとは、「コンテナオーケストレーター」と多くの人�
 （勝手な解釈かもしれません。すみません）
 
 <figure title="kubernetes overview">
-<img alt="kubernetes overview" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190601/20190601152418.png">
+<img alt="kubernetes overview" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428761/silver-birder.github.io/blog/google_kubernetes_overview.png">
 <figcaption>kubernetes overview</figcaption>
 </figure>
 
@@ -91,7 +91,7 @@ kubernetesのcontrol planeである、APIServer, Scheduler, Controller Manager�
 kubernetesをDockerForMacで動かしたときは、そういえばシングルノードでしたね。マルチノードってイメージでしたけど。
 
 <figure title="kubernetes jazz Improv">
-<img alt="kubernetes jazz Improv" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190601/20190601154007.png">
+<img alt="kubernetes jazz Improv" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428854/silver-birder.github.io/blog/google_kubernetes_jazz_Improv.png">
 <figcaption>kubernetes jazz Improv</figcaption>
 </figure>
 
@@ -163,7 +163,7 @@ Yahooでは、gimbalというOSSを使ってKubernetesを導入したみたい�
 30,40人ぐらい入れるスペースで、清潔感がありました。
 
 <figure title="kubernetes osaka satelite aiming">
-<img alt="kubernetes osaka satelite aiming" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190601/20190601172018.jpg">
+<img alt="kubernetes osaka satelite aiming" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428802/silver-birder.github.io/blog/kubernetes_osaka_satelite_aiming.jpg">
 <figcaption>kubernetes osaka satelite aiming</figcaption>
 </figure>
 

@@ -8,7 +8,7 @@ icon: 😎
 -->
 
 <figure title="Google Apps Script + Typescript + Jest">
-<img alt="Google Apps Script + Typescript + Jest" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200201/20200201212044.png">
+<img alt="Google Apps Script + Typescript + Jest" src="https://res.cloudinary.com/silverbirder/image/upload/v1614431246/silver-birder.github.io/blog/google_apps_script_and_typescript_and_jest.png">
 <figcaption>Google Apps Script + Typescript + Jest</figcaption></figure>
 
 Google Apps Script(以下,GAS)でライブラリを公開しました。ライブラリを開発する際、**テストのフィードバックサイクルを短くする**ため、`Clasp + Typescript + Jest` という技術スタックを選択しました。
@@ -21,7 +21,7 @@ Google Apps Script(以下,GAS)でライブラリを公開しました。ライ�
 [script.google.com](https://script.google.com/)にアクセスしてデバッグ実行って、しんどくないですか？
 
 <figure title="Google Apps Script Debugging ...">
-<img alt="Google Apps Script Debugging ..." src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200201/20200201234221.png">
+<img alt="Google Apps Script Debugging ..." src="https://res.cloudinary.com/silverbirder/image/upload/v1614431285/silver-birder.github.io/blog/google_apps_script_debugging.png">
 <figcaption>Google Apps Script Debugging ...</figcaption>
 </figure>
 

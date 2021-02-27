@@ -8,7 +8,7 @@ icon: 😎
 -->
 
 <figure title="Photo by JESHOOTS.COM on Unsplash">
-<img alt="Photo by JESHOOTS.COM on Unsplash" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201016/20201016213746.jpg">
+<img alt="Photo by JESHOOTS.COM on Unsplash" src="https://res.cloudinary.com/silverbirder/image/upload/v1614431574/silver-birder.github.io/blog/Photo_by_JESHOOTS_COM_on_Unsplash.jpg">
 <figcaption><span>Photo by <a href="https://unsplash.com/@jeshoots?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">JESHOOTS.COM</a> on <a href="https://unsplash.com/s/photos/tech-study-book?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></figcaption>
 </figure>
 

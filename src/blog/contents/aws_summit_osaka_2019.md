@@ -13,12 +13,12 @@ icon: 😎
 [https://aws.amazon.com/jp/summits/osaka-2019/:embed]
 
 <figure title="AWS Summit Osaka 2019">
-<img alt="AWS Summit Osaka 2019" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190627/20190627232406.png">
+<img alt="AWS Summit Osaka 2019" src="https://res.cloudinary.com/silverbirder/image/upload/v1614430707/silver-birder.github.io/blog/AWS_Summit_Osaka_2019.png">
 <figcaption>AWS Summit Osaka 2019</figcaption>
 </figure>
 
 <figure title="もらったもの">
-<img alt="もらったもの" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190627/20190627232409.png">
+<img alt="もらったもの" src="https://res.cloudinary.com/silverbirder/image/upload/v1614430752/silver-birder.github.io/blog/AWS_Summit_Osaka_2019_Novelty.png">
 <figcaption>もらったもの</figcaption>
 </figure>
 

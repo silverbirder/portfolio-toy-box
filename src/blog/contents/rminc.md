@@ -8,7 +8,7 @@ icon: 😎
 -->
 
 <figure title="rMinc">
-<img alt="rMinc" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200216/20200216214751.png">
+<img alt="rMinc" src="https://res.cloudinary.com/silverbirder/image/upload/v1614431016/silver-birder.github.io/blog/rMinc.png">
 <figcaption>rMinc</figcaption>
 </figure>
 
@@ -30,7 +30,7 @@ icon: 😎
 Googleは気を利かせて、次のような予定を勝手に登録してくれることがあります。（良い悪いがありますが...）
 
 <figure title="unknownorganizer@calendar.google.com">
-<img alt="unknownorganizer@calendar.google.com" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200216/20200216115925.png">
+<img alt="unknownorganizer@calendar.google.com" src="https://res.cloudinary.com/silverbirder/image/upload/v1614431051/silver-birder.github.io/blog/unknownorganizer_google_calendar.png">
 <figcaption>unknownorganizer@calendar.google.com</figcaption>
 </figure>
 

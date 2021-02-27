@@ -107,7 +107,7 @@ import "../../1_enterprise_business_rules/entities/Entity"
 UMLを可視化すると、下記の図のとおりです。
 
 <figure title="clean_architecture.puml">
-<img alt="clean_architecture.puml" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201128/20201128114839.png">
+<img alt="clean_architecture.puml" src="https://res.cloudinary.com/silverbirder/image/upload/v1614430164/silver-birder.github.io/blog/clean_architecture.puml.png">
 <figcaption>clean_architecture.puml</figcaption>
 </figure>
 
@@ -130,7 +130,7 @@ describe("architecture", () => {
 
 このテストケースはPASSします。
 <figure title="src/clean_architecture.test.ts > architecture > Check dependency #Succeed">
-<img alt="src/clean_architecture.test.ts > architecture > Check dependency #Succeed" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201128/20201128115326.png">
+<img alt="src/clean_architecture.test.ts > architecture > Check dependency #Succeed" src="https://res.cloudinary.com/silverbirder/image/upload/v1614430233/silver-birder.github.io/blog/src_clean_architecture_test_ts_architecture_check_dependency_succeed.png">
 <figcaption>src/clean_architecture.test.ts > architecture > Check dependency #Succeed</figcaption>
 </figure>
 
@@ -145,7 +145,7 @@ import "../../4_frameworks_and_drivers/web/Web"
 3レイヤーが上位の4レイヤーを使用しています。この状態でテストを実行すると、
 
 <figure title="src/clean_architecture.test.ts > architecture > Check dependency #Failed">
-<img alt="src/clean_architecture.test.ts > architecture > Check dependency #Failed" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201128/20201128115543.png">
+<img alt="src/clean_architecture.test.ts > architecture > Check dependency #Failed" src="https://res.cloudinary.com/silverbirder/image/upload/v1614430292/silver-birder.github.io/blog/src_clean_architecture_test_ts_architecture_check_dependency_failed.png">
 <figcaption>src/clean_architecture.test.ts > architecture > Check dependency #Failed</figcaption>
 </figure>
 

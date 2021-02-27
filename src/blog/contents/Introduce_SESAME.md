@@ -89,25 +89,25 @@ icon: 😎
 こちらが提供した情報は、扉の各必要な長さを提供したぐらいです。
 
 <figure title="それぞれの長さを提供">
-<img alt="それぞれの長さを提供 1" src="https://miro.medium.com/max/456/1*80vyGiGnR2VyGZdWa_eSBg.png">
-<img alt="それぞれの長さを提供 2" src="https://miro.medium.com/max/498/1*R6_jyKEaxIq-F-qJZaCoZw.png">
-<img alt="それぞれの長さを提供 3" src="https://miro.medium.com/max/1000/1*Wt7_YmDUuyeVsUEoQEUvcA.png">
-<img alt="それぞれの長さを提供 4" src="https://miro.medium.com/max/1000/1*XvbgwWUkIRWlT_5iUfTurA.png">
+<img alt="それぞれの長さを提供 1" src="https://res.cloudinary.com/silverbirder/image/upload/v1614381654/silver-birder.github.io/blog/provide_the_length_of_each_door_1.png">
+<img alt="それぞれの長さを提供 2" src="https://res.cloudinary.com/silverbirder/image/upload/v1614381654/silver-birder.github.io/blog/provide_the_length_of_each_door_2.png">
+<img alt="それぞれの長さを提供 3" src="https://res.cloudinary.com/silverbirder/image/upload/v1614381657/silver-birder.github.io/blog/provide_the_length_of_each_door_3.png">
+<img alt="それぞれの長さを提供 4" src="https://res.cloudinary.com/silverbirder/image/upload/v1614381657/silver-birder.github.io/blog/provide_the_length_of_each_door_4.png">
 <figcaption>それぞれの長さを提供</figcaption>
 </figure>
 
 それぞれの長さを提供すると、つぎのようなアダプターが完成したとのことで連絡をもらいました。（おそらく3Dプリンターで作成されたのかな)
 
 <figure title="アダプター完成図">
-<img alt="アダプター完成図" src="https://miro.medium.com/max/1400/1*GAdduNnJtPT2WnnkB5pnWg.png">
+<img alt="アダプター完成図" src="https://res.cloudinary.com/silverbirder/image/upload/v1614382012/silver-birder.github.io/blog/SESAME_adapter_complete_diagram.png">
 <figcaption>アダプター完成図</figcaption>
 </figure>
 
 こちらを私の家の扉に設定してみると、ぴったしハマり、無事両面テープが貼れました！ぱちぱち！
 
 <figure title="アダプターを噛ませて設置">
-<img alt="アダプターを噛ませて設置 1" src="https://miro.medium.com/max/1000/1*L084Nxy9gw88Mt6EUk2mMg.png">
-<img alt="アダプターを噛ませて設置 2" src="https://miro.medium.com/max/1000/1*SJDk-T8sYAA91EVHhTjuNQ.png">
+<img alt="アダプターを噛ませて設置 1" src="https://res.cloudinary.com/silverbirder/image/upload/v1614382084/silver-birder.github.io/blog/Installation_by_engaging_the_SESAME_adapter_1.png">
+<img alt="アダプターを噛ませて設置 2" src="https://res.cloudinary.com/silverbirder/image/upload/v1614382086/silver-birder.github.io/blog/Installation_by_engaging_the_SESAME_adapter_2.png">
 <figcaption>アダプターを噛ませて設置</figcaption>
 </figure>
 

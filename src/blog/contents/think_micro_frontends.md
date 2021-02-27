@@ -8,7 +8,7 @@ icon: 😎
 -->
 
 <figure title="Photo by Dil on Unsplash">
-<img alt="Photo by Dil on Unsplash" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201004/20201004121748.jpg">
+<img alt="Photo by Dil on Unsplash" src="https://res.cloudinary.com/silverbirder/image/upload/v1614431656/silver-birder.github.io/blog/Photo_by_Dil_on_Unsplash.jpg">
 <figcaption><span>Photo by <a href="https://unsplash.com/@thevisualiza?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Dil</a> on <a href="https://unsplash.com/s/photos/lego-block?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></figcaption>
 </figure>
 
@@ -174,7 +174,7 @@ Vaddin router
 # Webサイト⇔Webアプリ
 
 <figure title="document-application">
-<img alt="document-application" src="https://miro.medium.com/max/1224/1*NJMQCgyMShhjYx6dE_pbRw.png">
+<img alt="document-application" src="https://res.cloudinary.com/silverbirder/image/upload/v1614412210/silver-birder.github.io/blog/microfrontends-document-application.png">
 <figcaption><a href="https://www.linkedin.com/pulse/microfrontends-approach-building-scalable-web-apps-vinci-rufus">Microfrontends: An approach to building Scalable Web Apps</a></figcaption>
 </figure>
 

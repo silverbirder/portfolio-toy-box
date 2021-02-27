@@ -7,7 +7,7 @@ image:
 icon: 😎
 -->
 
-![Everything I've learned about Micro Frontends](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200504/20200504140846.jpg)
+![Everything I've learned about Micro Frontends](https://res.cloudinary.com/silverbirder/image/upload/v1614431108/silver-birder.github.io/blog/everything_I_ve_learned_about_Micro_Frontends.jpg)
 
 Micro FrontendsというWebフロントエンドアーキテクチャがあります。
 このアーキテクチャを知るために、書籍を読み、簡単なサンプルWebアプリを開発しました。

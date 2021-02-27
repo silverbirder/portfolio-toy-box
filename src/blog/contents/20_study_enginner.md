@@ -7,7 +7,7 @@ image:
 icon: 😎
 -->
 <figure title="PexelsのAkil Mazumderによる写真">
-<img alt="PexelsのAkil Mazumderによる写真" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201027/20201027191727.jpg"><figcaption>PexelsのAkil Mazumderによる写真</figcaption>
+<img alt="PexelsのAkil Mazumderによる写真" src="https://res.cloudinary.com/silverbirder/image/upload/v1614431503/silver-birder.github.io/blog/Pexels_Akil_Mazumder_Photo.jpg"><figcaption>PexelsのAkil Mazumderによる写真</figcaption>
 </figure>
 
 私は、現在26歳のWebエンジニアです。これまでの技術に対する学び方と、これからの技術に対する学び方について、少し考えたいと思っています。

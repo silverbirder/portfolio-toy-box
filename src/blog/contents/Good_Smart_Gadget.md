@@ -12,7 +12,7 @@ icon: 😎
 [:contents]
 
 <figure title="Photo by BENCE BOROS on Unsplash">
-<img src="https://miro.medium.com/max/1400/0*aqKmFEcSeAsoO4Iw">
+<img src="https://res.cloudinary.com/silverbirder/image/upload/v1614412113/silver-birder.github.io/blog/photo_by_BENCE_BOROS_on_Unsplash.jpg" alt="Photo by BENCE BOROS on Unsplash">
 <figcaption>Photo by <a href="https://unsplash.com/@benceboros?utm_source=medium&utm_medium=referral">BENCE BOROS</a> on <a href="https://unsplash.com/?utm_source=medium&utm_medium=referral">Unsplash</a></figcaption>
 </figure>
 

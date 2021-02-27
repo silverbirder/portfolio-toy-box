@@ -7,7 +7,7 @@ image:
 icon: 😎
 -->
 
-![バ美肉](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308172732.png)
+![バ美肉](https://res.cloudinary.com/silverbirder/image/upload/v1614412301/silver-birder.github.io/blog/%E3%83%8F%E3%82%99%E7%BE%8E%E8%82%89.png)
 
 [:contents]
 
@@ -27,12 +27,12 @@ Hangouts MeetやZoomといったビデオ会議ツールを使う機会が増え
 これにより、ビデオ会議(例はZoom)で、次のようなバーチャル美少女 (になりきった私)が参加できるようになります。もちろん、声もボイスチェンジできます。
 
 <figure title="バーチャル美少女 (私)">
-<img alt="バーチャル美少女 (私)" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308101851.png">
+<img alt="バーチャル美少女 (私)" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428127/silver-birder.github.io/blog/virtual_beautiful_girl_me.png">
 <figcaption>バーチャル美少女 (私)</figcaption>
 </figure>
 
 <figure title="Whiteboard in Zoom">
-<img alt="Whiteboard in Zoom" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308173549.png">
+<img alt="Whiteboard in Zoom" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428171/silver-birder.github.io/blog/whiteboard_in_zoom.png">
 <figcaption>Whiteboard in Zoom</figcaption>
 </figure>
 
@@ -46,7 +46,7 @@ Mac + Bootcamp → Windows10 + Facering  でもできると思いますが、動
 私は、次のような構成になりました。
 
 <figure title="バ美肉's structure">
-<img alt="バ美肉's structure" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308123745.png">
+<img alt="バ美肉's structure" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428221/silver-birder.github.io/blog/virtual_beautiful_girl_structure.png">
 <figcaption>バ美肉's structure</figcaption>
 </figure>
 
@@ -63,12 +63,12 @@ Mac + Bootcamp → Windows10 + Facering  でもできると思いますが、動
 Gachikoeは、次のような設定にしました。
 
 <figure title="Gachikoe">
-<img alt="Gachikoe" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308171514.png">
+<img alt="Gachikoe" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428254/silver-birder.github.io/blog/gachikoe.png">
 <figcaption>Gachikoe</figcaption>
 </figure>
 
 <figure title="Gachikoe settings">
-<img alt="Gachikoe settings" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308171539.png">
+<img alt="Gachikoe settings" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428287/silver-birder.github.io/blog/gachikoe_settings.png">
 <figcaption>Gachikoe settings</figcaption>
 </figure>
 
@@ -85,7 +85,7 @@ Outputを soundflower (2ch)にしています。
 LadioCastは、次のような設定にしました。
 
 <figure title="LadioCast">
-<img alt="LadioCast" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308171630.png">
+<img alt="LadioCast" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428329/silver-birder.github.io/blog/ladio_cast.png">
 <figcaption>LadioCast</figcaption>
 </figure>
 
@@ -102,7 +102,7 @@ Inputを soundflower (2ch)とし、Outputを soundflower (64ch)としていま�
 撮影前には、Webカメラとリップシンク(口の動きの同期)を起動しておきましょう。
 
 <figure title="3tene">
-<img alt="3tene" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308171751.png">
+<img alt="3tene" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428380/silver-birder.github.io/blog/3tene.png">
 <figcaption>3tene</figcaption>
 </figure>
 
@@ -125,7 +125,7 @@ Realityは、特に設定は必要ありません。
 
 私は、これです。
 <figure title="reality me">
-<img alt="reality me" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308135013.jpg">
+<img alt="reality me" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428417/silver-birder.github.io/blog/reality_me.jpg">
 <figcaption><a href="https://reality.wrightflyer.net/profile/443e9213">reality me</a></figcaption>
 </figure>
 
@@ -133,7 +133,7 @@ iPhoneで撮影している画面をMacに反映する必要があります。
 MacとiPhoneを接続し、QuickTime Playerへ出力します。こんな感じです。
 
 <figure title="iPhone To QuickTime Player">
-<img alt="iPhone To QuickTime Player" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308172222.png">
+<img alt="iPhone To QuickTime Player" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428459/silver-birder.github.io/blog/iPhone_to_quick_time_player.png">
 <figcaption>iPhone To QuickTime Player</figcaption>
 </figure>
 
@@ -147,7 +147,7 @@ CamTwistという仮想カメラを使いました。
 CamTwistは、次のような設定にしました。
 
 <figure title="CamTwist">
-<img alt="CamTwist" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308172329.png">
+<img alt="CamTwist" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428498/silver-birder.github.io/blog/cam_twist.png">
 <figcaption>CamTwist</figcaption>
 </figure>
 
@@ -159,14 +159,14 @@ CamTwistは、次のような設定にしました。
 Zoomは、次のような設定にしました。
 
 <figure title="Zoom > Settings > Video">
-<img alt="Zoom > Settings > Video" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308174057.png">
+<img alt="Zoom > Settings > Video" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428582/silver-birder.github.io/blog/zoom_settings_video.png">
 <figcaption>Zoom > Settings > Video</figcaption>
 </figure>
 
 動画は、CamTwistから取得するようにします。
 
 <figure title="Zoom > Settings > Audio">
-<img alt="Zoom > Settings > Audio" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20200308/20200308174235.png">
+<img alt="Zoom > Settings > Audio" src="https://res.cloudinary.com/silverbirder/image/upload/v1614428625/silver-birder.github.io/blog/zoom_settings_audio.png">
 <figcaption>Zoom > Settings > Audio</figcaption>
 </figure>
 

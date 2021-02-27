@@ -13,9 +13,9 @@ Google/Appleどちらも大好きで、けど海外カンファレンスにい�
 
 [https://yahoo-osaka.connpass.com/event/132601/:embed]
 
-![Google I/O WWDC まとめて報告会 看板](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190627/20190627095615.png)
-![YAHOO!Japan](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190627/20190627095612.png)
-![けんさくとえんじん](https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20190627/20190627095619.png)
+![Google I/O WWDC まとめて報告会 看板](https://res.cloudinary.com/silverbirder/image/upload/v1614430881/silver-birder.github.io/blog/Google_I_O_WWDC_1.png)
+![YAHOO!Japan](https://res.cloudinary.com/silverbirder/image/upload/v1614430948/silver-birder.github.io/blog/Yahoo_japan.png)
+![けんさくとえんじん](https://res.cloudinary.com/silverbirder/image/upload/v1614430980/silver-birder.github.io/blog/kensaku_to_enjin.png)
 
 hashtagはこちら [#mixleap](https://twitter.com/hashtag/mixleap)
 
