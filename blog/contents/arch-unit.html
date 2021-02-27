@@ -77,7 +77,7 @@
 </code></pre>
 <p>UMLを可視化すると、下記の図のとおりです。</p>
 <figure title="clean_architecture.puml">
-<amp-img alt="clean_architecture.puml" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201128/20201128114839.png" width="470" height="684" layout="intrinsic" class="i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" i-amphtml-layout="intrinsic"><i-amphtml-sizer class="i-amphtml-sizer"><img alt aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY4NCIgd2lkdGg9IjQ3MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer></amp-img>
+<amp-img alt="clean_architecture.puml" src="https://res.cloudinary.com/silverbirder/image/upload/v1614430164/silver-birder.github.io/blog/clean_architecture.puml.png" width="470" height="684" layout="intrinsic" class="i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" i-amphtml-layout="intrinsic"><i-amphtml-sizer class="i-amphtml-sizer"><img alt aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY4NCIgd2lkdGg9IjQ3MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer></amp-img>
 <figcaption>clean_architecture.puml</figcaption>
 </figure>
 <p>テストコードは、下記のとおりです。</p>
@@ -96,7 +96,7 @@ describe(<span class="hljs-string">"architecture"</span>, <span class="hljs-func
 </code></pre>
 <p>このテストケースはPASSします。</p>
 <figure title="src/clean_architecture.test.ts > architecture > Check dependency #Succeed">
-<amp-img alt="src/clean_architecture.test.ts > architecture > Check dependency #Succeed" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201128/20201128115326.png" width="962" height="422" layout="intrinsic" class="i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" i-amphtml-layout="intrinsic"><i-amphtml-sizer class="i-amphtml-sizer"><img alt aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjQyMiIgd2lkdGg9Ijk2MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer></amp-img>
+<amp-img alt="src/clean_architecture.test.ts > architecture > Check dependency #Succeed" src="https://res.cloudinary.com/silverbirder/image/upload/v1614430233/silver-birder.github.io/blog/src_clean_architecture_test_ts_architecture_check_dependency_succeed.png" width="962" height="422" layout="intrinsic" class="i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" i-amphtml-layout="intrinsic"><i-amphtml-sizer class="i-amphtml-sizer"><img alt aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjQyMiIgd2lkdGg9Ijk2MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer></amp-img>
 <figcaption>src/clean_architecture.test.ts &gt; architecture &gt; Check dependency #Succeed</figcaption>
 </figure>
 <p>では、違反コードを書いてみます。</p>
@@ -106,7 +106,7 @@ describe(<span class="hljs-string">"architecture"</span>, <span class="hljs-func
 </code></pre>
 <p>3レイヤーが上位の4レイヤーを使用しています。この状態でテストを実行すると、</p>
 <figure title="src/clean_architecture.test.ts > architecture > Check dependency #Failed">
-<amp-img alt="src/clean_architecture.test.ts > architecture > Check dependency #Failed" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/silverbirder180/20201128/20201128115543.png" width="1200" height="564" layout="intrinsic" class="i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" i-amphtml-layout="intrinsic"><i-amphtml-sizer class="i-amphtml-sizer"><img alt aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjU2NCIgd2lkdGg9IjEyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"></i-amphtml-sizer></amp-img>
+<amp-img alt="src/clean_architecture.test.ts > architecture > Check dependency #Failed" src="https://res.cloudinary.com/silverbirder/image/upload/v1614430292/silver-birder.github.io/blog/src_clean_architecture_test_ts_architecture_check_dependency_failed.png" width="1200" height="564" layout="intrinsic" class="i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" i-amphtml-layout="intrinsic"><i-amphtml-sizer class="i-amphtml-sizer"><img alt aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjU2NCIgd2lkdGg9IjEyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"></i-amphtml-sizer></amp-img>
 <figcaption>src/clean_architecture.test.ts &gt; architecture &gt; Check dependency #Failed</figcaption>
 </figure>
 <p>見事Failedとなりました。つまり、依存関係の誤りを自動的に検出することができます。</p>
