@@ -180,19 +180,29 @@ const addHeadTag = (layoutDOM, option) => {
 
 const addOGP = (layoutDOM, option) => {
     let src = '';
+    let title = '';
     const imgElement = layoutDOM.window.document.querySelector('img');
+    const titleElement = layoutDOM.window.document.querySelector('title');
     const imgOption = option['image'];
+    const titleOption = option['title'];
     if (imgOption) {
         src = imgOption;
     } else if (imgElement !== null) {
         src = imgElement.getAttribute('src');
+    } else {
+        src = 'https://res.cloudinary.com/silverbirder/image/upload/v1611128736/silver-birder.github.io/assets/logo.png';
     }
-    if (src) {
+    if (titleElement !== null) {
+        title = titleElement.textContent;
+    } else if (titleOption) {
+        title = titleOption;
+    }
+    if (src && title) {
         const ogMetaImage = layoutDOM.window.document.createElement('meta');
         ogMetaImage.setAttribute('property', 'og:image');
         const header = `w_500,b_black,co_white,c_fit,g_north,l_text:Arial_30_bold_center:silverbirder`;
-        const title = `w_500,h_50,b_black,co_white,c_fit,g_south,l_text:Arial_20_bold:${encodeURIComponent(option['title'].replace(regEmoji, ''))}`;
-        const imageUrl = `https://res.cloudinary.com/silverbirder/image/fetch/f_auto,w_500/${header}/${title}/${src}`;
+        const customTitle = `w_500,h_50,b_black,co_white,c_fit,g_south,l_text:Arial_20_bold:${encodeURIComponent(title.replace(regEmoji, ''))}`;
+        const imageUrl = `https://res.cloudinary.com/silverbirder/image/fetch/f_auto,w_500/${header}/${customTitle}/${src}`;
         ogMetaImage.setAttribute('content', `${imageUrl}`);
         layoutDOM.window.document.querySelector('head').appendChild(ogMetaImage);
     }
