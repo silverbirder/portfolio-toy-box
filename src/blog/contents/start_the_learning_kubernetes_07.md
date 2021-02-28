@@ -2,7 +2,7 @@
 title: 一足遅れて Kubernetes を学び始める - 07. workloads その3 -
 date: 2019-05-06T00:00:00+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

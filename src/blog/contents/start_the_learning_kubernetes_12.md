@@ -2,7 +2,7 @@
 title: 一足遅れて Kubernetes を学び始める - 12. リソース制限 -
 date: 2019-05-29T00:00:00+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

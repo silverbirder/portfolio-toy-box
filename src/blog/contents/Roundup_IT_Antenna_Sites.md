@@ -2,7 +2,7 @@
 title: Roundup IT Antenna Sites
 date: 2019-07-03T00:00:00+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

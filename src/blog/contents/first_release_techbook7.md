@@ -2,7 +2,7 @@
 title: 技術書典7 で「はじめてのWeb Components入門」を初出版します！
 date: 2019-08-30T10:31:59+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

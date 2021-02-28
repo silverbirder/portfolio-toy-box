@@ -2,7 +2,7 @@
 title: TypescriptでArchUnitしてみた
 date: 2020-11-28T12:08:33+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

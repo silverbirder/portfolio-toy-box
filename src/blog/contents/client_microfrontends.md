@@ -2,7 +2,7 @@
 title: クライアントサイド(ES Module)でMicro Frontends
 date: 2021-01-16T10:22:44+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

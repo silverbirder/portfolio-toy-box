@@ -2,7 +2,7 @@
 title: NFC Automation Trigger + SESAME API による自動解錠と考察
 date: 2019-12-28T00:00:00+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

@@ -2,7 +2,7 @@
 title: 一足遅れて Kubernetes を学び始める - 15. セキュリティ -
 date: 2019-06-07T00:00:00+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

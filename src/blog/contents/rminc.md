@@ -2,7 +2,7 @@
 title: GMailをGCalendarに登録するサービス rMinc を作ってみた
 date: 2020-02-17T18:45:14+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

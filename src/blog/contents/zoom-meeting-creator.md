@@ -2,7 +2,7 @@
 title: ZoomのMeetingを自動生成するGASライブラリ zoom-meeting-creator を作った
 date: 2020-06-06T22:28:00+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

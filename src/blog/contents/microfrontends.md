@@ -2,7 +2,7 @@
 title: Micro Frontends を学んだすべて
 date: 2020-05-04T18:29:21+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

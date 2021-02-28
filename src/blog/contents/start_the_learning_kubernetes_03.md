@@ -2,7 +2,7 @@
 title: 一足遅れて Kubernetes を学び始める - 03. Raspberry Pi -
 date: 2019-04-28T00:00:00+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

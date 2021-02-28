@@ -2,7 +2,7 @@
 title: 2020年の振り返り。結婚と継続力
 date: 2020-12-30T13:04:03+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

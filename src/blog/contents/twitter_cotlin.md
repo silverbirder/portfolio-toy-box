@@ -2,7 +2,7 @@
 title: TwitterにあるLinkを収集するツール Cotlin で、世界中のプレゼンテーション資料を知ろう
 date: 2020-03-15T16:17:16+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

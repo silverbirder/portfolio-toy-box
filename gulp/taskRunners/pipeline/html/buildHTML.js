@@ -2,6 +2,8 @@ const {BASE_URL} = require('../../variables.js');
 const jsdom = require('jsdom');
 const hljs = require('highlight.js');
 const {JSDOM} = jsdom;
+const regEmoji = new RegExp(/[\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF]/, 'g');
+const regSpace = new RegExp(/\s+/, 'g');
 
 const concatHeadAndMain = (contentDOM, layoutDOM) => {
     const contentHeadElement = contentDOM.window.document.querySelector('head');
@@ -148,18 +150,27 @@ const addHeadTag = (layoutDOM, option) => {
     const descriptionElement = layoutDOM.window.document.querySelector('meta[name="description"]');
     const titleElement = layoutDOM.window.document.querySelector('title');
     const iconElement = layoutDOM.window.document.querySelector('link[rel="icon"]');
-    if (descriptionElement === null && option['description'] !== null) {
-        const newDescriptionElement = layoutDOM.window.document.createElement('meta');
-        newDescriptionElement.setAttribute('name', 'description');
-        newDescriptionElement.setAttribute('content', option['description']);
-        headElement.appendChild(newDescriptionElement);
+    if (descriptionElement === null) {
+        if (option['description'] !== undefined && option['description'] !== '') {
+            const newDescriptionElement = layoutDOM.window.document.createElement('meta');
+            newDescriptionElement.setAttribute('name', 'description');
+            newDescriptionElement.setAttribute('content', option['description']);
+            headElement.appendChild(newDescriptionElement);
+        }  else {
+            const mainValue = layoutDOM.window.document.querySelector('main').textContent;
+            const description = mainValue.trim().replace(regSpace, ' ').replace(regEmoji, '').slice(0, 120);
+            const newDescriptionElement = layoutDOM.window.document.createElement('meta');
+            newDescriptionElement.setAttribute('name', 'description');
+            newDescriptionElement.setAttribute('content', description);
+            headElement.appendChild(newDescriptionElement);
+        }
     }
-    if (titleElement === null && option['title'] !== null) {
+    if (titleElement === null && option['title'] !== undefined && option['title'] !== '') {
         const newTitleElement = layoutDOM.window.document.createElement('title');
         newTitleElement.textContent = `${option['title']} - silverbirder's page`;
         headElement.appendChild(newTitleElement);
     }
-    if (iconElement === null && option['icon'] !== null) {
+    if (iconElement === null && option['icon'] !== undefined && option['icon'] !== '') {
         const newIconElement = layoutDOM.window.document.createElement('link');
         newIconElement.setAttribute('rel', 'icon');
         newIconElement.setAttribute('href', `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>${option['icon']}</text></svg>`);
@@ -180,7 +191,7 @@ const addOGP = (layoutDOM, option) => {
         const ogMetaImage = layoutDOM.window.document.createElement('meta');
         ogMetaImage.setAttribute('property', 'og:image');
         const header = `w_500,b_black,co_white,c_fit,g_north,l_text:Arial_30_bold_center:silverbirder`;
-        const title = `w_500,h_50,b_black,co_white,c_fit,g_south,l_text:Arial_20_bold:${encodeURIComponent(option['title'])}`;
+        const title = `w_500,h_50,b_black,co_white,c_fit,g_south,l_text:Arial_20_bold:${encodeURIComponent(option['title'].replace(regEmoji, ''))}`;
         const imageUrl = `https://res.cloudinary.com/silverbirder/image/fetch/f_auto,w_500/${header}/${title}/${src}`;
         ogMetaImage.setAttribute('content', `${imageUrl}`);
         layoutDOM.window.document.querySelector('head').appendChild(ogMetaImage);

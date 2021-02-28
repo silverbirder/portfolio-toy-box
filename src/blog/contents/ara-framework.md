@@ -2,7 +2,7 @@
 title: Ara-Framework で Micro Frontends with SSR
 date: 2020-08-23T18:37:13+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->
