@@ -2,7 +2,7 @@
 title: AWS Summit Osaka 2019 2019年6月27日参加レポート
 date: 2019-06-29T17:15:18+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

@@ -2,7 +2,7 @@
 title: 1コマ漫画検索サービスTiqav2 (Algolia + Cloudinary + Google Cloud Vision API) 作ってみた
 date: 2020-02-08T10:16:38+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

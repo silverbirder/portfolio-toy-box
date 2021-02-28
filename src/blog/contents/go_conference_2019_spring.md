@@ -2,7 +2,7 @@
 title: Go Conference 2019 Spring - 2019年5月18日 参加レポート
 date: 2019-05-21T22:41:43+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

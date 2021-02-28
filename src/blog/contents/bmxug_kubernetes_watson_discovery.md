@@ -2,7 +2,7 @@
 title: 【大阪】BMXUG勉強会 -Kubernates体験＆Watson Discovery入門- 2019年3月27日参加レポート
 date: 2019-05-22T23:07:53+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->

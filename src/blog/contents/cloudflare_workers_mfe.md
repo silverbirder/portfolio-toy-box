@@ -2,7 +2,7 @@
 title: Cloudflare Workers (Edge Worker) で Micro Frontends
 date: 2020-11-15T12:17:30+09:00
 draft: false
-description: description
+description: 
 image: 
 icon: 😎
 -->
